@@ -20,7 +20,12 @@ const slidebar = new Slidebar();
 slidebar.init();
 
 // Slider init
-const slider = new Slider();
+const slider = new Slider({
+  hasDraggingHandler: true,
+  hasWheelHandler: true,
+  hasFade: true,
+  autoPlay: 3000
+});
 slider.init();
 
 // Instagram API init

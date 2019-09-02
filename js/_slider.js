@@ -9,7 +9,12 @@ export default class Slider {
     this._prev = document.querySelector(options.prev) || document.querySelector('.slider-prev');
     this._next = document.querySelector(options.next) || document.querySelector('.slider-next');
     this._index = 0;
+    this._rate = options.rate || 1;
+    this._hasDraggingHandler = options.hasDraggingHandler || false;
+    this._hasWheelHandler = options.hasWheelHandler || false;
+    this._hasFade = options.hasFade || false
     this._hasCaption = options.hasCaption || false;
+    this._autoPlay = options.autoPlay || 0; 
     if (this._hasCaption) {
       this._caption = document.querySelector(options.caption) || document.querySelector('.slider-caption');
       this._inner.querySelectorAll('.slider-item-caption').forEach((elem) => {
@@ -29,13 +34,24 @@ export default class Slider {
     this._resizeEvent = document.createEvent("HTMLEvents");
     this._resizeEvent.initEvent('resize', true, true);
     window.dispatchEvent(this._resizeEvent);
+    if (this._autoPlay >= 1000) {
+      setInterval(() => {
+        if (!this.isAnimated) this.move(1);
+      }, this._autoPlay);
+    }
   }
 
   _setActiveItem() {
-    if (this._inner.querySelector('.active')) {
-      this._inner.querySelector('.active').classList.remove('active');
+    if (this._hasFade) {
+      if (this._inner.querySelector('.active')) {
+        this._inner.querySelector('.active').classList.remove('active');
+      }
+      this._items[this._index % this._len].classList.add('active');
+    } else {
+      this._inner.querySelectorAll('.slider-item').forEach((item) => {
+        item.classList.add('active');
+      });
     }
-    this._items[this._index % this._len].classList.add('active');
     if (this._hasCaption) {
       const caption = this._items[this._index % this._len].querySelector('.slider-item-caption').innerHTML;
       this._caption.innerHTML = caption;
@@ -52,32 +68,36 @@ export default class Slider {
     this._y = 0;
     this._isDragging = false;
     this._delta = 0;
-    this._inner.addEventListener(myStart, (event) => {
-      this._x = event.clientX;
-      this._y = event.clientY;
-      this._isDragging = true;
-      this._myStartHandler();
-      if (!isSupportTouch) event.preventDefault();
-    });
-    this._inner.addEventListener(myMove, (event) => {
-      this._x = event.clientX;
-      this._y = event.clientY;
-      this._myMoveHandler();
-      if (!isSupportTouch) event.preventDefault();
-    });
-    this._inner.addEventListener(myEnd, () => {
-      this._myEndHandler();
-      this._isDragging = false;
-    });
-    this._inner.addEventListener('mouseleave', () => {
-      this._myEndHandler();
-      this._isDragging = false;
-    });
-    this._inner.addEventListener('wheel', (event) => {
-      this._delta = event.deltaY;
-      this._myWheelHandler();
-      event.preventDefault();
-    });
+    if (this._hasDraggingHandler) {
+      this._inner.addEventListener(myStart, (event) => {
+        this._x = event.clientX;
+        this._y = event.clientY;
+        this._isDragging = true;
+        this._myStartHandler();
+        if (!isSupportTouch) event.preventDefault();
+      });
+      this._inner.addEventListener(myMove, (event) => {
+        this._x = event.clientX;
+        this._y = event.clientY;
+        this._myMoveHandler();
+        if (!isSupportTouch) event.preventDefault();
+      });
+      this._inner.addEventListener(myEnd, () => {
+        this._myEndHandler();
+        this._isDragging = false;
+      });
+      this._inner.addEventListener('mouseleave', () => {
+        this._myEndHandler();
+        this._isDragging = false;
+      });
+    }
+    if (this._hasWheelHandler) {
+      this._inner.addEventListener('wheel', (event) => {
+        this._delta = event.deltaY;
+        this._myWheelHandler();
+        event.preventDefault();
+      });
+    }
     this._prev.addEventListener(myTouch, (event) => {
       if (!this.isAnimated) this.move(-1);
       event.preventDefault();
@@ -221,7 +241,7 @@ export default class Slider {
   }
 
   _getInnerWidth() {
-    return this._slider.clientHeight * this._len;
+    return this._slider.clientHeight * this._len * this._rate;
   }
 
   _getAdjustedDistance(index) {
