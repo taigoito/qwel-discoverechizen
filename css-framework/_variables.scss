@@ -40,9 +40,9 @@ $link-hover-color:      map-get($theme-colors, "primary");
 $link-hover-decoration: underline;
 
 // Theme Fonts
-$font-family-sans-serif: "游ゴシック", "Yu Gothic", sans-serif;
-$font-family-serif:      "游明朝", "Yu Mincho", serif;
-$font-weight-sans-serif: 500;
+$font-family-sans-serif: "Noto Sans JP", sans-serif;
+$font-family-serif:      "Noto Serif JP", serif;
+$font-weight-sans-serif: 400;
 $font-weight-serif:      400;
 
 $font-family-base:    $font-family-sans-serif;

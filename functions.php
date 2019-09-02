@@ -66,7 +66,8 @@ add_action('widgets_init', 'qwel_widgets_init');
 // Scripts
 
 function qwel_scripts()
-{ 
+{
+  wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:300|Noto+Serif+JP:300&display=swap', [], null); 
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], null);
 }
 add_action('wp_enqueue_scripts', 'qwel_scripts');
