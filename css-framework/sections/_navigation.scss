@@ -7,6 +7,7 @@
 
 #header-navigation-bar {
   display: flex;
+  padding: .5rem 0;
   justify-content: space-between;
   align-items: center;
 
@@ -29,6 +30,9 @@
     display: inline-block;
     height: 3rem;
     margin: 0 1rem;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: 1.25rem;
     line-height: 3rem;
     vertical-align: middle;
     text-transform: capitalize;

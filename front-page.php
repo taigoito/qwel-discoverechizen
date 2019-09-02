@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <main <?php main_id(); ?>>
+  <main id="main">
     <?php
     $array = ['works', 'about', 'news', 'gallery', 'access', 'contact'];
     foreach ($array as $value) {

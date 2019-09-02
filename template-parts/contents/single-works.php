@@ -9,7 +9,7 @@ if (is_numeric($price)) {
   $priceHtml = '￥' . number_format($price) . '-';
 }
 ?>
-      <div class="work row">
+      <article class="work row">
         <div class="work-primary-col">
           <h2 class="work-title"><?php the_title(); ?></h2>
           <table class="work-info">
@@ -64,11 +64,11 @@ if (is_numeric($price)) {
               </tr>
             </tbody>
           </table>
-          <div class="work-description">
+          <div class="work-content">
             <?php the_content(); ?>
           </div>
         </div>
         <div class="work-secondary-col">
-          <div class="work-images"></div>
+          <div class="work-gallery"></div>
         </div>
-      </div>
+      </article>

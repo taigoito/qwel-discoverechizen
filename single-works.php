@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-  <main <?php main_id(); ?>>
+  <main id="main">
     <header id="page-header">
-      <h1><?php echo get_my_title(); ?></h1>
+      <h1 id="page-title" class="screen-reader-text"><?php echo get_my_title(); ?></h1>
     </header>
     <div class="container">
       <div class="row">
@@ -15,14 +15,14 @@
           }
           ?>
         </div>
-        <div class="secondary-col">
-          <h2>カテゴリー</h2>
+        <aside class="secondary-col">
+          <h2 class="navigation-title">カテゴリー</h2>
           <?php insert_works_cat(); ?>
-        </div>
-        <div class="tertiary-col">
-          <h2>モチーフで検索</h2>
+        </aside>
+        <aside class="tertiary-col">
+          <h2 class="navigation-title">モチーフで検索</h2>
           <?php insert_works_tag(); ?>
-        </div>
+        </aside>
       </div>
     </div>
   </main><!-- main -->

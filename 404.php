@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-  <main <?php main_id(); ?>>
+  <main id="main">
     <header id="page-header">
-      <h1><?php echo get_my_title(); ?></h1>
+      <h1 id="page-title"><?php echo get_my_title(); ?></h1>
     </header>
     <div class="container">
       <div class="row">

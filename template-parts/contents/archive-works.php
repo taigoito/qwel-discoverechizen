@@ -1,5 +1,5 @@
-      <section class="work">
-        <div class="work-image">
+      <div class="work">
+        <div class="featured-image">
           <div class="img-clip">
             <div class="img-clip-inner">
               <a href="<?php the_permalink(); ?>">
@@ -14,5 +14,5 @@
             </div>
           </div>
         </div>
-        <h2 class="work-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      </section>
+        <div class="work-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+      </div>

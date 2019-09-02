@@ -585,11 +585,6 @@ function body_id()
   echo 'id="' . get_my_slug() . '"';
 }
 
-function main_id()
-{
-  echo 'id="' . get_my_slug() . '-main"';
-}
-
 
 // No image
 // アイキャッチ画像の代替

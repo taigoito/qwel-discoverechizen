@@ -28,11 +28,10 @@ if (document.body.id === 'index') {
 
 if (document.body.id === 'works') {
   // Works
-  const elem = document.querySelector('.work-images');
-  const content = document.querySelector('.work-description');
+  const elem = document.querySelector('.work-gallery');
+  const content = document.querySelector('.work-content');
   const images = content.querySelectorAll('img');
   images.forEach((image) => {
-    image.classList.add('mb-2');
     elem.appendChild(image);
   });
 }

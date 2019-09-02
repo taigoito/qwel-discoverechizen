@@ -1,5 +1,5 @@
     <section id="news">
-      <h2>news</h2>
+      <h2 class="section-heading">news</h2>
       <div class="container">
         <?php
         $posts = get_posts([

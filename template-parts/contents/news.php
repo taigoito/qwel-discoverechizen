@@ -1,5 +1,5 @@
-      <section class="news row">
-        <div class="news-image">
+      <div class="news row">
+        <div class="featured-image">
           <a href="<?php the_permalink(); ?>">
             <?php
             if (has_post_thumbnail()) {
@@ -13,7 +13,7 @@
         <div class="news-intro">
           <div class="news-intro-inner">
             <div class="news-intro-date"><?php the_time('Y.m.d'); ?></div>
-            <h3 class="news-intro-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <div class="news-intro-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
             <ul class="news-intro-terms">
               <?php
               $terms = get_the_category($post->ID);
@@ -29,4 +29,4 @@
             </div>
           </div>
         </div>
-      </section><!-- .news -->
+      </div><!-- .news -->

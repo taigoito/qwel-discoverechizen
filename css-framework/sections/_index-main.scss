@@ -1,6 +1,6 @@
 // Index main
 
-#index-main {
+#index #main {
   &> section:not(#access) {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -19,6 +19,7 @@
 
   h2 {
     margin-bottom: 6rem;
+    font-size: 1.5rem;
     text-transform: capitalize;
   }
 }

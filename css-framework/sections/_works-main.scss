@@ -40,7 +40,7 @@
     @include table();
   }
 
-  .work-title, .work-info, .work-description {
+  .work-title, .work-info, .work-content {
     margin-bottom: 1rem;
   }
 
@@ -64,10 +64,12 @@
 
   .work-title {
     margin: 1rem auto;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
     font-size: 1rem;
   }
 
-  .work-image {
+  .featured-image {
     padding: .25rem;
     border: 1px solid gray(700);
 

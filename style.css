@@ -115,6 +115,11 @@ input, button, select, optgroup, textarea {
   text-align: center;
 }
 
+#site-header {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   #site-header {
     position: -webkit-sticky;
@@ -125,11 +130,11 @@ input, button, select, optgroup, textarea {
 }
 
 #page-header {
-  margin: 3rem 0;
   text-align: center;
 }
 
 #page-title {
+  margin: 3rem 0;
   font-size: 2rem;
 }
 
@@ -167,6 +172,7 @@ input, button, select, optgroup, textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: .5rem 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -201,6 +207,9 @@ input, button, select, optgroup, textarea {
   display: inline-block;
   height: 3rem;
   margin: 0 1rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
   line-height: 3rem;
   vertical-align: middle;
   text-transform: capitalize;
@@ -399,22 +408,23 @@ input, button, select, optgroup, textarea {
   }
 }
 
-#index-main > section:not(#access) {
+#index #main > section:not(#access) {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
 }
 
-#index-main > section:not(#access):not(#gallery):nth-child(odd) {
+#index #main > section:not(#access):not(#gallery):nth-child(odd) {
   background-color: #d9d9d9;
 }
 
-#index-main > section:not(#access):not(#gallery):nth-child(even) {
+#index #main > section:not(#access):not(#gallery):nth-child(even) {
   background-color: #ffffff;
 }
 
-#index-main h2 {
+#index #main h2 {
   margin-bottom: 6rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 
@@ -482,25 +492,25 @@ input, button, select, optgroup, textarea {
 #photo .post-title,
 #archive .post-title,
 #archive-photo .post-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-#post .post-image,
-#photo .post-image,
-#archive .post-image,
-#archive-photo .post-image {
+#post .featured-image,
+#photo .featured-image,
+#archive .featured-image,
+#archive-photo .featured-image {
   text-align: center;
 }
 
-#post .post-title, #post .post-image, #post .post-content,
+#post .post-title, #post .featured-image, #post .post-content,
 #photo .post-title,
-#photo .post-image,
+#photo .featured-image,
 #photo .post-content,
 #archive .post-title,
-#archive .post-image,
+#archive .featured-image,
 #archive .post-content,
 #archive-photo .post-title,
-#archive-photo .post-image,
+#archive-photo .featured-image,
 #archive-photo .post-content {
   margin-bottom: 2rem;
 }
@@ -626,7 +636,7 @@ input, button, select, optgroup, textarea {
   padding: 0;
 }
 
-#works .work-title, #works .work-info, #works .work-description {
+#works .work-title, #works .work-info, #works .work-content {
   margin-bottom: 1rem;
 }
 
@@ -670,20 +680,22 @@ input, button, select, optgroup, textarea {
 
 #archive-works .work-title {
   margin: 1rem auto;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
 }
 
-#archive-works .work-image {
+#archive-works .featured-image {
   padding: .25rem;
   border: 1px solid #b3b3b3;
 }
 
-#archive-works .work-image .img-clip {
+#archive-works .featured-image .img-clip {
   width: 18rem;
   height: 13.5rem;
 }
 
-#archive-works .work-image a:hover img {
+#archive-works .featured-image a:hover img {
   opacity: .7;
 }
 
@@ -747,7 +759,7 @@ input, button, select, optgroup, textarea {
   margin-bottom: 1rem;
 }
 
-#news .news-image {
+#news .featured-image {
   position: relative;
   width: 100%;
   width: auto;
@@ -759,17 +771,17 @@ input, button, select, optgroup, textarea {
   padding-right: 0.5rem;
 }
 
-#news .news-image img {
+#news .featured-image img {
   width: 9rem;
 }
 
 @media (min-width: 1024px) {
-  #news .news-image img {
+  #news .featured-image img {
     width: 12rem;
   }
 }
 
-#news .news-image a:hover img {
+#news .featured-image a:hover img {
   opacity: .7;
 }
 
@@ -806,6 +818,8 @@ input, button, select, optgroup, textarea {
 #news .news-intro-heading {
   display: inline-block;
   margin: .75rem 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 1;
   vertical-align: bottom;
@@ -1100,6 +1114,11 @@ input, button, select, optgroup, textarea {
 .tertiary-col h2 {
   margin-bottom: .5rem;
   font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
 }
 
 .img-clip {

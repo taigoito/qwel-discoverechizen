@@ -11,14 +11,15 @@
 
 #site-header {
   @include sticky-top();
+  @include background("light");
 }
 
 #page-header {
-  margin: 3rem 0;
   text-align: center;
 }
 
 #page-title {
+  margin: 3rem 0;
   font-size: 2rem;
 }
 

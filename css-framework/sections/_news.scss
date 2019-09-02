@@ -5,7 +5,7 @@
     margin-bottom: 1rem;
   }
 
-  .news-image {
+  .featured-image {
     @include col("sm", "auto");
 
     img {
@@ -43,6 +43,8 @@
   .news-intro-heading {
     display: inline-block;
     margin: .75rem 0;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
     font-size: 1.5rem;
     line-height: 1;
     vertical-align: bottom;

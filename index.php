@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-  <main <?php main_id(); ?>>
+  <main id="main">
     <header id="page-header">
-      <h1><?php echo get_my_title(); ?></h1>
+      <h1 id="page-title" class="screen-reader-text"><?php echo get_my_title(); ?></h1>
     </header>
     <div class="container">
       <div class="row">
@@ -17,9 +17,9 @@
           <?php if (!is_singular()) insert_pagination(); ?>
         </div><!-- .primary -->
         <?php if (!is_page()) { ?>
-        <aside class="secondary-col">
+        <div class="secondary-col">
           <?php dynamic_sidebar('blog-sidebar'); ?>
-        </aside><!-- .secondary -->
+        </div><!-- .secondary -->
         <?php } ?>
       </div>
     </div>
