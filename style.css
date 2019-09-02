@@ -163,7 +163,7 @@ input, button, select, optgroup, textarea {
   }
 }
 
-#header-navigation-bar .navigation-bland,
+#header-navigation-bar .navigation-brand,
 #header-navigation-bar .navigation-menu li {
   display: inline-block;
   height: 3rem;
@@ -173,19 +173,19 @@ input, button, select, optgroup, textarea {
   text-transform: capitalize;
 }
 
-#header-navigation-bar .navigation-bland a,
+#header-navigation-bar .navigation-brand a,
 #header-navigation-bar .navigation-menu li a {
   color: #262626;
   text-decoration: none;
 }
 
-#header-navigation-bar .navigation-bland a:hover,
+#header-navigation-bar .navigation-brand a:hover,
 #header-navigation-bar .navigation-menu li a:hover {
   color: #3399cc;
   text-decoration: underline;
 }
 
-#header-navigation-bar .navigation-bland img,
+#header-navigation-bar .navigation-brand img,
 #header-navigation-bar .navigation-menu li img {
   width: auto;
   height: 2rem;
@@ -195,7 +195,7 @@ input, button, select, optgroup, textarea {
 #navigation-toggler {
   display: inline-block;
   height: 3rem;
-  margin: .5rem;
+  margin: 0 .5rem;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -219,13 +219,13 @@ input, button, select, optgroup, textarea {
   margin-bottom: 3rem;
 }
 
-#footer-navigation .navigation-bland {
+#footer-navigation .navigation-brand {
   height: 3rem;
   padding-left: 1rem;
   line-height: 3rem;
 }
 
-#footer-navigation .navigation-bland img {
+#footer-navigation .navigation-brand img {
   margin-left: -1rem;
 }
 
@@ -240,23 +240,23 @@ input, button, select, optgroup, textarea {
   line-height: 2rem;
 }
 
-#footer-navigation .navigation-bland,
+#footer-navigation .navigation-brand,
 #footer-navigation .navigation-menu li {
   vertical-align: middle;
   text-transform: capitalize;
 }
 
-#footer-navigation .navigation-bland a,
+#footer-navigation .navigation-brand a,
 #footer-navigation .navigation-menu li a {
   color: #ffffff;
 }
 
-#footer-navigation .navigation-bland a:hover,
+#footer-navigation .navigation-brand a:hover,
 #footer-navigation .navigation-menu li a:hover {
   color: #3399cc;
 }
 
-#footer-navigation .navigation-bland img,
+#footer-navigation .navigation-brand img,
 #footer-navigation .navigation-menu li img {
   width: auto;
   height: 2rem;
@@ -268,14 +268,14 @@ input, button, select, optgroup, textarea {
     display: inline-block;
     padding: 0;
   }
-  #footer-navigation .navigation-bland,
+  #footer-navigation .navigation-brand,
   #footer-navigation .navigation-menu li {
     display: inline-block;
     height: 3rem;
     margin: 0 1rem;
     line-height: 3rem;
   }
-  #footer-navigation .navigation-bland img,
+  #footer-navigation .navigation-brand img,
   #footer-navigation .navigation-menu li img {
     margin: .5rem;
   }
