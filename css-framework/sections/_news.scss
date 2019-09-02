@@ -1,0 +1,76 @@
+// News
+
+#news {
+  .news {
+    margin-bottom: 1rem;
+  }
+
+  .news-image {
+    @include col("sm", "auto");
+
+    img {
+      width: 9rem;
+
+      @media (min-width: breakpoint("lg")) {
+        width: 12rem;
+      }
+    }
+
+    a:hover img {
+      opacity: .7;
+    }
+  }
+
+  .news-intro {
+    @include col("sm", 0);
+  }
+
+  .news-intro-inner {
+    height: 100%;
+    padding: .5rem 1rem;
+    background-color: #ffffff;
+    text-align: left;
+
+    @media (min-width: breakpoint("lg")) {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .news-intro-date {
+    line-height: 2rem;
+  }
+
+  .news-intro-heading {
+    display: inline-block;
+    margin: .75rem 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    vertical-align: bottom;
+  }
+
+  .news-intro-terms {
+    display: inline-block;
+    @include list-unstyled();
+    vertical-align: bottom;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      @include button("sm", "light");
+      font-size: .875rem;
+      margin: .5rem 0;
+    }
+  }
+
+  .news-intro-text {
+    display: none; // Visible "lg"
+    padding: .75rem 0;
+    text-align: justify;
+
+    @media (min-width: breakpoint("lg")) {
+      display: block;
+    }
+  }
+}

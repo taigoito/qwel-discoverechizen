@@ -1,0 +1,22 @@
+// About
+
+#about {
+  .about {
+    align-items: center;
+  }
+
+  .about-image,
+  .about-intro {
+    @include col("lg", 6);
+    margin-bottom: 2rem;
+  }
+
+  .about-intro-text {
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .about-intro-btn {
+    @include button("lg");
+  }
+}

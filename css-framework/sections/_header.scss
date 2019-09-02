@@ -1,0 +1,10 @@
+// Header
+
+#hero {
+  @include cover-unit();
+  @include background("dark");
+}
+
+#hero-content {
+  @include cover-section();
+}

@@ -1,0 +1,79 @@
+// Reboot
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root-font-size;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  @media (max-width: $root-font-size-breakpoint - 1) {
+    font-size: round($root-font-size * 0.9);
+  }
+}
+
+body {
+  margin: 0;
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  text-align: $text-align-base;
+  line-height: $line-height-base;
+  letter-spacing: $letter-spacing-base;
+}
+
+header, nav, main, article, section, aside, footer  {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, dt, th {
+  font-weight: $font-weight-base;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}

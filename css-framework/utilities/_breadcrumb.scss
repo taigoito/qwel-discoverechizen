@@ -1,0 +1,15 @@
+// Breadcrumb
+
+@mixin breadcrumb() {
+  @include list-unstyled();
+
+  li {
+    display: inline-block;
+    text-transform: capitalize;
+
+    &:not(:first-child)::before {
+      padding: 0 .5rem;
+      content: ">";
+    }
+  }
+}

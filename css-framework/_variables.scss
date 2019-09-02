@@ -1,0 +1,53 @@
+// Variables
+
+// Root
+$root-font-size: 16px;
+$root-font-size-breakpoint: 576px;
+
+// Grid system
+$grid-columns: 12;
+$grid-gutter-width: 1rem;
+
+// Breakpoints
+$grid-breakpoints: (
+  md: 768px,
+  lg: 1024px
+);
+
+// Container max widths
+$container-max-widths: (
+  md: 45rem,
+  lg: 60rem
+);
+
+// Theme color
+$key-color: hsl(200, 60%, 50%);
+$theme-colors: (
+  primary:       $key-color,
+  primary-light: lighten($key-color, 25%),
+  primary-dark:  darken($key-color, 10%),
+  secondary:     adjust-hue($key-color, -150deg),
+  light:         lighten(#000000, 85%),
+  dark:          lighten(#000000, 15%)
+);
+
+$body-bg:    #ffffff;
+$body-color: lighten(#000000, 15%);
+
+$link-color:            lighten(#000000, 30%);;
+$link-decoration:       none;
+$link-hover-color:      map-get($theme-colors, "primary");
+$link-hover-decoration: underline;
+
+// Theme Fonts
+$font-family-sans-serif: "游ゴシック", "Yu Gothic", sans-serif;
+$font-family-serif:      "游明朝", "Yu Mincho", serif;
+$font-weight-sans-serif: 500;
+$font-weight-serif:      400;
+
+$font-family-base:    $font-family-sans-serif;
+$font-weight-base:    $font-weight-sans-serif;
+$font-size-base:      1rem;
+$text-align-base:     justify;
+$line-height-base:    1.75;
+$letter-spacing-base: 0.04rem;

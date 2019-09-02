@@ -1,0 +1,32 @@
+// Photo gallery
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  @include list-unstyled();
+  justify-content: center;
+
+  @media(min-width: map-get($grid-breakpoints, "lg")) {
+    height: 24rem; // Twice the item height
+    overflow: hidden;   
+  }
+
+  &> li {
+    width: 31.25vw;
+    max-width: 18rem;
+    height: 31.25vw;
+    max-height: 18rem;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    a:hover > img {
+      opacity: .7;
+    }
+
+    @media(min-width: map-get($grid-breakpoints, "lg")) {
+      width: 12rem;
+      height: 12rem;  
+    }
+  }
+}

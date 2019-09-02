@@ -1,0 +1,14 @@
+// Embed
+
+@mixin embed-responsive() {
+  position: relative;
+  width: 100%;
+  height: 480px;
+
+  iframe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
