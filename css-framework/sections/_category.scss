@@ -1,0 +1,45 @@
+// List product and list motif
+
+.list-product,
+.list-motif {
+  margin-bottom: 3rem;
+  padding: 0;
+
+  li {
+    display: block;
+    line-height: 2.4;
+    border-top: 1px solid gray(700);
+    border-bottom: 1px solid gray(700);
+    text-indent: 1em
+  }
+
+  li+li {
+    border-top: none;
+  }
+
+  a {
+    display: block;
+  }
+
+  span {
+    margin: 0 1rem;
+    font-size: 87.5%;
+    text-transform: capitalize;
+  }
+}
+
+@media (min-width: breakpoint("lg")) {
+  .list-product,
+  .list-motif {
+    padding: .5rem 0;
+    border-top: 1px solid gray(700);
+    border-bottom: 1px solid gray(700);
+  
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+      border: none;
+      text-indent: 0;
+    }
+  }
+}

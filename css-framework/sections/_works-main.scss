@@ -1,0 +1,83 @@
+// Works main
+
+#works,
+#archive-works {
+  .primary-col {
+    @include col("lg", 12);
+    order: 1;
+    
+    @media (min-width: breakpoint("lg")) {
+      order: 2;
+    }
+  }
+  
+  .secondary-col {
+    @include col("lg", 12);
+    order: 2;
+    
+    @media (min-width: breakpoint("lg")) {
+      order: 1;
+    }
+  }
+  
+  .tertiary-col {
+    @include col("lg", 12);
+    order: 3;
+  }
+}
+
+#works {
+  .work-primary-col {
+    @include col("lg", 4);
+    order: 2;
+  }
+
+  .work-title {
+    font-size: 1.25rem;
+  }
+
+  .work-info {
+    @include table();
+  }
+
+  .work-title, .work-info, .work-description {
+    margin-bottom: 1rem;
+  }
+
+  .work-secondary-col {
+    @include col("lg", 8);
+    text-align: center;
+    order: 1;
+
+    img {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+#archive-works {
+  .work {
+    @include col("sm", auto);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .work-title {
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+
+  .work-image {
+    padding: .25rem;
+    border: 1px solid gray(700);
+
+    .img-clip {
+      width: 18rem;
+      height: 13.5rem;
+    }
+
+    a:hover img {
+      opacity: .7;
+    }
+  }
+}

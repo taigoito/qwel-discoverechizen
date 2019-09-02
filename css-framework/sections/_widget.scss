@@ -1,0 +1,42 @@
+// Widget
+
+.search-form {
+  position: relative;
+
+  label {
+    display: block;
+  }
+}
+
+.search-field {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid gray(700);
+}
+
+.search-submit {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  bottom: .25rem;
+  @include button();
+}
+
+.widget {
+  margin-bottom: 3rem;
+
+  ul {
+    @include list-unstyled();
+  }
+
+  li {
+    line-height: 2.4;
+    text-indent: 1rem;
+    border-bottom: 1px solid gray(700);
+
+    &:first-child {
+      border-top: 1px solid gray(700);
+    }
+  }
+}

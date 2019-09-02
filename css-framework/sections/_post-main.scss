@@ -1,0 +1,37 @@
+// Post main
+
+#post,
+#photo,
+#archive,
+#archive-photo {
+  .row {
+    justify-content: space-between;
+  }
+
+  .primary-col {
+    @include col("lg", 8);
+  }
+  
+  .secondary-col {
+    @include col("lg", 3);
+  }
+  
+  .post {
+    margin-bottom: 6rem;
+  }
+
+  .post-date {
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-image {
+    text-align: center;
+  }
+
+  .post-title, .post-image, .post-content {
+    margin-bottom: 2rem;
+  }
+}

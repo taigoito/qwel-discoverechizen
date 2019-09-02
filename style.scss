@@ -1,6 +1,9 @@
 /*
+Theme Name: Qwel
+Version: 1.0
 Author: Taigo Ito
 Author URI: https://qwel.design/
+Description: This is a theme for someone artists or craftsmen. Please customize and use.
 */
 
  @charset "utf-8";
@@ -21,13 +24,19 @@ Author URI: https://qwel.design/
  @import "css-framework/utilities/tables";
  @import "css-framework/sections/header";
  @import "css-framework/sections/navigation";
+ @import "css-framework/sections/breadcrumb";
+ @import "css-framework/sections/category";
  @import "css-framework/sections/index-main";
+ @import "css-framework/sections/post-main";
+ @import "css-framework/sections/works-main";
  @import "css-framework/sections/works";
  @import "css-framework/sections/about";
  @import "css-framework/sections/news";
  @import "css-framework/sections/gallery";
  @import "css-framework/sections/access";
  @import "css-framework/sections/contact";
+ @import "css-framework/sections/pagination";
+ @import "css-framework/sections/widget";
  @import "css-framework/sections/footer";
  @import "css-framework/sections/common";
  @import "css-framework/components/evil-icons";

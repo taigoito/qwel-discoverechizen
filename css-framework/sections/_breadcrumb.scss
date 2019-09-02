@@ -1,0 +1,10 @@
+// Breadcrumb
+
+#breadcrumb {
+  @include container();
+  margin: 2rem auto;
+}
+
+.breadcrumb {
+  @include breadcrumb();
+}

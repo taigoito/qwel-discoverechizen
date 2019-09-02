@@ -8,3 +8,20 @@
 #hero-content {
   @include cover-section();
 }
+
+#site-header {
+  @include sticky-top();
+}
+
+#page-header {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+#page-title {
+  font-size: 2rem;
+}
+
+#cover-image {
+  @include cover-image(none, blur(4px));
+}
