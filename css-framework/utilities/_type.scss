@@ -4,3 +4,10 @@
   padding-left: 0;
   list-style: none;
 }
+
+@mixin small($small-font-size: $small-font-size, $small-line-height: $small-line-height) {
+  @media (min-width: $root-font-size-breakpoint) {
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+  }
+}

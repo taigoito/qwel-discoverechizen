@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6, dt, th {
   font-weight: 500;
 }
 
+small {
+  font-size: 87.5%;
+}
+
 a {
   color: #4d4d4d;
   text-decoration: none;
@@ -445,7 +449,7 @@ input, button, select, optgroup, textarea {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  font-size: .875rem;
+  font-size: 87.5%;
   margin: .5rem 0;
 }
 
