@@ -1,5 +1,5 @@
-    <section id="works">
-      <h2 class="section-heading">works</h2>
+    <section id="front-works" class="front-sec">
+      <h2 class="front-sec-heading">works</h2>
         <div class="slider slider-sm">
           <div class="slider-inner">
             <?php

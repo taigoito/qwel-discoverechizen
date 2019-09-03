@@ -1,11 +1,11 @@
-// About
+// Front - About
 
-#about {
+#front-about {
   .about {
     align-items: center;
   }
 
-  .about-image,
+  .featured-image,
   .about-intro {
     @include col("lg", 6);
     margin-bottom: 2rem;

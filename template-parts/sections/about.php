@@ -1,11 +1,10 @@
-    <section id="about">
-      <h2 class="section-heading">about</h2>
+    <section id="front-about" class="front-sec">
+      <h2 class="front-sec-heading">about</h2>
       <div class="container">
         <?php
         $posts = get_posts([
           'posts_per_page' => 1,
-          'order' => 'ASC',
-          'exclude' => [1, 10],
+          'include' => 11,
           'post_type' => 'page'
         ]);
         foreach ($posts as $post) {

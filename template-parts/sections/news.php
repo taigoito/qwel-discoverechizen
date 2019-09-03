@@ -1,5 +1,5 @@
-    <section id="news">
-      <h2 class="section-heading">news</h2>
+    <section id="front-news" class="front-sec">
+      <h2 class="front-sec-heading">news</h2>
       <div class="container">
         <?php
         $posts = get_posts([

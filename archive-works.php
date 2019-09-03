@@ -27,6 +27,6 @@
           <?php insert_works_tag(); ?>
         </aside>
       </div>
-    </div>
+    </div><!-- .container -->
   </main><!-- main -->
 <?php get_footer(); ?>

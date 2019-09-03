@@ -1,5 +1,5 @@
-    <section id="gallery">
-      <h2 class="section-heading">gallery</h2>
+    <section id="front-gallery" class="front-sec">
+      <h2 class="front-sec-heading">gallery</h2>
       <ul class="photo-gallery">
         <?php
         $posts = get_posts([

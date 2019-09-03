@@ -412,24 +412,324 @@ input, button, select, optgroup, textarea {
   }
 }
 
-#index #main > section:not(#access) {
+.front-sec:not(#front-access) {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
 }
 
-#index #main > section:not(#access):not(#gallery):nth-child(odd) {
+.front-sec:not(#front-access):not(#front-gallery):nth-child(odd) {
   background-color: #d9d9d9;
 }
 
-#index #main > section:not(#access):not(#gallery):nth-child(even) {
+.front-sec:not(#front-access):not(#front-gallery):nth-child(even) {
   background-color: #ffffff;
 }
 
-#index #main h2 {
+.front-sec-heading {
   margin-bottom: 6rem;
   font-size: 1.5rem;
   text-transform: capitalize;
+}
+
+#front-works .slider-item {
+  padding: 0 3rem;
+}
+
+#front-about .about {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#front-about .featured-image,
+#front-about .about-intro {
+  position: relative;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  #front-about .featured-image,
+  #front-about .about-intro {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+#front-about .about-intro-text {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+#front-about .about-intro-btn {
+  display: inline-block;
+  padding: 0.375rem 6rem;
+  border: none;
+  background-color: #3399cc;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+#front-about .about-intro-btn:hover {
+  background-color: #2b82ad;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#front-news .news {
+  margin-bottom: 1rem;
+}
+
+#front-news .featured-image {
+  position: relative;
+  width: 100%;
+  width: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#front-news .featured-image img {
+  width: 9rem;
+}
+
+@media (min-width: 1024px) {
+  #front-news .featured-image img {
+    width: 12rem;
+  }
+}
+
+#front-news .featured-image a:hover img {
+  opacity: .7;
+}
+
+#front-news .news-intro {
+  position: relative;
+  width: 100%;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#front-news .news-intro-inner {
+  height: 100%;
+  padding: .5rem 1rem;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  #front-news .news-intro-inner {
+    padding: 1rem 2rem;
+  }
+}
+
+#front-news .news-intro-date {
+  line-height: 2rem;
+}
+
+#front-news .news-intro-heading {
+  display: inline-block;
+  margin: .75rem 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+#front-news .news-intro-terms {
+  display: inline-block;
+  padding-left: 0;
+  list-style: none;
+  vertical-align: bottom;
+}
+
+#front-news .news-intro-terms li {
+  display: inline-block;
+}
+
+#front-news .news-intro-terms a {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: none;
+  background-color: #d9d9d9;
+  color: #262626;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 87.5%;
+  margin: .5rem 0;
+}
+
+#front-news .news-intro-terms a:hover {
+  background-color: #c6c6c6;
+  color: #262626;
+  text-decoration: none;
+}
+
+#front-news .news-intro-text {
+  display: none;
+  padding: .75rem 0;
+  text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  #front-news .news-intro-text {
+    display: block;
+  }
+}
+
+#front-gallery {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+#front-access {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+#front-access iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+#front-contact form {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+#front-contact form label {
+  display: block;
+}
+
+#front-contact form input[type="text"], #front-contact form input[type="tel"], #front-contact form input[type="url"], #front-contact form input[type="email"], #front-contact form input[type="password"], #front-contact form input[type="file"], #front-contact form select, #front-contact form optgroup, #front-contact form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#front-contact form input[type="text"], #front-contact form input[type="tel"], #front-contact form input[type="url"], #front-contact form input[type="email"], #front-contact form input[type="password"], #front-contact form input[type="file"], #front-contact form select, #front-contact form optgroup {
+  height: calc(1.75rem + 6px);
+}
+
+#front-contact form input[type="file"] {
+  outline: 0;
+}
+
+#front-contact form textarea {
+  resize: vertical;
+}
+
+#front-contact form [type="button"], #front-contact form [type="reset"], #front-contact form [type="submit"] {
+  display: inline-block;
+  padding: 0.375rem 6rem;
+  border: none;
+  background-color: #3399cc;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+#front-contact form [type="button"]:hover, #front-contact form [type="reset"]:hover, #front-contact form [type="submit"]:hover {
+  background-color: #2b82ad;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.page-sec {
+  margin: 6rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-sec .primary-col, .page-sec .secondary-col {
+  position: relative;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .page-sec .primary-col, .page-sec .secondary-col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.page-sec:nth-child(odd) .primary-col {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.page-sec:nth-child(odd) .secondary-col {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.page-sec:nth-child(even) .primary-col {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.page-sec:nth-child(even) .secondary-col {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 #post .row,
@@ -701,256 +1001,6 @@ input, button, select, optgroup, textarea {
 
 #archive-works .featured-image a:hover img {
   opacity: .7;
-}
-
-#works .slider-item {
-  padding: 0 3rem;
-}
-
-#about .about {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#about .about-image,
-#about .about-intro {
-  position: relative;
-  width: 100%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 1024px) {
-  #about .about-image,
-  #about .about-intro {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-#about .about-intro-text {
-  margin-bottom: 2rem;
-  text-align: justify;
-}
-
-#about .about-intro-btn {
-  display: inline-block;
-  padding: 0.375rem 6rem;
-  border: none;
-  background-color: #3399cc;
-  color: #ffffff;
-  text-decoration: none;
-  text-align: center;
-  outline: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-}
-
-#about .about-intro-btn:hover {
-  background-color: #2b82ad;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-#news .news {
-  margin-bottom: 1rem;
-}
-
-#news .featured-image {
-  position: relative;
-  width: 100%;
-  width: auto;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  max-width: none;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-#news .featured-image img {
-  width: 9rem;
-}
-
-@media (min-width: 1024px) {
-  #news .featured-image img {
-    width: 12rem;
-  }
-}
-
-#news .featured-image a:hover img {
-  opacity: .7;
-}
-
-#news .news-intro {
-  position: relative;
-  width: 100%;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-width: 100%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-#news .news-intro-inner {
-  height: 100%;
-  padding: .5rem 1rem;
-  background-color: #ffffff;
-  text-align: left;
-}
-
-@media (min-width: 1024px) {
-  #news .news-intro-inner {
-    padding: 1rem 2rem;
-  }
-}
-
-#news .news-intro-date {
-  line-height: 2rem;
-}
-
-#news .news-intro-heading {
-  display: inline-block;
-  margin: .75rem 0;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1;
-  vertical-align: bottom;
-}
-
-#news .news-intro-terms {
-  display: inline-block;
-  padding-left: 0;
-  list-style: none;
-  vertical-align: bottom;
-}
-
-#news .news-intro-terms li {
-  display: inline-block;
-}
-
-#news .news-intro-terms a {
-  display: inline-block;
-  padding: 0.25rem 1rem;
-  border: none;
-  background-color: #d9d9d9;
-  color: #262626;
-  text-decoration: none;
-  text-align: center;
-  outline: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-  font-size: 87.5%;
-  margin: .5rem 0;
-}
-
-#news .news-intro-terms a:hover {
-  background-color: #c6c6c6;
-  color: #262626;
-  text-decoration: none;
-}
-
-#news .news-intro-text {
-  display: none;
-  padding: .75rem 0;
-  text-align: justify;
-}
-
-@media (min-width: 1024px) {
-  #news .news-intro-text {
-    display: block;
-  }
-}
-
-#gallery {
-  background-color: #262626;
-  color: #ffffff;
-}
-
-#access {
-  position: relative;
-  width: 100%;
-  height: 480px;
-}
-
-#access iframe {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-#contact form {
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  max-width: 600px;
-  text-align: left;
-}
-
-#contact form label {
-  display: block;
-}
-
-#contact form input[type="text"], #contact form input[type="tel"], #contact form input[type="url"], #contact form input[type="email"], #contact form input[type="password"], #contact form input[type="file"], #contact form select, #contact form optgroup, #contact form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#contact form input[type="text"], #contact form input[type="tel"], #contact form input[type="url"], #contact form input[type="email"], #contact form input[type="password"], #contact form input[type="file"], #contact form select, #contact form optgroup {
-  height: calc(1.75rem + 6px);
-}
-
-#contact form input[type="file"] {
-  outline: 0;
-}
-
-#contact form textarea {
-  resize: vertical;
-}
-
-#contact form [type="button"], #contact form [type="reset"], #contact form [type="submit"] {
-  display: inline-block;
-  padding: 0.375rem 6rem;
-  border: none;
-  background-color: #3399cc;
-  color: #ffffff;
-  text-decoration: none;
-  text-align: center;
-  outline: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-}
-
-#contact form [type="button"]:hover, #contact form [type="reset"]:hover, #contact form [type="submit"]:hover {
-  background-color: #2b82ad;
-  color: #ffffff;
-  text-decoration: none;
 }
 
 .pagination {

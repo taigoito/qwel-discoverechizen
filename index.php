@@ -22,6 +22,6 @@
         </div><!-- .secondary -->
         <?php } ?>
       </div>
-    </div>
+    </div><!-- .container -->
   </main><!-- main -->
 <?php get_footer(); ?>
