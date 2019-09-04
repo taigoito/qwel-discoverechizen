@@ -1,4 +1,4 @@
-    <div id="hero" style="background-image: url(<?php header_image(); ?>); color: #<?php header_textcolor(); ?>;">
+    <div id="hero" <?php if (get_header_image()) echo 'style="color: #' . header_textcolor(); '"'; ?>;">
       <div id="hero-content">
         <h1 id="site-title">
           <?php

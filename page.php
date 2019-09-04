@@ -8,7 +8,7 @@
       if (have_posts()) {
         while (have_posts()) {
           the_post();
-          get_template_part('template-parts/contents/page');
+          //get_template_part('template-parts/contents/page');
 
           $posts = get_children([
             'post_parent' => get_the_ID(),

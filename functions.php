@@ -29,20 +29,24 @@ function qwel_setup()
   // カスタムロゴ
   add_theme_support('custom-logo');
   
+  // カスタムメニュー
   register_nav_menus([
     'primary' => 'Primary Menu',
     'secondary' => 'Secondary Menu'
   ]);
 
+  // 固定ページの抜粋
+  add_post_type_support('page', 'excerpt');
+
   // メディアサイズ指定
-  update_option('thumbnail_size_w', 300);
-  update_option('thumbnail_size_h', 300);
-  update_option('medium_size_w', 450);
-  update_option('medium_size_h', 450);
+  update_option('thumbnail_size_w', 216);
+  update_option('thumbnail_size_h', 216);
+  update_option('medium_size_w', 432);
+  update_option('medium_size_h', 432);
   update_option('medium_large_size_w', 0);
   update_option('medium_large_size_h', 0);
-  update_option('large_size_w', 600);
-  update_option('large_size_h', 600);
+  update_option('large_size_w', 648);
+  update_option('large_size_h', 648);
 }
 add_action('after_setup_theme', 'qwel_setup');
 
@@ -505,7 +509,6 @@ function insert_pagination()
 
 function get_my_title()
 {
-  
   // WPオブジェクト取得
   $wp_obj = get_queried_object();
 
@@ -524,8 +527,8 @@ function get_my_title()
     else if ($month > 0) return $year . '年' . $month . '月の記事';
     else return $year . '年の記事';
   } else if (is_author()) {
-    // 投稿アーカイブ
-    return $wp_obj->display_name . ' の記事の記事';
+    // 投稿者アーカイブ
+    return $wp_obj->display_name . ' の記事';
   } else if (is_archive()) {
     // タームアーカイブ
     $term_name = $wp_obj->name;

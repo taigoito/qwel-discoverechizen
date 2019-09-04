@@ -17,7 +17,7 @@
     const preloader = new Preloader();
   </script>
 
-  <header id="<?php echo is_front_page() ? 'hero' : 'site-header'; ?>">
+  <header id="<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?>">
     <?php
     if (is_front_page()) {
       get_template_part('template-parts/header/hero');
@@ -25,7 +25,7 @@
       get_template_part('template-parts/header/navigation');
     }
     ?>
-  </header><!-- #<?php echo is_front_page() ? 'hero' : 'site-header'; ?> -->
+  </header><!-- #<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?> -->
   <?php
   if (is_front_page()) {
     get_template_part('template-parts/header/navigation');

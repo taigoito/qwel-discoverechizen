@@ -1,4 +1,4 @@
-      <div class="page-sec row">
+      <section class="page-sec">
         <div class="primary-col">
           <?php the_content(); ?>
         </div>
@@ -9,4 +9,4 @@
           </div>
         </div>
         <?php } ?>
-      </div>
+      </section>

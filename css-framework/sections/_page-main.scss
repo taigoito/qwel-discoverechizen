@@ -1,31 +1,32 @@
 // Page main
 
 .page-sec {
+  @include row();
   margin: 6rem 0;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 
   .primary-col, .secondary-col {
     @include col("lg", 6);
   }
 
-  &:nth-child(odd) {
-    .primary-col {
-      order: 2;
-    }
-
-    .secondary-col {
-      order: 1;
-    }
+  .primary-col {
+    order: 2;
   }
 
-  &:nth-child(even) {
-    .primary-col {
-      order: 1;
-    }
+  .secondary-col {
+    order: 1;
+    text-align: center;
+  }
 
-    .secondary-col {
-      order: 2;
+  @media (min-width: breakpoint("lg")) {
+    &:nth-child(even) {
+      .primary-col {
+        order: 1;
+      }
+
+      .secondary-col {
+        order: 2;
+      }
     }
   }
 }
