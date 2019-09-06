@@ -2,9 +2,13 @@
 
 #hero {
   @include cover-unit();
-  @include background("dark");
 }
 
 #hero-content {
   @include cover-section();
+}
+
+#cover-image {
+  @include cover-image();
+  @include background("light");
 }
