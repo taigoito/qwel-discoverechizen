@@ -32,8 +32,5 @@ slider.init();
 const photoGallery = new PhotoGallery();
 photoGallery.init();
 
-// Preloader load
-window.onload = preloader.load;
-
 // Icons init
 renderEvilIcons();
