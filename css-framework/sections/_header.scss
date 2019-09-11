@@ -2,7 +2,6 @@
 
 #hero {
   @include cover-unit();
-  @include background("dark");
 }
 
 #hero-content {
@@ -23,6 +22,7 @@
   font-size: 2rem;
 }
 
-#cover-image {
-  @include cover-image(none, blur(4px));
+#cover-image { 
+  @include cover-image();
+  @include background("light");
 }

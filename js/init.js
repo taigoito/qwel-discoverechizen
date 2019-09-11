@@ -40,8 +40,5 @@ if (document.body.id === 'works') {
   });
 }
 
-// Preloader load
-window.onload = preloader.load;
-
 // Icons init
 renderEvilIcons();

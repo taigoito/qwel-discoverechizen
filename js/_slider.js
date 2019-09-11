@@ -138,9 +138,9 @@ export default class Slider {
     const h1 = sliderTop + sliderHeight / 2;
     const h2 = window.innerHeight / 2;
     const delta = this._delta;
-    if ((h1 < h2 + 240 && delta < 60) || (h1 > h2 - 240 && delta > 60)) {
-      if (delta < 60 && !this.isAnimated) this.move(-1);
-      if (delta > 60 && !this.isAnimated) this.move(1);
+    if ((h1 < h2 + 240 && delta < 0) || (h1 > h2 - 240 && delta > 0)) {
+      if (delta < 0 && !this.isAnimated) this.move(-1);
+      if (delta > 0 && !this.isAnimated) this.move(1);
     }
   }
 
@@ -190,7 +190,7 @@ export default class Slider {
     this._flickDistance = this._stop - this._start;
     this._duration = duration;
     this._timeStart = false;
-    window.requestAnimationFrame(this._loop.bind(this));
+    this._loop(performance.now());
   }
 
   _readyMove(size, init = false) {
