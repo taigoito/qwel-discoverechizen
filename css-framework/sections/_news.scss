@@ -61,7 +61,7 @@
 
     a {
       @include button("sm", "light");
-      font-size: .875rem;
+      font-size: $small-font-size;
       margin: .5rem 0;
     }
   }

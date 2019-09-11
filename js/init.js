@@ -21,7 +21,11 @@ slidebar.init();
 if (document.body.id === 'index') {
   // Slider init
   const slider = new Slider({
-    hasCaption: true
+    hasDraggingHandler: true,
+    hasWheelHandler: true,
+    hasFade: true,
+    hasCaption: true,
+    autoPlay: 3000
   });
   slider.init();
 }
