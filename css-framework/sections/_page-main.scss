@@ -2,11 +2,13 @@
 
 .page-sec {
   @include row();
-  margin: 6rem 0;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   justify-content: space-around;
+  align-items: center;
 
   .primary-col, .secondary-col {
-    @include col("lg", 6);
+    @include col("lg", 5);
   }
 
   .primary-col {
@@ -30,4 +32,3 @@
     }
   }
 }
-

@@ -1,6 +1,6 @@
 /*
 Theme Name: Qwel
-Version: 1.0
+Version: 1.1
 Author: Taigo Ito
 Author URI: https://qwel.design/
 Description: This is a theme for someone artists or craftsmen. Please customize and use.
@@ -688,9 +688,13 @@ input, button, select, optgroup, textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 6rem 0;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page-sec .primary-col, .page-sec .secondary-col {
@@ -703,9 +707,9 @@ input, button, select, optgroup, textarea {
 @media (min-width: 1024px) {
   .page-sec .primary-col, .page-sec .secondary-col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
+    max-width: 41.66667%;
   }
 }
 
