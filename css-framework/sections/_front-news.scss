@@ -9,7 +9,11 @@
     @include col("sm", "auto");
 
     img {
-      width: 9rem;
+      width: 6rem;
+
+      @media (min-width: $root-font-size-breakpoint) {
+        width: 9rem;
+      }
 
       @media (min-width: breakpoint("lg")) {
         width: 12rem;
@@ -42,16 +46,20 @@
 
   .news-intro-heading {
     display: inline-block;
-    margin: .75rem 0;
+    margin: 0;
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
-    font-size: 1.5rem;
-    line-height: 1;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     vertical-align: bottom;
+
+    @media (min-width: $root-font-size-breakpoint) {
+      margin: .75rem 0;
+    }
   }
 
   .news-intro-terms {
-    display: inline-block;
+    display: none; // Visible "sm"
     @include list-unstyled();
     vertical-align: bottom;
 
@@ -62,7 +70,15 @@
     a {
       @include button("sm", "light");
       font-size: $small-font-size;
-      margin: .5rem 0;
+      margin: 0;
+    }
+
+    @media (min-width: $root-font-size-breakpoint) {
+      display: inline-block;
+
+      a {
+        margin: .5rem 0;
+      }
     }
   }
 
