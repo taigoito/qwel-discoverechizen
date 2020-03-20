@@ -242,35 +242,41 @@ function insert_works_fields()
 
 function save_works_fields($postID)
 {
-  if (!empty($_POST['material'])) {
-    update_post_meta($postID, 'material', $_POST['material']);
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+    return $postID;
+  } else if (isset($_POST['action']) && $_POST['action'] == 'inline-save') {
+    return $postID;
   } else {
-    delete_post_meta($postID, 'material');
-  }
-  if (!empty($_POST['finish'])) {
-    update_post_meta($postID, 'finish', $_POST['finish']);
-  } else {
-    delete_post_meta($postID, 'finish');
-  }
-  if (!empty($_POST['size'])) {
-    update_post_meta($postID, 'size', $_POST['size']);
-  } else {
-    delete_post_meta($postID, 'size');
-  }
-  if (!empty($_POST['location'])) {
-    update_post_meta($postID, 'location', $_POST['location']);
-  } else {
-    delete_post_meta($postID, 'location');
-  }
-  if (!empty($_POST['duration'])) {
-    update_post_meta($postID, 'duration', $_POST['duration']);
-  } else {
-    delete_post_meta($postID, 'duration');
-  }
-  if (!empty($_POST['price'])) {
-    update_post_meta($postID, 'price', $_POST['price']);
-  } else {
-    delete_post_meta($postID, 'price');
+    if (!empty($_POST['material'])) {
+      update_post_meta($postID, 'material', $_POST['material']);
+    } else {
+      delete_post_meta($postID, 'material');
+    }
+    if (!empty($_POST['finish'])) {
+      update_post_meta($postID, 'finish', $_POST['finish']);
+    } else {
+      delete_post_meta($postID, 'finish');
+    }
+    if (!empty($_POST['size'])) {
+      update_post_meta($postID, 'size', $_POST['size']);
+    } else {
+      delete_post_meta($postID, 'size');
+    }
+    if (!empty($_POST['location'])) {
+      update_post_meta($postID, 'location', $_POST['location']);
+    } else {
+      delete_post_meta($postID, 'location');
+    }
+    if (!empty($_POST['duration'])) {
+      update_post_meta($postID, 'duration', $_POST['duration']);
+    } else {
+      delete_post_meta($postID, 'duration');
+    }
+    if (!empty($_POST['price'])) {
+      update_post_meta($postID, 'price', $_POST['price']);
+    } else {
+      delete_post_meta($postID, 'price');
+    }
   }
 }
 add_action('save_post', 'save_works_fields');
@@ -294,7 +300,7 @@ function insert_breadcrumb()
 
     if (is_single()) {
       // 個別投稿ページ
-      $post_id = $wp_obj->ID;
+      $postID = $wp_obj->ID;
       $post_type = $wp_obj->post_type;
       $post_title = $wp_obj->post_title;
 
@@ -320,7 +326,7 @@ function insert_breadcrumb()
 
     // タクソノミーが紐づいていれば表示
     if ($the_tax != "") {
-      $terms = get_the_terms($post_id, $the_tax); // 投稿に紐づく全タームを取得
+      $terms = get_the_terms($postID, $the_tax); // 投稿に紐づく全タームを取得
 
       if (!empty($terms)) {
         $term = $terms[0];
