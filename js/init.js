@@ -16,7 +16,9 @@ const scrolling = new Scrolling();
 scrolling.init();
 
 // Slidebar init
-const slidebar = new Slidebar();
+const slidebar = new Slidebar({
+  root: `${location.protocol}//${location.hostname}/sample/`
+});
 slidebar.init();
 
 // Slider init

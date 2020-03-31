@@ -2,6 +2,7 @@
 
 export default class Slidebar {
   constructor(options = {}) {
+    this._root = options.root || `${location.protocol}//${location.hostname}`;
     this._bar = document.querySelector('#slidebar');
     this._menu = document.querySelector('#slidemenu');
     this._close = document.querySelector('#slidebar-close');
@@ -15,8 +16,21 @@ export default class Slidebar {
     this._menu.classList.add('collapse');
     this._close.classList.add('collapse');
     this._overlay.classList.add('collapse');
+    this._rewriteLinks();
     this._renderTemplate();
     this._handleEvents();
+  }
+
+  _rewriteLinks() {
+    const links = this._nav.querySelectorAll('a:not([data-toggle="slidebar"])');
+    links.forEach((link) => {
+      const href = link.getAttribute('href');
+      const regexp = /#[\w-]+/gi;
+      if (href && regexp.test(href)) {
+        const result = `${this._root}#${href.split('#').pop()}`;
+        link.setAttribute('href', result); 
+        }
+    });
   }
 
   _renderTemplate() {
