@@ -7,7 +7,12 @@ class Preloader {
     this._preloader.classList.add('show');
     this._preloader.style.backgroundColor = options.backgroundColor || '';
     document.body.appendChild(this._preloader);
-    if (options.spinner !== false) {
+    if (options.img) {
+      const img = new Image();
+      img.id = 'spinner';
+      img.src = options.img;
+      this._preloader.appendChild(img);
+    } else if (options.spinner !== false) {
       this._spinner = new Spinner(spinnerOptions);
       this._spinner.spin();
       this._preloader.appendChild(this._spinner.spinner);

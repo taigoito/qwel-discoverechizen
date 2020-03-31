@@ -953,7 +953,7 @@ input, button, select, optgroup, textarea {
 
 #works .work-info {
   width: 100%;
-  line-height: 2.4;
+  line-height: 1.15;
 }
 
 #works .work-info tr {
@@ -965,7 +965,7 @@ input, button, select, optgroup, textarea {
 }
 
 #works .work-info th, #works .work-info td {
-  padding: 0;
+  padding: .625rem 0;
 }
 
 #works .work-title, #works .work-info, #works .work-content {
@@ -1230,6 +1230,27 @@ h6 {
 h3, h4, h5, h6 {
   margin-top: 1rem;
   margin-bottom: .5rem;
+}
+
+p {
+  margin-bottom: .5rem;
+}
+
+blockquote {
+  margin-left: 1rem;
+  padding-left: .75rem;
+  border-left: 0.25rem solid #262626;
+  font-style: italic;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  color: #525252;
+  font-size: 87.5%;
 }
 
 .img-clip {

@@ -17,8 +17,11 @@ export default class Scrolling {
       const href = event.srcElement.getAttribute('href');
       const regexp = /#[\w-]+/gi;
       if (href && regexp.test(href)) {
-        event.preventDefault();
-        this.scroll(href);
+        const hash = href.split('#').pop();
+        if (document.getElementById(hash) != null) {
+          event.preventDefault();
+          this.scroll(`#${hash}`);
+        }
       }
     });
   }
