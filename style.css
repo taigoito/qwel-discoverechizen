@@ -606,6 +606,61 @@ input, button, select, optgroup, textarea {
           justify-content: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+h6 {
+  font-weight: bolder;
+}
+
+h3, h4, h5, h6 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+p {
+  margin-bottom: .5rem;
+}
+
+blockquote {
+  margin-left: 1rem;
+  padding-left: .75rem;
+  border-left: 0.25rem solid #262626;
+  font-style: italic;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  color: #525252;
+  font-size: 87.5%;
+}
+
 .icon {
   position: relative;
   display: inline-block;
