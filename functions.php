@@ -39,14 +39,14 @@ function qwel_setup()
   add_post_type_support('page', 'excerpt');
 
   // メディアサイズ指定
-  update_option('thumbnail_size_w', 216);
-  update_option('thumbnail_size_h', 216);
-  update_option('medium_size_w', 432);
-  update_option('medium_size_h', 432);
+  update_option('thumbnail_size_w', 256);
+  update_option('thumbnail_size_h', 256);
+  update_option('medium_size_w', 384);
+  update_option('medium_size_h', 384);
   update_option('medium_large_size_w', 0);
   update_option('medium_large_size_h', 0);
-  update_option('large_size_w', 648);
-  update_option('large_size_h', 648);
+  update_option('large_size_w', 1024);
+  update_option('large_size_h', 1024);
 }
 add_action('after_setup_theme', 'qwel_setup');
 
@@ -609,7 +609,7 @@ function no_image($size = 'sm')
 
 function register_excerpt_length()
 {
-  return 100;
+  return 64;
 }
 add_filter('excerpt_length', 'register_excerpt_length', 999);
 

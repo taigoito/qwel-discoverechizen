@@ -24,7 +24,7 @@
             </ul>
             <div class="news-intro-text">
               <p>
-                <?php echo mb_substr(get_the_excerpt(), 0, 75); ?> <a href="<?php the_permalink(); ?>">[詳細]</a>
+                <?php the_excerpt(); ?> <a href="<?php the_permalink(); ?>">[詳細]</a>
               </p>
             </div>
           </div>
