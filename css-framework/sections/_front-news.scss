@@ -1,94 +1,30 @@
 // Front - News
 
 #front-news {
+  .container>.row {
+    justify-content: space-around;
+  }
+
   .news {
-    margin-bottom: 1rem;
+    @include col("md", 5);
   }
 
   .featured-image {
-    @include col("sm", "auto");
-
-    img {
-      width: 6rem;
-
-      @media (min-width: $root-font-size-breakpoint) {
-        width: 9rem;
-      }
-
-      @media (min-width: breakpoint("lg")) {
-        width: 12rem;
+    @supports (object-fit: cover) {
+      img {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
       }
     }
-
-    a:hover img {
-      opacity: .7;
-    }
   }
 
-  .news-intro {
-    @include col("sm", 0);
-  }
-
-  .news-intro-inner {
-    height: 100%;
-    padding: .5rem 1rem;
-    background-color: #ffffff;
-    text-align: left;
-
-    @media (min-width: breakpoint("lg")) {
-      padding: 1rem 2rem;
-    }
-  }
-
-  .news-intro-date {
-    line-height: 2rem;
-  }
-
-  .news-intro-heading {
-    display: inline-block;
-    margin: 0;
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
+  .news-intro-title {
     font-size: 1.25rem;
-    line-height: 1.5rem;
-    vertical-align: bottom;
-
-    @media (min-width: $root-font-size-breakpoint) {
-      margin: .75rem 0;
-    }
-  }
-
-  .news-intro-terms {
-    display: none; // Visible "sm"
-    @include list-unstyled();
-    vertical-align: bottom;
-
-    li {
-      display: inline-block;
-    }
-
-    a {
-      @include button("sm", "light");
-      font-size: $small-font-size;
-      margin: 0;
-    }
-
-    @media (min-width: $root-font-size-breakpoint) {
-      display: inline-block;
-
-      a {
-        margin: .5rem 0;
-      }
-    }
-  }
-
-  .news-intro-text {
-    display: none; // Visible "lg"
-    padding: .75rem 0;
     text-align: justify;
+  }
 
-    @media (min-width: breakpoint("lg")) {
-      display: block;
-    }
+  .news-intro-description {
+    text-align: justify;
   }
 }

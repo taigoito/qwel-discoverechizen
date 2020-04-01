@@ -1,141 +1,36 @@
 // Navigation
 
-#header-navigation {
-  @include sticky-top();
-  background: rgba($body-bg, .7);
-}
+#brand-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: .75rem;
 
-#header-navigation-bar {
-  display: flex;
-  padding: .5rem 0;
-  justify-content: space-between;
-  align-items: center;
-
-  @media(min-width: breakpoint("lg")) {
-    justify-content: center;
-  }
-  
-  .navigation-menu {
-    display: none;
-    margin: 0;
-    @include list-unstyled;
-
-    @media(min-width: breakpoint("lg")) {
-      display: inline-block;
-    }
+  img {
+    width: 13.5rem; // height: 4.5rem
   }
 
-  .navigation-brand,
-  .navigation-menu li {
-    display: inline-block;
-    height: 3rem;
-    margin: 0 1rem;
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
-    font-size: 1.25rem;
-    line-height: 3rem;
-    vertical-align: middle;
-    text-transform: capitalize;
-
-    a {
-      color: $body-color;
-      text-decoration: none;
-
-      &:hover {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
-      }
-    }
-
-    img {
-      width: auto;
-      height: 2rem;
-      margin: .5rem;
-    }
+  @media (min-width: breakpoint("lg")) {
+    display: block;
   }
 }
 
 #navigation-toggler {
-  display: inline-block;
-  height: 3rem;
-  margin: 0 .5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: block;
+  margin: .75rem;
   padding: 0;
   border: 0;
   background-color: transparent;
-  color: $body-color;
   line-height: 1;
   outline: 0;
   cursor: pointer;
 
-  &:hover {
-    color: $link-hover-color;
-  }
-
-  @media(min-width: breakpoint("lg")) {
-    display: none;
-  }
-}
-
-#footer-navigation {
-  margin-bottom: 3rem;
-
-  .navigation-brand {
-    height: 3rem;
-    padding-left: 1rem;
-    line-height: 3rem;
-
-    img {
-      margin-left: -1rem;
-    }
-  }
-
-  .navigation-menu {
-    margin: 0;
-    padding-left: 1rem;
-    list-style: none;
-
-    li {
-      height: 2rem;
-      line-height: 2rem;
-    }
-  }
-
-  .navigation-brand,
-  .navigation-menu li {
-    vertical-align: middle;
-    text-transform: capitalize;
-
-    a {
-      color: #ffffff;
-
-      &:hover {
-        color: $link-hover-color;
-      }
-    }
-  
-    img {
-      width: auto;
-      height: 2rem;
-    }
-  }
-
-  @media(min-width: breakpoint("lg")) {
-    #footer-navigation-bar > div,
-    .navigation-menu {
-      display: inline-block;
-      padding: 0;
-    }
-
-    .navigation-brand,
-    .navigation-menu li {
-      display: inline-block;
-      height: 3rem;
-      margin: 0 1rem;
-      line-height: 3rem;
-
-      img {
-        margin: .5rem;
-      } 
-    }
+  img {
+    width: 4.5rem;
   }
 }

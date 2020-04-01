@@ -1,0 +1,106 @@
+// Front - Blog
+
+#front-blog,
+#archive-blog {
+  .blog-title {
+    color: #ffffff;
+  }
+
+  .blog {
+    @include col("md", 10);
+    margin-bottom: 1rem;
+  }
+
+  .featured-image {
+    @include col("sm", "auto");
+    margin-bottom: 0;
+
+    @supports (object-fit: cover) {
+      img {
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+
+        @media (min-width: $root-font-size-breakpoint) {
+          width: 9rem;
+          height: 9rem;
+        }
+
+        @media (min-width: breakpoint("lg")) {
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+    }
+
+    a:hover img {
+      opacity: .7;
+    }
+  }
+
+  .blog-intro {
+    @include col("sm", 0);
+  }
+
+  .blog-intro-inner {
+    height: 100%;
+    padding: .5rem 1rem;
+    text-align: left;
+
+    @media (min-width: breakpoint("lg")) {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .blog-intro-date {
+    line-height: 2rem;
+  }
+
+  .blog-intro-heading {
+    display: inline-block;
+    margin: 0;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    vertical-align: bottom;
+
+    @media (min-width: $root-font-size-breakpoint) {
+      margin: .5rem 0;
+    }
+  }
+
+  .blog-intro-terms {
+    display: none; // Visible "sm"
+    @include list-unstyled();
+    vertical-align: bottom;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      @include button("sm", "light");
+      font-size: $small-font-size;
+      margin: 0;
+    }
+
+    @media (min-width: $root-font-size-breakpoint) {
+      display: inline-block;
+
+      a {
+        margin: .5rem;
+      }
+    }
+  }
+
+  .blog-intro-text {
+    display: none; // Visible "lg"
+    padding: .75rem 0 .25rem;
+    text-align: justify;
+
+    @media (min-width: breakpoint("lg")) {
+      display: block;
+    }
+  }
+}

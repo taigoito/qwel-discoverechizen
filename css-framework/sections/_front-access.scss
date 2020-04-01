@@ -1,5 +1,29 @@
 // Front - Access
 
 #front-access {
+  .container {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .row {
+    @include row();
+    justify-content: center;
+
+    .wp-block-group:nth-child(1) {
+      @include col("md", 10);
+      @include col("lg", 6);
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-group:nth-child(2) {
+      @include col("md", 10);
+      @include col("lg", 4);
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.iframe-full-width {
   @include embed-responsive();
 }

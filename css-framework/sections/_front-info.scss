@@ -1,0 +1,47 @@
+// Front - Info
+
+#front-info {
+  .info {
+    @include col("lg", 6);
+    margin-bottom: 3rem;
+  }
+}
+
+#front-info,
+#archive-info {
+  .feature-image {
+    @include col("md", 6);
+    
+    img {
+      width: 18rem;
+    }
+  }
+}
+
+.info-intro {
+  @include col("md", 6);
+  text-align: left;
+
+  h3 {
+    width: 15rem;
+  }
+
+  p, a {
+    padding-left: .5rem;
+  }
+}
+
+@media (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+  .info {
+    &:nth-child(even) {
+      .info-intro {
+        order: 2;
+        text-align: right;
+      }
+
+      .info-image {
+        order: 1;
+      }
+    }
+  }
+}

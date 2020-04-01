@@ -7,7 +7,7 @@
   justify-content: center;
 
   @media(min-width: map-get($grid-breakpoints, "lg")) {
-    height: 24rem; // Twice the item height
+    height: 36rem; // 3 items height
     overflow: hidden;   
   }
 
@@ -25,8 +25,12 @@
     }
 
     @media(min-width: map-get($grid-breakpoints, "lg")) {
-      width: 12rem;
-      height: 12rem;  
+      width: 15rem;
+      height: 15rem;  
+    }
+
+    img {
+      width: 100%;
     }
   }
 }

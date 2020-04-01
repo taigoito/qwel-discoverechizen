@@ -1,9 +1,9 @@
 /*
-Theme Name: Qwel
-Version: 1.1
+Theme Name: Discover Echizen Beta
+Version: 2.0
 Author: Taigo Ito
 Author URI: https://qwel.design/
-Description: This is a theme for someone artists or craftsmen. Please customize and use.
+Description: This is a theme for Discover Echizen.
 */
 
  @charset "utf-8";
@@ -27,15 +27,21 @@ Description: This is a theme for someone artists or craftsmen. Please customize 
  @import "css-framework/sections/breadcrumb";
  @import "css-framework/sections/category";
  @import "css-framework/sections/front-main";
- @import "css-framework/sections/front-works";
- @import "css-framework/sections/front-about";
  @import "css-framework/sections/front-news";
+ @import "css-framework/sections/front-about";
+ @import "css-framework/sections/front-discover";
+ @import "css-framework/sections/front-info";
+ @import "css-framework/sections/front-plan";
+ @import "css-framework/sections/front-blog";
  @import "css-framework/sections/front-gallery";
+ @import "css-framework/sections/front-movie";
  @import "css-framework/sections/front-access";
  @import "css-framework/sections/front-contact";
- @import "css-framework/sections/page-main";
  @import "css-framework/sections/post-main";
- @import "css-framework/sections/works-main";
+ @import "css-framework/sections/discover-main";
+ @import "css-framework/sections/info-main";
+ @import "css-framework/sections/plan-main";
+ @import "css-framework/sections/booking";
  @import "css-framework/sections/pagination";
  @import "css-framework/sections/widget";
  @import "css-framework/sections/footer";
@@ -46,3 +52,4 @@ Description: This is a theme for someone artists or craftsmen. Please customize 
  @import "css-framework/components/preloader";
  @import "css-framework/components/slidebar";
  @import "css-framework/components/slider";
+ @import "css-framework/components/wave";

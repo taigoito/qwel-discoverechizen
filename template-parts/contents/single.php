@@ -10,21 +10,44 @@
           <?php } ?>
         </header>
         <div class="post-content">
-          <?php if (is_singular() && has_post_thumbnail()) { ?>
+          <?php if (is_singular() && !is_singular('plan') && has_post_thumbnail()) { ?>
           <div class="featured-image">
-            <?php the_post_thumbnail('large'); ?>
+            <?php the_post_thumbnail('full'); ?>
           </div>
-          <?php } else if (has_post_thumbnail()) { ?>
+          <?php } else if (!is_singular('plan') && has_post_thumbnail()) { ?>
           <div class="featured-image">
             <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail('large'); ?>
+              <?php the_post_thumbnail('full'); ?>
+            </a>
+          </div>
+          <?php } else if (is_singular() && !is_singular('plan')) { ?>
+          <div class="featured-image">
+            <?php no_image('lg'); ?>
+          </div>
+          <?php } else if (!is_singular('plan')) { ?>
+          <div class="featured-image">
+            <a href="<?php the_permalink(); ?>">
+              <?php no_image('lg'); ?>
             </a>
           </div>
           <?php } ?>
-          <?php the_content(); ?>
+          <div class="post-excerpt">
+            <?php the_excerpt(); ?>
+          </div>
+          <?php if (is_single()) { ?>
+            <?php the_content(); ?>
+          <?php } ?>
+          <?php if (is_singular('umitan') || is_singular('info')) { ?>
+            <?php get_template_part('template-parts/contents/information'); ?>
+          <?php } ?>
+          <?php if (is_singular('plan')) { ?>
+            <?php get_template_part('template-parts/contents/member'); ?>
+          <?php } ?>
         </div>
-        <aside class="post-navigation">
-          <h2 class="navigation-title screen-reader-text">投稿ナビゲーション</h2>
-          <?php if (is_singular('post')) insert_pagination(); ?>
-        </aside>
+        <?php if (is_singular('post')) { ?>
+          <aside class="post-navigation">
+            <h2 class="navigation-title screen-reader-text">投稿ナビゲーション</h2>
+            <?php insert_pagination(); ?>
+          </aside>
+        <?php } ?>
       </article>

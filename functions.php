@@ -6,7 +6,7 @@ Author URI: https://qwel.design/
 
 // Setup
 
-function qwel_setup()
+function discoverechizen_setup()
 {
   // アイキャッチ画像をサポート
   add_theme_support('post-thumbnails');
@@ -31,8 +31,7 @@ function qwel_setup()
   
   // カスタムメニュー
   register_nav_menus([
-    'primary' => 'Primary Menu',
-    'secondary' => 'Secondary Menu'
+    'primary' => 'Primary Menu'
   ]);
 
   // 固定ページの抜粋
@@ -48,12 +47,12 @@ function qwel_setup()
   update_option('large_size_w', 1024);
   update_option('large_size_h', 1024);
 }
-add_action('after_setup_theme', 'qwel_setup');
+add_action('after_setup_theme', 'discoverechizen_setup');
 
 
 // Widgets
 
-function qwel_widgets_init()
+function discoverechizen_widgets_init()
 {
   register_sidebar([
     'name' => 'Blog Sidebar',
@@ -64,24 +63,24 @@ function qwel_widgets_init()
     'after_title' => '</h2>'
   ]);
 }
-add_action('widgets_init', 'qwel_widgets_init');
+add_action('widgets_init', 'discoverechizen_widgets_init');
 
 
 // Scripts
 
-function qwel_scripts()
+function discoverechizen_scripts()
 {
-  wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:300|Noto+Serif+JP:300&display=swap', [], null); 
+  wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap', [], null); 
   wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], null);
 }
-add_action('wp_enqueue_scripts', 'qwel_scripts');
+add_action('wp_enqueue_scripts', 'discoverechizen_scripts');
 
 
 // Post
 // デフォルト投稿タイプ呼称・アイコン変更
 
-$post_name = '記事';
-$post_icon = 'dashicons-star-filled';
+$post_name = 'ブログ';
+//$post_icon = 'dashicons-star-filled';
 
 function change_menulabel()
 {
@@ -97,49 +96,45 @@ function change_objectlabel()
 {
   global $wp_post_types;
   global $post_name;
-  global $post_icon;
+  //global $post_icon;
   $wp_post_types['post']->label = $post_name;
   $wp_post_types['post']->labels->name = $post_name;
   $wp_post_types['post']->labels->singular_name = $post_name;
-  $wp_post_types['post']->menu_icon = $post_icon;
+  //$wp_post_types['post']->menu_icon = $post_icon;
 }
 add_action('init', 'change_objectlabel');
 
 
-// Works
+// Umitan
 
-$works_slug = 'works';
-$works_name = '作品';
-$works_icon = 'dashicons-hammer';
+$discover_slug = 'umitan';
+$discover_name = 'うみたん';
+$discover_icon = 'dashicons-star-filled';
 
-$works_cat_slug = 'product';
-$works_cat_name = '品名';
-$works_tag_slug = 'motif';
-$works_tag_name = 'モチーフ';
+$discover_cat_slug = 'umitan-cat';
+$discover_cat_name = 'シーズン';
 
-function register_option_works()
+function register_option_discover()
 {
-  global $works_slug;
-  global $works_name;
-  global $works_icon;
+  global $discover_slug;
+  global $discover_name;
+  global $discover_icon;
 
-  global $works_cat_slug;
-  global $works_cat_name;
-  global $works_tag_slug;
-  global $works_tag_name;
+  global $discover_cat_slug;
+  global $discover_cat_name;
 
-  register_post_type($works_slug, [
+  register_post_type($discover_slug, [
     'labels' => [
-      'name' => $works_name,
-      'all_items' => $works_name . '一覧'
+      'name' => $discover_name,
+      'all_items' => $discover_name . '一覧'
     ],
     'public' => true,
     'menu_position' => 6,
-    'menu_icon' => $works_icon,
-    'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
+    'menu_icon' => $discover_icon,
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
     'has_archive' => true,
     'rewrite' => [
-      'slug' => $works_slug,
+      'slug' => $discover_slug,
       'with_front' => false,
       'hierarchical' => true
     ],
@@ -148,33 +143,15 @@ function register_option_works()
   ]);
 
   register_taxonomy(
-    $works_cat_slug,
-    $works_slug,
+    $discover_cat_slug,
+    $discover_slug,
     [
-      'label' => $works_cat_name,
+      'label' => $discover_cat_name,
       'public' => true,
       'show_admin_column' => true,
       'hierarchical' => true,
       'rewrite' => [
-        'slug' => $works_cat_slug,
-        'with_front' => false,
-        'hierarchical' => true
-      ],
-      'query_var' => true,
-      'show_in_rest' => true
-    ]
-  );
-
-  register_taxonomy(
-    $works_tag_slug,
-    $works_slug,
-    [
-      'label' => $works_tag_name,
-      'public' => true,
-      'show_admin_column' => true,
-      'hierarchical' => false,
-      'rewrite' => [
-        'slug' => $works_tag_slug,
+        'slug' => $discover_cat_slug,
         'with_front' => false,
         'hierarchical' => true
       ],
@@ -183,94 +160,77 @@ function register_option_works()
     ]
   );
 }
-add_action('init', 'register_option_works');
+add_action('init', 'register_option_discover');
 
-function insert_works_cat()
+function add_discover_fields()
 {
-  global $works_slug;
-  global $works_name;
-  global $works_cat_slug;
-  echo '<ul class="list-' . $works_cat_slug . '">';
-  echo '<li>' .
-    '<a href="' . get_post_type_archive_link($works_slug) . '">' .
-    $works_name . '一覧' . '<span>-all-</span>' .
-    '</a>' .
-    '</li>';
-  $terms = get_terms($works_cat_slug, ['orderby' => 'id']);
-  foreach ($terms as $term) {
-    echo '<li>' .
-      '<a href="' . get_term_link($term->term_id, $works_cat_slug) . '">' .
-      $term->name . '<span>-' . $term->slug . '-</span>' .
-      '</a>' .
-      '</li>';
-  }
-  echo '</ul>';
+  global $discover_name;
+  add_meta_box('umitan_setting', 'インフォメーション', 'insert_discover_fields', 'umitan', 'normal');
 }
+add_action('admin_menu', 'add_discover_fields');
 
-function insert_works_tag()
-{
-  global $works_tag_slug;
-  echo '<ul class="list-' . $works_tag_slug . '">';
-  $terms = get_terms($works_tag_slug, ['orderby' => 'name']);
-  foreach ($terms as $term) {
-    echo '<li>' .
-      '<a href="' . get_term_link($term->term_id, $works_tag_slug) . '">' .
-      $term->name .
-      '</a>' .
-      '</li>';
-  }
-  echo '</ul>';
-}
-
-function add_works_fields()
-{
-  global $works_name;
-  add_meta_box('works_setting', $works_name . '詳細', 'insert_works_fields', 'works', 'normal');
-}
-add_action('admin_menu', 'add_works_fields');
-
-function insert_works_fields()
+function insert_discover_fields()
 {
   global $post;
-  echo '素材：<input type="text" name="material" value="' . get_post_meta($post->ID, 'material', true) . '" size="50"><br>';
-  echo '仕上：<input type="text" name="finish" value="' . get_post_meta($post->ID, 'finish', true) . '" size="50"><br>';
-  echo '寸法：<input type="text" name="size" value="' . get_post_meta($post->ID, 'size', true) . '" size="50"><br>';
-  echo '所在地：<input type="text" name="location" value="' . get_post_meta($post->ID, 'location', true) . '" size="50"><br>';
-  echo '参考納期：<input type="text" name="duration" value="' . get_post_meta($post->ID, 'duration', true) . '" size="50"><br>';
-  echo '参考価格：<input type="text" name="price" value="' . get_post_meta($post->ID, 'price', true) . '" size="50"><br>';
+  echo '<table>';
+  echo '<tr><th>開催日：</th><td><input type="text" name="eventdate" value="' . get_post_meta($post->ID, 'eventdate', true) . '" size="50"></td></tr>';
+  echo '<tr><th>体験名：</th><td><input type="text" name="item" value="' . get_post_meta($post->ID, 'item', true) . '" size="50"></td></tr>';
+  echo '<tr><th>事業所：</th><td><input type="text" name="pic" value="' . get_post_meta($post->ID, 'pic', true) . '" size="50"></td></tr>';
+  echo '<tr><th>所在地：</th><td><input type="text" name="address" value="' . get_post_meta($post->ID, 'address', true) . '" size="50"></td></tr>';
+  echo '<tr><th>連絡先：</th><td><input type="text" name="contact" value="' . get_post_meta($post->ID, 'contact', true) . '" size="50"></td></tr>';
+  echo '<tr><th>URL：</th><td><input type="text" name="webpage" value="' . get_post_meta($post->ID, 'webpage', true) . '" size="50"></td></tr>';
+  echo '<tr><th>営業期間：</th><td><input type="text" name="duration" value="' . get_post_meta($post->ID, 'duration', true) . '" size="50"></td></tr>';
+  echo '<tr><th>営業時間：</th><td><input type="text" name="hours" value="' . get_post_meta($post->ID, 'hours', true) . '" size="50"></td></tr>';
+  echo '<tr><th>料金：</th><td><input type="text" name="price" value="' . get_post_meta($post->ID, 'price', true) . '" size="50"></td></tr>';
+  echo '</table>';
 }
 
-function save_works_fields($postID)
+function save_discover_fields($postID)
 {
   if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-    return $postID;
+    return $post_id;
   } else if (isset($_POST['action']) && $_POST['action'] == 'inline-save') {
-    return $postID;
+    return $post_id;
   } else {
-    if (!empty($_POST['material'])) {
-      update_post_meta($postID, 'material', $_POST['material']);
+    if (!empty($_POST['eventdate'])) {
+      update_post_meta($postID, 'eventdate', $_POST['eventdate']);
     } else {
-      delete_post_meta($postID, 'material');
+      delete_post_meta($postID, 'eventdate');
     }
-    if (!empty($_POST['finish'])) {
-      update_post_meta($postID, 'finish', $_POST['finish']);
+    if (!empty($_POST['item'])) {
+      update_post_meta($postID, 'item', $_POST['item']);
     } else {
-      delete_post_meta($postID, 'finish');
+      delete_post_meta($postID, 'item');
     }
-    if (!empty($_POST['size'])) {
-      update_post_meta($postID, 'size', $_POST['size']);
+    if (!empty($_POST['pic'])) {
+      update_post_meta($postID, 'pic', $_POST['pic']);
     } else {
-      delete_post_meta($postID, 'size');
+      delete_post_meta($postID, 'pic');
     }
-    if (!empty($_POST['location'])) {
-      update_post_meta($postID, 'location', $_POST['location']);
+    if (!empty($_POST['address'])) {
+      update_post_meta($postID, 'address', $_POST['address']);
     } else {
-      delete_post_meta($postID, 'location');
+      delete_post_meta($postID, 'address');
+    }
+    if (!empty($_POST['contact'])) {
+      update_post_meta($postID, 'contact', $_POST['contact']);
+    } else {
+      delete_post_meta($postID, 'contact');
+    }
+    if (!empty($_POST['webpage'])) {
+      update_post_meta($postID, 'webpage', $_POST['webpage']);
+    } else {
+      delete_post_meta($postID, 'webpage');
     }
     if (!empty($_POST['duration'])) {
       update_post_meta($postID, 'duration', $_POST['duration']);
     } else {
       delete_post_meta($postID, 'duration');
+    }
+    if (!empty($_POST['hours'])) {
+      update_post_meta($postID, 'hours', $_POST['hours']);
+    } else {
+      delete_post_meta($postID, 'hours');
     }
     if (!empty($_POST['price'])) {
       update_post_meta($postID, 'price', $_POST['price']);
@@ -279,7 +239,330 @@ function save_works_fields($postID)
     }
   }
 }
-add_action('save_post', 'save_works_fields');
+add_action('save_post', 'save_discover_fields');
+
+
+// Booking page
+
+$booking_slug = 'booking-page';
+$booking_name = '予約ページ';
+$booking_icon = 'dashicons-book-alt';
+
+function register_option_booking()
+{
+  global $booking_slug;
+  global $booking_name;
+  global $booking_icon;
+
+  global $booking_cat_slug;
+  global $booking_cat_name;
+
+  register_post_type($booking_slug, [
+    'labels' => [
+      'name' => $booking_name,
+      'all_items' => $booking_name . '一覧'
+    ],
+    'public' => true,
+    'menu_position' => 21,
+    'menu_icon' => $booking_icon,
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'has_archive' => true,
+    'rewrite' => [
+      'slug' => $booking_slug,
+      'with_front' => false,
+      'hierarchical' => true
+    ],
+    'query_var' => true,
+    'show_in_rest' => true
+  ]);
+}
+add_action('init', 'register_option_booking');
+
+
+// Info
+
+$info_slug = 'info';
+$info_name = '観光情報';
+$info_icon = 'dashicons-heart';
+
+$info_cat_slug = 'info-cat';
+$info_cat_name = '分類';
+
+function register_option_info()
+{
+  global $info_slug;
+  global $info_name;
+  global $info_icon;
+
+  global $info_cat_slug;
+  global $info_cat_name;
+
+  register_post_type($info_slug, [
+    'labels' => [
+      'name' => $info_name,
+      'all_items' => $info_name . '一覧'
+    ],
+    'public' => true,
+    'menu_position' => 7,
+    'menu_icon' => $info_icon,
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
+    'has_archive' => true,
+    'rewrite' => [
+      'slug' => $info_slug,
+      'with_front' => false,
+      'hierarchical' => true
+    ],
+    'query_var' => true,
+    'show_in_rest' => true
+  ]);
+
+  register_taxonomy(
+    $info_cat_slug,
+    $info_slug,
+    [
+      'label' => $info_cat_name,
+      'public' => true,
+      'show_admin_column' => true,
+      'hierarchical' => true,
+      'rewrite' => [
+        'slug' => $info_cat_slug,
+        'with_front' => false,
+        'hierarchical' => true
+      ],
+      'query_var' => true,
+      'show_in_rest' => true
+    ]
+  );
+}
+add_action('init', 'register_option_info');
+
+function add_info_fields()
+{
+  global $info_name;
+  add_meta_box('info_setting', 'インフォメーション', 'insert_info_fields', 'info', 'normal');
+}
+add_action('admin_menu', 'add_info_fields');
+
+function insert_info_fields()
+{
+  global $post;
+  echo '<table>';
+  echo '<tr><th>事業所：</th><td><input type="text" name="pic" value="' . get_post_meta($post->ID, 'pic', true) . '" size="50"></td></tr>';
+  echo '<tr><th>所在地：</th><td><input type="text" name="address" value="' . get_post_meta($post->ID, 'address', true) . '" size="50"></td></tr>';
+  echo '<tr><th>連絡先：</th><td><input type="text" name="contact" value="' . get_post_meta($post->ID, 'contact', true) . '" size="50"></td></tr>';
+  echo '<tr><th>URL：</th><td><input type="text" name="webpage" value="' . get_post_meta($post->ID, 'webpage', true) . '" size="50"></td></tr>';
+  echo '<tr><th>営業期間：</th><td><input type="text" name="duration" value="' . get_post_meta($post->ID, 'duration', true) . '" size="50"></td></tr>';
+  echo '<tr><th>営業時間：</th><td><input type="text" name="hours" value="' . get_post_meta($post->ID, 'hours', true) . '" size="50"></td></tr>';
+  echo '<tr><th>参考料金：</th><td><input type="text" name="price" value="' . get_post_meta($post->ID, 'price', true) . '" size="50"></td></tr>';
+  echo '</table>';
+}
+
+function save_info_fields($postID)
+{
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+    return $post_id;
+  } else if (isset($_POST['action']) && $_POST['action'] == 'inline-save') {
+    return $post_id;
+  } else {
+    if (!empty($_POST['pic'])) {
+      update_post_meta($postID, 'pic', $_POST['pic']);
+    } else {
+      delete_post_meta($postID, 'pic');
+    }
+    if (!empty($_POST['address'])) {
+      update_post_meta($postID, 'address', $_POST['address']);
+    } else {
+      delete_post_meta($postID, 'address');
+    }
+    if (!empty($_POST['contact'])) {
+      update_post_meta($postID, 'contact', $_POST['contact']);
+    } else {
+      delete_post_meta($postID, 'contact');
+    }
+    if (!empty($_POST['webpage'])) {
+      update_post_meta($postID, 'webpage', $_POST['webpage']);
+    } else {
+      delete_post_meta($postID, 'webpage');
+    }
+    if (!empty($_POST['duration'])) {
+      update_post_meta($postID, 'duration', $_POST['duration']);
+    } else {
+      delete_post_meta($postID, 'duration');
+    }
+    if (!empty($_POST['hours'])) {
+      update_post_meta($postID, 'hours', $_POST['hours']);
+    } else {
+      delete_post_meta($postID, 'hours');
+    }
+    if (!empty($_POST['price'])) {
+      update_post_meta($postID, 'price', $_POST['price']);
+    } else {
+      delete_post_meta($postID, 'price');
+    }
+  }
+}
+add_action('save_post', 'save_info_fields');
+
+
+// Plan
+
+$plan_slug = 'plan';
+$plan_name = '旅プラン';
+$plan_icon = 'dashicons-universal-access';
+
+function register_option_plan()
+{
+  global $plan_slug;
+  global $plan_name;
+  global $plan_icon;
+
+  register_post_type($plan_slug, [
+    'labels' => [
+      'name' => $plan_name,
+      'all_items' => $plan_name . '一覧'
+    ],
+    'public' => true,
+    'menu_position' => 8,
+    'menu_icon' => $plan_icon,
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
+    'has_archive' => true,
+    'rewrite' => [
+      'slug' => $plan_slug,
+      'with_front' => false,
+      'hierarchical' => true
+    ],
+    'query_var' => true,
+    'show_in_rest' => true
+  ]);
+}
+add_action('init', 'register_option_plan');
+
+
+// Column
+
+$column_slug = 'column';
+$column_name = '海辺のコラム';
+$column_icon = 'dashicons-rss';
+
+function register_option_column()
+{
+  global $column_slug;
+  global $column_name;
+  global $column_icon;
+
+  global $column_cat_slug;
+  global $column_cat_name;
+
+  register_post_type($column_slug, [
+    'labels' => [
+      'name' => $column_name,
+      'all_items' => $column_name . '一覧'
+    ],
+    'public' => true,
+    'menu_position' => 9,
+    'menu_icon' => $column_icon,
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
+    'has_archive' => true,
+    'rewrite' => [
+      'slug' => $column_slug,
+      'with_front' => false,
+      'hierarchical' => true
+    ],
+    'query_var' => true,
+    'show_in_rest' => true
+  ]);
+}
+add_action('init', 'register_option_column');
+
+
+function move_media()
+{
+  global $menu;
+  $menu[19] = $menu[10];  //メディアの移動
+  unset($menu[10]);
+}
+add_action('admin_menu', 'move_media');
+
+
+// English
+
+$english_slug = 'english';
+$english_name = '英語ページ';
+$english_icon = 'dashicons-admin-post';
+
+function register_option_english()
+{
+  global $english_slug;
+  global $english_name;
+  global $english_icon;
+
+  global $english_cat_slug;
+  global $english_cat_name;
+
+  register_post_type($english_slug, [
+    'labels' => [
+      'name' => $english_name,
+      'all_items' => $english_name . '一覧'
+    ],
+    'public' => true,
+    'menu_position' => 10,
+    'menu_icon' => $english_icon,
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
+    'has_archive' => true,
+    'rewrite' => [
+      'slug' => $english_slug,
+      'with_front' => false,
+      'hierarchical' => true
+    ],
+    'query_var' => true,
+    'show_in_rest' => true
+  ]);
+}
+add_action('init', 'register_option_english');
+
+
+// User
+
+function insert_user_profile($bool) {
+  global $profileuser;
+  echo '<tr><th><label for="person">肩書き</label></th><td><input type="text" name="person" value="' . $profileuser->person . '" size="20"></td></tr>';
+  echo '<tr><th><label for="area">地区</label></th><td><input type="text" name="area" value="' . $profileuser->area . '" size="20"></td></tr>';
+  echo '<tr><th>質問</th><td>';
+  echo '<label for="q1">あなたの住んでいる地区はどんな場所ですか？なぜここに住んでいるのですか？</label><br><textarea name="q1" rows="2" cols="20">' . $profileuser->q1 . '</textarea><br>';
+  echo '<label for="q2">普段どんな仕事（活動）をしていますか？</label><br><textarea name="q2" rows="2" cols="20">' . $profileuser->q2 . '</textarea><br>';
+  echo '<label for="q3">越前海岸にないものはなんですか？</label><br><textarea name="q3" rows="2" cols="20">' . $profileuser->q3 . '</textarea><br>';
+  echo '<label for="q4">越前海岸にしかないものはなんですか？</label><br><textarea name="q4" rows="2" cols="20">' . $profileuser->q4 . '</textarea><br>';
+  echo '<label for="q5">この地域を形容詞で表すと？理由も教えてください。</label><br><textarea name="q5" rows="2" cols="20">' . $profileuser->q5 . '</textarea><br>';
+  echo '<label for="q6">この地域が、もっとこうなったら面白いということはありますか？</label><br><textarea name="q6" rows="2" cols="20">' . $profileuser->q6 . '</textarea><br>';
+  echo '<label for="q7">休日の過ごし方を教えてください。</label><br><textarea name="q7" rows="2" cols="20">' . $profileuser->q7 . '</textarea><br>';
+  echo '<label for="q8">趣味と特技を教えてください。</label><br><textarea name="q8" rows="2" cols="20">' . $profileuser->q8 . '</textarea><br>';
+  echo '<label for="q9">座右の銘を教えてください。</label><br><textarea name="q9" rows="2" cols="20">' . $profileuser->q9 . '</textarea><br>';
+  echo '<label for="q10">ズバリ、この地域（福井市越前海岸）の魅力って何ですか？</label><br><textarea name="q10" rows="2" cols="20">' . $profileuser->q10 . '</textarea></td></tr>';
+  echo '<tr><th><label for="instagrampage">インスタグラムページ</label></th><td><input type="text" name="instagrampage" value="' . $profileuser->instagrampage . '" size="20"></td></tr>';
+  echo '<tr><th><label for="instagrambusinessid">インスタグラムID</label></th><td><input type="text" name="instagrambusinessid" value="' . $profileuser->instagrambusinessid . '" size="20"></td></tr>';
+  echo '<tr><th><label for="accesstoken">アクセストークン</label></th><td><input type="text" name="accesstoken" value="' . $profileuser->accesstoken . '" size="80"></td></tr>';
+  return $bool;
+}
+add_action('show_password_fields', 'insert_user_profile');
+
+function save_user_profile($user_id, $prev_user_data) {
+  update_user_meta($user_id, 'person', $_POST['person'], $prev_user_data->person);
+  update_user_meta($user_id, 'area', $_POST['area'], $prev_user_data->area);
+  update_user_meta($user_id, 'q1', $_POST['q1'], $prev_user_data->q1);
+  update_user_meta($user_id, 'q2', $_POST['q2'], $prev_user_data->q2);
+  update_user_meta($user_id, 'q3', $_POST['q3'], $prev_user_data->q3);
+  update_user_meta($user_id, 'q4', $_POST['q4'], $prev_user_data->q4);
+  update_user_meta($user_id, 'q5', $_POST['q5'], $prev_user_data->q5);
+  update_user_meta($user_id, 'q6', $_POST['q6'], $prev_user_data->q6);
+  update_user_meta($user_id, 'q7', $_POST['q7'], $prev_user_data->q7);
+  update_user_meta($user_id, 'q8', $_POST['q8'], $prev_user_data->q8);
+  update_user_meta($user_id, 'q9', $_POST['q9'], $prev_user_data->q9);
+  update_user_meta($user_id, 'q10', $_POST['q10'], $prev_user_data->q10);
+  update_user_meta($user_id, 'instagrampage', $_POST['instagrampage'], $prev_user_data->instagrampage);
+  update_user_meta($user_id, 'instagrambusinessid', $_POST['instagrambusinessid'], $prev_user_data->instagrambusinessid);
+  update_user_meta($user_id, 'accesstoken', $_POST['accesstoken'], $prev_user_data->accesstoken);
+}
+add_action('profile_update', 'save_user_profile', 10, 2);
 
 
 // Breadcrumb
@@ -300,19 +583,24 @@ function insert_breadcrumb()
 
     if (is_single()) {
       // 個別投稿ページ
-      $postID = $wp_obj->ID;
+      $post_id = $wp_obj->ID;
       $post_type = $wp_obj->post_type;
       $post_title = $wp_obj->post_title;
 
       // カスタム投稿タイプを判定
-      global $works_slug;
-      global $works_cat_slug;
+      global $discover_slug;
+      global $discover_cat_slug;
+      global $info_slug;
+      global $info_cat_slug;
       if ($post_type == 'post') {
         // 「記事」の場合、「カテゴリー」を取得
         $the_tax = 'category';
-      } else if ($post_type == $works_slug) {
-        // 「作品」の場合、「品名」を取得
-        $the_tax = $works_cat_slug;
+      } else if ($post_type == $discover_slug) {
+        // 「うみたん」の場合、「シーズン」を取得
+        $the_tax = $discover_cat_slug;
+      } else if ($post_type == $info_slug) {
+        // 「観光情報」の場合、「分類」を取得
+        $the_tax = $info_cat_slug;
       } else {
         $the_tax = '';
       }
@@ -326,10 +614,10 @@ function insert_breadcrumb()
 
     // タクソノミーが紐づいていれば表示
     if ($the_tax != "") {
-      $terms = get_the_terms($postID, $the_tax); // 投稿に紐づく全タームを取得
+      $terms = get_the_terms($post_id, $the_tax); // 投稿に紐づく全タームを取得
 
       if (!empty($terms)) {
-        $term = $terms[0];
+        $term = $terms[count($terms) - 1];
 
         // 親タームがあれば表示
         if ($term->parent > 0) {
@@ -410,12 +698,18 @@ function insert_breadcrumb()
         $post_type = 'post';
       }
 
-      // 「品名」、「モチーフ」の場合、「作品一覧」を表示
-      global $works_slug;
-      global $works_cat_slug;
-      global $works_tag_slug;
-      if ($tax_name == $works_cat_slug || $tax_name == $works_tag_slug) {
-        $post_type = $works_slug;
+      // 「シーズン」の場合、「うみたん」を表示
+      global $discover_slug;
+      global $discover_cat_slug;
+      if ($tax_name == $discover_cat_slug) {
+        $post_type = $discover_slug;
+      }
+
+      // 「分類」の場合、「観光情報」を表示
+      global $info_slug;
+      global $info_cat_slug;
+      if ($tax_name == $info_cat_slug) {
+        $post_type = $info_slug;
       }
 
       // 投稿タイプ一覧を表示
@@ -518,33 +812,37 @@ function get_my_title()
   // WPオブジェクト取得
   $wp_obj = get_queried_object();
 
-  if (is_single() || is_home() || is_page()) {
-    // 個別投稿ページ・固定ページ
-    return $wp_obj->post_title;
+  if (!is_home() && is_page()) {
+    // 固定ページ
+    return $wp_obj->post_name;
   } else if (is_post_type_archive()) {
     // カスタム投稿アーカイブ
-    return $wp_obj->label . '一覧';
-  } else if (is_date()) {
-    // 日付別
-    $year = get_query_var('year');
-    $month = get_query_var('monthnum');
-    $day = get_query_var('day');
-    if ($day > 0) return $year . '年' . $month . '月' . $day . '日の記事';
-    else if ($month > 0) return $year . '年' . $month . '月の記事';
-    else return $year . '年の記事';
-  } else if (is_author()) {
-    // 投稿者アーカイブ
-    return $wp_obj->display_name . ' の記事';
+    return $wp_obj->name;
+  } else if ((is_single() && !is_singular('post'))) {
+    // カスタム投稿個別ページ
+    return $wp_obj->post_type;;
+  } else if (is_home() || is_date() || is_author() || is_search() || is_404() || is_single()) {
+    // 投稿アーカイブ, 投稿個別ページ
+    return 'blog';
   } else if (is_archive()) {
     // タームアーカイブ
-    $term_name = $wp_obj->name;
-    return $term_name;
-  } else if (is_search()) {
-    // 検索結果ページ
-    return '「' . get_search_query() . '」で検索した結果';
-  } else if (is_404()) {
-    // 404ページ
-    return '404 Not Found';
+    $tax_name = $wp_obj->taxonomy;
+    // 「カテゴリー」、「タグ」の場合
+    if ($tax_name == 'category' || $tax_name == 'tag') {
+      return 'blog';
+    }
+    // 「シーズン」の場合
+    global $discover_slug;
+    global $discover_cat_slug;
+    if ($tax_name == $discover_cat_slug) {
+      return $discover_slug;
+    }
+    // 「分類」の場合
+    global $info_slug;
+    global $info_cat_slug;
+    if ($tax_name == $info_cat_slug) {
+      return $info_slug;
+    }
   }
 }
 
@@ -575,12 +873,17 @@ function get_my_slug()
     if ($tax_name == 'category' || $tax_name == 'tag') {
       return 'archive';
     }
-    // 「品名」、「モチーフ」の場合
-    global $works_slug;
-    global $works_cat_slug;
-    global $works_tag_slug;
-    if ($tax_name == $works_cat_slug || $tax_name == $works_tag_slug) {
-      return 'archive-' . $works_slug;
+    // 「シーズン」の場合
+    global $discover_slug;
+    global $discover_cat_slug;
+    if ($tax_name == $discover_cat_slug) {
+      return 'archive-' . $discover_slug;
+    }
+    // 「分類」の場合
+    global $info_slug;
+    global $info_cat_slug;
+    if ($tax_name == $info_cat_slug) {
+      return 'archive-' . $info_slug;
     }
   }
 }
@@ -600,7 +903,7 @@ function body_id()
 
 function no_image($size = 'sm')
 {
-  echo '<img src="' . get_template_directory_uri() . '/images/no-image' . ($size === 'sm' ? '-sm' : '') . '.gif">';
+  echo '<img src="' . get_template_directory_uri() . '/assets/no-image' . ($size === 'sm' ? '-sm' : '') . '.jpg">';
 }
 
 
@@ -609,14 +912,14 @@ function no_image($size = 'sm')
 
 function register_excerpt_length()
 {
-  return 64;
+  return 100;
 }
 add_filter('excerpt_length', 'register_excerpt_length', 999);
 
 
 // Copyright
 
-$copyright = date('Y') . ' QWEL';
+$copyright = date('Y') . ' 福井市越前海岸盛り上げ隊';
 
 function copyright()
 {

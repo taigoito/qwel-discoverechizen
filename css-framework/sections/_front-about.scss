@@ -1,22 +1,61 @@
 // Front - About
 
 #front-about {
-  .about {
+  .front-sec-heading {
+    span {
+      letter-spacing: 0;
+    }
+  }
+}
+
+.about {
+  margin-bottom: 1.5rem;
+  
+  &>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-  }
-
-  .featured-image,
-  .about-intro {
-    @include col("lg", 6);
-    margin-bottom: 2rem;
-  }
-
-  .about-intro-text {
-    margin-bottom: 2rem;
     text-align: justify;
   }
+}
 
-  .about-intro-btn {
-    @include button("lg");
+.about-copy {
+  @include col("lg", 12);
+
+  img {
+    width: 30rem;
+  }
+}
+
+.about-p-1, .about-p-2, .about-p-3 {
+  margin: 1.5rem 0;
+
+  @media (min-width: breakpoint("lg")) {
+    margin: 3rem 0;
+  }
+}
+
+.about-copy, .about-map, .about-landscape, .about-logo, .about-members {
+  text-align: center;
+}
+
+.about-p-1, .about-p-2, .about-map, .about-logo {
+  @include col("lg", 5);
+}
+
+.about-p-3, .about-landscape {
+  @include col("lg", 6);
+}
+
+.about-members {
+  @include col("lg", 9);   
+}
+
+@media (max-width: breakpoint("lg") - 1) {
+  .about-p-1, .about-p-2 {
+    img {
+      display: none;
+    }
   }
 }

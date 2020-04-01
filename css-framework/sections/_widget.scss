@@ -31,12 +31,7 @@
   }
 
   li {
-    padding: .625rem 0;
-    border-bottom: 1px solid gray(700);
+    padding: .35rem 0;
     line-height: 1.15;
-
-    &:first-child {
-      border-top: 1px solid gray(700);
-    }
   }
 }

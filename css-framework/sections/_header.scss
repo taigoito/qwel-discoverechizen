@@ -1,28 +1,94 @@
 // Header
 
+$imageCount: 6;
+$imageDuration: 5;
+
 #hero {
   @include cover-unit();
 }
 
 #hero-content {
   @include cover-section();
+
+  &.hero-content-fade {
+    opacity: 0;
+    animation: fade #{$imageCount * $imageDuration}s ease 0s infinite normal;
+  }
+
+  img {
+    width: 18rem;
+  }
 }
 
-#site-header {
-  @include sticky-top();
-  @include background("light");
+@for $i from 1 through $imageCount  {
+  #hero-image-#{$i} { 
+    @include cover-image(url("./assets/landscape/main0#{$i - 1}.jpg"));
+    opacity: 0;
+
+    &.hero-image-fade {
+      animation: fade #{$imageCount * $imageDuration}s ease #{($i - 1) * $imageDuration}s infinite normal;
+    }
+  }
 }
 
-#page-header {
-  text-align: center;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
 }
 
-#page-title {
-  margin: 3rem 0;
-  font-size: 2rem;
+#header {
+  margin-top: 9rem;
+  margin-bottom: 6rem;
 }
 
-#cover-image { 
-  @include cover-image();
-  @include background("light");
+#page-title,
+.front-sec-heading {
+  @include container();
+
+  .row {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    img {
+      @include col("md", 6);
+      padding-left: .25rem;
+      padding-right: .25rem; // Adjust image position
+    }
+
+    @media (min-width: breakpoint("md")) {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        @include col("md", 3);
+        background: url("assets/svg/title_dec.svg") no-repeat center center / contain scroll;
+      }
+    }
+  }
+}
+
+#discover-title {
+  @include container();
+
+  .row {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    img {
+      @include col("md", 10);
+    }
+  }
 }

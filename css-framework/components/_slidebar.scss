@@ -9,7 +9,7 @@
   width: 18rem;
   height: 100%;
   margin: auto;
-  background-color: rgba(gray(300), .85);
+  background-color: rgba(theme-color("primary"), .85); // customized
   text-align: center;
   transition: width ease-in-out .25s;
   
@@ -72,7 +72,7 @@
   cursor: pointer;
   
   .icon {
-    margin: .5rem;
+    margin: .75rem; // customized
   }
   
   &:hover {

@@ -1,23 +1,8 @@
 // Front - main
 
-.front-sec:not(#front-access) {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+.front-sec:not(.wave) {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: #ffffff;
   text-align: center;
-
-  &:not(#front-gallery) {
-    &:nth-child(odd) {
-      background-color: gray(850);
-    }
-
-    &:nth-child(even) {
-      background-color: $body-bg;
-    }
-  }
-}
-
-.front-sec-heading {
-  margin-bottom: 6rem;
-  font-size: 1.5rem;
-  text-transform: capitalize;
 }

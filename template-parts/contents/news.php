@@ -1,32 +1,13 @@
-      <div class="news row">
+      <div class="news">
+        <?php if (has_post_thumbnail()) { ?>
         <div class="featured-image">
-          <a href="<?php the_permalink(); ?>">
-            <?php
-            if (has_post_thumbnail()) {
-              the_post_thumbnail('thumbnail');
-            } else {
-              no_image();
-            }
-            ?>
-          </a>
+          <?php the_post_thumbnail('large'); ?>
         </div>
+        <?php } ?>
         <div class="news-intro">
-          <div class="news-intro-inner">
-            <div class="news-intro-date"><?php the_time('Y.m.d'); ?></div>
-            <div class="news-intro-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-            <ul class="news-intro-terms">
-              <?php
-              $terms = get_the_category($post->ID);
-              foreach ($terms as $term) {
-                echo '<li><a href="' . get_term_link($term->slug, 'category') . '">' . $term->name . '</a></li> ';
-              }
-              ?>
-            </ul>
-            <div class="news-intro-text">
-              <p>
-                <?php the_excerpt(); ?> <a href="<?php the_permalink(); ?>">[詳細]</a>
-              </p>
-            </div>
+          <h3 class="news-intro-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <div class="news-intro-description">
+            <?php the_excerpt(); ?>
           </div>
         </div>
       </div><!-- .news -->

@@ -1,0 +1,95 @@
+// Discover - Main
+
+#umitan, #archive-umitan {
+  background-color: theme-color("primary");
+
+  .discover-icons {
+    @include col();
+
+    .row {
+      @include list-unstyled();
+    }
+  }
+}
+
+.discover-icon {
+  @include col("sm", 4);
+  @include col("md", 2);
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.discover {
+  @include col("md", 6);
+  @include col("lg", 4);
+  display: flex;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.discover-inner {
+  position: relative;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .75rem;
+  background: #ffffff;
+  text-align: left;
+  line-height: 1.5;
+
+  .featured-image {
+    margin-bottom: 1rem;
+
+    @supports (object-fit: cover) {
+      img {
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+        
+        @media (min-width: breakpoint("md")) {
+          height: 15rem;
+        }
+    
+        @media (min-width: breakpoint("lg")) {
+          height: 13.5rem;
+        }
+      }
+    }
+  }
+}
+
+.discover-eventdate {
+  margin: 0;
+  color: #ff584f;
+}
+
+.discover-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.discover-subtitle {
+  margin: 0;;
+  //color: theme-color("primary");
+}
+
+.discover-excerpt {
+  margin: 1rem 0 .25rem;
+  font-size: 87.5%;
+}
+
+.discover-terms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include list-unstyled();
+  margin: .375rem;
+
+  li {
+    display: inline-block;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}

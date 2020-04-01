@@ -1,16 +1,12 @@
-    <div id="hero" <?php if (get_header_image()) echo 'style="color: #' . get_header_textcolor() . '"'; ?>>
-      <div id="hero-content">
-        <h1 id="site-title">
-          <?php
-          if (has_custom_logo()) {
-            $custom_logo_id = get_theme_mod('custom_logo');
-            $image = wp_get_attachment_image_src($custom_logo_id, 'full');
-            echo '<img src="' . $image[0] . '">';
-          } else {
-            bloginfo('name');
-          }
-          ?>
-        </h1>
-        <div id="site-description"><?php bloginfo('description'); ?></div>
-      </div>
-    </div><!-- #hero -->
+
+    <div id="hero-content">
+      <h1 id="site-title">
+        <img src="<?php echo get_template_directory_uri() . '/assets/svg/top_logo2.svg'; ?>" alt="越前海岸盛り上げ隊">
+      </h1>
+    </div>
+    <div id="hero-image-1"></div>
+    <div id="hero-image-2"></div>
+    <div id="hero-image-3"></div>
+    <div id="hero-image-4"></div>
+    <div id="hero-image-5"></div>
+    <div id="hero-image-6"></div>

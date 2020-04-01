@@ -1,8 +1,5 @@
 <?php get_header(); ?>
   <main id="main">
-    <header id="page-header">
-      <h1 id="page-title" class="screen-reader-text"><?php echo get_my_title(); ?></h1>
-    </header>
     <div class="container">
       <div class="row">
         <div class="primary-col">
@@ -12,16 +9,18 @@
               the_post();
               get_template_part('template-parts/contents/single');
             }
+          } else {
+            echo '只今コンテンツを準備中です。';
           }
           ?>
           <?php if (!is_singular()) insert_pagination(); ?>
         </div><!-- .primary -->
-        <?php if (!is_page()) { ?>
+        <?php if (is_archive() || is_single()) { ?>
         <div class="secondary-col">
           <?php dynamic_sidebar('blog-sidebar'); ?>
         </div><!-- .secondary -->
         <?php } ?>
-      </div>
+      </div><!-- .row -->
     </div><!-- .container -->
   </main><!-- main -->
 <?php get_footer(); ?>

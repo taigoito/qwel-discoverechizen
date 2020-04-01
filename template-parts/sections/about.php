@@ -1,16 +1,21 @@
     <section id="front-about" class="front-sec">
-      <h2 class="front-sec-heading">about</h2>
+      <h2 class="front-sec-heading">
+        <div class="row">
+          <img src="<?php echo get_template_directory_uri() . '/assets/svg/title_about.svg'; ?>" alt="about">
+        </div>
+      </h2>
       <div class="container">
         <?php
         $posts = get_posts([
           'posts_per_page' => 1,
-          'include' => 11,
+          'include' => [3],
           'post_type' => 'page'
         ]);
         foreach ($posts as $post) {
           setup_postdata($post);
-          get_template_part('template-parts/contents/about');
+          the_content();
         }
         ?>
+        <!--<a class="about-intro-btn" href="<?php /*the_permalink(3);*/ ?>">&gt; 越前海岸と私たちについて もっと詳しく</a>-->
       </div><!-- .container -->
     </section><!-- #about -->

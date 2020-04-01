@@ -1,10 +1,32 @@
 // Breadcrumb
 
 #breadcrumb {
-  @include container();
-  margin: 2rem auto;
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+  z-index: -1;
+  height: 1rem;
+  line-height: 1;
+  margin-right: 6rem; // Navigation toggler
+  font-size: .875rem;
+
+  @media(min-width: breakpoint("lg")) {
+    left: 18rem;
+  }
 }
 
 .breadcrumb {
   @include breadcrumb();
+}
+
+#umitan, #archive-umitan {
+  .breadcrumb {
+    a {
+      color: #ffffff;
+
+      &:hover {
+        color: theme-color("primary-dark");
+      }
+    }
+  }
 }
