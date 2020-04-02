@@ -87,6 +87,14 @@ figcaption {
   @include image-clip-inner();
 }
 
+// Gutenberg
+
+.wp-block-group,
+.wp-block-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 // Accessibility
 
 .screen-reader-text {
