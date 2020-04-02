@@ -31,9 +31,9 @@
   }
 
   li {
-    line-height: 2.4;
-    text-indent: 1rem;
+    padding: .625rem 0;
     border-bottom: 1px solid gray(700);
+    line-height: 1.15;
 
     &:first-child {
       border-top: 1px solid gray(700);
