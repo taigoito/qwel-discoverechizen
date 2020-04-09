@@ -5,16 +5,8 @@
     margin-bottom: 1rem;
   }
 
-  .news-image {
-    @include col("sm", "auto");
-
-    img {
-      width: 9rem;
-
-      @media (min-width: breakpoint("lg")) {
-        width: 12rem;
-      }
-    }
+  .featured-image {
+    @include col("lg", 3);
 
     a:hover img {
       opacity: .7;
@@ -22,55 +14,57 @@
   }
 
   .news-intro {
-    @include col("sm", 0);
+    @include col("lg", 8); // Match the width of the "md" size
+  }
+
+  .news-intro-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #ffffff;
   }
 
   .news-intro-inner {
-    height: 100%;
-    padding: .5rem 1rem;
-    background-color: #ffffff;
+    padding: .5rem 1.5rem;
     text-align: left;
-
-    @media (min-width: breakpoint("lg")) {
-      padding: 1rem 2rem;
-    }
   }
 
   .news-intro-date {
-    line-height: 2rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    line-height: 1; // Make 2.5rem height by margin and line-height
   }
 
   .news-intro-heading {
     display: inline-block;
-    margin: .75rem 0;
-    font-size: 1.5rem;
-    line-height: 1;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.25; // Make 2.5rem height by margin, font-size and line-height
     vertical-align: bottom;
   }
 
   .news-intro-terms {
     display: inline-block;
+    margin-bottom: 0;
     @include list-unstyled();
     vertical-align: bottom;
 
     li {
       display: inline-block;
+      margin-bottom: 0;
     }
 
     a {
       @include button("sm", "light");
-      font-size: $small-font-size;
-      margin: .5rem 0;
+      font-size: 1rem;
+      line-height: 1.25; // Make 2.5rem height by button mixin and line-height
     }
   }
 
   .news-intro-text {
-    display: none; // Visible "lg"
-    padding: .75rem 0;
+    display: block;
+    margin-top: .75rem;
+    margin-bottom: .75rem; // Match the inner top with the margin
     text-align: justify;
-
-    @media (min-width: breakpoint("lg")) {
-      display: block;
-    }
   }
 }

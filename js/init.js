@@ -8,7 +8,7 @@
 import Scrolling from './_scrolling.js';
 import Slidebar from './_slidebar.js';
 import Slider from './_slider.js';
-import PhotoGallery from './_photo-gallery.js';
+//import PhotoGallery from './_photo-gallery.js';
 import renderEvilIcons from './_evil-icons.js';
 
 // Scrolling init
@@ -31,8 +31,8 @@ const slider = new Slider({
 slider.init();
 
 // Instagram API init
-const photoGallery = new PhotoGallery();
-photoGallery.init();
+//const photoGallery = new PhotoGallery();
+//photoGallery.init();
 
 // Icons init
 renderEvilIcons();

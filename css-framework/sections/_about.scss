@@ -3,11 +3,12 @@
 #about {
   .about {
     align-items: center;
+    justify-content: space-around;
   }
 
-  .about-image,
+  .featured-image,
   .about-intro {
-    @include col("lg", 6);
+    @include col("lg", 5);
     margin-bottom: 2rem;
   }
 

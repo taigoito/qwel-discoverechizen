@@ -11,7 +11,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 
-  @media (max-width: $root-font-size-breakpoint - 1) {
+  @media (max-width: breakpoint("sm") - 1) {
     font-size: round($root-font-size * 0.9);
   }
 }
@@ -24,7 +24,7 @@ body {
   font-weight: $font-weight-base;
   font-size: $font-size-base;
   text-align: $text-align-base;
-  line-height: $line-height-base;
+  line-height: 1.15;
   letter-spacing: $letter-spacing-base;
 }
 
