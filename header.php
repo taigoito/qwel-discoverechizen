@@ -22,13 +22,13 @@
     if (is_front_page()) {
       get_template_part('template-parts/header/hero');
     } else {
-      get_template_part('template-parts/header/navigation');
+      get_template_part('template-parts/header/nav');
     }
     ?>
   </header><!-- #<?php echo is_front_page() ? 'hero-wrap' : 'site-header'; ?> -->
   <?php
   if (is_front_page()) {
-    get_template_part('template-parts/header/navigation');
+    get_template_part('template-parts/header/nav');
   } else {
     get_template_part('template-parts/header/breadcrumb');
   }

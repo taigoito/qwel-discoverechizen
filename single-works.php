@@ -16,11 +16,11 @@
           ?>
         </div>
         <aside class="secondary-col">
-          <h2 class="navigation-title">カテゴリー</h2>
+          <h2 class="nav-title">カテゴリー</h2>
           <?php insert_works_cat(); ?>
         </aside>
         <aside class="tertiary-col">
-          <h2 class="navigation-title">モチーフで検索</h2>
+          <h2 class="nav-title">モチーフで検索</h2>
           <?php insert_works_tag(); ?>
         </aside>
       </div>

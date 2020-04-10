@@ -1,11 +1,11 @@
-// Navigation
+// Nav
 
-#header-navigation {
+#header-nav {
   @include sticky-top();
   background: rgba($body-bg, .7);
 }
 
-#header-navigation-bar {
+#header-nav-bar {
   display: flex;
   padding: .5rem 0;
   justify-content: space-between;
@@ -15,7 +15,7 @@
     justify-content: center;
   }
   
-  .navigation-menu {
+  .nav-menu {
     display: none;
     margin: 0;
     @include list-unstyled;
@@ -25,8 +25,8 @@
     }
   }
 
-  .navigation-brand,
-  .navigation-menu li {
+  .nav-brand,
+  .nav-menu li {
     display: inline-block;
     height: 3rem;
     margin: 0 1rem;
@@ -55,7 +55,7 @@
   }
 }
 
-#navigation-toggler {
+#nav-toggler {
   display: inline-block;
   height: 3rem;
   margin: 0 .5rem;
@@ -76,10 +76,10 @@
   }
 }
 
-#footer-navigation {
+#footer-nav {
   margin-bottom: 3rem;
 
-  .navigation-brand {
+  .nav-brand {
     height: 3rem;
     padding-left: 1rem;
     line-height: 3rem;
@@ -89,7 +89,7 @@
     }
   }
 
-  .navigation-menu {
+  .nav-menu {
     margin: 0;
     padding-left: 1rem;
     list-style: none;
@@ -100,8 +100,8 @@
     }
   }
 
-  .navigation-brand,
-  .navigation-menu li {
+  .nav-brand,
+  .nav-menu li {
     vertical-align: middle;
     text-transform: capitalize;
 
@@ -120,14 +120,14 @@
   }
 
   @media(min-width: breakpoint("lg")) {
-    #footer-navigation-bar > div,
-    .navigation-menu {
+    #footer-nav-bar > div,
+    .nav-menu {
       display: inline-block;
       padding: 0;
     }
 
-    .navigation-brand,
-    .navigation-menu li {
+    .nav-brand,
+    .nav-menu li {
       display: inline-block;
       height: 3rem;
       margin: 0 1rem;

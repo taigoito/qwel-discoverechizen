@@ -5,9 +5,10 @@
   list-style: none;
 }
 
-@mixin small($small-font-size: $small-font-size, $small-line-height: $small-line-height) {
-  @media (min-width: $root-font-size-breakpoint) {
+@mixin small($small-font-size: $small-font-size, $small-line-height: $small-line-height, $small-letter-spacing: $small-letter-spacing) {
+  @media (min-width: breakpoint("sm")) {
     font-size: $small-font-size;
     line-height: $small-line-height;
+    letter-spacing: $small-letter-spacing;
   }
 }

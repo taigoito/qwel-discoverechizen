@@ -39,14 +39,14 @@ function qwel_setup()
   add_post_type_support('page', 'excerpt');
 
   // メディアサイズ指定
-  update_option('thumbnail_size_w', 256);
-  update_option('thumbnail_size_h', 256);
-  update_option('medium_size_w', 384);
-  update_option('medium_size_h', 384);
+  update_option('thumbnail_size_w', 240);
+  update_option('thumbnail_size_h', 240);
+  update_option('medium_size_w', 360);
+  update_option('medium_size_h', 360);
   update_option('medium_large_size_w', 0);
   update_option('medium_large_size_h', 0);
-  update_option('large_size_w', 1024);
-  update_option('large_size_h', 1024);
+  update_option('large_size_w', 720);
+  update_option('large_size_h', 720);
 }
 add_action('after_setup_theme', 'qwel_setup');
 
