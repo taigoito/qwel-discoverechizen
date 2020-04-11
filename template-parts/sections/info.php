@@ -33,7 +33,7 @@
                 <h3><img src="<?php echo get_template_directory_uri() . '/assets/svg/info_map.svg'; ?>"></h3>
                 <p>盛り上げ隊が発行している地域の魅力が詰まった地図。</p>
                 <a href="#">&gt; マップを見る</a>
-                  <br><!--<a href="<?php /*echo get_template_directory_uri() . '/assets/map2020.pdf';*/ ?>" target="_blank">&gt; マップのダウンロード</a>-->
+                  <br><a href="<?php echo get_template_directory_uri() . '/assets/map2020.pdf'; ?>" target="_blank">&gt; マップのダウンロード</a>
               </div>
               <div class="feature-image">
                 <img src="<?php echo get_template_directory_uri() . '/assets/svg/info_illust_map.svg'; ?>">
