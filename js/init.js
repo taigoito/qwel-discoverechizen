@@ -62,7 +62,8 @@ const detectColor = (elem) => {
 const changeIcons = () => {
   let targetElem;
   if (document.body.id === 'index') {
-    const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-movie', 'front-access', 'front-contact'];
+    //const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-movie', 'front-access', 'front-contact'];
+    const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-movie', 'front-access', 'front-contact'];
     targetElem = detectSection(arr);
   } else {
     const arr = ['main'];
@@ -94,14 +95,14 @@ if (document.body.id === 'index') {
   };
 
   // Slider init
-  const slider = new Slider({
+  /*const slider = new Slider({
     hasDraggingHandler: true,
     hasWheelHandler: true,
     hasFade: true,
     hasCaption: true,
     autoPlay: false
   });
-  slider.init();
+  slider.init();*/
 
   //Wave init
   const targets = document.querySelectorAll('.wave');
