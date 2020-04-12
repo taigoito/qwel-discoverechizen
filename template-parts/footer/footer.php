@@ -12,8 +12,8 @@
           </ul>
         </div>
         <div id="footer-content-2">
-          <div id="footer-navigation">
-            <?php if (has_nav_menu('primary')) wp_nav_menu(['menu' => 'primary', 'menu_class' => 'navigation-menu']); ?>
+          <div id="footer-nav">
+            <?php if (has_nav_menu('primary')) wp_nav_menu(['menu' => 'primary', 'menu_class' => 'nav-menu']); ?>
           </div>
         </div>
         <div id="footer-copyright">

@@ -70,7 +70,7 @@
   @include list-unstyled();
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
 
     span {
       text-transform: uppercase;
@@ -78,7 +78,7 @@
     }
 
     &:nth-child(6) {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
   }
 }

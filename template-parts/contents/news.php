@@ -1,7 +1,15 @@
       <div class="news">
         <?php if (has_post_thumbnail()) { ?>
         <div class="featured-image">
-          <?php the_post_thumbnail('large'); ?>
+          <a href="<?php the_permalink(); ?>">
+            <?php
+            if (has_post_thumbnail()) {
+              the_post_thumbnail('large');
+            } else {
+              no_image('lg');
+            }
+            ?>
+          </a>
         </div>
         <?php } ?>
         <div class="news-intro">

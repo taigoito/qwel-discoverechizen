@@ -45,8 +45,8 @@
           <?php } ?>
         </div>
         <?php if (is_singular('post')) { ?>
-          <aside class="post-navigation">
-            <h2 class="navigation-title screen-reader-text">投稿ナビゲーション</h2>
+          <aside class="post-nav">
+            <h2 class="nav-title screen-reader-text">投稿ナビゲーション</h2>
             <?php insert_pagination(); ?>
           </aside>
         <?php } ?>

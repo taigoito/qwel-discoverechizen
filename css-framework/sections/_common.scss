@@ -48,12 +48,21 @@ h6 {
 }
 
 h3, h4, h5, h6 {
-  margin-top: 1rem;
-  margin-bottom: .5rem; 
+  margin-top: 2rem;
+  margin-bottom: 1rem; 
 }
 
 p {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
+  line-height: $line-height-base;
+}
+
+ol, ul {
+  margin-bottom: 1rem;
+
+  li {
+    margin-bottom: .5rem;
+  }
 }
 
 // Blockquote
@@ -62,7 +71,11 @@ blockquote {
   margin-left: 1rem;
   padding-left: .75rem;
   border-left: .25rem solid $body-color;
-  font-style: italic;
+
+  p, cite {
+    font-style: italic;
+    @include small();
+  }
 }
 
 // Figure

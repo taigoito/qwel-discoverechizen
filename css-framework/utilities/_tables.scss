@@ -2,14 +2,9 @@
 
 @mixin table() {
   width: 100%;
-  line-height: 1.15;
 
   tr {
     border-top: 1px solid gray(700);
-  }
-
-  th {
-    text-indent: 1rem;
   }
 
   th, td {

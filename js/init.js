@@ -23,14 +23,14 @@ scrolling.init();
 // Slidebar init
 const slidebar = new Slidebar({
   root: `${HOST}${ROOT}`,
-  nav: document.querySelector('#footer-navigation')
+  nav: document.querySelector('#footer-nav')
 });
 slidebar.init();
 
 // Menu icon
 const logo = document.getElementById('brand-home').querySelector('img');
 const logoSrc = logo.src;
-const toggler = document.getElementById('navigation-toggler').querySelector('img');
+const toggler = document.getElementById('nav-toggler').querySelector('img');
 const togglerSrc = toggler.src;
 
 const detectSection = (arr) => {
