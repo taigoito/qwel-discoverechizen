@@ -6,7 +6,7 @@
   }
 
   .featured-image {
-    @include col("lg", 3);
+    @include col("lg", 4);
 
     a:hover img {
       opacity: .7;
@@ -51,6 +51,7 @@
 
     li {
       display: inline-block;
+      margin-left: .75rem;
       margin-bottom: 0;
     }
 
