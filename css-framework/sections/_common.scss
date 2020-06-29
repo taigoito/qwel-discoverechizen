@@ -90,14 +90,8 @@ figcaption {
   font-size: $small-font-size;
 }
 
-// Image clip
-
-.img-clip {
-  @include image-clip();
-}
-
-.img-clip-inner {
-  @include image-clip-inner();
+a:hover img {
+  opacity: .7;
 }
 
 // Gutenberg

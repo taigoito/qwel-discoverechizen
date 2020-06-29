@@ -27,7 +27,16 @@
     margin-top: 1.5rem;
     margin-bottom: .5rem;
     font-size: 1rem;
-    line-height: inherit;
+    line-height: $line-height-base;
+  }
+
+  .plan-title {
+    font-weight: 700;
+  }
+
+  .featured-image {
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -54,6 +63,7 @@
     display: block;
     @include col();
     color: theme-color("primary");
+    line-height: $line-height-base;
   }
 
   .plan-title {
@@ -79,7 +89,6 @@
   .featured-image {
     position: relative;
     order: 1;
-    width: 100%;
     max-width: 18rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -104,29 +113,18 @@
   &>.wp-block-group {
     &>.wp-block-group__inner-container {
       @include row();
-      align-items: center;
+      //align-items: center;
       justify-content: space-around;
 
-      &>.wp-block-group {
-        position: relative;
-        width: 100%;
-        max-width: 24rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
-
+      &>.wp-block-group,     
       &>.wp-block-image,
       &>p {
         position: relative;
         width: 100%;
-        max-width: 18rem;
+        max-width: 22.5rem;
         margin: 0;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-
-        @media (min-width: breakpoint("lg")) {
-          margin-left: 1.5rem;
-        }
       }
     }
 
@@ -134,7 +132,7 @@
       content: "";
       display: block;
       height: 3rem;
-      margin-top: .5rem;
+      margin-top: 1.5rem;
       margin-bottom: 1.5rem;
       background: url("assets/svg/plan_section.svg") no-repeat center center / contain scroll;
     }
@@ -161,6 +159,7 @@
   margin: 4.5rem auto;
   color: theme-color("primary");
   font-size: 1.5rem;
+  line-height: $line-height-base;
   text-align: center;
 
   span:first-child {
@@ -183,5 +182,9 @@
     margin-top: 2rem;
     margin-bottom: .5rem;
     color: theme-color("secondary");
+  }
+
+  dt, dd {
+    line-height: $line-height-base;
   }
 }

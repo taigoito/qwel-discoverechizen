@@ -50,8 +50,8 @@ $imageDuration: 5;
 }
 
 #header {
-  margin-top: 9rem;
-  margin-bottom: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 #page-title,
@@ -76,19 +76,6 @@ $imageDuration: 5;
         @include col("md", 3);
         background: url("assets/svg/title_dec.svg") no-repeat center center / contain scroll;
       }
-    }
-  }
-}
-
-#discover-title {
-  @include container();
-
-  .row {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
-    img {
-      @include col("md", 10);
     }
   }
 }

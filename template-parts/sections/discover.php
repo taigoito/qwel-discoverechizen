@@ -1,5 +1,5 @@
     <section id="front-discover" class="front-sec wave">
-      <h2 class="front-discover-heading">
+      <h2 id="discover-title">
         <div class="row">
           <img src="<?php echo get_template_directory_uri() . '/assets/svg/title_umitan.svg'; ?>" alt="umitan">
         </div>
@@ -19,6 +19,10 @@
           }
           ?>
           </div>
+          <div class="front-discover-video">
+            <video controls src="<?php echo get_template_directory_uri() . '/assets/discoverechizen.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/discoverechizen_poster.jpg'; ?>"></video>
+            <a href="https://youtu.be/fssr1SzO0L0" target="_blank">Youtubeチャンネルを見る &gt;&gt;&gt;</a>
+          </div>
           <?php
           $posts = get_posts([
             'posts_per_page' => 3,
@@ -37,19 +41,21 @@
           <div class="discover-pickup">
             <div class="row">
               <div class="featured-image">
-              <?php
-                if (has_post_thumbnail()) {
-                  the_post_thumbnail('large');
-                } else {
-                  no_image('lg');
-                }
-              ?>
+                <a href="<?php the_permalink(); ?>">
+                  <?php
+                    if (has_post_thumbnail()) {
+                      the_post_thumbnail('large');
+                    } else {
+                      no_image('lg');
+                    }
+                  ?>
+                </a>
               </div>
               <div class="discover-pickup-intro">
                 <img src="<?php echo get_template_directory_uri() . '/assets/svg/umitan_osusume.svg'; ?>">
-                <h4 class="discover-pickup-title">[<?php echo get_post_meta($post->ID, 'eventdate', true); ?>]
-                  <br><?php echo get_post_meta($post->ID, 'item', true); ?></h4>
-                <p class="discover-pickup-subtitle"><?php the_title(); ?></a></p>
+                <h4 class="discover-pickup-title"><?php echo get_post_meta($post->ID, 'eventdate', true); ?>
+                  <br><?php the_discover_title(); ?></h4>
+                <p class="discover-pickup-subtitle"><?php the_discover_description(); ?></a></p>
                 <div class="discover-pickup-excerpt"><?php the_excerpt(); ?></div>
                 <a class="discover-pickup-btn" href="<?php the_permalink(); ?>">お申込み・詳細はこちら &gt;&gt;&gt;</a>
               </div>

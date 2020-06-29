@@ -18,5 +18,6 @@
         }
         ?>
         </div><!-- .row -->
+        <a href="<?php echo get_term_link('news', 'category'); ?>">&gt; お知らせを もっと見る</a>
       </div><!-- .container -->
     </section><!-- #news -->

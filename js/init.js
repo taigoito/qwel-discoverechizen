@@ -62,8 +62,7 @@ const detectColor = (elem) => {
 const changeIcons = () => {
   let targetElem;
   if (document.body.id === 'index') {
-    //const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-movie', 'front-access', 'front-contact'];
-    const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-movie', 'front-access', 'front-contact'];
+    const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-access', 'front-contact'];
     targetElem = detectSection(arr);
   } else {
     const arr = ['main'];
@@ -104,7 +103,7 @@ if (document.body.id === 'index') {
   });
   slider.init();*/
 
-  //Wave init
+  // Wave init
   const targets = document.querySelectorAll('.wave');
   targets.forEach((target, i) => {
     if (i === 0) {
@@ -121,11 +120,35 @@ if (document.body.id === 'index') {
       });
       wave.init();
     }
-  })
+  });
+
+  // Map
+  const _transitionEnd = (elem, func) => {
+    let callback;
+    const promise = new Promise((resolve, reject) => {
+      callback = () => resolve(elem);
+      elem.addEventListener('transitionend', callback);
+    });
+    func();
+    promise.then((elem) => {
+      elem.removeEventListener('transitionend', callback);
+    });
+    return promise;
+  }
+
+  const map = document.getElementById('map-cover');
+  map.classList.add('active');
+  map.addEventListener('click', () => {
+    const promise = _transitionEnd(map, () => {
+      map.classList.remove('active');
+    }).then(() => {
+      map.remove();
+    });
+  });
 }
 
 if (document.body.id === 'archive-umitan' || document.body.id === 'umitan') {
-  //Wave init
+  // Wave init
   const wave = new Wave({
     target: document.querySelector('.wave'),
     lightness: '100%',

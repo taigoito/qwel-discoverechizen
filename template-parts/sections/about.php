@@ -16,6 +16,6 @@
           the_content();
         }
         ?>
-        <!--<a class="about-intro-btn" href="<?php /*the_permalink(3);*/ ?>">&gt; 越前海岸と私たちについて もっと詳しく</a>-->
+        <a href="<?php the_permalink(3); ?>">&gt; 越前海岸と私たちについて もっと詳しく</a>
       </div><!-- .container -->
     </section><!-- #about -->

@@ -1,17 +1,19 @@
           <div class="discover">
             <div class="discover-inner">
               <div class="featured-image">
-                <?php
-                  if (has_post_thumbnail()) {
-                    the_post_thumbnail('medium');
-                  } else {
-                    no_image('lg');
-                  }
-                ?>
+                <a href="<?php the_permalink(); ?>">
+                  <?php
+                    if (has_post_thumbnail()) {
+                      the_post_thumbnail('medium');
+                    } else {
+                      no_image('lg');
+                    }
+                  ?>
+                </a>
               </div>
-              <p class="discover-eventdate">[<?php echo get_post_meta($post->ID, 'eventdate', true); ?>]</p>
-              <h4 class="discover-title"><?php echo get_post_meta($post->ID, 'item', true); ?></h4>
-              <p class="discover-subtitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+              <p class="discover-eventdate"><?php echo get_post_meta($post->ID, 'eventdate', true); ?></p>
+              <h4 class="discover-title"><?php the_discover_title(); ?></h4>
+              <p class="discover-subtitle"><a href="<?php the_permalink(); ?>"><?php the_discover_description(); ?></a></p>
               <div class="discover-excerpt"><?php the_excerpt(); ?></div>
               <ul class="discover-terms">
                 <?php

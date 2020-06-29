@@ -1,27 +1,26 @@
 // Front - Umitan
 
-.front-discover-heading {
+#discover-title {
   @include container();
 
   .row {
     @include row();
-    margin-top: 3rem;
-    margin-bottom: 3rem;
 
     img {
-      @include col("lg", 10);
+      @include col("lg", 9);
     }
   }
 }
 
 #front-discover {
   .container>.row {
+    margin-bottom: 3rem;
     align-items: center;
   }
 }
 
 .front-discover-intro {
-  @include col("lg", 10);
+  @include col("lg", 9);
   margin-bottom: 3rem;
 
   p {
@@ -29,25 +28,40 @@
   }
 }
 
-.discover-pickup {
-  @include col("lg", 10);
-  margin-bottom: 3rem;
+.front-discover-video {
+  @include col("lg", 12);
+  margin-bottom: 6rem;
+  padding-left: 0;
+  padding-right: 0;
 
-  .row {
-    align-items: center;
+  video {
+    margin-bottom: 2rem;
   }
 
-  .featured-image {
-    @include col("md", 6);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  a {
+    color: #ffffff;
 
-    @supports (object-fit: cover) {
-      img {
-        width: 100%;
-        height: 18rem;
-        object-fit: cover;
-      }
+    &:hover {
+      color: $body-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.discover-pickup {
+  @include col("lg", 9);
+  margin-bottom: 3rem;
+
+  .featured-image {
+    @include image-clip();
+    @include col("md", 6); // width: 22.5rem(md)
+    height: 16.125rem; // The aspect ratio is 4 : 3
+    max-height: calc(75vmin - .75rem);
+
+    img {
+      height: 16.125rem;
+      max-height: calc(75vmin - .75rem);
+      object-fit: cover;
     }
   }
 }
@@ -65,16 +79,22 @@
 .discover-pickup-title {
   margin: .75rem 0;
   font-weight: 700;
+  line-height: $line-height-base * 6 / 8;
 }
 
 .discover-pickup-subtitle {
   margin: 0;
   color: #ffffff;
+  line-height: $line-height-base * 6 / 8;
 }
 
 .discover-pickup-excerpt {
   margin: .75rem 0;
-  font-size: 87.5%;
+
+  p {
+    font-size: 87.5%;
+    line-height: $line-height-base * 6 / 8;
+  }
 }
 
 .discover-pickup-btn {

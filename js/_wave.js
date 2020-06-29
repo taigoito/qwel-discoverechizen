@@ -75,6 +75,7 @@ export default class Wave {
       const canvas = this.target.querySelector('.canvas');
       canvas.width = this.target.clientWidth;
       canvas.height = this.target.clientHeight;
+      if (this.static) this._draw(0, 0);
     });
   }
 }

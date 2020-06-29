@@ -67,10 +67,13 @@
 
 // Specify background color to be detected by script
 
-#post, #info, #column, #photo,
-#archive, #archive-info, #archive-column, #archive-photo {
+#header, #main {
+  background: #ffffff;
+}
+
+#index, #umitan, #archive-umitan {
   #header, #main {
-    background: #ffffff;
+    background-color: transparent;
   }
 }
 

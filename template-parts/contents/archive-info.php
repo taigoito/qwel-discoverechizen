@@ -1,7 +1,7 @@
           <article class="post">
             <div class="post-inner">
               <div class="post-intro">
-                <h4 class="post-title"><?php the_title(); ?></h4>
+                <h4 class="post-title"><?php the_info_title(); ?></h4>
                 <div class="post-excerpt"><?php the_excerpt(); ?></div>
                 <?php if (!empty(get_post_meta($post->ID, 'address', true))) { ?>
                   <p><?php echo get_post_meta($post->ID, 'address', true); ?></p>
@@ -13,7 +13,9 @@
               </div>
               <?php if (has_post_thumbnail()) { ?>
                 <div class="featured-image">
-                  <?php the_post_thumbnail('medium'); ?>
+                  <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('medium'); ?>
+                  </a>
                 </div>
               <?php } ?>
             </div>

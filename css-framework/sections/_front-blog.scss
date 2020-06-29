@@ -3,7 +3,9 @@
 #front-blog,
 #archive-blog {
   .blog {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 
   .featured-image {
@@ -12,13 +14,16 @@
 
   .blog-intro {
     @include col("lg", 8); // Match the width of the "md" size
+
+    @media (min-width: breakpoint("lg")) {
+      width: 60rem;
+    }
   }
 
   .blog-intro-container {
     display: flex;
     align-items: center;
     height: 100%;
-    @include background("light");
   }
 
   .blog-intro-inner {

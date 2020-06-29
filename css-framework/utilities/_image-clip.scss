@@ -3,9 +3,3 @@
 @mixin image-clip() {
   overflow: hidden;
 }
-
-@mixin image-clip-inner() {
-  margin-top: -10%;
-  margin-left: -5%;
-  margin-right: -5%;
-}

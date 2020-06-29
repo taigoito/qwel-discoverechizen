@@ -17,5 +17,6 @@
           }
           ?>
         </div><!-- .row -->
+        <a href="<?php the_permalink(2); ?>">&gt; ブログを もっと見る</a>
       </div><!-- .container -->
     </section><!-- #blog -->

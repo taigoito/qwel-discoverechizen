@@ -241,6 +241,20 @@ function save_discover_fields($postID)
 }
 add_action('save_post', 'save_discover_fields');
 
+function the_discover_title()
+{
+  $title = get_the_title();
+  $arr = preg_split('/\s\|\s/', $title, -1, PREG_SPLIT_NO_EMPTY);
+  echo $arr[0];
+}
+
+function the_discover_description()
+{
+  $title = get_the_title();
+  $arr = preg_split('/\s\|\s/', $title, -1, PREG_SPLIT_NO_EMPTY);
+  echo $arr[1];
+}
+
 
 // Booking page
 
@@ -402,6 +416,20 @@ function save_info_fields($postID)
   }
 }
 add_action('save_post', 'save_info_fields');
+
+function the_info_title()
+{
+  $title = get_the_title();
+  $arr = preg_split('/\s\|\s/', $title, -1, PREG_SPLIT_NO_EMPTY);
+  echo $arr[0];
+}
+
+function the_info_description()
+{
+  $title = get_the_title();
+  $arr = preg_split('/\s\|\s/', $title, -1, PREG_SPLIT_NO_EMPTY);
+  echo $arr[1];
+}
 
 
 // Plan
@@ -643,7 +671,12 @@ function insert_breadcrumb()
       }
 
       // 自身
-      echo '<li>' . $post_title . '</li>';
+      if ($post_type == 'umitan' || $post_type == 'info') {
+        $arr = preg_split('/\s\|\s/', $post_title, -1, PREG_SPLIT_NO_EMPTY);
+        echo '<li>' . $arr[0] . '</li>';
+      } else {
+        echo '<li>' . $post_title . '</li>';
+      }
     } else if (is_page()) {
       // 固定ページ
       $page_id = $wp_obj->ID;
