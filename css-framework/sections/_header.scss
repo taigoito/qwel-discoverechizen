@@ -54,6 +54,12 @@ $imageDuration: 5;
   margin-bottom: 3rem;
 }
 
+#umitan, #archive-umitan {
+  #header {
+    margin-bottom: 0;
+  }
+}
+
 #page-title,
 .front-sec-heading {
   @include container();

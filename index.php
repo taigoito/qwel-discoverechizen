@@ -15,7 +15,7 @@
           ?>
           <?php if (!is_singular()) insert_pagination(); ?>
         </div><!-- .primary -->
-        <?php if (is_home() || is_archive() || is_single()) { ?>
+        <?php if (is_archive() || is_single()) { ?>
         <div class="secondary-col">
           <?php dynamic_sidebar('blog-sidebar'); ?>
         </div><!-- .secondary -->

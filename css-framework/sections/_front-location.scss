@@ -1,6 +1,6 @@
-// Front - Access
+// Front - Location
 
-#front-access {
+#front-location {
   .container {
     margin-bottom: 1.5rem;
     text-align: left;
@@ -32,12 +32,20 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, .3);
-  transition: opacity linear .25s;;
+  color: #ffffff;
+  transition: opacity linear .25s;
 
   &:not(.active) {
     opacity: 0;
   }
+}
+
+#map-info {
+
 }

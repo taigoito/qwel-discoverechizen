@@ -1,5 +1,5 @@
-          <div class="discover">
-            <div class="discover-inner">
+          <div class="umitan">
+            <div class="umitan-inner">
               <div class="featured-image">
                 <a href="<?php the_permalink(); ?>">
                   <?php
@@ -11,11 +11,11 @@
                   ?>
                 </a>
               </div>
-              <p class="discover-eventdate"><?php echo get_post_meta($post->ID, 'eventdate', true); ?></p>
-              <h4 class="discover-title"><?php the_discover_title(); ?></h4>
-              <p class="discover-subtitle"><a href="<?php the_permalink(); ?>"><?php the_discover_description(); ?></a></p>
-              <div class="discover-excerpt"><?php the_excerpt(); ?></div>
-              <ul class="discover-terms">
+              <p class="umitan-eventdate"><?php echo get_post_meta($post->ID, 'eventdate', true); ?></p>
+              <h4 class="umitan-title"><?php the_umitan_description(); ?></h4>
+              <p class="umitan-subtitle"><a href="<?php the_permalink(); ?>"><?php the_umitan_title(); ?></a></p>
+              <div class="umitan-excerpt"><?php the_excerpt(); ?></div>
+              <ul class="umitan-terms">
                 <?php
                 $terms = get_the_terms($post->ID, 'umitan-cat');
                 foreach ($terms as $term) {

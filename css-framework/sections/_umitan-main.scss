@@ -1,9 +1,9 @@
-// Discover - Main
+// umitan - Main
 
 #umitan, #archive-umitan {
   background-color: theme-color("primary");
 
-  .discover-icons {
+  .umitan-icons {
     @include col();
 
     .row {
@@ -12,7 +12,7 @@
   }
 }
 
-.discover-icon {
+.umitan-icon {
   @include col("sm", 4);
   @include col("md", 2);
   margin-bottom: 2rem;
@@ -20,13 +20,13 @@
   padding-right: 1rem
 }
 
-.discover {
+.umitan {
   display: flex;
   @include col("sm", "auto");
   margin-bottom: 2rem;
 }
 
-.discover-inner {
+.umitan-inner {
   position: relative;
   width: 21.5rem;
   margin-left: auto;
@@ -61,27 +61,27 @@
   }
 }
 
-.discover-eventdate {
+.umitan-eventdate {
   margin: 0;
   color: #ff584f;
 }
 
-.discover-title {
+.umitan-title {
   margin: 0;
   font-size: 1rem;
 }
 
-.discover-subtitle {
+.umitan-subtitle {
   margin: 0;;
   //color: theme-color("primary");
 }
 
-.discover-excerpt {
+.umitan-excerpt {
   margin: 1rem 0 .25rem;
   font-size: 87.5%;
 }
 
-.discover-terms {
+.umitan-terms {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,5 +92,23 @@
     display: inline-block;
     width: 3.75rem;
     height: 3.75rem;
+  }
+}
+
+.umitan-table {
+  @include table();
+  text-align: left;
+
+  td:first-child {
+    width: 9rem;
+    padding-left: 1rem;
+  }
+}
+
+#umitan .post-title {
+  span {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: $line-height-base;
   }
 }

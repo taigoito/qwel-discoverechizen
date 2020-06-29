@@ -62,7 +62,7 @@ const detectColor = (elem) => {
 const changeIcons = () => {
   let targetElem;
   if (document.body.id === 'index') {
-    const arr = ['front-news', 'front-about', 'front-discover', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-access', 'front-contact'];
+    const arr = ['front-news', 'front-about', 'front-umitan', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-location', 'front-contact'];
     targetElem = detectSection(arr);
   } else {
     const arr = ['main'];

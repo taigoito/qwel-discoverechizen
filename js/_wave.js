@@ -21,6 +21,7 @@ export default class Wave {
     const seconds = 0;
     const t = 0;
     this._draw(seconds, t);
+    window.setInterval(window.dispatchEvent(this._resizeEvent), 3000);
   }
 
   _draw(seconds, t) {

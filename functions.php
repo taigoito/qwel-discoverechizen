@@ -107,34 +107,34 @@ add_action('init', 'change_objectlabel');
 
 // Umitan
 
-$discover_slug = 'umitan';
-$discover_name = 'うみたん';
-$discover_icon = 'dashicons-star-filled';
+$umitan_slug = 'umitan';
+$umitan_name = 'うみたん';
+$umitan_icon = 'dashicons-star-filled';
 
-$discover_cat_slug = 'umitan-cat';
-$discover_cat_name = 'シーズン';
+$umitan_cat_slug = 'umitan-cat';
+$umitan_cat_name = 'シーズン';
 
-function register_option_discover()
+function register_option_umitan()
 {
-  global $discover_slug;
-  global $discover_name;
-  global $discover_icon;
+  global $umitan_slug;
+  global $umitan_name;
+  global $umitan_icon;
 
-  global $discover_cat_slug;
-  global $discover_cat_name;
+  global $umitan_cat_slug;
+  global $umitan_cat_name;
 
-  register_post_type($discover_slug, [
+  register_post_type($umitan_slug, [
     'labels' => [
-      'name' => $discover_name,
-      'all_items' => $discover_name . '一覧'
+      'name' => $umitan_name,
+      'all_items' => $umitan_name . '一覧'
     ],
     'public' => true,
     'menu_position' => 6,
-    'menu_icon' => $discover_icon,
+    'menu_icon' => $umitan_icon,
     'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
     'has_archive' => true,
     'rewrite' => [
-      'slug' => $discover_slug,
+      'slug' => $umitan_slug,
       'with_front' => false,
       'hierarchical' => true
     ],
@@ -143,15 +143,15 @@ function register_option_discover()
   ]);
 
   register_taxonomy(
-    $discover_cat_slug,
-    $discover_slug,
+    $umitan_cat_slug,
+    $umitan_slug,
     [
-      'label' => $discover_cat_name,
+      'label' => $umitan_cat_name,
       'public' => true,
       'show_admin_column' => true,
       'hierarchical' => true,
       'rewrite' => [
-        'slug' => $discover_cat_slug,
+        'slug' => $umitan_cat_slug,
         'with_front' => false,
         'hierarchical' => true
       ],
@@ -160,16 +160,16 @@ function register_option_discover()
     ]
   );
 }
-add_action('init', 'register_option_discover');
+add_action('init', 'register_option_umitan');
 
-function add_discover_fields()
+function add_umitan_fields()
 {
-  global $discover_name;
-  add_meta_box('umitan_setting', 'インフォメーション', 'insert_discover_fields', 'umitan', 'normal');
+  global $umitan_name;
+  add_meta_box('umitan_setting', 'インフォメーション', 'insert_umitan_fields', 'umitan', 'normal');
 }
-add_action('admin_menu', 'add_discover_fields');
+add_action('admin_menu', 'add_umitan_fields');
 
-function insert_discover_fields()
+function insert_umitan_fields()
 {
   global $post;
   echo '<table>';
@@ -185,7 +185,7 @@ function insert_discover_fields()
   echo '</table>';
 }
 
-function save_discover_fields($postID)
+function save_umitan_fields($postID)
 {
   if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
     return $post_id;
@@ -239,16 +239,16 @@ function save_discover_fields($postID)
     }
   }
 }
-add_action('save_post', 'save_discover_fields');
+add_action('save_post', 'save_umitan_fields');
 
-function the_discover_title()
+function the_umitan_title()
 {
   $title = get_the_title();
   $arr = preg_split('/\s\|\s/', $title, -1, PREG_SPLIT_NO_EMPTY);
   echo $arr[0];
 }
 
-function the_discover_description()
+function the_umitan_description()
 {
   $title = get_the_title();
   $arr = preg_split('/\s\|\s/', $title, -1, PREG_SPLIT_NO_EMPTY);
@@ -616,16 +616,16 @@ function insert_breadcrumb()
       $post_title = $wp_obj->post_title;
 
       // カスタム投稿タイプを判定
-      global $discover_slug;
-      global $discover_cat_slug;
+      global $umitan_slug;
+      global $umitan_cat_slug;
       global $info_slug;
       global $info_cat_slug;
       if ($post_type == 'post') {
         // 「記事」の場合、「カテゴリー」を取得
         $the_tax = 'category';
-      } else if ($post_type == $discover_slug) {
+      } else if ($post_type == $umitan_slug) {
         // 「うみたん」の場合、「シーズン」を取得
-        $the_tax = $discover_cat_slug;
+        $the_tax = $umitan_cat_slug;
       } else if ($post_type == $info_slug) {
         // 「観光情報」の場合、「分類」を取得
         $the_tax = $info_cat_slug;
@@ -732,10 +732,10 @@ function insert_breadcrumb()
       }
 
       // 「シーズン」の場合、「うみたん」を表示
-      global $discover_slug;
-      global $discover_cat_slug;
-      if ($tax_name == $discover_cat_slug) {
-        $post_type = $discover_slug;
+      global $umitan_slug;
+      global $umitan_cat_slug;
+      if ($tax_name == $umitan_cat_slug) {
+        $post_type = $umitan_slug;
       }
 
       // 「分類」の場合、「観光情報」を表示
@@ -865,10 +865,10 @@ function get_my_title()
       return 'blog';
     }
     // 「シーズン」の場合
-    global $discover_slug;
-    global $discover_cat_slug;
-    if ($tax_name == $discover_cat_slug) {
-      return $discover_slug;
+    global $umitan_slug;
+    global $umitan_cat_slug;
+    if ($tax_name == $umitan_cat_slug) {
+      return $umitan_slug;
     }
     // 「分類」の場合
     global $info_slug;
@@ -907,10 +907,10 @@ function get_my_slug()
       return 'archive';
     }
     // 「シーズン」の場合
-    global $discover_slug;
-    global $discover_cat_slug;
-    if ($tax_name == $discover_cat_slug) {
-      return 'archive-' . $discover_slug;
+    global $umitan_slug;
+    global $umitan_cat_slug;
+    if ($tax_name == $umitan_cat_slug) {
+      return 'archive-' . $umitan_slug;
     }
     // 「分類」の場合
     global $info_slug;

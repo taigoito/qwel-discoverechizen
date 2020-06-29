@@ -1,6 +1,6 @@
 /*
-Theme Name: Discover Echizen Beta
-Version: 2.1
+Theme Name: Discover Echizen
+Version: 2.0
 Author: Taigo Ito
 Author URI: https://qwel.design/
 Description: This is a theme for Discover Echizen.
@@ -293,6 +293,10 @@ input, button, select, optgroup, textarea {
 #header {
   margin-top: 6rem;
   margin-bottom: 3rem;
+}
+
+#umitan #header, #archive-umitan #header {
+  margin-bottom: 0;
 }
 
 #page-title,
@@ -878,7 +882,7 @@ input, button, select, optgroup, textarea {
   }
 }
 
-#discover-title {
+#umitan-title {
   position: relative;
   width: 100%;
   margin-left: auto;
@@ -888,24 +892,24 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 600px) {
-  #discover-title {
+  #umitan-title {
     max-width: 540px;
   }
 }
 
 @media (min-width: 782px) {
-  #discover-title {
+  #umitan-title {
     max-width: 720px;
   }
 }
 
 @media (min-width: 1024px) {
-  #discover-title {
+  #umitan-title {
     max-width: 960px;
   }
 }
 
-#discover-title .row {
+#umitan-title .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,7 +922,7 @@ input, button, select, optgroup, textarea {
           justify-content: center;
 }
 
-#discover-title .row img {
+#umitan-title .row img {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -926,7 +930,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 1024px) {
-  #discover-title .row img {
+  #umitan-title .row img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
@@ -934,14 +938,14 @@ input, button, select, optgroup, textarea {
   }
 }
 
-#front-discover .container > .row {
+#front-umitan .container > .row {
   margin-bottom: 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.front-discover-intro {
+.front-umitan-intro {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -950,7 +954,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 1024px) {
-  .front-discover-intro {
+  .front-umitan-intro {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
@@ -958,11 +962,11 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.front-discover-intro p {
+.front-umitan-intro p {
   color: #ffffff;
 }
 
-.front-discover-video {
+.front-umitan-video {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -973,7 +977,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 1024px) {
-  .front-discover-video {
+  .front-umitan-video {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -981,20 +985,20 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.front-discover-video video {
+.front-umitan-video video {
   margin-bottom: 2rem;
 }
 
-.front-discover-video a {
+.front-umitan-video a {
   color: #ffffff;
 }
 
-.front-discover-video a:hover {
+.front-umitan-video a:hover {
   color: #545454;
   text-decoration: underline;
 }
 
-.discover-pickup {
+.umitan-pickup {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -1003,7 +1007,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 1024px) {
-  .discover-pickup {
+  .umitan-pickup {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
@@ -1011,7 +1015,7 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.discover-pickup .featured-image {
+.umitan-pickup .featured-image {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1022,7 +1026,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 782px) {
-  .discover-pickup .featured-image {
+  .umitan-pickup .featured-image {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -1030,14 +1034,14 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.discover-pickup .featured-image img {
+.umitan-pickup .featured-image img {
   height: 16.125rem;
   max-height: calc(75vmin - .75rem);
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.discover-pickup-intro {
+.umitan-pickup-intro {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -1047,7 +1051,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 782px) {
-  .discover-pickup-intro {
+  .umitan-pickup-intro {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -1055,48 +1059,48 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.discover-pickup-intro img {
+.umitan-pickup-intro img {
   width: 13.5rem;
 }
 
-.discover-pickup-title {
+.umitan-pickup-title {
   margin: .75rem 0;
   font-weight: 700;
   line-height: 1.35;
 }
 
-.discover-pickup-subtitle {
+.umitan-pickup-subtitle {
   margin: 0;
   color: #ffffff;
   line-height: 1.35;
 }
 
-.discover-pickup-excerpt {
+.umitan-pickup-excerpt {
   margin: .75rem 0;
 }
 
-.discover-pickup-excerpt p {
+.umitan-pickup-excerpt p {
   font-size: 87.5%;
   line-height: 1.35;
 }
 
-.discover-pickup-btn {
+.umitan-pickup-btn {
   margin: 0;
   color: #ffffff;
   font-size: 87.5%;
 }
 
-.discover-pickup-btn:hover {
+.umitan-pickup-btn:hover {
   color: #545454;
   text-decoration: underline;
 }
 
-.discover-icons {
+.umitan-icons {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.discover-spring, .discover-summer, .discover-autumn, .discover-winter, .discover-all {
+.umitan-spring, .umitan-summer, .umitan-autumn, .umitan-winter, .umitan-all {
   position: relative;
   width: 100%;
   -webkit-box-flex: 0;
@@ -1115,7 +1119,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 782px) {
-  .discover-spring, .discover-summer, .discover-autumn, .discover-winter, .discover-all {
+  .umitan-spring, .umitan-summer, .umitan-autumn, .umitan-winter, .umitan-all {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
@@ -1123,7 +1127,7 @@ input, button, select, optgroup, textarea {
   }
 }
 
-.discover-allseason {
+.umitan-allseason {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -1134,7 +1138,7 @@ input, button, select, optgroup, textarea {
 }
 
 @media (min-width: 782px) {
-  .discover-allseason {
+  .umitan-allseason {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 75%;
             flex: 0 0 75%;
@@ -1366,6 +1370,7 @@ input, button, select, optgroup, textarea {
 #front-blog .blog-intro-terms li,
 #archive-blog .blog-intro-terms li {
   display: inline-block;
+  margin-left: .75rem;
   margin-bottom: 0;
 }
 
@@ -1414,12 +1419,12 @@ video {
   max-width: 100%;
 }
 
-#front-access .container {
+#front-location .container {
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
-#front-access .row {
+#front-location .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,7 +1438,7 @@ video {
   justify-content: center;
 }
 
-#front-access .row .wp-block-group:nth-child(1) {
+#front-location .row .wp-block-group:nth-child(1) {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -1446,7 +1451,7 @@ video {
 }
 
 @media (min-width: 782px) {
-  #front-access .row .wp-block-group:nth-child(1) {
+  #front-location .row .wp-block-group:nth-child(1) {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 83.33333%;
             flex: 0 0 83.33333%;
@@ -1455,7 +1460,7 @@ video {
 }
 
 @media (min-width: 1024px) {
-  #front-access .row .wp-block-group:nth-child(1) {
+  #front-location .row .wp-block-group:nth-child(1) {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -1463,7 +1468,7 @@ video {
   }
 }
 
-#front-access .row .wp-block-group:nth-child(2) {
+#front-location .row .wp-block-group:nth-child(2) {
   position: relative;
   width: 100%;
   padding-left: 0.5rem;
@@ -1476,7 +1481,7 @@ video {
 }
 
 @media (min-width: 782px) {
-  #front-access .row .wp-block-group:nth-child(2) {
+  #front-location .row .wp-block-group:nth-child(2) {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 83.33333%;
             flex: 0 0 83.33333%;
@@ -1485,7 +1490,7 @@ video {
 }
 
 @media (min-width: 1024px) {
-  #front-access .row .wp-block-group:nth-child(2) {
+  #front-location .row .wp-block-group:nth-child(2) {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
@@ -1510,9 +1515,19 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
   -webkit-transition: opacity linear .25s;
   transition: opacity linear .25s;
 }
@@ -1789,7 +1804,7 @@ video {
   background-color: #00a1d6;
 }
 
-#umitan .discover-icons, #archive-umitan .discover-icons {
+#umitan .umitan-icons, #archive-umitan .umitan-icons {
   position: relative;
   width: 100%;
   -webkit-box-flex: 0;
@@ -1800,12 +1815,12 @@ video {
   padding-right: 0.5rem;
 }
 
-#umitan .discover-icons .row, #archive-umitan .discover-icons .row {
+#umitan .umitan-icons .row, #archive-umitan .umitan-icons .row {
   padding-left: 0;
   list-style: none;
 }
 
-.discover-icon {
+.umitan-icon {
   position: relative;
   width: 100%;
   -webkit-box-flex: 0;
@@ -1824,7 +1839,7 @@ video {
 }
 
 @media (min-width: 782px) {
-  .discover-icon {
+  .umitan-icon {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 16.66667%;
             flex: 0 0 16.66667%;
@@ -1832,7 +1847,7 @@ video {
   }
 }
 
-.discover {
+.umitan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1848,7 +1863,7 @@ video {
   margin-bottom: 2rem;
 }
 
-.discover-inner {
+.umitan-inner {
   position: relative;
   width: 21.5rem;
   margin-left: auto;
@@ -1859,13 +1874,13 @@ video {
   line-height: 1.5;
 }
 
-.discover-inner .featured-image {
+.umitan-inner .featured-image {
   overflow: hidden;
   height: 15rem;
   margin-bottom: 1rem;
 }
 
-.discover-inner .featured-image img {
+.umitan-inner .featured-image img {
   width: 100%;
   height: 15rem;
   -o-object-fit: cover;
@@ -1873,37 +1888,37 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .discover-inner {
+  .umitan-inner {
     width: 17.5rem;
   }
-  .discover-inner .featured-image {
+  .umitan-inner .featured-image {
     height: 12rem;
   }
-  .discover-inner .featured-image img {
+  .umitan-inner .featured-image img {
     height: 12rem;
   }
 }
 
-.discover-eventdate {
+.umitan-eventdate {
   margin: 0;
   color: #ff584f;
 }
 
-.discover-title {
+.umitan-title {
   margin: 0;
   font-size: 1rem;
 }
 
-.discover-subtitle {
+.umitan-subtitle {
   margin: 0;
 }
 
-.discover-excerpt {
+.umitan-excerpt {
   margin: 1rem 0 .25rem;
   font-size: 87.5%;
 }
 
-.discover-terms {
+.umitan-terms {
   position: absolute;
   top: 0;
   left: 0;
@@ -1912,10 +1927,34 @@ video {
   margin: .375rem;
 }
 
-.discover-terms li {
+.umitan-terms li {
   display: inline-block;
   width: 3.75rem;
   height: 3.75rem;
+}
+
+.umitan-table {
+  width: 100%;
+  text-align: left;
+}
+
+.umitan-table tr {
+  border-top: 1px solid #b3b3b3;
+}
+
+.umitan-table th, .umitan-table td {
+  padding: .625rem 0;
+}
+
+.umitan-table td:first-child {
+  width: 9rem;
+  padding-left: 1rem;
+}
+
+#umitan .post-title span {
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.8;
 }
 
 #archive-info .container > .row {
@@ -2252,7 +2291,7 @@ video {
   padding-right: 0.5rem;
 }
 
-.plan-content > .wp-block-group > .wp-block-group__inner-container {
+.plan-content > .plan-spot > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2267,9 +2306,9 @@ video {
       justify-content: space-around;
 }
 
-.plan-content > .wp-block-group > .wp-block-group__inner-container > .wp-block-group,
-.plan-content > .wp-block-group > .wp-block-group__inner-container > .wp-block-image,
-.plan-content > .wp-block-group > .wp-block-group__inner-container > p {
+.plan-content > .plan-spot > div > .wp-block-group,
+.plan-content > .plan-spot > div > .wp-block-image,
+.plan-content > .plan-spot > div > p {
   position: relative;
   width: 100%;
   max-width: 22.5rem;
@@ -2278,7 +2317,7 @@ video {
   padding-right: 0.5rem;
 }
 
-.plan-content > .wp-block-group:not(:last-child)::after {
+.plan-content > .plan-spot:not(:last-child)::after {
   content: "";
   display: block;
   height: 3rem;
@@ -2343,6 +2382,13 @@ video {
 
 .member-content dt, .member-content dd {
   line-height: 1.8;
+}
+
+#mymap {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
 }
 
 #booking-page .container,

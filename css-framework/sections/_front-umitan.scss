@@ -1,6 +1,6 @@
 // Front - Umitan
 
-#discover-title {
+#umitan-title {
   @include container();
 
   .row {
@@ -12,14 +12,14 @@
   }
 }
 
-#front-discover {
+#front-umitan {
   .container>.row {
     margin-bottom: 3rem;
     align-items: center;
   }
 }
 
-.front-discover-intro {
+.front-umitan-intro {
   @include col("lg", 9);
   margin-bottom: 3rem;
 
@@ -28,7 +28,7 @@
   }
 }
 
-.front-discover-video {
+.front-umitan-video {
   @include col("lg", 12);
   margin-bottom: 6rem;
   padding-left: 0;
@@ -48,7 +48,7 @@
   }
 }
 
-.discover-pickup {
+.umitan-pickup {
   @include col("lg", 9);
   margin-bottom: 3rem;
 
@@ -66,7 +66,7 @@
   }
 }
 
-.discover-pickup-intro {
+.umitan-pickup-intro {
   @include col("md", 6);
   padding-left: 1.5rem;
   text-align: left;
@@ -76,19 +76,19 @@
   }
 }
 
-.discover-pickup-title {
+.umitan-pickup-title {
   margin: .75rem 0;
   font-weight: 700;
   line-height: $line-height-base * 6 / 8;
 }
 
-.discover-pickup-subtitle {
+.umitan-pickup-subtitle {
   margin: 0;
   color: #ffffff;
   line-height: $line-height-base * 6 / 8;
 }
 
-.discover-pickup-excerpt {
+.umitan-pickup-excerpt {
   margin: .75rem 0;
 
   p {
@@ -97,7 +97,7 @@
   }
 }
 
-.discover-pickup-btn {
+.umitan-pickup-btn {
   margin: 0;
   color: #ffffff;
   font-size: 87.5%;
@@ -108,12 +108,12 @@
   }
 }
 
-.discover-icons {
+.umitan-icons {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.discover-spring, .discover-summer, .discover-autumn, .discover-winter, .discover-all {
+.umitan-spring, .umitan-summer, .umitan-autumn, .umitan-winter, .umitan-all {
   @include col("sm", 6);
   @include col("md", 3);
   margin-bottom: 2rem;
@@ -121,7 +121,7 @@
   padding-right: 1rem;
 }
 
-.discover-allseason {
+.umitan-allseason {
   @include col("md", 9);
   margin-bottom: 2rem;
   padding-left: 1rem;

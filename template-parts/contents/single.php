@@ -4,7 +4,12 @@
           <div class="post-date"><?php the_time('Y.m.d'); ?></div>
           <?php } ?>
           <?php if (is_single()) { ?>
-          <h2 class="post-title"><?php the_title(); ?></h2>
+            <?php if (is_singular('umitan')) { ?>
+              <h2 class="post-title"><span><?php the_umitan_description(); ?></span>
+                <br><?php the_umitan_title(); ?></h2>
+            <?php } else { ?>
+              <h2 class="post-title"><?php the_title(); ?></h2>
+            <?php } ?>
           <?php } else { ?>
           <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <?php } ?>

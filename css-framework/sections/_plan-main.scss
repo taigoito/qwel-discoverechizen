@@ -110,8 +110,8 @@
 .plan-content {
   @include col();
 
-  &>.wp-block-group {
-    &>.wp-block-group__inner-container {
+  &>.plan-spot {
+    &>div {
       @include row();
       //align-items: center;
       justify-content: space-around;
