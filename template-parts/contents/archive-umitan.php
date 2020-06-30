@@ -20,7 +20,7 @@
                 $terms = get_the_terms($post->ID, 'umitan-cat');
                 foreach ($terms as $term) {
                   if ($term->term_id < 150) {
-                    echo '<li><a href="' . get_term_link($term->slug, 'umitan-cat') . '"><img src="' . get_template_directory_uri() . '/assets/svg/umitan_icon_s_' . $term->slug . '.svg"></a></li> ';
+                    echo '<li><img src="' . get_template_directory_uri() . '/assets/svg/umitan_icon_s_' . $term->slug . '.svg"></li> ';
                   }
                 }
                 ?>

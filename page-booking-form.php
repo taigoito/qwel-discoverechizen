@@ -1,15 +1,21 @@
 <?php get_header(); ?>
   <main id="main">
-    <div class="container">
-    <?php
-    if (have_posts()) {
-      while (have_posts()) {
-        the_post();
-        the_content();
-      }
-    }
-    ?>
-    </div><!-- .container -->
+    <div class="wrapper wave">
+      <div id="booking-form" class="container">
+        <div class="row">
+          <div class="primary-col">
+            <?php
+            if (have_posts()) {
+              while (have_posts()) {
+                the_post();
+                the_content();
+              }
+            }
+            ?>
+          </div>
+        </div><!-- .row-->
+      </div><!-- .container -->
+    </div><!-- .wrapper -->
   </main><!-- main -->
   <?php get_template_part('template-parts/footer/slidebar'); ?>
   <?php get_template_part('template-parts/footer/footer'); ?>

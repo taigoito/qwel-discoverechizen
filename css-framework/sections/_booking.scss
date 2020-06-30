@@ -3,8 +3,16 @@
 #booking-page,
 #booking-form,
 #booking-thanks {
-  .container {
-    min-height: 75vh;
+  .primary-col {
     margin-bottom: 3rem;
+    text-align: left;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .monthly-calendar {
+    margin-top: 3rem;
   }
 }

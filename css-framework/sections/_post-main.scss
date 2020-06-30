@@ -63,6 +63,14 @@
   .post-title, .featured-image, .post-content, .post-excerpt {
     margin-bottom: 2rem;
   }
+
+  .table {
+    @include table();
+  }
+}
+
+.post-excerpt img {
+  margin-top: 1rem;
 }
 
 // Specify background color to be detected by script

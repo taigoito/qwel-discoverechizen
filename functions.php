@@ -176,6 +176,7 @@ function insert_umitan_fields()
   echo '<tr><th>開催日：</th><td><input type="text" name="eventdate" value="' . get_post_meta($post->ID, 'eventdate', true) . '" size="50"></td></tr>';
   echo '<tr><th>体験名：</th><td><input type="text" name="item" value="' . get_post_meta($post->ID, 'item', true) . '" size="50"></td></tr>';
   echo '<tr><th>事業所：</th><td><input type="text" name="pic" value="' . get_post_meta($post->ID, 'pic', true) . '" size="50"></td></tr>';
+  echo '<tr><th>スラグ：</th><td><input type="text" name="picslug" value="' . get_post_meta($post->ID, 'picslug', true) . '" size="50"></td></tr>';
   echo '<tr><th>所在地：</th><td><input type="text" name="address" value="' . get_post_meta($post->ID, 'address', true) . '" size="50"></td></tr>';
   echo '<tr><th>連絡先：</th><td><input type="text" name="contact" value="' . get_post_meta($post->ID, 'contact', true) . '" size="50"></td></tr>';
   echo '<tr><th>URL：</th><td><input type="text" name="webpage" value="' . get_post_meta($post->ID, 'webpage', true) . '" size="50"></td></tr>';
@@ -206,6 +207,11 @@ function save_umitan_fields($postID)
       update_post_meta($postID, 'pic', $_POST['pic']);
     } else {
       delete_post_meta($postID, 'pic');
+    }
+    if (!empty($_POST['picslug'])) {
+      update_post_meta($postID, 'picslug', $_POST['picslug']);
+    } else {
+      delete_post_meta($postID, 'picslug');
     }
     if (!empty($_POST['address'])) {
       update_post_meta($postID, 'address', $_POST['address']);
@@ -846,12 +852,16 @@ function get_my_title()
   $wp_obj = get_queried_object();
 
   if (!is_home() && is_page()) {
+    // 予約ページ
+    if (is_page('booking-form') || is_page('booking-thanks')) return 'umitan';
     // 固定ページ
     return $wp_obj->post_name;
   } else if (is_post_type_archive()) {
     // カスタム投稿アーカイブ
     return $wp_obj->name;
   } else if ((is_single() && !is_singular('post'))) {
+    // 予約ページ
+    if (is_singular('booking-page')) return 'umitan';
     // カスタム投稿個別ページ
     return $wp_obj->post_type;;
   } else if (is_home() || is_date() || is_author() || is_search() || is_404() || is_single()) {
@@ -888,9 +898,13 @@ function get_my_slug()
   $wp_obj = get_queried_object();
 
   if (is_single()) {
+    // 予約ページ
+    if (is_singular('booking-page')) return 'umitan';
     // 個別投稿ページ
     return $wp_obj->post_type;
   } else if (!is_home() && is_page()) {
+    // 予約ページ
+    if (is_page('booking-form') || is_page('booking-thanks')) return 'umitan';
     // 固定ページ
     return $wp_obj->post_name;
   } else if (is_post_type_archive()) {

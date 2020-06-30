@@ -38,6 +38,7 @@
           <?php } ?>
           <div class="post-excerpt">
             <?php the_excerpt(); ?>
+            <img src="<?php echo get_template_directory_uri() . '/assets/svg/border.svg'; ?>">
           </div>
           <?php if (is_single()) { ?>
             <?php the_content(); ?>

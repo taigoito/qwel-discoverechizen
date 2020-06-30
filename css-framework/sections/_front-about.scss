@@ -65,10 +65,10 @@
 }
 
 .about-members {
-  @include col("lg", 9); 
+  @include col("lg", 12); 
   
   img {
-    width: 45rem
+    width: 60rem
   }
 }
 

@@ -1,6 +1,6 @@
 /*
 Theme Name: Discover Echizen
-Version: 2.0
+Version: 2.1
 Author: Taigo Ito
 Author URI: https://qwel.design/
 Description: This is a theme for Discover Echizen.
@@ -669,14 +669,14 @@ input, button, select, optgroup, textarea {
 @media (min-width: 1024px) {
   .about-members {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-    max-width: 75%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
 .about-members img {
-  width: 45rem;
+  width: 60rem;
 }
 
 @media (max-width: 1023px) {
@@ -972,8 +972,6 @@ input, button, select, optgroup, textarea {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin-bottom: 6rem;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 @media (min-width: 1024px) {
@@ -1046,6 +1044,7 @@ input, button, select, optgroup, textarea {
   width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  margin-top: 2rem;
   padding-left: 1.5rem;
   text-align: left;
 }
@@ -1061,6 +1060,12 @@ input, button, select, optgroup, textarea {
 
 .umitan-pickup-intro img {
   width: 13.5rem;
+}
+
+@media (min-width: 1024px) {
+  .umitan-pickup-intro {
+    margin-top: 0;
+  }
 }
 
 .umitan-pickup-title {
@@ -1769,6 +1774,46 @@ video {
   margin-bottom: 2rem;
 }
 
+#post .table,
+#umitan .table,
+#info .table,
+#plan .table,
+#column .table,
+#photo .table,
+#archive .table {
+  width: 100%;
+}
+
+#post .table tr,
+#umitan .table tr,
+#info .table tr,
+#plan .table tr,
+#column .table tr,
+#photo .table tr,
+#archive .table tr {
+  border-top: 1px solid #b3b3b3;
+}
+
+#post .table th, #post .table td,
+#umitan .table th,
+#umitan .table td,
+#info .table th,
+#info .table td,
+#plan .table th,
+#plan .table td,
+#column .table th,
+#column .table td,
+#photo .table th,
+#photo .table td,
+#archive .table th,
+#archive .table td {
+  padding: .625rem 0;
+}
+
+.post-excerpt img {
+  margin-top: 1rem;
+}
+
 #header, #main {
   background: #ffffff;
 }
@@ -1935,6 +1980,7 @@ video {
 
 .umitan-table {
   width: 100%;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -1955,6 +2001,33 @@ video {
   font-weight: bold;
   font-size: 1.125rem;
   line-height: 1.8;
+}
+
+.btn-booking {
+  margin: 3rem auto 6rem;
+  text-align: center;
+}
+
+.btn-booking a {
+  display: inline-block;
+  padding: 0.75rem 6rem;
+  border: none;
+  background-color: #00a1d6;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.btn-booking a:hover {
+  background-color: #0084b0;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #archive-info .container > .row {
@@ -2391,15 +2464,28 @@ video {
   margin: auto;
 }
 
-#booking-page .container,
-#booking-form .container,
-#booking-thanks .container {
-  min-height: 75vh;
+#booking-page .primary-col,
+#booking-form .primary-col,
+#booking-thanks .primary-col {
   margin-bottom: 3rem;
+  text-align: left;
+}
+
+#booking-page h2,
+#booking-form h2,
+#booking-thanks h2 {
+  margin-bottom: 2rem;
+}
+
+#booking-page .monthly-calendar,
+#booking-form .monthly-calendar,
+#booking-thanks .monthly-calendar {
+  margin-top: 3rem;
 }
 
 .pagination {
-  margin-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   padding-left: 0;
   list-style: none;
   text-align: center;
@@ -2820,7 +2906,7 @@ a:hover img {
 
 @media (min-width: 1024px) {
   .photo-gallery {
-    height: 36rem;
+    height: 30rem;
     overflow: hidden;
   }
 }

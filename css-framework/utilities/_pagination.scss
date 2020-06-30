@@ -1,7 +1,8 @@
 // Pagination
 
 @mixin pagination() {
-  margin-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   @include list-unstyled;
   text-align: center;
 

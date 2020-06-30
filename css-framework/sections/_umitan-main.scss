@@ -97,6 +97,7 @@
 
 .umitan-table {
   @include table();
+  margin-bottom: 2rem;
   text-align: left;
 
   td:first-child {
@@ -110,5 +111,14 @@
     font-weight: bold;
     font-size: 1.125rem;
     line-height: $line-height-base;
+  }
+}
+
+.btn-booking {
+  margin: 3rem auto 6rem;
+  text-align: center;
+
+  a {
+    @include button("lg");
   }
 }

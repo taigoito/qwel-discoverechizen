@@ -17,11 +17,12 @@ export default class Wave {
     this._handleEvents();
     this._resizeEvent = document.createEvent("HTMLEvents");
     this._resizeEvent.initEvent('resize', true, true);
-    window.dispatchEvent(this._resizeEvent);
     const seconds = 0;
     const t = 0;
     this._draw(seconds, t);
-    window.setInterval(window.dispatchEvent(this._resizeEvent), 3000);
+    window.setInterval(() => {
+      window.dispatchEvent(this._resizeEvent);
+    }, 1000);
   }
 
   _draw(seconds, t) {

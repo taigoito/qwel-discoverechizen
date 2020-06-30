@@ -19,8 +19,21 @@
               the_post();
               get_template_part('template-parts/contents/archive-umitan');
             }
-          } else {
-            echo '只今コンテンツを準備中です。';
+          }
+          if (!is_post_type_archive('umitan') && !is_tax('umitan-cat', ['allseason'])) {
+            $posts = get_posts([
+              'posts_per_page' => 24,
+              'post_type' => 'umitan',
+              'tax_query' => [[
+                'taxonomy' => 'umitan-cat',
+                'field'    => 'slug',
+                'terms'    => 'allseason'
+              ]]
+            ]);
+            foreach ($posts as $post) {
+              setup_postdata($post);
+              get_template_part('template-parts/contents/archive-umitan');
+            }
           }
           ?>
         </div>

@@ -1,5 +1,6 @@
 <?php
 $picHtml = get_post_meta($post->ID, 'pic', true);
+$picslugHtml = get_post_meta($post->ID, 'picslug', true);
 $addresssHtml = get_post_meta($post->ID, 'address', true);
 $contactHtml = get_post_meta($post->ID, 'contact', true);
 $urlHtml = '<a href="' . get_post_meta($post->ID, 'webpage', true) . '" target="_blank">' . get_post_meta($post->ID, 'webpage', true) . '</a>';
@@ -10,7 +11,12 @@ $priceHtml = get_post_meta($post->ID, 'price', true);
           <h3 class="information-heading">INFORMATION</h3>
           <table class="pic-information">
             <tbody>
-              <?php if (!empty(get_post_meta($post->ID, 'pic', true))) { ?>
+              <?php if (!empty(get_post_meta($post->ID, 'pic', true)) && !empty(get_post_meta($post->ID, 'picslug', true))) { ?>
+              <tr>
+                <th>事業所</th>
+                <td><?php echo '<a href="' . get_home_url('/') . '/info/' . $picslugHtml . '">' . $picHtml . '</a>'; ?></td>
+              </tr>
+              <?php } else if (!empty(get_post_meta($post->ID, 'pic', true))) { ?>
               <tr>
                 <th>事業所</th>
                 <td><?php echo $picHtml; ?></td>
@@ -30,7 +36,7 @@ $priceHtml = get_post_meta($post->ID, 'price', true);
               <?php if (!empty(get_post_meta($post->ID, 'contact', true))) { ?>
               <tr>
                 <th>連絡先</th>
-                <td><?php echo $contactHtml; ?></td>
+                <td><?php echo '<a href="tel:' . $contactHtml . '">' . $contactHtml . '</a>'; ?></td>
               </tr>
               <?php } else { ?>
               <tr>
