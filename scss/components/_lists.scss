@@ -1,11 +1,15 @@
-// News
+/* Component Lists
+------------------------------*/
 
-#news {
-  .news {
+.lists {
+  @include container();
+
+  &__item {
+    @include row();
     margin-bottom: 1rem;
   }
 
-  .featured-image {
+  &__image {
     @include col("lg", 4);
 
     a:hover img {
@@ -13,29 +17,29 @@
     }
   }
 
-  .news-intro {
+  &__textbox {
     @include col("lg", 8); // Match the width of the "md" size
   }
 
-  .news-intro-container {
+  &__textbox-inner {
     display: flex;
     align-items: center;
     height: 100%;
     background-color: #ffffff;
   }
 
-  .news-intro-inner {
+  &__content {
     padding: .5rem 1.5rem;
     text-align: left;
   }
 
-  .news-intro-date {
+  &__date {
     margin-top: .75rem;
     margin-bottom: .75rem;
     line-height: 1; // Make 2.5rem height by margin and line-height
   }
 
-  .news-intro-heading {
+  &__heading {
     display: inline-block;
     margin: .5rem 0;
     font-size: 1.2rem;
@@ -43,26 +47,27 @@
     vertical-align: bottom;
   }
 
-  .news-intro-terms {
+  &__terms {
     display: inline-block;
     margin-bottom: 0;
     @include list-unstyled();
     vertical-align: bottom;
+  }
 
-    li {
-      display: inline-block;
-      margin-left: .75rem;
-      margin-bottom: 0;
-    }
+  &__term {
+    display: inline-block;
+    margin-left: .75rem;
+    margin-bottom: 0;
 
     a {
+      display: inline-block;
       @include button("sm", "light");
       font-size: 1rem;
       line-height: 1.25; // Make 2.5rem height by button mixin and line-height
     }
   }
 
-  .news-intro-text {
+  &__intro {
     display: block;
     margin-top: .75rem;
     margin-bottom: .75rem; // Match the inner top with the margin

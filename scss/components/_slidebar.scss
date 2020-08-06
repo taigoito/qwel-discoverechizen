@@ -1,6 +1,7 @@
-// Slidebar
+/* Component Slidebar
+------------------------------*/
 
-#slidebar {
+.slidebar {
   position: fixed;
   top: 0;
   right: 0;
@@ -28,7 +29,7 @@
   }
 }
 
-#slidemenu {
+.slidemenu {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -57,7 +58,7 @@
   }
 }
 
-#slidebar-close{
+.slidebar__close{
   position: absolute;
   top: 0;
   right: 0;
@@ -84,7 +85,7 @@
   }
 }
 
-#slidebar-overlay {
+.slidebar__overlay {
   position: fixed;
   top: 0;
   right: 0;

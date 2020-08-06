@@ -1,22 +1,18 @@
 // Grid
 
-@mixin container-base() {
+@mixin container() {
   position: relative;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $grid-gutter-width / 2;
-  padding-right: $grid-gutter-width / 2;
-}
-
-@mixin container() {
-  @include container-base();
   @each $infix, $breakpoint in $grid-breakpoints {
     $max-width: map-get($container-max-widths, $infix);
     @media (min-width: $breakpoint) {
       max-width: $max-width;
     }
   }
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
 }
 
 @mixin row() {
@@ -24,7 +20,6 @@
   flex-wrap: wrap;
   margin-left: ($grid-gutter-width / -2);
   margin-right: ($grid-gutter-width / -2);
-  justify-content: center;
 }
 
 @mixin col($infix: "sm", $size: 12) {

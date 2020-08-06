@@ -1,0 +1,75 @@
+/* Layout Header nav
+------------------------------*/
+
+.header-nav {
+  @include sticky-top();
+  background: rgba($body-bg, .7);
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(min-width: breakpoint("lg")) {
+      justify-content: center;
+    }
+  }
+}
+
+%header-nav-item {
+  display: inline-block;
+  height: 3rem;
+  margin: 0 1rem;
+  line-height: 3rem;
+  vertical-align: middle;
+  text-transform: capitalize;
+
+  a {
+    color: $body-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+  }
+}
+
+.header-nav-brand {
+  @extend %header-nav-item;
+}
+  
+.header-nav-menu {
+  display: none;
+  margin: 0;
+  @include list-unstyled;
+
+  @media(min-width: breakpoint("lg")) {
+    display: inline-block;
+  }
+
+  &__item {
+    @extend %header-nav-item;
+  }
+}
+
+.header-nav-toggler {
+  display: inline-block;
+  height: 3rem;
+  margin: 0 .5rem;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: $body-color;
+  line-height: 1;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  @media(min-width: breakpoint("lg")) {
+    display: none;
+  }
+}

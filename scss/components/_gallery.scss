@@ -1,6 +1,7 @@
-// Photo gallery
+/* Component Gallery
+------------------------------*/
 
-.photo-gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   @include list-unstyled();
@@ -11,7 +12,7 @@
     overflow: hidden;   
   }
 
-  &> li {
+  &__item {
     width: 31.25vw;
     max-width: 18rem;
     height: 31.25vw;

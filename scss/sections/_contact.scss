@@ -1,0 +1,15 @@
+/* Section Contact
+------------------------------*/
+
+.contact {
+  @extend %section;
+  background-color: $body-bg;
+
+  &__heading {
+    @extend %section__heading;
+  }
+
+  &__form {
+    @include form();
+  }
+}

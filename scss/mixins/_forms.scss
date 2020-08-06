@@ -1,8 +1,13 @@
 // Forms
 
 @mixin form() {
-  @include container-base();
+  position: relative;
+  width: 100%;
   max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
   text-align: left;
 
   label {
@@ -33,8 +38,8 @@
   }
 
   [type="button"], [type="reset"], [type="submit"] {
-    @include button("lg", "primary");
     display: block;
+    @include button("lg", "primary");
     margin: auto;
   }
 }

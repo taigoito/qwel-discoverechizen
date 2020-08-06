@@ -3,10 +3,10 @@
 export default class Slidebar {
   constructor(options = {}) {
     this._root = options.root || `${location.protocol}//${location.hostname}`;
-    this._bar = document.querySelector('#slidebar');
-    this._menu = document.querySelector('#slidemenu');
-    this._close = document.querySelector('#slidebar-close');
-    this._overlay = document.querySelector('#slidebar-overlay');
+    this._bar = document.querySelector('.slidebar');
+    this._menu = document.querySelector('.slidemenu');
+    this._close = document.querySelector('.slidebar__close');
+    this._overlay = document.querySelector('.slidebar__overlay');
     this._toggle = document.querySelectorAll('[data-toggle="slidebar"]');
     this._nav = options.nav || document.querySelector('nav');
     this._template = options.template || document.querySelector('#slidebar-template');

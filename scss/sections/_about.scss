@@ -1,0 +1,11 @@
+/* Section About
+------------------------------*/
+
+.about {
+  @extend %section;
+  background-color: $body-bg;
+
+  &__heading {
+    @extend %section__heading;
+  }
+}
