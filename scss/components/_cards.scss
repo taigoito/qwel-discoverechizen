@@ -2,8 +2,12 @@
 ------------------------------*/
 
 .cards {
-  @include row();
-  justify-content: space-around;
+  @include container();
+
+  &__container {
+    @include row();
+    justify-content: space-around;
+  }
 
   &__item {
     @include col("sm", "auto");
