@@ -871,7 +871,7 @@ function get_my_title()
     return 'blog';
   } else if (is_archive()) {
     // タームアーカイブ
-    $term_name = $wp_obj->taxonomy;
+    $tax_name = $wp_obj->taxonomy;
     // 「カテゴリー」、「タグ」の場合
     if ($tax_name == 'category' || $tax_name == 'tag') {
       return 'blog';

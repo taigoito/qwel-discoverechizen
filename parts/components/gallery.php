@@ -1,5 +1,5 @@
         <li  class="gallery__item">
-          <a href="<?php the_permalink(); ?>">
+          <a href="https://www.instagram.com/discoverechizen/" target="_blank">
             <?php
             if (has_post_thumbnail()) {
               the_post_thumbnail('thumbnail');

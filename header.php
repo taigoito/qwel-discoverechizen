@@ -1,7 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
@@ -14,7 +14,11 @@
   </noscript>
   <script src="<?php echo get_template_directory_uri() . '/js/preloader.js'; ?>"></script>
   <script>
-    const preloader = new Preloader();
+    const preloader = new Preloader({
+      backgroundColor: 'hsl(195, 100%, 42%)',
+      img: '/discoverechizen/wp/wp-content/themes/discoverechizen/assets/svg/top_logo2.svg',
+      terminateTime: 5000
+    });
   </script>
 
   <?php

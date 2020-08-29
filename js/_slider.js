@@ -227,7 +227,8 @@ export default class Slider {
 
   _done() {
     this._inner.style.transform = `translateX(${this._start + this._flickDistance}px)`;
-    window.dispatchEvent(this._resizeEvent);
+    //window.dispatchEvent(this._resizeEvent);
+    this._windowResizeHandler();
     this.timeStart = false;
     this.isAnimated = false;
     this._setActiveItem();

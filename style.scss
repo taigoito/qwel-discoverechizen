@@ -36,6 +36,10 @@ Description: This is a theme for Discover Echizen.
  @import "scss/sections/movie";
  @import "scss/sections/location";
  @import "scss/sections/contact";
+ @import "scss/sections/archive-info";
+ @import "scss/sections/archive-plan";
+ @import "scss/sections/pic-info";
+ @import "scss/sections/member";
  @import "scss/components/breadcrumb";
  @import "scss/components/cards";
  @import "scss/components/categories";
@@ -50,5 +54,7 @@ Description: This is a theme for Discover Echizen.
  @import "scss/components/slider";
  @import "scss/components/wave";
  @import "scss/utilities/accessibilities";
+ @import "scss/utilities/booking";
  @import "scss/utilities/custom-logo";
+ @import "scss/utilities/tables";
  @import "scss/utilities/widgets";

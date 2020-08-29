@@ -5,7 +5,7 @@
         </div>
       </h2>
       <div class="about__main">
-        <div class="about__container">
+        <div class="article--about">
           <?php
           $posts = get_posts([
             'posts_per_page' => 1,

@@ -32,10 +32,10 @@
           <div class="info-item">
             <div class="info-item__inner">
               <div class="info-item__intro">
-                  <h3><img src="<?php echo get_template_directory_uri() . '/assets/svg/info_map.svg'; ?>"></h3>
-                  <p>盛り上げ隊が発行している地域の魅力が詰まった地図。</p>
-                  <a href="./treasuremap/" target="_blank">&gt; マップを見る</a>
-                    <br><a href="<?php echo get_template_directory_uri() . '/assets/map2020.pdf'; ?>" target="_blank">&gt; マップのダウンロード</a>
+                  <h3 class="info-item__heading"><img src="<?php echo get_template_directory_uri() . '/assets/svg/info_map.svg'; ?>"></h3>
+                  <p class="info-item__text">盛り上げ隊が発行している地域の魅力が詰まった地図。</p>
+                  <a class="info-item__more" href="./treasuremap/" target="_blank">&gt; マップを見る</a>
+                    <br><a class="info-item__more" href="<?php echo get_template_directory_uri() . '/assets/map2020.pdf'; ?>" target="_blank">&gt; マップのダウンロード</a>
                 </div>
                 <div class="info-item__image">
                   <img src="<?php echo get_template_directory_uri() . '/assets/svg/info_illust_map.svg'; ?>">

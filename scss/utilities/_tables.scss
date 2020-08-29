@@ -1,0 +1,17 @@
+/* Utility Tables
+------------------------------*/
+
+.umitan-table {
+    margin-bottom: 2rem;
+  
+    table {
+      @include table();
+      text-align: left;
+  
+      td:first-child {
+        width: 9rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+  

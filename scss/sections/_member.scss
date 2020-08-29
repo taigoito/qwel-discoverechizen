@@ -1,0 +1,41 @@
+/* Section Member
+------------------------------*/
+
+.member {
+  &__title {
+    width: 24rem;
+    max-width: 100%;
+    margin: 4.5rem auto;
+    color: theme-color("primary");
+    font-size: 1.5rem;
+    line-height: $line-height-base;
+    text-align: center;
+  
+    span:first-child {
+      font-size: 1rem;
+    }
+  
+    &::after {
+      content: "";
+      display: block;
+      height: 3rem;
+      background: url("assets/svg/plan_dec.svg") no-repeat center center / contain scroll;
+    }
+  }
+  
+  &__content {
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+  
+    dt {
+      margin-top: 2rem;
+      margin-bottom: .5rem;
+      color: theme-color("secondary");
+    }
+  
+    dt, dd {
+      margin-left: 0;
+      line-height: $line-height-base;
+    }
+  }
+}

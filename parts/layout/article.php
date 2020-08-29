@@ -41,6 +41,12 @@
           <?php the_excerpt(); ?>
           <img class="article__border" src="<?php echo get_template_directory_uri() . '/assets/svg/border.svg'; ?>">
           <?php if (is_single() || is_page()) the_content(); ?>
+          <?php if (is_singular('umitan') || is_singular('info')) { ?>
+            <?php get_template_part('parts/sections/pic-info'); ?>
+          <?php } ?>
+          <?php if (is_singular('plan')) { ?>
+            <?php get_template_part('parts/sections/member'); ?>
+          <?php } ?>
         </div>
         <?php if (is_singular('post')) { ?>
         <aside class="aside">
