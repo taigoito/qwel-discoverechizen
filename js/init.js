@@ -34,8 +34,8 @@ if (document.body.id === 'index') {
 
 if (document.body.id === 'works') {
   // Works
-  const elem = document.querySelector('.work-gallery');
-  const content = document.querySelector('.work-content');
+  const elem = document.querySelector('.article-work__gallery');
+  const content = document.querySelector('.article-work__content');
   const images = content.querySelectorAll('.wp-block-image');
   images.forEach((image) => {
     elem.appendChild(image);

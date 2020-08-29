@@ -1,0 +1,23 @@
+/* Component Breadcrumb
+------------------------------*/
+
+.breadcrumb {
+  @include container();
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__items {
+    margin-bottom: 0;
+    @include list-unstyled();
+  }
+
+  &__item {
+    display: inline-block;
+    text-transform: capitalize;
+
+    &:not(:first-child)::before {
+      padding: 0 .5rem;
+      content: ">";
+    }
+  }
+}

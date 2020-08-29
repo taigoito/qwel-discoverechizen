@@ -1,0 +1,26 @@
+// Buttons
+
+@mixin button($size: "sm", $key-color: "primary", $background: theme-color($key-color), $hover-background: darken($background, 7.5%)) {
+  margin: auto;
+  @if ($size == "sm") {
+    padding: 0.625rem 1.25rem;
+  } @else if ($size == "md") {
+    padding: 0.625rem 5rem;
+  } @else if ($size == "lg") {
+    padding: 0.75rem 6rem;
+  }
+  border: none;
+  background-color: $background;
+  color: color-yiq($background);
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-background;
+    color: color-yiq($hover-background);
+    text-decoration: none;
+  }
+}

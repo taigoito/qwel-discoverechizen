@@ -1,0 +1,57 @@
+/* Layout Article
+------------------------------*/
+
+.article {
+  margin-bottom: 6rem;
+
+  &__date {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  &__content {
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &--work {
+    @include row();
+  
+    &__primary {
+      @include col("lg", 4);
+      order: 2;
+    }
+  
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+  
+    &__info {
+      @include table();
+      margin-bottom: 1rem;
+    }
+  
+    &__content {
+      margin-bottom: 1rem;
+    }
+  
+    &__secondary {
+      @include col("lg", 8);
+      text-align: center;
+      order: 1;
+  
+      img {
+        margin-bottom: 2rem;
+      }
+    }
+  }  
+}

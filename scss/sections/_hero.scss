@@ -1,0 +1,17 @@
+/* Layout Hero
+------------------------------*/
+
+.hero {
+  &__inner {
+    @include cover-unit();
+  }
+
+  &__content {
+    @include cover-section();
+  }
+}
+
+.cover-image {
+  @include cover-image();
+  @include background("light");
+}

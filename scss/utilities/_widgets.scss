@@ -1,0 +1,52 @@
+/* Utility Widgets
+------------------------------*/
+
+.search-form {
+  position: relative;
+
+  label {
+    display: block;
+    line-height: $line-height-base;
+  }
+}
+
+.search-field {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid gray(700);
+  font-size: $small-font-size;
+}
+
+.search-submit {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  bottom: .25rem;
+  display: inline-block;
+  font-size: $small-font-size;
+  @include button();
+}
+
+.widget {
+  margin-bottom: 3rem;
+
+  &__title {
+    border: 0;
+    font-size: 1rem;
+  }
+
+  ul {
+    @include list-unstyled();
+  }
+
+  li {
+    padding: .625rem 0;
+    border-bottom: 1px solid gray(700);
+    font-size: $small-font-size;
+
+    &:first-child {
+      border-top: 1px solid gray(700);
+    }
+  }
+}

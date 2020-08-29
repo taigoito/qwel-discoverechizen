@@ -1,0 +1,7 @@
+/* Layout Header
+------------------------------*/
+
+.site-header {
+  @include sticky-top();
+  @include background("light");
+}

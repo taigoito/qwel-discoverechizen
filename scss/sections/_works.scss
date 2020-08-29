@@ -1,0 +1,11 @@
+/* Section Works
+------------------------------*/
+
+.works {
+  @extend %section;
+  background-color: gray(850);
+
+  &__heading {
+    @extend %section__heading;
+  }
+}

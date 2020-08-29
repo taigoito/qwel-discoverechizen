@@ -1,0 +1,170 @@
+/* Foundation
+ * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
+------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: $root-font-size;
+  
+  @media (max-width: breakpoint("sm") - 1) {
+    font-size: round($root-font-size * 0.875);
+  }
+}
+
+body {
+  margin: 0; // Remove the margin in all browsers
+  background: $body-bg; // Below, apply the default style of the theme
+  color: $body-color;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  text-align: $text-align-base;
+  line-height: 1.15;
+  letter-spacing: $letter-spacing-base;
+  -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem; // Set default top and bottom margins
+  margin-bottom: 1rem;
+  font-family: $heading-font-family; // Apply the default
+  font-weight: $heading-font-weight;
+}
+
+p {
+  margin-top: 0; // Just in case
+  margin-bottom: 1rem; // Margin after paragraphs
+  line-height: $line-height-base; // Set default line height for paragraphs
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem; // Remove it when nesting
+  padding-left: 2rem; // Change browser default unit from 'px' to 'rem'
+
+  li {
+    margin-bottom: .5rem; // Applied with default line height
+  }
+}
+
+blockquote {
+  margin-left: 1rem; // Put a left border in the blockquote
+  padding-left: .75rem;
+  border-left: .25rem solid $body-color;
+
+  p, cite {
+    font-style: italic; // Make font style italic and make them smaller
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+    letter-spacing: $small-letter-spacing;
+  }
+}
+
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  letter-spacing: $small-letter-spacing;
+}
+
+a {
+  color: $link-color; // Apply the default
+  text-decoration: $link-decoration;
+
+  &:focus {
+    outline: 0; // Remove it
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:not([href]):not([class]) {
+    &,
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+figure {
+  margin: 0; // Remove margins and center contents
+  text-align: center;
+}
+
+figcaption {
+  color: gray(300); // Make font color gray and make them smaller
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  letter-spacing: $small-letter-spacing;
+}
+
+img {
+  max-width: 100%; // Make fluid image
+  height: auto;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: $font-weight-base;
+  text-align: left;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0; // Remove the margin in Firefox and Safari
+  font-family: inherit; // Change the font styles in all browsers
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button, select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // Correct the inability to style clickable types in iOS and Safari
+}
+
+::-moz-focus-inner {
+  border-style: none; // Remove the inner border and padding in Firefox
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto; // Correct the cursor style of increment and decrement buttons in Chrome
+}
+
+[type="search"] {
+  -webkit-appearance: textfield; // Correct the odd appearance in Chrome and Safari
+  outline-offset: -2px; // Correct the outline style in Safari
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none; // Remove the inner padding in Chrome and Safari on macOS
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // Correct the inability to style clickable types in iOS and Safari
+  font: inherit; // Change font properties to `inherit` in Safari
+}

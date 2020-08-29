@@ -1,0 +1,76 @@
+/* Layout Main
+------------------------------*/
+
+%section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+%section__heading {
+  margin-top: 0;
+  margin-bottom: 6rem;
+  text-transform: capitalize;
+}
+
+.main {
+  &__title {
+    margin: 3rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__container {
+    @include container();
+  }
+
+  &__inner {
+    @include row();
+    justify-content: space-around;
+  }
+
+  &__primary {
+    @include col("lg", 8);
+    max-width: 40rem;
+    
+    @media (min-width: breakpoint("lg")) {
+      max-width: 40rem;
+    }
+  }
+
+  &__secondary {
+    @include col("lg", 3);
+    max-width: 15rem;
+    
+    @media (min-width: breakpoint("lg")) {
+      max-width: 15rem;
+    }
+  }
+
+  &--works {
+    @include row();
+  
+    &__primary {
+      @include col();
+      order: 1;
+      
+      @media (min-width: breakpoint("lg")) {
+        order: 2;
+      }
+    }
+  
+    &__secondary {
+      @include col();
+      order: 2;
+      
+      @media (min-width: breakpoint("lg")) {
+        order: 1;
+      }
+    }
+  
+    &__tertiary {
+      @include col();
+      order: 3;
+    }
+  }  
+}
