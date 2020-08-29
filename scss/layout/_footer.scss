@@ -1,0 +1,81 @@
+/* Layout Footer
+------------------------------*/
+
+.footer {
+  padding: 3rem 1rem;
+  @include background("primary");
+
+  @media (min-width: breakpoint("lg")) {
+    text-align: center;
+  }
+
+  &__main {
+    max-width: map-get($container-max-widths, "md");
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem .5rem;
+  }
+
+  &__container {
+    @include row();
+    justify-content: space-around;
+  }
+
+  &__content--primary {
+    @include col("md", 6);
+  }
+
+  &__content--secondary {
+    @include col("md", 4);
+  }
+}
+
+.footer-brand {
+  margin-bottom: 6rem;
+
+  img {
+    width: 24rem;
+  }
+}
+
+.social-links {
+  margin: 3rem;
+  text-align: left;
+
+  &__item {
+    display: inline-block;
+    margin: 0 .25rem;
+
+    img {
+      width: 2rem;
+    }
+  }
+}
+
+.footer-nav {
+  margin-bottom: 2rem;
+
+  ul {
+    @include list-unstyled();
+    font-size: 87.5%;
+    text-align: left;
+  }
+
+  li {
+    margin-bottom: .75rem;
+    letter-spacing: .04rem;;
+  }
+
+  a {
+    color: lighten(#000000, 95%);
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-copyright {
+  color: lighten(#000000, 95%);
+}

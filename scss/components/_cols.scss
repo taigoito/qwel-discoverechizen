@@ -1,0 +1,142 @@
+/* Component Cols
+------------------------------*/
+
+%container {
+  @include container();
+}
+
+.one-col {
+  @extend %container;
+
+  %__container {
+    @include row();
+    margin-bottom: 6rem; // Remove it, if not needed
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__container {
+    @extend %__container;
+  }
+
+  &__image {
+    @include col("lg", 5);
+  }
+
+  &__textbox {
+    @include col("lg", 5);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 1.17rem;
+  }
+
+  %__intro {
+    margin-bottom: 2rem;
+  }
+
+  &__intro {
+    @extend %__intro;
+    text-align: justify;
+
+    &--align_left {
+      @extend %__intro;
+      text-align: left;
+    }
+
+    &--align_center {
+      @extend %__intro;
+      text-align: center;
+    }
+
+    &--align_right {
+      @extend %__intro;
+      text-align: right;
+    }
+  }
+
+  &__more {
+    display: inline-block;
+    @include button("lg");
+  }
+
+  &__container--order_switched {
+    @extend %__container;
+
+    @media (min-width: breakpoint("lg")) {
+      .one-col__textbox {
+        order: 1;
+      }
+
+      .one-col__image {
+        order: 2;
+      }
+    }
+  }
+}
+
+.cols {
+  @extend %container;
+
+  &__container {
+    @include row();
+    justify-content: space-around;
+  }
+
+  %__col {
+    margin-bottom: 6rem;
+  }
+
+  &__col {
+    @extend %__col;
+
+    @for $i from 3 through 6 {
+      &--size_#{$i} {
+        @extend %__col;
+        @include col("lg", $i);
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 1.17rem;
+    text-align: left;
+  }
+
+  %__intro {
+    margin-bottom: 1rem;
+  }
+
+  &__intro {
+    @extend %__intro;
+    text-align: justify;
+
+    &--align_left {
+      @extend %__intro;
+      text-align: left;
+    }
+
+    &--align_center {
+      @extend %__intro;
+      text-align: center;
+    }
+
+    &--align_right {
+      @extend %__intro;
+      text-align: right;
+    }
+  }
+
+  &__more {
+    display: inline-block;
+    @include button("lg");
+  }
+}

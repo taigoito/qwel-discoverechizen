@@ -1,0 +1,99 @@
+/* Layout Main
+------------------------------*/
+
+%section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+%section__heading {
+  @include container();
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+%section__heading-container {
+  @include row();
+
+  img {
+    @include col("md", 6);
+    padding-left: .25rem;
+    padding-right: .25rem; // Adjust image position
+  }
+
+  @media (min-width: breakpoint("md")) {
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      @include col("md", 3);
+      background: url("assets/svg/title_dec.svg") no-repeat center center / contain scroll;
+    }
+  }
+}
+
+.main {
+  &__title {
+    margin: 3rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__container {
+    @include container();
+  }
+
+  &__inner {
+    @include row();
+    justify-content: space-around;
+  }
+
+  &__primary {
+    @include col("lg", 8);
+  }
+
+  &__secondary {
+    @include col("lg", 2);
+  }
+
+  &--about {
+    @include container();
+  }
+
+  &--umitan {
+    &__container {
+      @include container();
+    }
+
+    &__article-wrap {
+      @include row();
+      justify-content: center;
+    }
+
+    &__article-container {
+      @include col("lg", 9);
+    }
+
+    &__icons {
+      @include list-unstyled();
+      @include row();
+    }
+  
+    &__icon {
+      @include col("sm", 4);
+      @include col("md", 2);
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &--plan {
+    background-color: theme-color("primary-light");
+
+    &__container {
+      @include container();
+    }
+  }
+}

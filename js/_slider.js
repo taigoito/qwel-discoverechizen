@@ -2,12 +2,12 @@
 
 export default class Slider {
   constructor(options = {}) {
-    this._slider = document.querySelector(options.slider) || document.querySelector('.slider');
-    this._inner = document.querySelector(options.inner) || document.querySelector('.slider-inner');
+    this._slider = document.querySelector(options.slider) || document.getElementById('slider');
+    this._inner = document.querySelector(options.inner) || document.querySelector('.slider__inner');
     this._items = this._inner.children;
     this._len = this._items.length;
-    this._prev = document.querySelector(options.prev) || document.querySelector('.slider-prev');
-    this._next = document.querySelector(options.next) || document.querySelector('.slider-next');
+    this._prev = document.querySelector(options.prev) || document.querySelector('.slider__prev');
+    this._next = document.querySelector(options.next) || document.querySelector('.slider__next');
     this._index = 0;
     this._rate = options.rate || 1;
     this._hasDraggingHandler = options.hasDraggingHandler || false;
@@ -16,8 +16,8 @@ export default class Slider {
     this._hasCaption = options.hasCaption || false;
     this._autoPlay = options.autoPlay || 0; 
     if (this._hasCaption) {
-      this._caption = document.querySelector(options.caption) || document.querySelector('.slider-caption');
-      this._inner.querySelectorAll('.slider-item-caption').forEach((elem) => {
+      this._caption = document.querySelector(options.caption) || document.querySelector('.slider__caption');
+      this._inner.querySelectorAll('.slider__caption--hidden').forEach((elem) => {
         elem.style.display = 'none';
       });
     }
@@ -48,12 +48,12 @@ export default class Slider {
       }
       this._items[this._index % this._len].classList.add('active');
     } else {
-      this._inner.querySelectorAll('.slider-item').forEach((item) => {
+      this._inner.querySelectorAll('.slider__item').forEach((item) => {
         item.classList.add('active');
       });
     }
     if (this._hasCaption) {
-      const caption = this._items[this._index % this._len].querySelector('.slider-item-caption').innerHTML;
+      const caption = this._items[this._index % this._len].querySelector('.slider__caption--hidden').innerHTML;
       this._caption.innerHTML = caption;
     }
   }
@@ -227,8 +227,7 @@ export default class Slider {
 
   _done() {
     this._inner.style.transform = `translateX(${this._start + this._flickDistance}px)`;
-    //window.dispatchEvent(this._resizeEvent);
-    this._windowResizeHandler();
+    window.dispatchEvent(this._resizeEvent);
     this.timeStart = false;
     this.isAnimated = false;
     this._setActiveItem();

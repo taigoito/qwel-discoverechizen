@@ -1,0 +1,99 @@
+/* Section Umitan
+------------------------------*/
+
+.umitan {
+  @extend %section;
+
+  &__heading {
+    @extend %section__heading;
+  }
+
+  &__heading-container {
+    @include row();
+    justify-content: center;
+
+    img {
+      @include col("lg", 9);
+    }
+  }
+
+  &__main {
+    @include container();
+  }
+
+  &__container {
+    @include row();
+    justify-content: center;
+  }
+
+  &__intro {
+    @include col("lg", 9);
+    margin-bottom: 3rem;
+  
+    p {
+      color: #ffffff;
+    }
+  }
+  
+  &__video {
+    @include col("lg", 12);
+    margin-bottom: 6rem;
+  
+    video {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    a {
+      color: #ffffff;
+  
+      &:hover {
+        color: $body-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &__icons {
+    @include row();
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  %__icon {
+    @include col("sm", 6);
+    @include col("md", 3);
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__icon {
+    &--spring {
+      @extend %__icon;
+    }
+
+    &--summer {
+      @extend %__icon;
+    }
+
+    &--autumn {
+      @extend %__icon;
+    }
+
+    &--winter {
+      @extend %__icon;
+    }
+
+    &--all {
+      @extend %__icon;
+    }
+
+    &--allseason {
+      @include col("md", 9);
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/* Layout Hero
+------------------------------*/
+
+$imageCount: 6;
+$imageDuration: 5;
+
+.hero {
+  &__inner {
+    @include cover-unit();
+  }
+
+  &__content {
+    @include cover-section();
+
+    &.fade {
+      opacity: 0;
+      animation: fade #{$imageCount * $imageDuration}s ease 0s infinite normal;
+    }
+  
+    img {
+      width: 18rem;
+    }
+  }
+}
+
+@for $i from 1 through $imageCount  {
+  .hero__image--num_#{$i} { 
+    @include cover-image(url("./assets/landscape/main0#{$i - 1}.jpg"));
+    opacity: 0;
+
+    &.fade {
+      animation: fade #{$imageCount * $imageDuration}s ease #{($i - 1) * $imageDuration}s infinite normal;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+}

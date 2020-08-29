@@ -1,26 +1,27 @@
 <?php get_header(); ?>
-  <main id="main">
-    <div class="container">
-      <div class="row">
-        <div class="primary-col">
-          <?php
+  <main id="main" class="main">
+    <div class="main__container">
+      <div class="main__inner">
+        <div class="main__primary">
+          <?php if (is_404()) { ?>
+          <p>お探しのページは見つかりませんでした</p>
+          <?php } ?>
+          <?php 
           if (have_posts()) {
             while (have_posts()) {
               the_post();
-              get_template_part('template-parts/contents/single');
+              get_template_part('parts/layout/article');
             }
-          } else {
-            echo '只今コンテンツを準備中です。';
           }
           ?>
-          <?php if (!is_singular()) insert_pagination(); ?>
-        </div><!-- .primary -->
-        <?php if (is_archive() || is_single()) { ?>
-        <div class="secondary-col">
+          <?php if (!is_single() && !is_page() || is_home()) insert_pagination(); ?>
+        </div><!-- .main__primary -->
+        <?php if (is_home() || is_singular('post') || is_post_type_archive('post') || is_category() || is_tag() || is_date() || is_author() || is_search()) { ?>
+        <div class="main__secondary">
           <?php dynamic_sidebar('blog-sidebar'); ?>
-        </div><!-- .secondary -->
+        </div><!-- .main__secondary -->
         <?php } ?>
-      </div><!-- .row -->
-    </div><!-- .container -->
-  </main><!-- main -->
+      </div><!-- .main__inner -->
+    </div><!-- .main__container -->
+  </main><!-- .main -->
 <?php get_footer(); ?>

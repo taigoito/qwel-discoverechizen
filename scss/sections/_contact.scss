@@ -1,0 +1,20 @@
+/* Section Contact
+------------------------------*/
+
+.contact {
+  @extend %section;
+  background-color: #ffffff; // Color detected
+
+  &__heading {
+    @extend %section__heading;
+  }
+
+  &__heading-container {
+    @extend %section__heading-container;
+  }
+
+  form {
+    @include form();
+    text-align: left;
+  }
+}

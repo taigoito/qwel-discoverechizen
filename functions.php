@@ -59,7 +59,7 @@ function discoverechizen_widgets_init()
     'id' => 'blog-sidebar',
     'before_widget' => '<aside class="widget">',
     'after_widget' => '</aside>',
-    'before_title' => '<h2 class="widget-title">',
+    'before_title' => '<h2 class="widget__title">',
     'after_title' => '</h2>'
   ]);
 }
@@ -189,9 +189,9 @@ function insert_umitan_fields()
 function save_umitan_fields($postID)
 {
   if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-    return $post_id;
+    return $postID;
   } else if (isset($_POST['action']) && $_POST['action'] == 'inline-save') {
-    return $post_id;
+    return $postID;
   } else {
     if (!empty($_POST['eventdate'])) {
       update_post_meta($postID, 'eventdate', $_POST['eventdate']);
@@ -380,9 +380,9 @@ function insert_info_fields()
 function save_info_fields($postID)
 {
   if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-    return $post_id;
+    return $postID;
   } else if (isset($_POST['action']) && $_POST['action'] == 'inline-save') {
-    return $post_id;
+    return $postID;
   } else {
     if (!empty($_POST['pic'])) {
       update_post_meta($postID, 'pic', $_POST['pic']);
@@ -603,21 +603,21 @@ add_action('profile_update', 'save_user_profile', 10, 2);
 
 function insert_breadcrumb()
 {
-  echo '<ul class="breadcrumb">';
-  echo '<li>' .
+  echo '<div class="breadcrumb"><ul class="breadcrumb__items">';
+  echo '<li class="breadcrumb__item">' .
     '<a href="' . home_url('/') . '">top</a>' .
     '</li>';
 
   if (is_home()) {
     // メインページ
-    echo '<li>' . get_post_type_object('post')->label . '一覧' . '</li>';
+    echo '<li class="breadcrumb__item">' . get_post_type_object('post')->label . '一覧' . '</li>';
   } else {
     // WPオブジェクト取得
     $wp_obj = get_queried_object();
 
     if (is_single()) {
       // 個別投稿ページ
-      $post_id = $wp_obj->ID;
+      $postID = $wp_obj->ID;
       $post_type = $wp_obj->post_type;
       $post_title = $wp_obj->post_title;
 
@@ -640,7 +640,7 @@ function insert_breadcrumb()
       }
 
       // 投稿タイプ一覧を表示
-      echo '<li>' .
+      echo '<li class="breadcrumb__item">' .
       '<a href="' . get_post_type_archive_link($post_type) . '">' .
       get_post_type_object($post_type)->label . '一覧' .
       '</a>' .
@@ -648,7 +648,7 @@ function insert_breadcrumb()
 
     // タクソノミーが紐づいていれば表示
     if ($the_tax != "") {
-      $terms = get_the_terms($post_id, $the_tax); // 投稿に紐づく全タームを取得
+      $terms = get_the_terms($postID, $the_tax); // 投稿に紐づく全タームを取得
 
       if (!empty($terms)) {
         $term = $terms[count($terms) - 1];
@@ -659,7 +659,7 @@ function insert_breadcrumb()
           $parent_array = array_reverse(get_ancestors($term->term_id, $the_tax));
           foreach ($parent_array as $parent_id) {
             $parent_term = get_term($parent_id, $the_tax);
-            echo '<li>' .
+            echo '<li class="breadcrumb__item">' .
                 '<a href="' . get_term_link($parent_id, $the_tax) . '">' .
                 $parent_term->name .
                 '</a>' .
@@ -668,7 +668,7 @@ function insert_breadcrumb()
           }
 
           // 最下層タームを表示
-          echo '<li>' .
+          echo '<li class="breadcrumb__item">' .
             '<a href="' . get_term_link($term->term_id, $the_tax) . '">' .
             $term->name .
             '</a>' .
@@ -679,9 +679,9 @@ function insert_breadcrumb()
       // 自身
       if ($post_type == 'umitan' || $post_type == 'info') {
         $arr = preg_split('/\s\|\s/', $post_title, -1, PREG_SPLIT_NO_EMPTY);
-        echo '<li>' . $arr[0] . '</li>';
+        echo '<li class="breadcrumb__item">' . $arr[0] . '</li>';
       } else {
-        echo '<li>' . $post_title . '</li>';
+        echo '<li class="breadcrumb__item">' . $post_title . '</li>';
       }
     } else if (is_page()) {
       // 固定ページ
@@ -692,7 +692,7 @@ function insert_breadcrumb()
         // 親ページ
         $parent_array = array_reverse(get_post_ancestors($page_id));
         foreach ($parent_array as $parent_id) {
-          echo '<li>' .
+          echo '<li class="breadcrumb__item">' .
             '<a href="' . get_permalink($parent_id) . '">' .
             get_the_title($parent_id) .
             '</a>' .
@@ -700,10 +700,10 @@ function insert_breadcrumb()
         }
       }
       // 自身
-      echo '<li>' . $page_title . '</li>';
+      echo '<li class="breadcrumb__item">' . $page_title . '</li>';
     } else if (is_post_type_archive()) {
       // カスタム投稿アーカイブ
-      echo '<li>' . $wp_obj->label . '一覧</li>';
+      echo '<li class="breadcrumb__item">' . $wp_obj->label . '一覧</li>';
     } else if (is_date()) {
       // 日付別
       $year = get_query_var('year');
@@ -712,20 +712,20 @@ function insert_breadcrumb()
 
       if ($day > 0) {
         // 日別アーカイブ
-        echo '<li><a href="' . get_year_link($year) . '">' . $year . '年</a></li>' .
-          '<li><a href="' . get_month_link($year, $month) . '">' . $month . '月</a></li>' .
-          '<li>' . $day . '日</li>';
+        echo '<li class="breadcrumb__item"><a href="' . get_year_link($year) . '">' . $year . '年</a></li>' .
+          '<li class="breadcrumb__item"><a href="' . get_month_link($year, $month) . '">' . $month . '月</a></li>' .
+          '<li class="breadcrumb__item">' . $day . '日</li>';
       } else if ($month > 0) {
         // 月別アーカイブ
-        echo '<li><a href="' . get_year_link($year) . '">' . $year . '年</a></li>' .
-          '<li>' . $month . '月</li>';
+        echo '<li class="breadcrumb__item"><a href="' . get_year_link($year) . '">' . $year . '年</a></li>' .
+          '<li class="breadcrumb__item">' . $month . '月</li>';
       } else {
         // 年別アーカイブ
-        echo '<li>' . $year . '年</li>';
+        echo '<li class="breadcrumb__item">' . $year . '年</li>';
       }
     } else if (is_author()) {
       // 投稿者アーカイブ
-      echo '<li>' . $wp_obj->display_name . ' の記事</li>';
+      echo '<li class="breadcrumb__item">' . $wp_obj->display_name . ' の記事</li>';
     } else if (is_archive()) {
       // タームアーカイブ
       $term_id = $wp_obj->term_id;
@@ -752,7 +752,7 @@ function insert_breadcrumb()
       }
 
       // 投稿タイプ一覧を表示
-      echo '<li>' .
+      echo '<li class="breadcrumb__item">' .
         '<a href="' . get_post_type_archive_link($post_type) . '">' .
         get_post_type_object($post_type)->label . '一覧' .
         '</a>';
@@ -762,7 +762,7 @@ function insert_breadcrumb()
         $parent_array = array_reverse(get_ancestors($term_id, $tax_name));
         foreach ($parent_array as $parent_id) {
           $parent_term = get_term($parent_id, $tax_name);
-          echo '<li>' .
+          echo '<li class="breadcrumb__item">' .
             '<a href="' . get_term_link($parent_id, $tax_name) . '">' .
             $parent_term->name .
             '</a>' .
@@ -770,15 +770,17 @@ function insert_breadcrumb()
         }
       }
       // ターム自身の表示
-      echo '<li>' . $term_name . '</li>';
+      echo '<li class="breadcrumb__item">' . $term_name . '</li>';
     } else if (is_search()) {
       // 検索結果ページ
-      echo '<li>「' . get_search_query() . '」で検索した結果</li>';
+      echo '<li class="breadcrumb__item">「' . get_search_query() . '」で検索した結果</li>';
     } else if (is_404()) {
       // 404ページ
-      echo '<li>404 Not Found</li>';
+      echo '<li class="breadcrumb__item">404 Not Found</li>';
     }
   }
+
+  echo '</ul></div>';
 }
 
 
@@ -788,21 +790,21 @@ function insert_pagination()
 {
   if (is_single()) {
     // 個別投稿ページの場合、前後の記事へ移動できる
-    echo '<ul class="pagination">';
+    echo '<div class="pagination"><ul class="pagination__items">';
 
     // 前の記事があれば、前の記事へを表示
     $prev_post = get_previous_post();
     if (!empty($prev_post)) {
-      echo '<li class="page-prev"><a href="' . get_permalink($prev_post->ID) . '"><span data-icon="ei-chevron-left"></span></a></li>';
+      echo '<li class="pagination__item--prev"><a href="' . get_permalink($prev_post->ID) . '"><span data-icon="ei-chevron-left"></span></a></li>';
     }
 
     // 次の記事があれば、次の記事へを表示
     $next_post = get_next_post();
     if (!empty($next_post)) {
-      echo '<li class="page-next"><a href="' . get_permalink($next_post->ID) . '"><span data-icon="ei-chevron-right"></span></a></li>';
+      echo '<li class="pagination__item--next"><a href="' . get_permalink($next_post->ID) . '"><span data-icon="ei-chevron-right"></span></a></li>';
     }
 
-    echo '</ul>';
+    echo '</ul></div>';
   } else if (is_home() || is_archive() || is_search()) {
     // アーカイブページの場合、ページの切り替えができる
     global $wp_query;
@@ -811,34 +813,34 @@ function insert_pagination()
 
     // ページ数が2ページ以上の場合から表示
     if ($pages > 1) {
-      echo '<ul class="pagination">';
+      echo '<div class="pagination"><ul class="pagination__items">';
 
       // 最初へ
       if ($paged > 3) {
-        echo '<li><a href="', get_pagenum_link(1), '">1</a></li>';
+        echo '<li class="pagination__item"><a href="', get_pagenum_link(1), '">1</a></li>';
         if ($paged > 4) {
-          echo '<li class="page-joint"><span>…</span></li>';
+          echo '<li class="pagination__item--joint"><span>…</span></li>';
         }
       }
       // 前後へ
       for ($i = 1; $i <= $pages; $i++) {
         if ($i <= $paged + 2 && $i >= $paged - 2) {
           if ($paged === $i) {
-            echo '<li class="page-active"><span>' . $i . '</span></li>';
+            echo '<li class="pagination__item--active"><span>' . $i . '</span></li>';
           } else {
-            echo '<li><a href="', get_pagenum_link($i), '">' . $i . '</a></li>';
+            echo '<li class="pagination__item"><a href="', get_pagenum_link($i), '">' . $i . '</a></li>';
           }
         }
       }
       // 最後へ
       if ($paged + 2 < $pages) {
         if ($paged  + 3 < $pages) {
-          echo '<li class="page-joint"><span>…</span></li>';
+          echo '<li class="pagination__item--joint"><span>…</span></li>';
         }
-        echo '<li><a href="', get_pagenum_link($pages), '">' . $pages . '</a></li>';
+        echo '<li class="pagination__item"><a href="', get_pagenum_link($pages), '">' . $pages . '</a></li>';
       }
 
-      echo '</ul>';
+      echo '</ul></div>';
     }
   }
 }
@@ -869,7 +871,7 @@ function get_my_title()
     return 'blog';
   } else if (is_archive()) {
     // タームアーカイブ
-    $tax_name = $wp_obj->taxonomy;
+    $term_name = $wp_obj->taxonomy;
     // 「カテゴリー」、「タグ」の場合
     if ($tax_name == 'category' || $tax_name == 'tag') {
       return 'blog';
@@ -959,7 +961,7 @@ function no_image($size = 'sm')
 
 function register_excerpt_length()
 {
-  return 100;
+  return 64;
 }
 add_filter('excerpt_length', 'register_excerpt_length', 999);
 

@@ -23,18 +23,18 @@ scrolling.init();
 // Slidebar init
 const slidebar = new Slidebar({
   root: `${HOST}${ROOT}`,
-  nav: document.querySelector('#footer-nav')
+  nav: document.querySelector('.footer-nav')
 });
 slidebar.init();
 
 // Menu icon
-const logo = document.getElementById('brand-home').querySelector('img');
+const logo = document.querySelector('.brand-home img');
 const logoSrc = logo.src;
-const toggler = document.getElementById('nav-toggler').querySelector('img');
+const toggler = document.querySelector('.nav-toggler img');
 const togglerSrc = toggler.src;
 
 const detectSection = (arr) => {
-  let targetElem = document.getElementById(document.body.id === 'index' ? 'hero' : 'header');
+  let targetElem = document.getElementById(document.body.id === 'index' ? 'hero' : 'site-header');
   let min = targetElem.getBoundingClientRect().top;
   arr.forEach(ID => {
     const elem = document.getElementById(ID);
@@ -55,14 +55,14 @@ const detectColor = (elem) => {
   const colors = color.match(/\d+/g);
   const r = parseInt(colors[0], 16);
   const g = parseInt(colors[1], 16);
-  const b = parseInt(colors[1], 16);
-  return ((((r * 299) + (g * 587) + (b * 114) ) / 1000) < 128) ? true : false ;
+  const b = parseInt(colors[2], 16);
+  return ((((r * 299) + (g * 587) + (b * 114) ) / 1000) < 300) ? true : false ;
 }
 
 const changeIcons = () => {
   let targetElem;
   if (document.body.id === 'index') {
-    const arr = ['front-news', 'front-about', 'front-umitan', 'front-info', 'front-plan', 'front-blog', 'front-gallery', 'front-location', 'front-contact'];
+    const arr = ['news', 'about', 'umitan', 'info', 'plan', 'blog', 'photos', 'location', 'contact'];
     targetElem = detectSection(arr);
   } else {
     const arr = ['main'];
@@ -86,22 +86,22 @@ if (document.body.id === 'index') {
   image.src = `${ROOT}wp/wp-content/themes/discoverechizen/assets/landscape/main00.jpg`;
   image.onload = () => {
     for (let i = 0; i < 6; i++) {
-      const logo = document.getElementById('hero-content');
-      logo.classList.add('hero-content-fade');
-      const cover = document.getElementById(`hero-image-${i + 1}`);
-      cover.classList.add('hero-image-fade');
+      const logo = document.querySelector('.hero__content');
+      logo.classList.add('fade');
+      const cover = document.querySelector(`.hero__image--num_${i + 1}`);
+      cover.classList.add('fade');
     }
   };
 
   // Slider init
-  /*const slider = new Slider({
+  const slider = new Slider({
     hasDraggingHandler: true,
     hasWheelHandler: true,
     hasFade: true,
     hasCaption: true,
-    autoPlay: false
+    autoPlay: 3000
   });
-  slider.init();*/
+  slider.init();
 
   // Wave init
   const targets = document.querySelectorAll('.wave');
@@ -136,7 +136,7 @@ if (document.body.id === 'index') {
     return promise;
   }
 
-  const map = document.getElementById('map-cover');
+  const map = document.querySelector('.map__cover');
   map.classList.add('active');
   map.addEventListener('click', () => {
     const promise = _transitionEnd(map, () => {

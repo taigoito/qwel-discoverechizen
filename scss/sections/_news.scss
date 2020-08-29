@@ -1,0 +1,15 @@
+/* Section News
+------------------------------*/
+
+.news {
+  @extend %section;
+  background-color: #ffffff; // Color detected
+
+  &__heading {
+    @extend %section__heading;
+  }
+
+  &__heading-container {
+    @extend %section__heading-container;
+  }
+}

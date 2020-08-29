@@ -1,0 +1,37 @@
+/* Component Breadcrumb
+------------------------------*/
+
+.breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  max-width: map-get($container-max-widths, "md");
+  margin-right: 6rem; // Nav toggler
+  padding: 3rem .5rem;
+  font-size: .875rem;
+
+  @media(min-width: breakpoint("lg")) {
+    left: 17.5rem;
+  }
+
+  &__items {
+    margin-bottom: 0;
+    @include list-unstyled();
+  }
+
+  &__item {
+    display: inline-block;
+    text-transform: capitalize;
+
+    &:not(:first-child)::before {
+      padding: 0 .5rem;
+      content: ">";
+    }
+  }
+}
+
+#umitan, #archive-umitan {
+  .breadcrumb__item a {
+    color: #ffffff;
+  }
+}

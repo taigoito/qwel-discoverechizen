@@ -1,0 +1,28 @@
+/* Section Movie
+------------------------------*/
+
+.movie {
+  @extend %section;
+  background-color: #ffffff; // Color detected
+
+  &__heading {
+    @extend %section__heading;
+  }
+
+  &__heading-container {
+    @extend %section__heading-container;
+  }
+
+  &__main {
+    @include container();
+  }
+
+  &__container {
+    @include row();
+
+    video {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+}
