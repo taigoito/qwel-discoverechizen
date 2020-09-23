@@ -12,8 +12,4 @@
   &__heading-container {
     @extend %section__heading-container;
   }
-
-  &__main {
-    @include container();
-  }
 }

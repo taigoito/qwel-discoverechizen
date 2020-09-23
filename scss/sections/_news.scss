@@ -12,4 +12,19 @@
   &__heading-container {
     @extend %section__heading-container;
   }
+
+  &__categories {
+    @include container();
+    margin-bottom: 3rem;
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 1.17rem;
+
+    &:not(:first-child)::before {
+      content: "|";
+      margin: 0 1rem;
+    }
+  }
 }

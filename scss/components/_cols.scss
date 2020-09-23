@@ -10,7 +10,7 @@
 
   %__container {
     @include row();
-    margin-bottom: 6rem; // Remove it, if not needed
+    //margin-bottom: 6rem; // Remove it, if not needed
     justify-content: space-around;
     align-items: center;
   }
@@ -20,11 +20,11 @@
   }
 
   &__image {
-    @include col("lg", 5);
+    @include col("lg", 12);
   }
 
   &__textbox {
-    @include col("lg", 5);
+    @include col("lg", 8);
     margin-top: 2rem;
     margin-bottom: 2rem;
   }

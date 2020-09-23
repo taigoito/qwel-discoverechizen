@@ -1,6 +1,6 @@
 /*
 Theme Name: Discover Echizen
-Version: 2.2
+Version: 2.2.1
 Author: Taigo Ito
 Author URI: https://qwel.design/
 Description: This is a theme for Discover Echizen.
@@ -911,7 +911,7 @@ button,
       flex-wrap: wrap;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -1619,37 +1619,48 @@ button,
   background-color: #ffffff;
 }
 
-/* Section About
-------------------------------*/
-.about {
-  background-color: #ffffff;
-}
-
-.about__main {
+.news__categories {
   position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 600px) {
-  .about__main {
+  .news__categories {
     max-width: 30rem;
   }
 }
 
 @media (min-width: 782px) {
-  .about__main {
+  .news__categories {
     max-width: 40rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .about__main {
+  .news__categories {
     max-width: 60rem;
   }
+}
+
+.news__category {
+  display: inline-block;
+  font-size: 1.17rem;
+}
+
+.news__category:not(:first-child)::before {
+  content: "|";
+  margin: 0 1rem;
+}
+
+/* Section About
+------------------------------*/
+.about {
+  background-color: #ffffff;
 }
 
 /* Section Umitan
@@ -2788,7 +2799,6 @@ button,
       flex-wrap: wrap;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
-  margin-bottom: 6rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -2806,9 +2816,9 @@ button,
 @media (min-width: 1024px) {
   .one-col__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.66667%;
-            flex: 0 0 41.66667%;
-    max-width: 41.66667%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
@@ -2824,9 +2834,9 @@ button,
 @media (min-width: 1024px) {
   .one-col__textbox {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.66667%;
-            flex: 0 0 41.66667%;
-    max-width: 41.66667%;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+    max-width: 66.66667%;
   }
 }
 

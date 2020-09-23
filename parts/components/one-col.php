@@ -2,7 +2,7 @@
           <div class="one-col__image">
             <?php
             if (has_post_thumbnail()) {
-              the_post_thumbnail('large');
+              the_post_thumbnail('full');
             } else {
               no_image('lg');
             }
@@ -12,6 +12,6 @@
             <div class="one-col__intro">
               <?php the_excerpt(); ?>
             </div>
-            <a class="one-col__more" href="<?php the_permalink(); ?>">詳細</a>
+            <a href="<?php the_permalink(); ?>">&gt; 私たちと越前海岸について もっと詳しく</a>
           </div>
         </div>
