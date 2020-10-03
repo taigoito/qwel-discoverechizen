@@ -8,8 +8,10 @@
 import Scrolling from './_scrolling.js';
 import Slidebar from './_slidebar.js';
 import Slider from './_slider.js';
-//import PhotoGallery from './_photo-gallery.js';
 import renderEvilIcons from './_evil-icons.js';
+
+const HOST = `${location.protocol}//${location.hostname}`;
+const ROOT = '/sample/';
 
 // Scrolling init
 const scrolling = new Scrolling();
@@ -17,7 +19,7 @@ scrolling.init();
 
 // Slidebar init
 const slidebar = new Slidebar({
-  root: `${location.protocol}//${location.hostname}/sample/`
+  root: `${HOST}${ROOT}`
 });
 slidebar.init();
 
@@ -29,10 +31,6 @@ const slider = new Slider({
   autoPlay: 3000
 });
 slider.init();
-
-// Instagram API init
-//const photoGallery = new PhotoGallery();
-//photoGallery.init();
 
 // Icons init
 renderEvilIcons();
