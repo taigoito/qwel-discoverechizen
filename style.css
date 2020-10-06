@@ -1,6 +1,6 @@
 /*
 Theme Name: Discover Echizen
-Version: 2.2.1
+Version: 2.2.2
 Author: Taigo Ito
 Author URI: https://qwel.design/
 Description: This is a theme for Discover Echizen.
@@ -706,6 +706,8 @@ button,
   margin-left: -0.5rem;
   margin-right: -0.5rem;
   margin-bottom: 6rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

@@ -24,6 +24,6 @@
           ?>
         </div>
       </div><!-- .cols -->
-      <a class="news__more" href="<?php echo get_term_link('news', 'category'); ?>">&gt; お知らせ をもっと見る</a>
+      <a class="news__more" href="<?php the_permalink(2); ?>">>&gt; お知らせ をもっと見る</a>
     </section><!-- .news -->
     
