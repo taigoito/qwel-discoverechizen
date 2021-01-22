@@ -7,6 +7,6 @@
             }
             ?>
             <div class="slider__caption--hidden">
-              <?php the_title(); ?><a href="<?php the_permalink(); ?>"> [詳細]</a>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </div>
           </div>

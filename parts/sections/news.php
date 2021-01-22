@@ -4,7 +4,7 @@
         <?php
         $posts = get_posts([
           'posts_per_page' => 5,
-          'post_type' => ['post', 'works']
+          'post_type' => ['post']
         ]);
         foreach ($posts as $post) {
           setup_postdata($post);

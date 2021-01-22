@@ -25,7 +25,7 @@
                   }
                   ?>
                 </ul>
-                <p class="lists__intro"><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">[詳細]</a></p>
+                <p class="lists__intro"><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">[read more]</a></p>
               </div>
             </div>
           </div>

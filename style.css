@@ -296,7 +296,8 @@ button,
 }
 
 .main__title {
-  margin: 3rem 0;
+  margin-top: 0;
+  margin-bottom: 3rem;
   font-size: 2rem;
   text-align: center;
 }
@@ -457,16 +458,63 @@ button,
 /* Layout Article
 ------------------------------*/
 .article {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
+}
+
+.article__header {
+  margin-bottom: 2rem;
 }
 
 .article__date {
-  margin-bottom: 1rem;
+  margin-top: .75rem;
+  margin-bottom: .75rem;
 }
 
 .article__title {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  display: inline-block;
+  margin: .5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  vertical-align: bottom;
+}
+
+.article__terms {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  vertical-align: bottom;
+}
+
+.article__term {
+  display: inline-block;
+  margin-left: .75rem;
+  margin-bottom: 0;
+}
+
+.article__term a {
+  display: inline-block;
+  margin: auto;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background-color: #d9d9d9;
+  color: #262626;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.article__term a:hover {
+  background-color: #c6c6c6;
+  color: #262626;
+  text-decoration: none;
 }
 
 .article__content {
@@ -476,6 +524,10 @@ button,
 .article__image {
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.article__image a:hover img {
+  opacity: .7;
 }
 
 .article--work {
@@ -787,8 +839,6 @@ button,
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 @media (min-width: 600px) {
@@ -810,7 +860,8 @@ button,
 }
 
 .breadcrumb__items {
-  margin-bottom: 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding-left: 0;
   list-style: none;
 }

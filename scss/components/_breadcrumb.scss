@@ -3,11 +3,10 @@
 
 .breadcrumb {
   @include container();
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 
   &__items {
-    margin-bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     @include list-unstyled();
   }
 

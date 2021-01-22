@@ -45,7 +45,6 @@
           <?php if (is_404()) { ?>
           <p>お探しのページは見つかりませんでした</p>
           <?php } ?>
-          <?php if (is_single() || is_home() || is_page()) { ?>
           <?php 
           if (have_posts()) {
             while (have_posts()) {
@@ -54,19 +53,7 @@
             }
           }
           ?>
-          <?php } else { ?>
-          <div class="lists">
-            <?php 
-            if (have_posts()) {
-              while (have_posts()) {
-                the_post();
-                get_template_part('parts/components/lists');
-              }
-            }
-            ?>
-          </div>
-          <?php insert_pagination(); ?>
-          <?php } ?>
+          <?php if (is_archive()) insert_pagination(); ?>
         </div><!-- .main__primary -->
         <?php if (is_home() || is_singular('post') || is_post_type_archive('post') || is_category() || is_tag() || is_date() || is_author() || is_search()) { ?>
         <div class="main__secondary">
