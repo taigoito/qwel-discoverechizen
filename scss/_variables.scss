@@ -11,14 +11,14 @@ $grid-gutter-width: 1rem;
 $grid-breakpoints: (
   sm: 600px, // Match style of WordPress block library
   md: 782px,
-  lg: 1152px
+  lg: 1024px
 );
 
 // Container max widths
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 1080px
+  sm: 30rem,
+  md: 40rem,
+  lg: 60rem
 );
 
 // Theme color
@@ -50,7 +50,7 @@ $font-family-base:    $font-family-sans-serif;
 $font-weight-base:    $font-weight-sans-serif;
 $font-size-base:      1rem;
 $text-align-base:     justify;
-$line-height-base:    28.8 / ($root-font-size / ($root-font-size* 0 + 1));
+$line-height-base:    28.8 / ($root-font-size / ($root-font-size * 0 + 1)); // Remove the unit
 $letter-spacing-base: 0;
 
 $heading-font-family: $font-family-sans-serif;
