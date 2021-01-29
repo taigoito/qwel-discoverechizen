@@ -9,9 +9,12 @@ $imageDuration: 5;
     @include cover-unit();
   }
 
-  &__content {
+  &__contentwrap {
     @include cover-section();
+    position: relative;
+  }
 
+  &__content {
     &.fade {
       opacity: 0;
       animation: fade #{$imageCount * $imageDuration}s ease 0s infinite normal;
@@ -20,6 +23,27 @@ $imageDuration: 5;
     img {
       width: 18rem;
     }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+    display: block;
+    width: 18rem;
+    @include button("lg");
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(theme-color("primary"), .7);
+    font-size: $small-font-size;
+  }
+
+  &__self {
+    padding-right: .5rem;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
   }
 }
 

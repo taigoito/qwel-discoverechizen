@@ -62,7 +62,7 @@ const detectColor = (elem) => {
 const changeIcons = () => {
   let targetElem;
   if (document.body.id === 'index') {
-    const arr = ['about', 'news', 'umitan', 'info', 'plan', 'photos', 'location', 'contact'];
+    const arr = ['news', 'umitan', 'info', 'plan', 'photos', 'location', 'contact'];
     targetElem = detectSection(arr);
   } else {
     const arr = ['main'];

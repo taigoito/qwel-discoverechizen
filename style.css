@@ -1436,11 +1436,12 @@ button,
           align-items: center;
 }
 
-.hero__content {
+.hero__contentwrap {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   text-align: center;
+  position: relative;
 }
 
 .hero__content.fade {
@@ -1451,6 +1452,45 @@ button,
 
 .hero__content img {
   width: 18rem;
+}
+
+.hero__btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3rem;
+  display: block;
+  width: 18rem;
+  margin: auto;
+  padding: 0.75rem 6rem;
+  border: none;
+  background-color: #00a1d6;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgba(0, 161, 214, 0.7);
+  font-size: 87.5%;
+}
+
+.hero__btn:hover {
+  background-color: #0084b0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero__self {
+  padding-right: .5rem;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .hero__image--num_1 {
