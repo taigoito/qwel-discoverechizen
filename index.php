@@ -14,7 +14,7 @@
             }
           }
           ?>
-          <?php if (!is_single() && !is_page() || is_home()) insert_pagination(); ?>
+          <?php if (is_archive()) insert_pagination(); ?>
         </div><!-- .main__primary -->
         <?php if (is_home() || is_singular('post') || is_post_type_archive('post') || is_category() || is_tag() || is_date() || is_author() || is_search()) { ?>
         <div class="main__secondary">

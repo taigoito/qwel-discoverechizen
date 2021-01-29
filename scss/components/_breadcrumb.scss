@@ -15,7 +15,8 @@
   }
 
   &__items {
-    margin-bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     @include list-unstyled();
   }
 
