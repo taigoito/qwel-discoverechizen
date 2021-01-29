@@ -23,11 +23,12 @@
 
   &__container {
     @include row();
+    align-items: center;
     justify-content: center;
   }
 
   &__intro {
-    @include col("lg", 9);
+    @include col("lg", 6);
     margin-bottom: 3rem;
   
     p {
@@ -36,12 +37,12 @@
   }
   
   &__video {
-    @include col("lg", 12);
-    margin-bottom: 6rem;
+    @include col("lg", 6);
+    margin-bottom: 3rem;
   
     video {
       max-width: 100%;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   
     a {
