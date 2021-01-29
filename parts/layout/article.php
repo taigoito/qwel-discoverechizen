@@ -3,21 +3,6 @@
         <header class="article__header">
           <?php if (is_home() || is_singular('post') || is_post_type_archive('post') || is_category() || is_tag() || is_date() || is_author() || is_search()) { ?>
           <div class="article__date"><?php the_time('Y.m.d'); ?></div>
-          <h2 class="article__title">
-            <?php if (is_home() || is_archive()) { ?>  
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <?php } else { ?>
-              <?php the_title(); ?>
-            <?php } ?>
-          </h2>
-          <ul class="article__terms">
-            <?php
-            $terms = get_the_category($post->ID);
-            foreach ($terms as $term) {
-              echo '<li class="article__term"><a href="' . get_term_link($term->slug, 'category') . '">' . $term->name . '</a></li> ';
-            }
-            ?>
-          </ul>
           <?php } ?>
           <?php if (is_single()) { ?>
             <?php if (is_singular('umitan')) { ?>
