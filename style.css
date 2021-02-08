@@ -500,9 +500,9 @@ button,
 @media (min-width: 1024px) {
   .main__secondary {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.66667%;
-            flex: 0 0 16.66667%;
-    max-width: 16.66667%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 
@@ -1667,44 +1667,6 @@ button,
   background-color: #ffffff;
 }
 
-.news__categories {
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 600px) {
-  .news__categories {
-    max-width: 30rem;
-  }
-}
-
-@media (min-width: 782px) {
-  .news__categories {
-    max-width: 40rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .news__categories {
-    max-width: 60rem;
-  }
-}
-
-.news__category {
-  display: inline-block;
-  font-size: 1.17rem;
-}
-
-.news__category:not(:first-child)::before {
-  content: "|";
-  margin: 0 1rem;
-}
-
 /* Section About
 ------------------------------*/
 .about {
@@ -2052,6 +2014,56 @@ button,
 ------------------------------*/
 .blog {
   background-color: #ffffff;
+}
+
+.blog__categories {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 600px) {
+  .blog__categories {
+    max-width: 30rem;
+  }
+}
+
+@media (min-width: 782px) {
+  .blog__categories {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog__categories {
+    max-width: 60rem;
+  }
+}
+
+.blog__category {
+  display: inline-block;
+}
+
+.blog__category a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.6rem 1.25rem 0.65rem;
+  border-radius: 1.25rem;
+  background-color: #00a1d6;
+  color: #ffffff;
+}
+
+.blog__category a:hover {
+  opacity: .7;
+  text-decoration: none;
+}
+
+.blog__category a::before {
+  content: "#";
 }
 
 /* Section Photos
@@ -2614,8 +2626,6 @@ button,
 }
 
 .breadcrumb__items {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   padding-left: 0;
   list-style: none;
 }

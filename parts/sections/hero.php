@@ -5,7 +5,7 @@
           <img src="<?php echo get_template_directory_uri() . '/assets/svg/top_logo2.svg'; ?>" alt="越前海岸盛り上げ隊">
           </h1>
         </div>
-        <a class="hero__btn" href="<?php the_permalink(3); ?>"><span class="hero__self">越前海岸盛り上げ隊</span>について</a>
+        <a class="hero__btn" href="<?php the_permalink(3); ?>"><span class="hero__self">#越前海岸盛り上げ隊</span></a>
       </div>
     </div>
     <div class="hero__image--num_1"></div>
