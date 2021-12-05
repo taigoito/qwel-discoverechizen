@@ -1,0 +1,67 @@
+/**
+ * Component - Preloader
+ */
+
+$spinnerWidth:     48px;
+$spinnerBarsCount: 12;
+$spinnerBarsBg:    $bodyBg;
+
+@mixin make-spinner-bars($width: $spinnerWidth, $spinnerBarsCount: $spinnerBarsCount, $spinnerBarsBg: $spinnerBarsBg) {
+  & > span {
+    position: absolute;
+    top: $width * 9 / 24;
+    left: $width * 11 / 24;
+    display: block;
+    width: $width * 2 / 24;
+    height: $width * 6 / 24;
+    border-radius: $width * 1 / 24;
+  
+    @for $i from 1 through $spinnerBarsCount {
+      &:nth-child(#{$i}) {
+        background-color: rgba($spinnerBarsBg, $i / ($spinnerBarsCount + 2));
+        transform: rotate(#{($i - 1) * 360 / $spinnerBarsCount}deg) translate(0, #{$width * 8 / 24})
+      }
+    }
+  }
+}
+
+.preloader {
+ &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900; // header: 1000 より背面
+    width: 100%;
+    height: $preloaderHeight;
+    background: $preloaderBg;
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+
+    &:not(.--show) {
+      opacity: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: $spinnerWidth;
+    height: $spinnerWidth;
+    margin: auto;
+    @include make-spinner-bars;
+  }
+}

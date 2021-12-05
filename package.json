@@ -1,0 +1,19 @@
+{
+  "name": "qwel",
+  "version": "2.0.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taigoito/qwel.git"
+  },
+  "author": "Taigo Ito",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/taigoito/qwel/issues"
+  },
+  "homepage": "https://github.com/taigoito/qwel#readme"
+}

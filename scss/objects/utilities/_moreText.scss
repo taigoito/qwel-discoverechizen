@@ -1,0 +1,7 @@
+/**
+ * Utility - More text
+ */
+
+.archive .post__moreText::after {
+  content: $listItemMoreText;
+}

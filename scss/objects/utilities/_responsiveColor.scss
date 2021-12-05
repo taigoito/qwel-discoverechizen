@@ -1,0 +1,17 @@
+/**
+ * Utility - Responsive Color
+ */
+
+.responsiveColor {
+  &.--change {
+    color: themeColor("lightest");
+
+    span, a {
+      color: themeColor("lightest");
+    }
+
+    img {
+      filter: var(--header-filter, $whiteShape);
+    }
+  }
+}

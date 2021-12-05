@@ -1,7 +1,27 @@
-/* Layout Header
-------------------------------*/
+/**
+ * Layout - Header
+ */
 
-.site-header {
-  @include sticky-top();
-  @include background("light");
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000; // 基準
+  background-color: rgba($bodyBg, .7);
+  transition: .35s ease-in-out all;
+
+  &:hover {
+    background-color: rgba($bodyBg, 1);
+  }
+
+  &__container {
+    @include container();
+    @include row(flex-start);
+    height: $headerHeight;
+
+    @media (min-width: breakpoint("lg")) {
+      justify-content: center;
+    }
+  }
 }

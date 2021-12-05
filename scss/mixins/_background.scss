@@ -1,6 +1,0 @@
-// Background
-
-@mixin background($key-color: "primary", $background: theme-color($key-color)) {
-  background-color: $background;
-  color: color-yiq($background);
-}

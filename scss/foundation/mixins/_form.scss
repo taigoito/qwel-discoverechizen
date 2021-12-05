@@ -1,0 +1,38 @@
+// Form
+
+@mixin form() {
+  margin-top: $sectionMarginTop;
+  margin-bottom: $sectionMarginBottom;
+  
+  label {
+    display: block;
+  }
+
+  input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="file"], select, optgroup, textarea {
+    display: block;
+    width: 100%;
+    margin-top: .375rem;
+    margin-bottom: .75rem;
+    padding-left: round($rootFontSize / 2);
+    padding-right: round($rootFontSize / 2);
+  }
+
+  input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="file"], select, optgroup {
+    height: 2.8rem;
+  }
+
+  input[type="file"] {
+    outline: 0;  
+  }
+
+  textarea {
+    padding-top: round($rootFontSize / 2);
+    padding-top: round($rootFontSize / 2);
+    resize: vertical;
+  }
+
+  [type="button"], [type="reset"], [type="submit"] {
+    display: block;
+    @include button("md");
+  }
+}

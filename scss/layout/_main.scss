@@ -1,77 +1,16 @@
-/* Layout Main
-------------------------------*/
-
-%section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  text-align: center;
-}
-
-%section__heading {
-  margin-top: 0;
-  margin-bottom: 6rem;
-  text-transform: capitalize;
-}
+/**
+ * Layout - Main
+ */
 
 .main {
-  &__title {
-    margin-top: 0;
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    text-align: center;
+  &__wrapper {
+    min-height: calc(66.66vh - 4.5rem); // コンテンツが少ない場合に.coverを隠す
+    background-color: $bodyBg;
+    overflow: hidden; // コンテナ内での全幅使用対策
   }
 
   &__container {
     @include container();
+    @include row(space-between, flex-start);
   }
-
-  &__inner {
-    @include row();
-    justify-content: space-around;
-  }
-
-  &__primary {
-    @include col("lg", 8);
-    max-width: 40rem;
-    
-    @media (min-width: breakpoint("lg")) {
-      max-width: 40rem;
-    }
-  }
-
-  &__secondary {
-    @include col("lg", 3);
-    max-width: 15rem;
-    
-    @media (min-width: breakpoint("lg")) {
-      max-width: 15rem;
-    }
-  }
-
-  &--works {
-    @include row();
-  
-    &__primary {
-      @include col();
-      order: 1;
-      
-      @media (min-width: breakpoint("lg")) {
-        order: 2;
-      }
-    }
-  
-    &__secondary {
-      @include col();
-      order: 2;
-      
-      @media (min-width: breakpoint("lg")) {
-        order: 1;
-      }
-    }
-  
-    &__tertiary {
-      @include col();
-      order: 3;
-    }
-  }  
 }

@@ -1,0 +1,123 @@
+// Grid System
+
+// ルート要素にて定義
+// これを基準とした1remを、全ての寸法の基本単位とする
+$rootFontSize:     16px;
+$rootFontSizeXs:   3.84vw; // 4vw以下推奨
+
+// 基準幅
+$base:             18rem;
+$breakpointBase:   300px;
+$containerBase:    var(--container-base, #{$base});
+
+// xs: 1カラム
+// 文字サイズを流動させ、レイアウトを固定
+$containerWidthXs: calc(#{$containerBase} * 4 / 3);
+
+// sm: 1〜2カラム (下層ページで、メディアと文章の使用くらいに留める)
+// コンテナ幅を拡げ、文字サイズをpxに切り替え固定
+// WordPressのブロックエディタの都合上、BPを600px以内に設置するのが望ましい
+$breakpointSm:     $breakpointBase * 2;
+$containerWidthSm: calc(#{$containerBase} * 2);
+
+// 以下、任意に定義
+// md: 1〜2カラム (カードレイアウト可能)
+$breakpointMd:     $breakpointBase * 3;
+$containerWidthMd: calc(#{$containerBase} * 3);
+
+// lg: 1〜3カラム (サイドバー設置可能)
+$breakpointLg:     $breakpointBase * 4;
+$containerWidthLg: calc(#{$containerBase} * 4);
+
+// ブレイクポイント (以下BP)
+$breakpoints:      (
+  sm:                $breakpointSm,
+  md:                $breakpointMd,
+  lg:                $breakpointLg
+);
+
+// コンテナ幅
+$containerWidths:  (
+  xs:                $containerWidthXs,
+  sm:                $containerWidthSm,
+  md:                $containerWidthMd,
+  lg:                $containerWidthLg
+);
+
+// モーダルアスペクト比
+$modalRatio:       5 / 8;
+$modalAspectRatio: var(--modal-aspect-ratio, #{$modalRatio});
+
+// モーダル幅
+$modalWidths:      (
+  md:                calc(#{$containerBase} * 2),
+  lg:                calc(#{$containerBase} * 3)
+);
+
+// モーダル幅
+$modalHeights:      (
+  md:                calc(#{$containerBase} * #{$modalAspectRatio} * 2),
+  lg:                calc(#{$containerBase} * #{$modalAspectRatio} * 3)
+);
+
+// リストアスペクト比
+$listRatio:        5 / 8;
+$listAspectRatio:  var(--list-aspect-ratio, #{$listRatio});
+
+// カードアスペクト比
+$cardRatio:        5 / 8;
+$cardAspectRatio:  var(--card-aspect-ratio, #{$cardRatio});
+
+// カード幅
+$cardWidths:       (
+  sm:                calc(#{$containerBase} * 0.64),
+  md:                calc(#{$containerBase} * 0.96),
+  lg:                calc(#{$containerBase} * 1.28)
+);
+
+// カード高さ
+$cardHeights:      (
+  sm:                calc(#{$containerBase} * #{$cardAspectRatio} * 0.64),
+  md:                calc(#{$containerBase} * #{$cardAspectRatio} * 0.96),
+  lg:                calc(#{$containerBase} * #{$cardAspectRatio} * 1.28)
+);
+
+// スライダーアスペクト比
+$sliderRatio:        5 / 8;
+$sliderAspectRatio:  var(--slider-aspect-ratio, #{$sliderRatio});
+
+// スライダー幅
+$sliderWidths:     (
+  sm:                calc(#{$containerBase} / #{$sliderAspectRatio} * 0.64),
+  md:                calc(#{$containerBase} / #{$sliderAspectRatio} * 0.96),
+  lg:                calc(#{$containerBase} / #{$sliderAspectRatio} * 1.28)
+);
+
+// スライダー高さ
+$sliderHeights:       (
+  sm:                calc(#{$containerBase} * 0.64),
+  md:                calc(#{$containerBase} * 0.96),
+  lg:                calc(#{$containerBase} * 1.28)
+);
+
+// BPの配列の接頭辞から値を返す関数
+@function breakpoint($infix: "lg") {
+  @return map-get($breakpoints, $infix);
+}
+
+// BPの配列から、引数の接頭辞以降を取り除く関数
+@function popBreakpoints($infix: "lg") {
+  @if $infix == "lg" {
+    @return $breakpoints;
+  } @else if $infix == "md" {
+    @return map-remove($breakpoints, "lg");
+  } @else if $infix == "sm" {
+    @return map-remove($breakpoints, "lg", "md");
+  }
+}
+
+// .header, .siteBrand, .hero, .preloaderの高さ
+$siteBrandHeight:  var(--site-brand-height, 48px);
+$headerHeight:     calc(#{$siteBrandHeight} + 24px);
+$heroHeight:       var(--cover-height, 75vh);
+$preloaderHeight:  calc(var(--header-height, 72px) * 2 + #{$heroHeight});

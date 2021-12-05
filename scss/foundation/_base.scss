@@ -1,0 +1,145 @@
+/**
+ * Foundation
+ * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--root-font-size, $rootFontSize);
+  
+  @media (max-width: breakpoint("sm") - 1) {
+    font-size: $rootFontSizeXs;
+  }
+}
+
+body {
+  margin: 0; // Remove the margin in all browsers
+  background-color: $bodyBg;
+  color: $bodyColor;
+  font-family: var(--font-family-base, $fontFamilyBase);
+  font-weight: var(--font-weight-base, $fontWeightBase);
+  line-height: $lineHeightBase;
+  letter-spacing: $letterSpacingBase;
+  -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $headingMarginTop;
+  margin-bottom: $headingMarginBottom;
+  font-family: var(--heading-font-family, $headingFontFamily);
+  font-weight: var(--heading-font-weight, $headingFontWeight);
+}
+
+h1 {
+  font-size: $h1FontSize;
+}
+
+h2 {
+  font-size: $h2FontSize;
+}
+
+h3 {
+  font-size: $h3FontSize;
+}
+
+h4 {
+  font-size: $h4FontSize;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: $h5FontSize;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: $h6FontSize;
+}
+
+p {
+  margin-top: $textMarginTop;
+  margin-bottom: $textMarginBottom;
+}
+
+ol, ul {
+  list-style: none;
+  margin-top: $textMarginTop;
+  margin-bottom: $textMarginBottom;
+  padding-left: 0;
+}
+
+li {
+  margin-top: $textMarginTop;
+  margin-bottom: $textMarginBottom;
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  @include smallText();
+}
+
+blockquote {
+  @include blockquote();
+}
+
+a {
+  color: $linkColor; // リンク文字の固有設定
+  text-decoration: $linkDecoration;
+
+  &:hover {
+    color: $linkHoverColor;
+    text-decoration: $linkHoverDecoration;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure {
+  display: block;
+  margin: $textMarginTop auto  $textMarginBottom;
+}
+
+figcaption {
+  @include smallText();
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: $fontWeightBase;
+  text-align: left;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit; // Change the font styles in all browsers
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button, select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button; // Correct the inability to style clickable types in iOS and Safari
+}
