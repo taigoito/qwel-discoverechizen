@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*
-Theme Name: Qwel
+Theme Name: Qwel One
 Description: This is a theme for someone's portfolio or blog. You can customize and use.
-Version: 2.0
+Version: 1.0
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -366,6 +366,55 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 /**
+ * Layout - Title Area
+ */
+.titleArea__container {
+  position: relative;
+  width: calc(var(--container-base, 18rem) * 4 / 3);
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 33.33vh;
+}
+
+@media (min-width: 600px) {
+  .titleArea__container {
+    width: calc(var(--container-base, 18rem) * 2);
+  }
+}
+
+@media (min-width: 900px) {
+  .titleArea__container {
+    width: calc(var(--container-base, 18rem) * 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .titleArea__container {
+    width: calc(var(--container-base, 18rem) * 4);
+  }
+}
+
+.titleArea__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: var(--xxl-font-size, 2rem);
+  text-transform: capitalize;
+}
+
+/**
  * Layout - Sidebar
  */
 .sidebar {
@@ -439,6 +488,238 @@ button, [type="button"], [type="reset"], [type="submit"] {
 .footer__copyright {
   margin-bottom: 1.5rem;
   text-align: center;
+}
+
+/**
+ * Project - Toppage sections
+ */
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: white;
+  text-align: center;
+}
+
+.section__heading {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--xl-font-size, 1.5rem);
+  text-transform: capitalize;
+}
+
+.section__description {
+  margin-bottom: 1.5rem;
+}
+
+.section__inner {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.section__inner.--container {
+  position: relative;
+  width: calc(var(--container-base, 18rem) * 4 / 3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .section__inner.--container {
+    width: calc(var(--container-base, 18rem) * 2);
+  }
+}
+
+@media (min-width: 900px) {
+  .section__inner.--container {
+    width: calc(var(--container-base, 18rem) * 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section__inner.--container {
+    width: calc(var(--container-base, 18rem) * 4);
+  }
+}
+
+.section__content {
+  position: relative;
+  width: calc(var(--container-base, 18rem) * 4 / 3);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+
+@media (min-width: 600px) {
+  .section__content {
+    width: calc(var(--container-base, 18rem) * 2);
+  }
+}
+
+@media (min-width: 900px) {
+  .section__content {
+    width: calc(var(--container-base, 18rem) * 3);
+  }
+}
+
+.section__moreWrap {
+  text-align: center;
+}
+
+.section__more {
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.section__moreText::after {
+  content: "more >";
+  text-transform: none;
+}
+
+.section.--hero {
+  position: relative;
+  height: var(--cover-height, 75vh);
+  min-height: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+}
+
+.section.--hero .section__content {
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+  -webkit-transition: .35s ease-in-out all;
+  transition: .35s ease-in-out all;
+}
+
+body.--loaded .section.--hero .section__content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.section.--hero h2 {
+  font-weight: bold;
+  font-size: var(--xxl-font-size, 2rem);
+  text-transform: capitalize;
+}
+
+.section.--hero .post__content {
+  font-size: var(--lg-font-size, 1.33rem);
+}
+
+.section.--hero .post__excerpt {
+  font-size: var(--lg-font-size, 1.33rem);
+}
+
+.section.--hero .post__moreWrap {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section.--hero .post__more {
+  display: inline-block;
+  margin: auto;
+  padding: .625rem 2.5rem;
+  border: none;
+  background-color: var(--primary-color, #3399cc);
+  color: white;
+  opacity: .85;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.section.--hero .post__more:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.section.--access .section__map {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+.section.--access .section__map iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.section.--contact .section__content {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.section.--contact .section__content label {
+  display: block;
+}
+
+.section.--contact .section__content input[type="text"], .section.--contact .section__content input[type="tel"], .section.--contact .section__content input[type="url"], .section.--contact .section__content input[type="email"], .section.--contact .section__content input[type="password"], .section.--contact .section__content input[type="file"], .section.--contact .section__content select, .section.--contact .section__content optgroup, .section.--contact .section__content textarea {
+  display: block;
+  width: 100%;
+  margin-top: .375rem;
+  margin-bottom: .75rem;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.section.--contact .section__content input[type="text"], .section.--contact .section__content input[type="tel"], .section.--contact .section__content input[type="url"], .section.--contact .section__content input[type="email"], .section.--contact .section__content input[type="password"], .section.--contact .section__content input[type="file"], .section.--contact .section__content select, .section.--contact .section__content optgroup {
+  height: 2.8rem;
+}
+
+.section.--contact .section__content input[type="file"] {
+  outline: 0;
+}
+
+.section.--contact .section__content textarea {
+  padding-top: 8px;
+  padding-top: 8px;
+  resize: vertical;
+}
+
+.section.--contact .section__content [type="button"], .section.--contact .section__content [type="reset"], .section.--contact .section__content [type="submit"] {
+  display: block;
+  margin: auto;
+  padding: .625rem 2.5rem;
+  border: none;
+  background-color: var(--primary-color, #3399cc);
+  color: white;
+  opacity: .85;
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.section.--contact .section__content [type="button"]:hover, .section.--contact .section__content [type="reset"]:hover, .section.--contact .section__content [type="submit"]:hover {
+  opacity: 1;
+  text-decoration: none;
 }
 
 /**
@@ -2927,8 +3208,44 @@ button, [type="button"], [type="reset"], [type="submit"] {
 /**
  * Utility - More text
  */
+.section.--hero .post__moreText::after {
+  content: var(--hero-more-text, "more >");
+}
+
+.section.--feature .section__moreText::after {
+  content: var(--feature-more-text, "more >");
+}
+
+.section.--feature .post__moreText::after {
+  content: var(--feature-item-more-text, "more >");
+}
+
+.section.--about .post__moreText::after {
+  content: var(--about-more-text, "more >");
+}
+
+.section.--service .section__moreText::after {
+  content: var(--service-more-text, "more >");
+}
+
+.section.--service .post__moreText::after {
+  content: var(--service-item-more-text, "more >");
+}
+
+.section.--team .post__moreText::after {
+  content: var(--team-more-text, "more >");
+}
+
+.section.--news .section__moreText::after {
+  content: var(--news-more-text, "more >");
+}
+
+.section.--news .post__moreText::after {
+  content: var(--news-item-more-text, "more >");
+}
+
 .archive .post__moreText::after {
-  content: "more >";
+  content: var(--news-item-more-text, "more >");
 }
 
 /**

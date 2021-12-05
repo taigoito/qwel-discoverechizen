@@ -8,6 +8,25 @@ trait Base {
 	use \Qwel_Theme\Base_Settings;
 
 	/**
+	 * 設定を読み込んで並べ直したセクションの配列を取得
+	 */
+	public static function get_sections() {
+		// $sections を上書きするHook
+		$sections = apply_filters('qwel_theme_sections', self::$sections);
+
+		// order で並べ替え
+		uksort($sections, function($key1, $key2) {
+			$sec1    = $sections[$key1];
+			$sec2    = $sections[$key2];
+			$order1  = self::get_data($key1, 'order');
+			$order2  = self::get_data($key2, 'order');
+			return $order1 - $order2;
+		});
+
+		return $sections;
+	}
+
+	/**
 	 * デフォルト設定を取得
 	 */
 	public static function get_default_data($section, $key = false) {

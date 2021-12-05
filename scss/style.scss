@@ -1,7 +1,7 @@
 /*
-Theme Name: Qwel
+Theme Name: Qwel One
 Description: This is a theme for someone's portfolio or blog. You can customize and use.
-Version: 2.0
+Version: 1.0
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -28,10 +28,12 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "layout/siteBrand";
 @import "layout/gNav";
 @import "layout/main";
+@import "layout/titleArea";;
 @import "layout/sidebar";
 @import "layout/footer";
 
 // Objects
+@import "objects/projects/sections";
 @import "objects/projects/pages";
 @import "objects/projects/posts";
 @import "objects/projects/archive";

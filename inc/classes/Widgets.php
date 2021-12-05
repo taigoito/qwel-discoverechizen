@@ -7,7 +7,7 @@ namespace Qwel_Theme;
 trait Widgets {
   public static function setup_widgets() {
     // グローバルメニュー
-    register_nav_menu('primary', 'Primary Menu');
+    //register_nav_menu('primary', 'Primary Menu');
 
     // サイドバー
     register_sidebar([

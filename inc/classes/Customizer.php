@@ -15,8 +15,11 @@ trait Customizer {
     self::$customize = $wp_customize;
     self::add_panel(self::$db_name);
 
+    // セクションを取得
+    $sections = self::get_sections();
+
     // 設定項目の配列
-    $settings_array = self::make_settings_array();
+    $settings_array = self::make_settings_array($sections);
 
     // $settings_array を順次処理
     foreach ($settings_array as $section => $keys) {
