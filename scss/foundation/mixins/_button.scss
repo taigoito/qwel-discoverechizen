@@ -1,0 +1,45 @@
+// Button
+
+@mixin button($size: "xs", $key: "primary", $rounded: "none") {
+  margin: auto;
+
+  @if $size == "xs" {
+    padding: .5rem 1rem;
+  } @else if $size == "sm" {
+    padding: .625rem 1.25rem;
+  } @else if $size == "md" {
+    padding: .625rem 2.5rem;
+  } @else if $size == "lg" {
+    padding: .75rem 3rem;
+  }
+
+  border: none;
+  @if $rounded == "sm" {
+    border-radius: .375rem;
+  } @else if $rounded == "md" {
+    border-radius: .75rem;
+  } @else if $rounded == "lg" {
+    border-radius: 2.25rem;
+  }
+
+  //$color: themeColor($key);
+  //background-color: $color;
+  //color: colorYiq($color);
+  background-color: originalColor($key);
+  color: colorYiqByKey($key);
+  opacity: .85;
+
+  text-decoration: none;
+  text-align: center;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    //background-color: lighten($color, 7.5%);
+    //color: colorYiq(lighten($color, 7.5%));
+    opacity: 1;
+
+    text-decoration: none;
+  }
+}

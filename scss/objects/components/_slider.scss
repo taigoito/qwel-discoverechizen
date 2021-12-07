@@ -1,0 +1,206 @@
+/**
+ * Component - Slider
+ */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: calc(83.33vmin * #{$sliderAspectRatio});
+  overflow: hidden;
+
+  @media (min-width: breakpoint("md")) {
+    @each $key, $height in $sliderHeights {
+      &.--#{$key} {
+        height: $height;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+
+  .post {
+    position: relative;
+    flex: 0 1 auto; 
+    order: 0;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.15s linear;
+    
+    &:not(.--current) {
+      opacity: .5;
+    }
+  }
+
+  .post__image {
+    width: 83.33vmin;
+    height: calc(83.33vmin * #{$sliderAspectRatio});
+    margin: 0;
+    
+    @each $key, $width in $sliderWidths {
+      @at-root .slider.--#{$key}.--fit .post__image {
+        @media (min-width: breakpoint("md")) {
+          width: $width;
+          height: map-get($sliderHeights, $key);
+        }
+      }
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: default;
+    }
+  }
+
+  .post__textContent {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: .75rem;
+    padding: .75rem 1.5rem;
+    background-color: rgba(themeColor("lightest"), .7);
+    color: $bodyColor;
+    text-align: left;
+
+    &:hover {
+      background-color: rgba(themeColor("lightest"), .85);
+      color: $bodyColor;
+    }
+  }
+
+  .post__date {
+    display: none;
+    margin-top: 0;
+    margin-bottom: .75rem;
+
+    @media (min-width: breakpoint("md")) {
+      display: block;
+    }
+  }
+
+  .post__heading {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $h4FontSize;
+    text-transform: capitalize;
+  }
+
+  .post__tags {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (min-width: breakpoint("md")) {
+      display: inline-flex;
+    }
+  }
+
+  .post__tag {
+    margin: .375rem;
+    padding-left: .375rem;
+    padding-right: .375rem;
+    @include background("darker");
+
+    a {
+      color: themeColor("lightest");
+
+      &:hover {
+        color: themeColor("lighter");
+      }
+    }
+
+    a::before {
+      content:"#";
+    }
+  }
+
+  .post__excerpt {
+    display: none;
+    height: 3.6rem; // 2行
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    text-align: justify;
+    @include smallText();
+
+    @media (min-width: breakpoint("md")) {
+      display: block;
+    }
+  }
+
+  .post__moreWrap {
+    display: none;
+
+    @media (min-width: breakpoint("md")) {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  .post__more {
+    display: inline-block;
+  }
+
+  .post__moreText::after {
+    content: $sliderItemMoreText;
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 4.5rem; // アイコンのサイズ
+    margin: auto;
+    border: 0;
+    background-color: transparent;
+    color: $linkColor;
+    text-align: center;
+    
+    &:hover {
+      color: $linkHoverColor;
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+}
+  
+.sliderNav {
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+  margin: .75rem auto;
+
+  &__item {
+    width: .5rem;
+    height: .5rem;
+    margin: .75rem;
+    border-radius: 50%;
+    background-color: $linkHoverColor;
+    cursor: pointer;
+
+    &:not(.--current) {
+      background-color: $linkColor;
+    }
+  }
+}

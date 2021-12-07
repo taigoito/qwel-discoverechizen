@@ -1,15 +1,27 @@
-/* Layout Header
-------------------------------*/
+/**
+ * Layout - Header
+ */
 
-.hero {
-  @include cover-unit();
+.header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000; // 基準
+  background-color: rgba($bodyBg, .7);
+  transition: .35s ease-in-out all;
 
-  &__content {
-    @include cover-section();
+  &:hover {
+    background-color: rgba($bodyBg, 1);
   }
-}
 
-.cover-image {
-  @include cover-image();
-  @include background("light");
+  &__container {
+    @include container();
+    @include row(flex-start);
+    height: $headerHeight;
+
+    @media (min-width: breakpoint("lg")) {
+      justify-content: center;
+    }
+  }
 }

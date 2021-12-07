@@ -1,0 +1,45 @@
+/**
+ * Component - Pagination
+ */
+
+.pagination {
+  @include row(center);
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 3rem;
+  padding-bottom: 0;
+  text-align: center;
+  line-height: 1;
+
+  &__item {
+    margin-bottom: 0;
+    
+    a {
+      display: block;
+      @include button("xs", "primary");
+      padding: 1rem;
+      border: 2px solid $bodyBg;
+    }
+    
+    &.--prev {
+      margin-right: 3rem;
+    }
+
+    &.--next {
+      margin-left: 3rem;
+    }
+
+    &.--current {
+      padding: 1rem;
+      border: 2px solid $bodyBg;
+      @include background("primary-dark");
+    }
+
+    &.--joint {
+      padding: 1rem;
+      border: 2px solid $bodyBg;
+      @include background("primary");
+    }
+  }
+}

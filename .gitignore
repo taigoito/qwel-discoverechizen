@@ -1,3 +1,6 @@
+# VS code
 .vscode/
-*.map
-php/config.php
+
+# Node_modules
+node_modules/
+package-lock.json

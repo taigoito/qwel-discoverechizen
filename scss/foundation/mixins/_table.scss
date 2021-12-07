@@ -1,0 +1,21 @@
+// Tables
+
+@mixin table() {
+  width: 100%;
+  margin-top: $sectionMarginTop;
+  margin-bottom: $sectionMarginBottom;
+
+  tr {
+    border-bottom: 1px solid themeColor("lighter");
+
+    &:first-child {
+      border-top: 1px solid themeColor("lighter");
+    }
+  }
+
+  th, td {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+    @include smallText();
+  }
+}

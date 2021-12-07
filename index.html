@@ -4,260 +4,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qwel Workspace</title>
   <link href="./style.css" rel="stylesheet">
   <link href="./favicon.ico" rel="shortcut icon">
 </head>
 
 <body>
-  <noscript>
-    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
-      <br>JavaScriptを有効にして再度ご来訪ください。</p>
-  </noscript>
-  <script src="./js/preloader.js"></script>
-  <script>
-    const preloader = new Preloader();
-  </script>
-  <header id="hero" class="hero">
-    <div class="hero__content">
-      <h1 class="hero-title">Title here</h1>
-      <div class="hero-description">Description here</div>
-    </div>
-  </header><!-- .hero -->
-  <nav class="header-nav">
-    <div class="header-nav__bar">
-      <div class="header-nav-brand">
-        <a href="#hero">top</a>
-      </div>
-      <ul class="header-nav-menu">
-        <li class="header-nav-menu__item"><a href="#works">works</a></li>
-        <li class="header-nav-menu__item"><a href="#about">about</a></li>
-        <li class="header-nav-menu__item"><a href="#news">news</a></li>
-        <li class="header-nav-menu__item"><a href="#photos">gallery</a></li>
-        <li class="header-nav-menu__item"><a href="#access">access</a></li>
-        <li class="header-nav-menu__item"><a href="#contact">contact</a></li>
-      </ul>
-      <ul class="header-nav-menu">
-        <li class="header-nav-menu__item"><a href="https://www.instagram.com" target="_blank"><span data-icon="ei-sc-instagram" data-size="m"></span></a></li>
-      </ul>
-      <button class="header-nav-toggler" type="button" data-toggle="slidebar"><span data-icon="ei-navicon" data-size="m"></span></button>
-    </div>
-  </nav><!-- .header-nav -->
-  <main class="main">
-    <section id="works" class="works">
-      <h2 class="works__heading">works</h2>
-      <div id="slider" class="slider--size_sm">
-        <div class="slider__inner">
-          <div class="slider__item">
-            <img src="./images/no-image-sm.gif">
-          </div>
-          <div class="slider__item">
-            <img src="./images/no-image.gif">
-          </div>
-          <div class="slider__item">
-            <img src="./images/no-image-sm.gif">
-          </div>
-          <div class="slider__item">
-            <img src="./images/no-image.gif">
-          </div>
-          <div class="slider__item">
-            <img src="./images/no-image-sm.gif">
-          </div>
-          <div class="slider__item">
-            <img src="./images/no-image.gif">
-          </div>
-        </div>
-        <a class="slider__prev" href="#"><span data-icon="ei-chevron-left" data-size="l"></span></a>
-        <a class="slider__next" href="#"><span data-icon="ei-chevron-right" data-size="l"></span></a>
-      </div><!-- .slider -->
-    </section><!-- .works -->
-    <section id="about" class="about">
-      <h2 class="about__heading">about</h2>
-      <div class="one-col">
-        <div class="one-col__container">
-          <div class="one-col__image">
-            <img src="./images/no-image.gif">
-          </div>
-          <div class="one-col__textbox">
-            <p class="one-col__intro">抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。</p>
-            <a class="one-col__more" href="#">詳細</a>
-          </div>
-        </div>
-      </div><!-- .one-col -->
-    </section><!-- .about -->
-    <section id="news" class="news">
-      <h2 class="news__heading">news</h2>
-      <div class="lists">
-        <article class="lists__item">
-          <div class="lists__image">
-            <a href="#"><img src="./images/no-image.gif"></a>
-          </div>
-          <div class="lists__textbox">
-            <div class="lists__textbox-inner">
-              <div class="lists__content">
-                <div class="lists__date">2020.03.20</div>
-                <h3 class="lists__heading"><a href="#">見出しがここに入ります</a></h3>
-                <ul class="lists__terms">
-                  <li class="lists__term"><a href="#">お知らせ</a></li>
-                  <li class="lists__term"><a href="#">制作日記</a></li>
-                </ul>
-                <p class="lists__intro">抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。<a href="#">[詳細]</a></p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="lists__item">
-          <div class="lists__image">
-            <a href="#"><img src="./images/no-image.gif"></a>
-          </div>
-          <div class="lists__textbox">
-            <div class="lists__textbox-inner">
-              <div class="lists__content">
-                <div class="lists__date">2020.02.09</div>
-                <h3 class="lists__heading"><a href="#">見出しがここに入ります</a></h3>
-                <ul class="lists__terms">
-                  <li class="lists__term"><a href="#">お知らせ</a></li>
-                </ul>
-                <p class="lists__intro">抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。<a href="#">[詳細]</a></p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="lists__item">
-          <div class="lists__image">
-            <a href="#"><img src="./images/no-image.gif"></a>
-          </div>
-          <div class="lists__textbox">
-            <div class="lists__textbox-inner">
-              <div class="lists__content">
-                <div class="lists__date">2019.10.31</div>
-                <h3 class="lists__heading"><a href="#">見出しがここに入ります</a></h3>
-                <ul class="lists__terms">
-                </ul>
-                <p class="lists__intro">抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。抜粋がここに入ります。<a href="#">[詳細]</a></p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div><!-- .lists -->
-    </section><!-- .news -->
-    <section id="photos" class="photos">
-      <h2 class="photos__heading">photo gallery</h2>
-      <ul class="gallery">
-        <li class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-        <li  class="gallery__item">
-          <a href="./images/no-image-sm.gif" target="_blank"><img src="./images/no-image-sm.gif"></a>
-        </li>
-      </ul><!-- .gallery -->
-    </section><!-- .photos -->
-    <section id="access" class="access">
-      <h2 class="access__heading">access</h2>
-      <div class="access__map">
-        <iframe src="https://www.google.com/maps/embed" width="960" height="480" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-      </div>
-    </section><!-- .access -->
-    <section id="contact" class="contact">
-      <h2 class="contact__heading">contact</h2>
-      <form class="contact__form" action="../php/contact.php" method="post" autocomplete="on">
-        <label>お名前<br>
-          <input name="yourname" type="text" maxlength="20" placeholder="お名前を入力してください" required></label>
-        <label>メールアドレス<br>
-          <input name="yourmail" type="email" maxlength="40" placeholder="メールアドレスを入力してください" required></label>
-        <label>件名<br>
-          <select name="yoursubject">
-            <option value="制作に関するお問い合わせ">制作に関するお問い合わせ</option>
-            <option value="その他">その他</option>
-          </select></label>
-        <label>メッセージ<br>
-          <textarea name="yourmessage" maxlength="400" rows="12" placeholder="メッセージを入力してください" required></textarea></label>
-        <button type="submit">確認</button>
-      </form>
-    </section><!-- .contact -->
-  </main><!-- .main -->
-  <div class="slidebar">
-    <ul class="slidemenu"></ul>
-    <button class="slidebar__close" type="button" data-toggle="slidebar"><span data-icon="ei-close" data-size="m"></span></button>
-  </div>
-  <div class="slidebar__overlay"></div>
-  <template id="slidebar-template">
-    <li><a href=""></a></li>
-  </template>
-  <div class="cover-image"></div>
-  <footer class="footer">
-    <div class="footer-nav">
-      <div class="footer-nav__bar">
-        <div class="footer-nav-brand">
-          <a href="#hero">top</a>
-        </div>
-        <ul class="footer-nav-menu">
-          <li class="footer-nav-menu__item"><a href="#works">works</a></li>
-          <li class="footer-nav-menu__item"><a href="#about">about</a></li>
-          <li class="footer-nav-menu__item"><a href="#news">news</a></li>
-          <li class="footer-nav-menu__item"><a href="#photos">gallery</a></li>
-          <li class="footer-nav-menu__item"><a href="#access">access</a></li>
-          <li class="footer-nav-menu__item"><a href="#contact">contact</a></li>
-        </ul>
-        <ul class="footer-nav-menu">
-          <li class="footer-nav-menu__item"><a href="https://www.instagram.com" target="_blank"><span data-icon="ei-sc-instagram" data-size="m"></span></a></li>
-        </ul>
-      </div>
-    </div>
-    <small>&copy; 2020 QWEL</small>
-  </footer><!-- .footer -->
-  <script src="./js/init.js" type="module"></script>
-  <script>
-    // Preloader load
-    window.onload = preloader.load;
-  </script>
-</body>
+  <header id="header">
 
+  </header><!-- #header -->
+  <nav id="nav">
+
+  </nav><!-- #nav -->
+  <main id="main">
+
+
+
+  </main><!-- #main -->
+  <div id="cover" class="cover">
+    <div class="cover__image"></div>
+  </div><!-- #cover -->
+  <button id="drawer" class="drawer" type="button" data-drawer="toggle">
+    <span class="drawer__navicon" data-icon="ei-navicon" data-size="m"></span>
+    <span class="drawer__close" data-icon="ei-close" data-size="m"></span>
+  </button><!-- #drawer -->
+  <div id="drawerMenu" class="drawerMenu">
+    <ul class="drawerMenu__inner"></ul>
+  </div><!-- #drawerMenu -->
+  <div id="drawerMenuOverlay" class="drawerMenuOverlay"></div><!-- #drawerMenuOverlay -->
+  <template id="drawerMenuItemTemplate">
+    <li class="drawerMenu__item"><a href=""></a></li>
+  </template><!-- #drawerMenuItemTemplate -->
+  <footer id="footer">
+
+  </footer>
+  <script src='./modules/init.js' type="module"></script>
+</body>
 </html>

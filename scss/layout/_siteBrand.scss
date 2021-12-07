@@ -1,0 +1,28 @@
+/**
+ * Layout - Site Brand
+ */
+
+.siteBrand {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $h2FontSize;
+  line-height: $siteBrandHeight;
+
+  &.--float { // 設定によってheaderが無効のとき
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: .75rem;
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: auto;
+    height: $siteBrandHeight;
+  }
+}

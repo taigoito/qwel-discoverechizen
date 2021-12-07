@@ -1,0 +1,16 @@
+/**
+ * Project - Pages
+ */
+
+.post.--page {
+  position: relative;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  & .post {
+    &__content {
+      text-align: justify;
+    }
+  }
+}

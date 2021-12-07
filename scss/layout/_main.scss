@@ -1,14 +1,16 @@
-/* Layout Main
-------------------------------*/
+/**
+ * Layout - Main
+ */
 
-%section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  text-align: center;
-}
+.main {
+  &__wrapper {
+    min-height: calc(66.66vh - 4.5rem); // コンテンツが少ない場合に.coverを隠す
+    background-color: $bodyBg;
+    overflow: hidden; // コンテナ内での全幅使用対策
+  }
 
-%section__heading {
-  margin-top: 0;
-  margin-bottom: 6rem;
-  text-transform: capitalize;
+  &__container {
+    @include container();
+    @include row(space-between, flex-start);
+  }
 }

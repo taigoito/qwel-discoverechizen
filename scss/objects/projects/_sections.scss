@@ -1,0 +1,118 @@
+/**
+ * Project - Toppage sections
+ */
+
+ .section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: $bodyBg;
+  text-align: center;
+
+  &__heading {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: $h2FontSize;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    margin-bottom: 1.5rem; 
+  }
+
+  &__inner {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &.--container {
+      @include container();
+    }
+  }
+
+  &__content {
+    @include container("md");
+    margin-bottom: 3rem;
+    text-align: justify;
+  }
+
+  &__moreWrap {
+    text-align: center;
+  }
+
+  &__more {
+    display: inline-block;
+    text-transform: capitalize;
+  }
+
+  &__moreText::after {
+    content: $sectionMoreText;
+    text-transform: none;
+  }
+
+  &.--hero {
+    position: relative;
+    height: $heroHeight;
+    min-height: 480px; // 小型端末の横向き表示に対応
+    @include row(center, center);
+    background-color: transparent;
+
+    .section__content {
+      margin-bottom: 0;
+      color: themeColor("lightest");
+      text-align: center;
+      opacity: 0;
+      transform: translateY(3rem);
+      transition: .35s ease-in-out all;
+
+      body.--loaded & {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    h2 {
+      font-weight: bold;
+      font-size: $h1FontSize;
+      text-transform: capitalize;
+    }
+  
+    .post__content {
+      font-size: $h3FontSize;
+    }
+  
+    .post__excerpt {
+      font-size: $h3FontSize;
+    }
+  
+    .post__moreWrap {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+  
+    .post__more {
+      display: inline-block;
+      @include button("md", "primary");
+    }
+  }
+
+  &.--access {
+    .section__map {
+      position: relative;
+      width: 100%;
+      height: 480px;
+  
+      iframe {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &.--contact {
+    .section__content {
+      @include form();
+    }
+  }
+}

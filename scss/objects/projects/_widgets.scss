@@ -1,0 +1,87 @@
+/**
+ * Project - Widgets
+ */
+
+.widget {
+  .sidebar & {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__heading {
+    height: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    font-size: $h5FontSize;
+    line-height: 3rem; // メインループのコンテンツと高さを合わせる
+    text-transform: capitalize;
+  }
+  
+  // ウィジェット > リスト
+  li {
+    margin-bottom: 0;
+    font-size: $h6FontSize;
+    line-height: $smallLineHeight;
+    letter-spacing: $smallLetterSpacing;
+    text-transform: capitalize;
+    
+    a {
+      display: block;
+      // サイドバー内ではボーダー
+      .sidebar & {
+        padding-top: .625rem;
+        padding-bottom: .625rem;
+        border-bottom: 1px solid themeColor("lighter");
+      }
+      // フッター内では行を狭く
+      .footer & {
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+      }
+    }
+    // 2階層目以降
+    li {
+      a {
+        padding-left: .75rem;
+      }
+
+      li a {
+        padding-left: 1.5rem;
+      }
+    }
+
+    .sidebar & {
+      &:first-child a {
+        border-top: 1px solid themeColor("lighter");
+      }
+      // サブメニューのボーダーの重なりを除去
+      li:first-child a {
+        border-top: 0;
+      }
+    }
+  }
+
+  // ウィジェット > テーブル
+  table {
+    @include table();
+    // フッター内では行を狭く
+    .footer & {
+      th, td {
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+      }
+    }
+  }
+
+  // フッター内はリンク文字色を反転
+  .footer & {
+    a {
+      color: themeColor("lightest");
+
+      &:hover {
+        color: $linkHoverColor;
+      }
+    }
+  }
+}

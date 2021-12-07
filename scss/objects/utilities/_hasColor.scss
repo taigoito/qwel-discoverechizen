@@ -1,0 +1,10 @@
+/**
+ * Utility - Has Color
+ */
+
+//@each $key, $color in $themeColors {
+  @each $key, $color in $originalColors {
+  .has-#{$key}-color {
+    color: $color !important;
+  }
+}
