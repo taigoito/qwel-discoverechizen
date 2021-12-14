@@ -6,19 +6,16 @@
  */
 
 import Scrolling from './_scrolling.js';
+import Modal from './_modal.js';
+import Panels from './_panels.js';
 import Slidebar from './_slidebar.js';
 import Slider from './_slider.js';
 import Wave from './_wave.js';
+import RenderItems from './_renderItems.js';
 import renderEvilIcons from './_evil-icons.js';
 
 const HOST = `${location.protocol}//${location.hostname}`;
 const ROOT = '/discoverechizen/';
-
-// Scrolling init
-const scrolling = new Scrolling({
-  offset: -12
-});
-scrolling.init();
 
 // Slidebar init
 const slidebar = new Slidebar({
@@ -26,6 +23,15 @@ const slidebar = new Slidebar({
   nav: document.querySelector('.footer-nav')
 });
 slidebar.init();
+
+// Scrolling init
+const scrolling = new Scrolling();
+
+// Modal init
+//const modal = new Modal();
+
+// Panels init
+const panels = new Panels();
 
 // Menu icon
 const logo = document.querySelector('.brand-home img');
@@ -156,6 +162,9 @@ if (document.body.id === 'archive-umitan' || document.body.id === 'umitan') {
   });
   wave.init();
 }
+
+const url = 'https://portal.discoverechizen.com/';
+new RenderItems(url);
 
 // Icons init
 renderEvilIcons();

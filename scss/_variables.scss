@@ -22,11 +22,10 @@ $container-max-widths: (
 );
 
 // Theme color
-$key-color: hsl(195, 100%, 42%);
 $theme-colors: (
-  primary:       $key-color,
-  primary-light: hsl(195, 66%, 83%),
-  primary-dark:  darken($key-color, 17%),
+  primary-light: #d1f0fc,
+  primary:       #37bef0,
+  primary-dark:  #18aada,
   secondary:     hsl(15, 75%, 42%),
   light:         lighten(#000000, 92%),
   dark:          lighten(#000000, 17%)

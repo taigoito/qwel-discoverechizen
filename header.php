@@ -7,7 +7,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_id(); ?>>
+<body <?php body_id(); ?> data-scrolling-offset="-48">
   <noscript>
     <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
       <br>JavaScriptを有効にして再度ご来訪ください。</p>

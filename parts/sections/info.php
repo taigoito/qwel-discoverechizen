@@ -35,7 +35,7 @@
                   <h3 class="info-item__heading"><img src="<?php echo get_template_directory_uri() . '/assets/svg/info_map.svg'; ?>"></h3>
                   <p class="info-item__text">盛り上げ隊が発行している地域の魅力が詰まった地図。</p>
                   <a class="info-item__more" href="./treasuremap/" target="_blank">&gt; マップを見る</a>
-                    <br><a class="info-item__more" href="<?php echo get_template_directory_uri() . '/assets/map2020.pdf'; ?>" target="_blank">&gt; マップのダウンロード</a>
+                    <br><a class="info-item__more" href="<?php echo get_template_directory_uri() . '/assets/map2021.pdf'; ?>" target="_blank">&gt; マップのダウンロード</a>
                 </div>
                 <div class="info-item__image">
                   <img src="<?php echo get_template_directory_uri() . '/assets/svg/info_illust_map.svg'; ?>">

@@ -4,6 +4,10 @@ Author: Taigo Ito
 Author URI: https://qwel.design/
 */
 
+// テーマのパス, URI
+define('DE_THEME_DIR', get_template_directory());
+define('DE_THEME_URI', get_template_directory_uri());
+
 // Setup
 
 function discoverechizen_setup()
@@ -70,8 +74,18 @@ add_action('widgets_init', 'discoverechizen_widgets_init');
 
 function discoverechizen_scripts()
 {
+  // テーマ情報を取得し、スタイルシート読み込み時にバージョン情報を付与
+  $theme = wp_get_theme(get_template());
+  $version = $theme->get('Version');
   wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap', [], null); 
-  wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], null);
+  wp_enqueue_style('style', get_template_directory_uri() . '/style.css', [], $version);
+
+  if (is_single(2595)) {
+    // Google Fonts
+    $family = 'Sawarabi+Gothic';
+    wp_enqueue_style('fonts-lp', 'https://fonts.googleapis.com/css?family=' . $family . '&display=swap', [], null);
+    wp_enqueue_style('style-lp', get_template_directory_uri() . '/style-lp.css', [], null);
+  }
 }
 add_action('wp_enqueue_scripts', 'discoverechizen_scripts');
 

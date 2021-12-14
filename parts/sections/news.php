@@ -8,8 +8,7 @@
         <div class="cols__container">
           <?php
           $posts = get_posts([
-            'posts_per_page' => 3,
-            'category' => 1,
+            'posts_per_page' => 2,
             'post_type' => 'post'
           ]);
           foreach ($posts as $post) {
@@ -19,9 +18,7 @@
           ?>
           <?php
           $posts = get_posts([
-            'posts_per_page' => 1,
-            'post_type' => 'post',
-            'include' => [2080]
+            'include' => [2725, 2080]
           ]);
           foreach ($posts as $post) {
             setup_postdata($post);
@@ -29,6 +26,9 @@
           }
           ?>
         </div>
+        <figure class="news__banner">
+          <a href="<?php echo get_permalink(2595); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/banner_studytour.svg'; ?>"></a>
+        </figure>
       </div><!-- .cols -->
       <a class="news__more" href="<?php echo get_category_link(1); ?>">&gt; 最新情報 をもっと見る</a>
     </section><!-- .news -->

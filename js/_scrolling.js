@@ -1,38 +1,38 @@
 // Scrolling
 
 export default class Scrolling {
-  constructor(options = {}) {
-    this._offset = options.offset || 48;
-    this._duration = options.duration || 1000;
-    this._callback = options.callback;
-  }
-
-  init() {
+  constructor(elem) {
+    // 各オプション (body要素のdata属性から取得)
+    this._elem = elem || document.body;
+    this._offset = this._elem.dataset.scrollingOffset || 72; // header標準
+    this._duration = this._elem.dataset.scrollingDuration || 1000;
     this._handleEvents();
   }
 
-  _handleEvents() {
-    const myTouch = 'ontouchend' in document && window.innerWidth < 1024 ? 'touchend' : 'click';
-    document.addEventListener(myTouch, (event) => {
-      const href = event.srcElement.getAttribute('href');
-      const regexp = /#[\w-]+/gi;
-      if (href && regexp.test(href)) {
-        const hash = href.split('#').pop();
-        if (document.getElementById(hash) != null) {
-          event.preventDefault();
-          this.scroll(`#${hash}`);
-        }
-      }
-    });
-  }
-
-  scroll(target) {
-    this._elem = document.querySelector(target);
+  scroll(id) {
+    this._elem = document.getElementById(id);
     this._start = window.scrollY || window.pageYOffset;
     this._stop = this._elem.getBoundingClientRect().top + this._start;
     this._distance = this._stop - this._start - this._offset;
     this._timeStart = false;
     window.requestAnimationFrame(this._loop.bind(this));
+  }
+
+  _handleEvents() {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach((link) => { 
+      link.addEventListener('click', (event) => {
+        const href = event.currentTarget.getAttribute('href');
+        const regexp = /#[\w\%-]+/gi;
+        if (href && regexp.test(href)) {
+          const hash = href.split('#').pop();
+          if (document.getElementById(hash) != null) {
+            event.preventDefault();
+            this.scroll(hash);
+          }
+        }
+      });
+    });
   }
 
   _loop(timeCurrent) {
@@ -51,9 +51,6 @@ export default class Scrolling {
 
   _done() {
     window.scrollTo(0, this._start + this._distance);
-    if (typeof this._callback === 'function') {
-      this._callback();
-    }
     this.timeStart = false;
   }
 
