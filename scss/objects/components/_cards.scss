@@ -1,0 +1,119 @@
+/**
+ * Component - Cards
+ */
+
+.cards {
+  &__inner {
+    @include row(center);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .post {
+    margin: .75rem .375rem;
+
+    @each $key, $width in $cardWidths {
+      @at-root .cards.--#{$key} .post {
+        flex: 0 0 $width;
+        width: $width;
+      }
+    }
+  }
+
+  .post__inner {
+    height: 100%;
+    box-shadow: 0 0 6px 0 themeColor("darker");
+    transition: .35s all ease-in-out;
+
+    &:hover {
+      box-shadow: 0 3px 12px 0 themeColor("darker");
+      transform: translateY(-2px);
+    }
+  }
+
+  .post__image {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    @each $key, $height in $cardHeights {
+      @at-root .cards.--#{$key} .post__image {
+        height: $height;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .35s all ease-in-out;
+
+      @at-root .cards .post__inner:hover .post__image img {
+        transform: scale(1.17, 1.17);
+      }
+    }
+  }
+
+  .post__textContent {
+    padding: .75rem 1.5rem;
+    background-color: themeColor("lightest");
+    text-align: left;
+  }
+
+  .post__date {
+    margin-top: 0;
+    margin-bottom: .75rem;
+  }
+
+  .post__heading {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    font-size: $h4FontSize;
+    text-transform: capitalize;
+  }
+
+  .post__tags {
+    @include row(flex-start);
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+  }
+
+  .post__tag {
+    margin: .375rem;
+    padding-left: .375rem;
+    padding-right: .375rem;
+    background-color: themeColor("lighter");
+
+    a::before {
+      content:"#";
+    }
+  }
+
+  .post__excerpt {
+    height: 7.95rem; // 4行 (7.2rem + .75rem)
+    margin-bottom: .75rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px dashed themeColor("lighter");
+    text-align: justify;
+    @include smallText();
+  }
+
+  .post__moreWrap {
+    text-align: center;
+  }
+
+  .post__more {
+    display: inline-block;
+  }
+
+  .post__moreText::after {
+    content: $cardsItemMoreText;
+  }
+}

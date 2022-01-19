@@ -1,102 +1,27 @@
-/* Layout Header
-------------------------------*/
+/**
+ * Layout - Header
+ */
 
-%site-header {
-  padding-top: 6rem;
-  text-align: center;
-
-  &__title {
-    @include container();
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-.site-header {
-  @extend %site-header;
-  padding-bottom: 3rem;
-  background-color: #ffffff; // Color detected
-
-  &__title {
-    @extend %site-header__title;
-  }
-
-  &__title-container {
-    @include row();
-
-    img {
-      @include col("md", 6);
-      padding-left: .25rem;
-      padding-right: .25rem; // Adjust image position
-    }
-
-    @media (min-width: breakpoint("md")) {
-      &::before,
-      &::after {
-        content: "";
-        display: block;
-        @include col("md", 3);
-        background: url("assets/svg/title_dec.svg") no-repeat center center / contain scroll;
-      }
-    }
-  }
-
-  &--umitan {
-    @extend %site-header;
-    background-color: theme-color("primary");
-
-    &__title {
-      @extend %site-header__title;
-    }
-
-    &__title-container {
-      @include row();
-      justify-content: center;
-
-      img {
-        @include col("md", 9);
-      }
-    }
-  }
-
-  &--plan {
-    @extend %site-header;
-    padding-bottom: 3rem;
-    background-color: theme-color("primary-light");
-  }
-}
-
-.brand-home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  margin: .75rem;
-
-  img {
-    width: 13.5rem; // height: 4.5rem
-  }
-
-  @media (min-width: breakpoint("lg")) {
-    display: block;
-  }
-}
-
-.nav-toggler {
-  position: fixed;
+.header {
+  position: sticky;
   top: 0;
   right: 0;
-  z-index: 1000;
-  display: block;
-  margin: .75rem;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  line-height: 1;
-  outline: 0;
-  cursor: pointer;
+  left: 0;
+  z-index: 1000; // 基準
+  background-color: rgba($bodyBg, .7);
+  transition: .35s ease-in-out all;
 
-  img {
-    width: 4.5rem;
+  &:hover {
+    background-color: rgba($bodyBg, 1);
+  }
+
+  &__container {
+    @include container();
+    @include row(flex-start);
+    height: $headerHeight;
+
+    @media (min-width: breakpoint("lg")) {
+      justify-content: center;
+    }
   }
 }

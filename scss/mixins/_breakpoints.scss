@@ -1,5 +1,0 @@
-// Breakpoints
-
-@function breakpoint($infix: "lg") {
-  @return map-get($grid-breakpoints, $infix);
-}

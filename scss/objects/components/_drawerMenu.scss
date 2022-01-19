@@ -1,0 +1,141 @@
+/**
+ * Component - Drawer Menu
+ */
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1110;
+  display: block;
+  width: $headerHeight;
+  height: $headerHeight;
+  padding: .75rem;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  outline: 0;
+  cursor: pointer;
+
+  &:not(.responsiveColor) { // 設定によってheaderが有効のとき
+    @media (min-width: breakpoint("lg")) {
+      display: none;
+    }
+  }
+
+  &__navicon.icon, &__close.icon {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    width: $siteBrandHeight;
+    height: $siteBrandHeight;
+    transition: .25s all ease-in-out;
+  }
+
+  &__navicon {
+    opacity: 0;
+    transform: rotate(45deg);
+
+    @at-root .drawer:not(.--active) .drawer__navicon {
+      opacity: 1;
+      transform: rotate(0);
+    }
+  }
+
+  &__close {
+    color: $bodyBg;
+    opacity: 1;
+    transform: rotate(0);
+
+    @at-root .drawer:not(.--active) .drawer__close {
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.drawerMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100; // header: 1000 より前面
+  width: 18rem;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(themeColor("darkest"), .85);
+  text-align: center;
+  transition: width ease-in-out .25s;
+  
+  &:not(.--show) {
+    width: 0;
+  }
+  
+  &__inner {
+    @include row(center);
+    height: 100%;
+    margin-bottom: 0;
+    align-content: center;
+    opacity: 1;
+    
+    &:not(.--show) {
+      opacity: 0;
+    }
+
+    &.--collapse {
+      display: none;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+    text-transform: capitalize;
+
+    &.--brand {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      img {
+        filter: var(--header-filter, $whiteShape);
+        width: auto;
+        height: $siteBrandHeight;
+      }
+    }
+
+    &.--social {
+      width: 3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    a {
+      display: block;
+      color: themeColor("lightest");
+      text-decoration: none;
+      
+      &:hover {
+        color: $linkHoverColor;
+        text-decoration: $linkHoverDecoration;
+      }
+    }
+  }
+}
+
+.drawerMenuOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1090;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+
+  &.--collapse {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+/**
+ * Layout - G Nav
+ */
+
+.gNav {
+  display: none;
+  height: $siteBrandHeight;
+
+  &:not(.--hidden) { // 設定によってheaderが有効のとき
+    @media (min-width: breakpoint("lg")) {
+      @include row();
+    }
+  }
+
+  &__primaryMenu, &__socialMenu {
+    @include row();
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    li  {
+      margin-bottom: 0;
+      
+      a {
+        display: block;
+        margin-left: .375rem; // 項目に合わせて適宜に調整
+        text-transform: capitalize;
+        line-height: 1;
+
+        @at-root .gNav__primaryMenu li a {
+          padding: 1rem; // socialMenu内に入るアイコンと高さを揃える
+        }
+      }
+
+      &:first-child a {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

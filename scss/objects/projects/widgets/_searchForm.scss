@@ -1,0 +1,28 @@
+// Search Form
+
+.search-form {
+  position: relative;
+
+  label {
+    display: block;
+    line-height: $lineHeightBase;
+  }
+}
+
+.search-field {
+  display: block;
+  width: 100%;
+  padding: .625rem;
+  border: 1px solid themeColor("lighter");
+  font-size: $smallFontSize;
+}
+
+.search-submit {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  bottom: .25rem;
+  display: inline-block;
+  @include button();
+  font-size: $smallFontSize;
+}

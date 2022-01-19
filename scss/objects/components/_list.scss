@@ -1,0 +1,125 @@
+/**
+ * Component - List
+ */
+
+.list {
+  &__inner {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .post {
+    margin-bottom: 0;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid themeColor("lighter");
+
+    @at-root .list.--lg .post:first-child {
+      @media (min-width: breakpoint("lg")) {
+        padding-top: .75rem;
+        border-top: 1px solid themeColor("lighter");
+      }
+    }
+  }
+
+  .post__inner {
+    @include row(space-around);
+  }
+
+  .post__image {
+    @include col();
+    width: var(--container-base);
+    height: calc(var(--container-base) * var(--list-aspect-ratio));
+    margin: 0;
+    overflow: hidden;
+
+    @at-root .list.--lg .post__image {
+      @include col("lg", auto);
+    }
+
+    a {
+      display: block;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .35s all ease-in-out;;
+    
+      &:hover {
+        transform: scale(1.17, 1.17);
+      }
+    }
+  }
+
+  .post__textContent {
+    padding: .75rem 0;
+    text-align: left;
+    @include col();
+
+    @at-root .list.--lg .post__textContent{
+      @include col("lg", 8);
+
+      @media (min-width: breakpoint("lg")) {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  .post__date {
+    margin-top: 0;
+    margin-bottom: .75rem;
+  }
+
+  .post__heading {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $h4FontSize;
+    text-transform: capitalize;
+  }
+
+  .post__tags {
+    display: inline-flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .post__tag {
+    margin: .375rem;
+    padding-left: .375rem;
+    padding-right: .375rem;
+    background-color: themeColor("lighter");
+
+    a::before {
+      content:"#";
+    }
+  }
+
+  .post__excerpt {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    text-align: justify;
+    @include smallText();
+
+    @at-root .list.--lg .post__excerpt {
+      @media (min-width: breakpoint("lg")) {
+        height: 3.6rem; // 2行
+      }
+    }
+  }
+
+  .post__moreWrap {
+    text-align: right;
+  }
+
+  .post__more {
+    display: inline-block;
+  }
+
+  .post__moreText::after {
+    content: $listItemMoreText;
+  }
+}

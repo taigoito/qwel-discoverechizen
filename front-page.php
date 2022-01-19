@@ -1,10 +1,29 @@
-<?php get_header(); ?>
+<?php get_header();
+  /**
+   * Main
+   * フロントページでは、main直下に各セクションが入る
+   */
+  ?>
   <main id="main" class="main">
     <?php
-    $array = ['news', 'umitan', 'info', 'plan', 'blog', 'location', 'contact'];
-    foreach ($array as $value) {
-      get_template_part('parts/sections/' . $value);
+    /**
+     * フロントページでは .section を使う (sass/objects/projects/_sections.scss)
+     * 特殊な処理は .--hero, .--access などで対応
+     */
+    // セクション毎のテンプレート読み込み
+    $sections = \Qwel::get_sections();
+    foreach ($sections as $section => $type) {
+      // 表示の有無をチェック
+      $relational_id = \Qwel::get_data($section, 'relational_id');
+      if ($relational_id) get_template_part('section-parts/' . $section);
     }
     ?>
-  </main><!-- .main -->
-<?php get_footer(); ?>
+  </main><!-- #main -->
+  <?php
+  /**
+   * Cover
+   * フロントページでは、複数要素を挿入し、JSのFaderを適用
+   */
+  get_template_part('template-parts/cover');
+  ?><!-- #cover -->
+<?php get_footer();
