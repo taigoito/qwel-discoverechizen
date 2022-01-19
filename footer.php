@@ -9,8 +9,9 @@
    * ウィジェットエリア * 4カラム構成
    */
   get_template_part('template-parts/footer');
-  
-  wp_footer(); ?>
+  ?>
+  <script src="<?php echo DE_THEME_URI . '/modules/renderItems.js'; ?>" type="module"></script>
+  <?php wp_footer(); ?>
 </body>
 
 </html>

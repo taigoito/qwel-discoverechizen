@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -100;
   width: 100%;
   height: 100%;
 
@@ -21,11 +21,11 @@
     background-size: cover;
     opacity: 1;
     transition: 1s linear opacity;
-    filter: var(--cover-filter, $blur);
+    filter: none;
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 6 {
       &.--num_#{$i} {
-        background-image: var(--cover-image-#{$i});
+        background-image: url("./assets/main0#{$i - 1}.jpg");
       }
     }
 

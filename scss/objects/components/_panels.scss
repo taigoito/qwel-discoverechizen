@@ -1,0 +1,9 @@
+/**
+ * Component - Panels
+ */
+
+.panel {
+  &.--collapse {
+    display: none;
+  }
+}

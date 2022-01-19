@@ -1,0 +1,21 @@
+/**
+ * Utility - Sizing
+ */
+
+$sizingValues: (
+  1:   6rem,
+  2:   12rem,
+  3:   18rem,
+  4:   24rem,
+  5:   30rem,
+  6:   36rem
+);
+
+@each $suffix, $val in $sizingValues {
+  .--w_#{$suffix} {
+    width: $val !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace DE_Theme;
 
 /**
  * テーマサポート機能

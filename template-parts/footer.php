@@ -14,6 +14,6 @@
       </div>
     </div>
     <div class="footer__copyright">
-      <small>&copy; <?php echo \Qwel::get_data('footer', 'copyright'); ?></small>
+      <small>&copy; <?php echo \DE::get_data('footer', 'copyright'); ?></small>
     </div>
   </footer><!-- #footer -->

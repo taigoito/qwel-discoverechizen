@@ -1,18 +1,18 @@
 <?php
-namespace Qwel_Theme;
+namespace DE_Theme;
 
 /**
  * テーマの全般設定を取得する関数群
  */
 trait Base {
-	use \Qwel_Theme\Base_Settings;
+	use \DE_Theme\Base_Settings;
 
 	/**
 	 * 設定を読み込んで並べ直したセクションの配列を取得
 	 */
 	public static function get_sections() {
 		// $sections を上書きするHook
-		$sections = apply_filters('qwel_theme_sections', self::$sections);
+		$sections = apply_filters('DE_Theme_sections', self::$sections);
 
 		// order で並べ替え
 		uksort($sections, function($key1, $key2) {
@@ -31,7 +31,7 @@ trait Base {
 	 */
 	public static function get_default_data($section, $key = false) {
 		// $data を上書きするHook
-		$data = apply_filters('qwel_theme_defaults', self::$data);
+		$data = apply_filters('DE_Theme_defaults', self::$data);
 
 		$theme_settings  = $data;
 		$section         = $theme_settings[$section];

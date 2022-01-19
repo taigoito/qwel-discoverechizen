@@ -1,20 +1,28 @@
     <?php
     $wp_obj  = get_queried_object();
     $title   = '';
+    $slug    = '';
 
     // 固定ページ
     if (is_home() || is_page()) {
       $title = $wp_obj->post_title;
+      $slug  = $wp_obj->post_name;
 
     // 個別投稿ページ
     } else if (is_single()) {
       $post_id = $wp_obj->ID;
       $terms   = get_the_terms($post_id, 'category');
       $title   = $terms[0]->name;
+      $slug    = $terms[0]->slug;
+      if ($slug === 'feature') {
+        $title = $wp_obj->post_title;
+        $slug  = $wp_obj->post_name;
+      }
 
     // カスタム投稿アーカイブ
     } else if (is_post_type_archive()) {
       $title = $wp_obj->label;
+      $slug  = $wp_obj->name;
 
     // 日付別
     } else if (is_date()) {
@@ -32,6 +40,7 @@
     // タームアーカイブ
     } else if (is_archive()) {
       $title = $wp_obj->name;
+      $slug  = $wp_obj->slug;
 
     // 検索結果ページ
     } else if (is_search()) {
@@ -39,11 +48,20 @@
 
     // 404ページ
     } else if (is_404()) {
-      $title = '404 Not Found';
+      $title = 'Not Found';
+      $slug  = '404';
+
+    // その他
+    } else {
+      $title = $wp_obj->label;
+      $slug  = $wp_obj->name;
     }
     ?>
     <header id="titleArea" class="titleArea">
-      <div class="titleArea__container">
-        <h1 class="titleArea__title"><?php echo $title; ?></h1>
+      <div class="page__headingContainer">
+        <h1 class="page__heading">
+          <span class="page__headingSpan1" data-comfort="1"><?php echo my_format_slug($slug); ?></span>
+          <span class="page__headingSpan2" data-comfort="1"><?php echo $title; ?></span>
+        </h1>
       </div>
     </header>

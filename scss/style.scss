@@ -1,7 +1,7 @@
 /*
-Theme Name: Qwel One
-Description: This is a theme for someone's portfolio or blog. You can customize and use.
-Version: 1.0
+Theme Name: Discover Echiven
+Description: This is a theme for Discover Echizen.
+Version: 2.6
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -34,8 +34,10 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 // Objects
 @import "objects/projects/sections";
+@import "objects/projects/contentMap";
 @import "objects/projects/pages";
 @import "objects/projects/posts";
+@import "objects/projects/landingPages";
 @import "objects/projects/archive";
 @import "objects/projects/widgets";
 @import "objects/projects/widgets/searchForm";
@@ -50,13 +52,16 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "objects/components/mediaText";
 @import "objects/components/modal";
 @import "objects/components/pagination";
+@import "objects/components/panels";
 @import "objects/components/preloader";
 @import "objects/components/slider";
+@import "objects/components/wave";
 @import "objects/utilities/button";
 @import "objects/utilities/form";
 @import "objects/utilities/grid";
-@import "objects/utilities/table";
+@import "objects/utilities/sizing";
 @import "objects/utilities/spacing";
+@import "objects/utilities/table";
 @import "objects/utilities/type";
 @import "objects/utilities/visibility";
 @import "objects/utilities/moreText";

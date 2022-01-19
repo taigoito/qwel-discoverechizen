@@ -1,12 +1,11 @@
 // Color System
 
 // 任意の基準色を設定し、配色を決定する
-$primaryColor:     hsl(200, 60%, 50%);
 $themeColors:      (
-  primary-light:     lighten($primaryColor, 25%),
-  primary:           $primaryColor,
-  primary-dark:      darken($primaryColor, 10%),
-  secondary:         adjust-hue($primaryColor, -150deg),
+  primary-light:     #d1f0fc,
+  primary:           #37bef0,
+  primary-dark:      #18aada,
+  secondary:         #9bcb6b,
   lightest:          hsl(0, 0%, 100%),
   lighter:           hsl(0, 0%, 85%),
   light:             hsl(0, 0%, 70%),
@@ -60,7 +59,7 @@ $originalColors:   (
   $g: green($color);
   $b: blue($color);
   $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-  @if ($yiq < 160) {
+  @if ($yiq < 150) {
     @return themeColor("lightest");
   } @else {
     @return themeColor("darkest");
@@ -69,15 +68,15 @@ $originalColors:   (
 
 // bodyの設定
 $bodyBg:           themeColor('lightest');
-$bodyColor:        themeColor('darkest');
+$bodyColor:        themeColor('darker');
 
 // リンク文字の設定
 // リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
-$linkColor:        themeColor('darker');
-$linkHoverColor:   originalColor("primary");
+$linkColor:        themeColor('primary');
+$linkHoverColor:   originalColor("primary-dark");
 
 // Preloaderの設定
-$preloaderBg:      themeColor("dark");
+$preloaderBg:      themeColor("primary");
 
 // filter
 $blur:             brightness(0.85) blur(1px);

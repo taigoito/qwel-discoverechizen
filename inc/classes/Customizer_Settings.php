@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace DE_Theme;
 
 /**
  * カスタマイザーの設定項目を配列化
@@ -40,9 +40,6 @@ trait Customizer_Settings {
 			$option_tags[$tag->term_id] = $tag->name;
 		}
 
-		// $fonts を上書きするHook
-		$option_fonts = apply_filters('qwel_theme_fonts', self::$fonts);
-
 		// ユーティリティクラス
 		$option_background = [
 			'none'           => 'Body background',
@@ -57,9 +54,6 @@ trait Customizer_Settings {
 			'darker'         => 'Darker',
 			'darkest'        => 'Darkest'
 		];
-
-		// 抜粋or本文
-		$option_show_content = ['excerpt', 'content'];
 
 		// 画像アスペクト比
 		$option_aspect_ratio = [
@@ -80,20 +74,6 @@ trait Customizer_Settings {
 				'secondary_color'      => ['type'  => 'color'],
 
 				// コンテナと文字サイズ
-				'container_base'       => [
-					'type'     => 'select',
-					'choices'  => [
-						'16rem'    => 'Default',
-						'18rem'    => 'Wider'
-					]
-				],
-				'root_font_size'       => [
-					'type'     => 'select',
-					'choices'  => [
-						'16px'     => 'Default',
-						'18px'     => 'Larger'
-					]
-				],
 				'h1_font_size'         => [
 					'type'     => 'select',
 					'choices'  => [
@@ -125,66 +105,11 @@ trait Customizer_Settings {
 						'1.17rem'  => 'Default',
 						'1.33rem'  => 'Larger'
 					]
-				],
-
-				//  フォント設定
-				'use_noto_sans_jp_300'   => ['type'  => 'checkbox'],
-				'use_noto_sans_jp_400'   => ['type'  => 'checkbox'],
-				'use_noto_sans_jp_500'   => ['type'  => 'checkbox'],
-				'use_noto_sans_jp_700'   => ['type'  => 'checkbox'],
-				'use_noto_serif_jp_300'  => ['type'  => 'checkbox'],
-				'use_noto_serif_jp_400'  => ['type'  => 'checkbox'],
-				'use_noto_serif_jp_500'  => ['type'  => 'checkbox'],
-				'use_noto_serif_jp_700'  => ['type'  => 'checkbox'],
-				'font_family_base'       => [
-					'type'     => 'select',
-					'choices'  => $option_fonts
-				],
-				'font_weight_base'     => [
-					'type'     => 'select',
-					'choices'  => [
-						'300'  => 'Light',
-						'400'  => 'Regular',
-						'500'  => 'Medium',
-						'700'  => 'Bold',
-					]
-				],
-				'heading_font_family'  => [
-					'type'     => 'select',
-					'choices'  => $option_fonts
-				],
-				'heading_font_weight'  => [
-					'type'     => 'select',
-					'choices'  => [
-						'300'  => 'Light',
-						'400'  => 'Regular',
-						'500'  => 'Medium',
-						'700'  => 'Bold',
-					]
 				]
 			],
 
-			// Header設定
-			'header' => [
-				'header_disable'       => ['type'  => 'checkbox'],
-				'site_brand_height'    => ['type'  => 'number'],
-				'site_brand_filter'    => []
-			],
-
 			// ヒーローセクション設定
-			'hero' => [
-				'relational_id'        => ['type'  => 'select', 'choices'  => $option_pages],
-				'cover_1'              => ['type'  => 'image'],
-				'cover_2'              => ['type'  => 'image'],
-				'cover_3'              => ['type'  => 'image'],
-				'cover_4'              => ['type'  => 'image'],
-				'cover_height'         => ['type'  => 'number'],
-				'cover_filter'         => [],
-				'preloader_background' => ['type'  => 'select', 'choices' => $option_background],
-				'preloader_image'      => ['type'  => 'image'],
-				'show_full_content'    => ['type'  => 'checkbox'],
-				'more_text'            => ['sanitize'  => '']
-			],
+			'hero' => [],
 
 			// 固定ページセクション設定
 			'page' => [
@@ -198,8 +123,6 @@ trait Customizer_Settings {
 						'right'    => 'Image right, text left'
 					]
 				],
-				'background'         => ['type'  => 'select', 'choices' => $option_background],
-				'show_full_content'  => ['type'  => 'checkbox'],
 				'more_text'          => ['sanitize'  => '']
 			],
 
@@ -215,8 +138,6 @@ trait Customizer_Settings {
 						'right'    => 'Image right, text left'
 					]
 				],
-				'background'         => ['type'  => 'select', 'choices' => $option_background],
-				'show_full_content'  => ['type'  => 'checkbox'],
 				'more_text'          => ['sanitize'  => '']
 			],
 
@@ -232,12 +153,9 @@ trait Customizer_Settings {
 						'lg'   => 'Large',
 					]
 				],
-				'background'         => ['type'  => 'select', 'choices' => $option_background],
 				'more_text'          => ['sanitize'  => ''],
 				'items_count'        => ['type'  => 'number'],
 				'item_aspect_ratio'  => ['type'  => 'select', 'choices'  => $option_aspect_ratio],
-				'item_show_date'     => ['type'  => 'checkbox'],
-				'item_show_tags'     => ['type'  => 'checkbox'],
 				'item_more_text'     => ['sanitize'  => '']
 			],
 
@@ -253,20 +171,93 @@ trait Customizer_Settings {
 						'lg'   => 'Large',
 					]
 				],
-				'background'         => ['type'  => 'select', 'choices' => $option_background],
 				'more_text'          => ['sanitize'  => ''],
 				'items_count'        => ['type'  => 'number'],
 				'item_aspect_ratio'  => ['type'  => 'select', 'choices'  => $option_aspect_ratio],
-				'item_show_date'     => ['type'  => 'checkbox'],
-				'item_show_tags'     => ['type'  => 'checkbox'],
 				'item_more_text'     => ['sanitize'  => '']
+			],
+
+			// アバウトセクション設定
+			'about'  => [
+				'order'              => ['type'  => 'number'],
+				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
+				'more_text'          => ['sanitize'  => ''],
+			],
+
+			// コンテンツセクション設定
+			'content' => [
+				'order'                    => ['type'  => 'number'],
+				'island_1_image'           => ['type'  => 'image'],
+				'island_1_content_1_image' => ['type'  => 'image'],
+				'island_1_content_1_title' => [],
+				'island_1_content_1_href'  => [],
+				'island_1_content_2_image' => ['type'  => 'image'],
+				'island_1_content_2_title' => [],
+				'island_1_content_2_href'  => [],
+				'island_1_content_3_image' => ['type'  => 'image'],
+				'island_1_content_3_title' => [],
+				'island_1_content_3_href'  => [],
+				'island_1_content_4_image' => ['type'  => 'image'],
+				'island_1_content_4_title' => [],
+				'island_1_content_4_href'  => [],
+				'island_2_image'           => ['type'  => 'image'],
+				'island_2_content_1_image' => ['type'  => 'image'],
+				'island_2_content_1_title' => [],
+				'island_2_content_1_href'  => [],
+				'island_2_content_2_image' => ['type'  => 'image'],
+				'island_2_content_2_title' => [],
+				'island_2_content_2_href'  => [],
+				'island_2_content_3_image' => ['type'  => 'image'],
+				'island_2_content_3_title' => [],
+				'island_2_content_3_href'  => [],
+				'island_2_content_4_image' => ['type'  => 'image'],
+				'island_2_content_4_title' => [],
+				'island_2_content_4_href'  => [],
+				'island_3_image'           => ['type'  => 'image'],
+				'island_3_content_1_image' => ['type'  => 'image'],
+				'island_3_content_1_title' => [],
+				'island_3_content_1_href'  => [],
+				'island_3_content_2_image' => ['type'  => 'image'],
+				'island_3_content_2_title' => [],
+				'island_3_content_2_href'  => [],
+				'island_3_content_3_image' => ['type'  => 'image'],
+				'island_3_content_3_title' => [],
+				'island_3_content_3_href'  => [],
+				'island_3_content_4_image' => ['type'  => 'image'],
+				'island_3_content_4_title' => [],
+				'island_3_content_4_href'  => [],
+				'island_4_image'           => ['type'  => 'image'],
+				'island_4_content_1_image' => ['type'  => 'image'],
+				'island_4_content_1_title' => [],
+				'island_4_content_1_href'  => [],
+				'island_4_content_2_image' => ['type'  => 'image'],
+				'island_4_content_2_title' => [],
+				'island_4_content_2_href'  => [],
+				'island_4_content_3_image' => ['type'  => 'image'],
+				'island_4_content_3_title' => [],
+				'island_4_content_3_href'  => [],
+				'island_4_content_4_image' => ['type'  => 'image'],
+				'island_4_content_4_title' => [],
+				'island_4_content_4_href'  => [],
+				'island_5_image'           => ['type'  => 'image'],
+				'island_5_content_1_image' => ['type'  => 'image'],
+				'island_5_content_1_title' => [],
+				'island_5_content_1_href'  => [],
+				'island_5_content_2_image' => ['type'  => 'image'],
+				'island_5_content_2_title' => [],
+				'island_5_content_2_href'  => [],
+				'island_5_content_3_image' => ['type'  => 'image'],
+				'island_5_content_3_title' => [],
+				'island_5_content_3_href'  => [],
+				'island_5_content_4_image' => ['type'  => 'image'],
+				'island_5_content_4_title' => [],
+				'island_5_content_4_href'  => []
 			],
 
 			// アクセスセクション設定
 			'access' => [
 				'order'              => ['type'  => 'number'],
 				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
-				'background'         => ['type'  => 'select', 'choices' => $option_background],
 				'map_url'            => []
 			],
 
@@ -274,7 +265,6 @@ trait Customizer_Settings {
 			'contact'  => [
 				'order'              => ['type'  => 'number'],
 				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
-				'background'         => ['type'  => 'select', 'choices' => $option_background],
 				'contact_form'       => []
 			],
 
@@ -285,14 +275,14 @@ trait Customizer_Settings {
 
 			// SNS設定
 			'social' => [
-				'twitter'            => [],
 				'facebook'           => [],
-				'instagram'          => []
+				'instagram'          => [],
+				'youtube'            => []
 			]
 		];
     
     // $customizer_settings を上書きするHook
-		$customizer_settings = apply_filters('qwel_theme_customizer_settings', $customizer_settings);
+		$customizer_settings = apply_filters('de_theme_customizer_settings', $customizer_settings);
 
 		$settings_array = [
 			'style'  => $customizer_settings['style'],

@@ -44,20 +44,24 @@
               if (!empty($terms)) {
                 $term = $terms[0];
 
-                // 親タームがあれば表示
-                if ($term->parent > 0) {
-                  $parent_array = array_reverse(get_ancestors($term->term_id, $tax_name));
-                  foreach ($parent_array as $parent_id) {
-                    $parent_term = get_term($parent_id, $tax_name);
+                /* Custom */
+                if ($term->slug !== 'feature') {
+
+                  // 親タームがあれば表示
+                  if ($term->parent > 0) {
+                    $parent_array = array_reverse(get_ancestors($term->term_id, $tax_name));
+                    foreach ($parent_array as $parent_id) {
+                      $parent_term = get_term($parent_id, $tax_name);
           ?>
             <li class="breadcrumb__item"><a href="<?php echo get_term_link($parent_id, $tax_name); ?>"><?php echo $parent_term->name; ?></a></li>
           <?php
+                    }
                   }
-                }
-                // 最下層タームを表示
+                  // 最下層タームを表示
           ?>
             <li class="breadcrumb__item"><a href="<?php echo get_term_link($term->term_id, $tax_name); ?>"><?php echo $term->name; ?></a></li>
           <?php
+                }
               }
             }
             // 自身

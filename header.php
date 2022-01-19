@@ -9,8 +9,8 @@
 
 <?php
   $adminbar_shown    = is_admin_bar_showing();
-  $header_disable    = \Qwel::get_data('header', 'header_disable');
-  $header_height     = \Qwel::get_data('header', 'site_brand_height') + 24;
+  $header_disable    = \DE::get_data('header', 'header_disable');
+  $header_height     = \DE::get_data('header', 'site_brand_height') + 24;
   $scrolling_offset  = $header_disable ? 0 : $header_height;
 ?>
 <body class="<?php echo $adminbar_shown ? 'has-adminbar' : '' ; ?>" data-scrolling-offset="<?php echo $scrolling_offset; ?>">

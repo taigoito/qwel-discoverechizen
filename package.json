@@ -1,0 +1,19 @@
+{
+  "name": "qwel-discoverechizen",
+  "version": "2.6.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taigoito/qwel-discoverechizen.git"
+  },
+  "author": "Taigo Ito",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/taigoito/qwel-discoverechizen/issues"
+  },
+  "homepage": "https://github.com/taigoito/qwel-discoverechizen#readme"
+}

@@ -1,12 +1,12 @@
 <?php
-namespace Qwel_Theme;
+namespace DE_Theme;
 
 /**
  * カスタマイザーの設定項目を登録
  */
 trait Customizer {
-  use \Qwel_Theme\Base,
-    \Qwel_Theme\Customizer_Settings;
+  use \DE_Theme\Base,
+    \DE_Theme\Customizer_Settings;
 
   protected static $customize  = '';
   protected static $priority   = 0;
@@ -126,14 +126,14 @@ trait Customizer {
 	protected static function get_sanitize_name($type = false) {
 		switch ($type) {
 			case 'checkbox':
-				return ['\Qwel', 'sanitize_checkbox'];
+				return ['\DE', 'sanitize_checkbox'];
       case 'number':
-				return ['\Qwel', 'sanitize_float'];
+				return ['\DE', 'sanitize_float'];
 			case 'radio':
 			case 'select':
-				return ['\Qwel', 'sanitize_select'];
+				return ['\DE', 'sanitize_select'];
 			case 'image':
-				return ['\Qwel', 'sanitize_image'];
+				return ['\DE', 'sanitize_image'];
 			case 'color':
 				return 'sanitize_hex_color';
 			default: // text | textarea

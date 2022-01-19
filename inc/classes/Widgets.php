@@ -1,14 +1,11 @@
 <?php
-namespace Qwel_Theme;
+namespace DE_Theme;
 
 /**
  * ウィジェットを登録
  */
 trait Widgets {
   public static function setup_widgets() {
-    // グローバルメニュー
-    //register_nav_menu('primary', 'Primary Menu');
-
     // サイドバー
     register_sidebar([
       'name'           => 'Sidebar',

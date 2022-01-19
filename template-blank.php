@@ -47,7 +47,31 @@
         <?php
           }
         }
+        
+        /**
+         * 関連記事
+         */
         ?>
+        <div class="archive">
+          <div class="list --lg">
+            <ul class="list__inner">
+              <?php
+              $wp_obj  = get_queried_object();
+              $post_id = $wp_obj->ID;
+              $term    = get_term_by('slug', $wp_obj->post_name, 'category');
+              $posts   = get_posts([
+                'posts_per_page'  => get_option('posts_per_page'),
+                'exclude'         => [$post_id],
+                'category'        => $term->term_id
+              ]);
+              foreach ($posts as $post) {
+                setup_postdata($post);
+                get_template_part('template-parts/post');
+              }
+              ?>
+            </ul>
+          </div>
+        </div><!-- .archive -->
       </div>
     </div>
   </main>

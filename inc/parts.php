@@ -29,7 +29,7 @@ if (!function_exists('get_featured_image')) {
         <?php if (has_post_thumbnail()) { ?>
           <?php the_post_thumbnail($size); ?>
         <?php } else { ?>
-          <img src="<?php echo QWEL_DEFAULT_IMAGE; ?>">
+          <img src="<?php echo DE_DEFAULT_IMAGE; ?>">
         <?php } ?>
       </a>
     </figure>
@@ -40,7 +40,7 @@ if (!function_exists('get_featured_image')) {
       <?php if (has_post_thumbnail()) { ?>
         <?php the_post_thumbnail($size); ?>
       <?php } else { ?>
-        <img src="<?php echo QWEL_DEFAULT_IMAGE; ?>">
+        <img src="<?php echo DE_DEFAULT_IMAGE; ?>">
       <?php } ?>
     </figure>
     <?php

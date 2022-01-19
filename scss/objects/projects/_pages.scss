@@ -14,3 +14,47 @@
     }
   }
 }
+
+.page {
+  &__headingContainer {
+    @extend %__headingContainer;
+  }
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__headingSpan1 {
+    @extend %__headingSpan1;
+  }
+
+  &__headingSpan2 {
+    @extend %__headingSpan2;
+  }
+}
+
+.pageCopy.--area {
+  @include container();
+  @include row(space-around, stretch);
+
+  &::before, &::after {
+    content: "";
+    @include col("lg", 3);
+  }
+
+  &::before {
+    background: url("./assets/illust_dec_1.svg") no-repeat right center;
+  }
+
+  &::after {
+    background: url("./assets/illust_dec_2.svg") no-repeat left center;
+  }
+}
+
+.pageSection {
+  @include container("md");
+
+  .grid {
+    margin-bottom: 1.5rem;
+  }
+}

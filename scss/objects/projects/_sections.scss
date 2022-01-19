@@ -2,17 +2,105 @@
  * Project - Toppage sections
  */
 
- .section {
+%__headingContainer {
+  @include container();
+  @include row(space-between, stretch);
+  height: 6rem;
+  margin-bottom: 1.5rem;
+  background: url("./assets/illust_dec_sm.svg") no-repeat right top;
+
+  @media (min-width: breakpoint("md")) {
+    justify-content: space-around;
+    background: none;
+  }
+
+  &::before, &::after {
+    @include col("md", 2);
+    @include col("lg", 4);
+
+    @media (min-width: breakpoint("md")) {
+      content: "";
+      background: url("./assets/illust_dec.svg") repeat-x left center;
+    }
+  }
+}
+
+%__heading {
+  position: relative;
+  width: 21rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $h2FontSize;
+  text-align: left;
+  text-transform: capitalize;
+
+  @media (min-width: breakpoint("md")) {
+    text-align: center;
+  }
+}
+
+%__headingSpan1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 120%;
+  height: 4.5rem;
+  margin: auto;
+  color: var(--primary-color);
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 150%;
+  line-height: 4.5rem;
+  transform: scale(0.8333, 1) translate(-10%, 0);
+}
+
+%__headingSpan2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1.5rem;
+  margin: auto;
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 75%;
+  line-height: 1.5rem;
+}
+
+.section {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: $bodyBg;
   text-align: center;
+  
+  &:first-of-type {
+    padding-top: 6rem;
+  }
+
+  &__headingContainer:not(.--discover) {
+    @extend %__headingContainer;
+  }
 
   &__heading {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-size: $h2FontSize;
-    text-transform: capitalize;
+    @extend %__heading;
+  }
+
+  &__headingSpan1 {
+    @extend %__headingSpan1;
+  }
+
+  &__headingSpan2 {
+    @extend %__headingSpan2;
+  }
+
+  &__headingContainer.--discover .section__heading {
+    width: 42rem;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   &__description {
@@ -56,46 +144,51 @@
     background-color: transparent;
 
     .section__content {
-      margin-bottom: 0;
-      color: themeColor("lightest");
       text-align: center;
+    }
+    
+    .hero__logo {
+      width: 18rem;
       opacity: 0;
-      transform: translateY(3rem);
-      transition: .35s ease-in-out all;
+      transition: opacity .35s linear;
 
-      body.--loaded & {
+      .--loaded & {
         opacity: 1;
-        transform: translateY(0);
       }
-    }
-  
-    h2 {
-      font-weight: bold;
-      font-size: $h1FontSize;
-      text-transform: capitalize;
-    }
-  
-    .post__content {
-      font-size: $h3FontSize;
-    }
-  
-    .post__excerpt {
-      font-size: $h3FontSize;
-    }
-  
-    .post__moreWrap {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-  
-    .post__more {
-      display: inline-block;
-      @include button("md", "primary");
     }
   }
 
-  &.--access {
+  &.--about {
+    .post__inner {
+      @include row();
+    }
+
+    .post__image {
+      @include col("lg", 6);
+      margin: 0;
+    }
+
+    .post__textContent {
+      @include col("lg", 4);
+      padding: .75rem 0;
+      margin-bottom: .75rem;
+      text-align: justify;
+    }
+
+    @media (min-width: breakpoint("lg")) {
+      .post:nth-child(even) {
+        .post__image {
+          order: 2;
+        }
+
+        .post__textContent {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &.--location {
     .section__map {
       position: relative;
       width: 100%;

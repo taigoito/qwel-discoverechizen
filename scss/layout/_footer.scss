@@ -4,8 +4,8 @@
 
 .footer {
   padding: 3rem 1.5rem;
-  background-color: themeColor("darkest");
-  color: colorYiq(themeColor("darkest"));
+  background-color: themeColor("primary-dark");
+  color: colorYiq(themeColor("primary-dark"));
 
   &__container {
     @include container();

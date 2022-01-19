@@ -1,0 +1,627 @@
+/*
+ * Project - Landing pages
+ */
+
+//
+// カラースキーマ
+//
+$studytour_themeColors: (
+  primary:     #5e5ba2,
+  secondary:   #548254,
+  tertiary:    #62c4e3,
+  quaternary:  #804d63,
+  quinary:     #9bcb6c
+);
+
+$workation_themeColors: (
+  primary:     #ffdf40,
+  secondary:   #f9d640
+); 
+
+//
+// .lp (wrapper)
+//
+.lp {
+  @include col();
+  padding-top: 0;
+  padding-bottom: 3rem;
+
+  //
+  // 要素定義
+  //
+  div {
+    text-align: justify;
+  }
+
+  img {
+    width: 100%; // SVG
+  }
+
+  //
+  // .lp要素定義
+  //
+  // LPごとにロゴを表示
+  &__title {
+    text-align: center; // 中のimg要素に幅指定
+
+    img {
+      width: 31.5rem; // デフォルトでコンテナの半分
+    }
+  }
+
+  // .lp直下の.lp__section内に使う大見出し
+  &__heading {
+    width: 9rem; // アイコン使用を想定
+    margin: auto;
+  }
+
+  // 中見出し以下の装飾
+  &__lead {
+    &.--exlargeText {
+      font-size: 1.5rem; // モバイルで落ち防止
+      line-height: 1.5;
+      text-align: center;
+  
+      @media (min-width: breakpoint("lg")) {
+        font-size: 2rem;
+      }
+    }
+  
+    &.--largeText {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      letter-spacing: .375rem;
+      text-align: center;
+    }
+  
+    &.--bold {
+      font-weight: 700;
+    }
+  }
+
+  // ナビゲーション
+  &__nav {
+    @include row(center);
+  }
+
+  // ナビゲーションアイテム
+  &__navItem {
+    // ローカルナビ
+    &.--local {
+      @include col("xs", 1, 4);
+      @include col("md", 1, 8);
+    }
+
+    a:hover {
+      opacity: .85;
+    }
+  }
+
+  &__gallery {
+    @include row();
+  }
+
+  &__galleryItem {
+    &.--sm {
+      @include col("xs", 6);
+      @include col("sm", 4);
+      @include col("lg", 3);
+      padding: 0 .375rem;
+    }
+  }
+  
+
+  // 境界線
+  &__border {
+    width: 100%;
+  }
+
+  // figure
+  &__figure {
+    display: block;
+    margin: 0; // reset
+    text-align: center;
+
+    // イラスト
+    &.--artwork {
+      img {
+        max-width: 13.5rem;
+      }
+
+      &_md img {
+        max-width: 18rem;
+      }
+
+      &_lg img {
+        max-width: 31.5rem;
+      }
+    }
+  }
+
+  // video
+  &__video {
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // caption
+  &__caption {
+    margin: .75rem auto 3rem;;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__span {
+    display: inline-block;
+  }
+
+  //
+  // 以下、修飾子をページごとにラップして名前の競合を防ぐ
+  // .lp__section: section要素に使用し、最初に見出しが来る
+  // .lp__content: section内をrow()にして、lp__figureとカラムを分割した場合に使用
+  // .lp__span, .lp__btn 等適宜に使用
+  //
+
+  //
+  // .lp.--schoolExcursion
+  //
+  &.--schoolExcursion .lp{
+    &__navItem {
+      &.--activity {
+        @include col();
+        @include row();
+        width: 12rem;
+
+        .lp__navItemIcon {
+          @include col();
+          width: 3rem;
+        }
+
+        .lp__navItemBtn {
+          @include col();
+          width: 8.5rem;
+          margin: auto;
+          padding: .25rem 0;
+          border-radius: .75rem;
+          color: themeColor("lightest");
+          @include smallText();
+          text-align: center;
+        }
+
+        &:nth-child(1) .lp__navItemBtn {
+          background-color: map-get($studytour_themeColors, "primary");
+        }
+
+        &:nth-child(2) .lp__navItemBtn {
+          background-color: map-get($studytour_themeColors, "secondary");
+        }
+
+        &:nth-child(3) .lp__navItemBtn {
+          background-color: map-get($studytour_themeColors, "tertiary");
+        }
+
+        &:nth-child(4) .lp__navItemBtn {
+          background-color: map-get($studytour_themeColors, "quaternary");
+        }
+
+        &:nth-child(5) .lp__navItemBtn {
+          background-color: map-get($studytour_themeColors, "quinary");
+        }
+      }
+    }
+
+    &__section {
+      &.--intro {
+        @media (min-width: breakpoint("lg")) {
+          margin-top: -3rem ;
+        }
+      }
+
+      &.--feature {
+        @include col();
+        width: 18rem;
+        margin-bottom: 1.5rem;
+        padding: .75rem 2.25rem 1.5rem;
+        border-radius: 1.5rem;
+        background-color: #eeeeee;
+
+        h5 {
+          color: themeColor("primary");
+          font-size: 1.25rem;
+          line-height: 1.5;
+          text-align: center;
+        }
+
+        p {
+          font-size: $smallFontSize;
+          line-height: $smallLineHeight;
+        }
+      }
+
+      &.--facility {
+        @include col("xs", 10);
+        @include col("sm", 6);
+        @include col("sm", 4);
+        @include col("lg", 3);
+        margin-bottom: 1.5rem;
+        padding: 0 .5rem;
+
+        img {
+          display: block;
+        }
+
+        h5 {
+          margin-top: .75rem;
+          margin-bottom: .375rem;
+          line-height: 1.25;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-size: $smallFontSize;
+        }
+      }
+
+      &.--concierge {
+        @include row();
+
+        .lp__figure {
+          @include col("xs", 3);
+        }
+
+        .lp__content {
+          @include col("xs", 8);
+
+          p:last-child {
+            color: #ff85b5;
+          }
+        }
+      }
+      
+      &.--reserve {
+        @include row();
+
+        .lp__content {
+          @include col();
+          @include col("sm", 6);
+          @include col("lg", 12);
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &.--announce {
+        margin: 0 calc(50% - 50vw); // 全幅
+        padding-top: 1.5rem;
+        padding-bottom: 4.5rem;
+        background-color: themeColor("primary-light");
+      }
+    }
+
+    &__content {
+      &.--goToPDF {
+        @include col();
+        @include col("lg", 6);
+        margin-top: 1.5rem;
+
+        a {
+          display: block;
+          float: right;
+          width: 12rem;
+
+          &:hover {
+            opacity: .85;
+          }
+        }
+
+        @media (min-width: breakpoint("lg")) {
+          order: 3;
+          margin-top: 4.5rem;
+          margin-left: percentage(1 / 12);
+        }
+      }
+
+      &.--trafficInfo {
+        @include row();
+
+        .lp__figure {
+          @include col("xs", 3);
+          @include col("sm", 2);
+        }
+
+        .lp__content {
+          @include col();
+          @include col("sm", 9);
+          font-size: $smallFontSize;
+          line-height: $smallLineHeight;
+        }
+      }
+
+      &.--announce {
+        @include container();
+        padding: 1.5rem 3rem;
+        border-radius: .75rem;
+        background-color: themeColor("lightest");
+
+        @media (min-width: breakpoint("lg")) {
+          padding: 3rem 4.5rem;
+        }
+      }
+    }
+
+    &__list {
+      &.--reply {
+        list-style: circle;
+        color: themeColor("primary");
+      }
+    }
+
+    &__figure {
+      &.--image_1, &.--image_2 {
+        @include col("xs", 6);
+        @include col("lg", 4);
+        margin-bottom: .75rem;
+        padding: 0 .375rem;
+      }
+
+      @media (min-width: breakpoint("lg")) {
+        &.--image_1 {
+          margin-top: 1.5rem;
+          margin-left: percentage(1 / 12);
+          margin-right: percentage(1 / 12);
+          margin-bottom: 1.5rem;
+        }
+
+        &.--image_2 {
+          order: 4;
+          margin-top: 1.5rem;
+          margin-left: percentage(1 / 12);
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &.--accessinfo_highway img {
+        width: 27rem;
+      }
+
+      &.--accessinfo_local  img {
+        width: 18rem;
+      }
+    }
+
+    &__span {
+      &.--area {
+        margin-left: 1.5rem;
+        font-weight: 400;
+        font-size: $smallFontSize;
+      }
+
+      &.--tel, &.--capacity {
+        width: 45%;
+      }
+
+      &.--capacity {
+        color: themeColor("primary");
+      }
+    
+      &.--faq {
+        margin-right: .75rem;
+        color: themeColor("primary");
+        font-weight: 700;
+        font-size: 1.17rem;
+      }
+
+      &.--reply {
+        float: right;
+        font-weight: 700;
+        font-size: 1.17rem;
+
+        &::before {
+          content:"+";
+        }
+
+        &.--active::before {
+          content:"-";
+        }
+      }
+
+      &.--target {
+        color: themeColor("primary");
+        font-weight: 400;
+      }
+
+      &.--time {
+        float: right;
+      }
+    }
+
+    &__btn {
+      &.--reservation {
+        @include button("lg", "light", "sm");
+        padding-right: .75rem;
+        color: #ffffff;
+        font-family: "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: 700;
+        @include smallText();
+
+        .icon {
+          margin-left: .75rem;
+          vertical-align: -7px;
+        }
+      }
+    }
+
+    &__table {
+      &.--activity {
+        width: 100%;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        caption {
+          caption-side: top;
+          text-align: left;
+        }
+      
+        tr {
+          border-bottom: 1px solid themeColor("lighter");
+      
+          &:first-child {
+            border-top: 1px solid themeColor("lighter");
+          }
+        }
+      
+        th, td {
+          padding-top: .75rem;
+          padding-bottom: .75rem;
+          font-size: $smallFontSize;
+          line-height: 1.5;
+        }
+      }
+
+      &.--cancellation {
+        width: 100%;
+
+        caption {
+          caption-side: top;
+          text-align: left;
+        }
+
+        tr {
+          border-bottom: 1px solid themeColor("lighter");
+      
+          &:first-child {
+            border-top: 1px solid themeColor("lighter");
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // .lp.--work
+  //
+  &.--work .lp{
+    &__lead {
+      &.--translation {
+        display: block;
+        margin: 0 -6rem;
+        color: themeColor("primary");
+        text-align: center;
+      }
+
+      &.--copy {
+        text-align: center;
+
+        img {
+          width: 31.5rem;
+        }
+      }
+    }
+    
+    &__section {
+
+    }
+
+    &__content {
+      &.--wrHead {
+        @include col();
+        @include col("md", 9);
+        @include col("lg", 7.5);
+
+        @media (min-width: breakpoint("md")) {
+          padding-left: 1.5rem;
+        }
+      }
+    }
+
+    &__listItem {
+      max-width: 31.5rem;
+      margin: auto;
+
+      &.--targetuser::before {
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        margin-right: .75rem;
+        background-color: map-get($workation_themeColors, "primary");
+        vertical-align: middle;
+      }
+    }
+
+    &__figure {
+      &.--fig_1 {
+        @include col("xs", 54, 100);
+        @include col("md", 36, 100);
+        margin: .75rem .375rem;
+      }
+
+      &.--fig_2, &.--fig_3, &.--fig_5, &.--fig_6 {
+        @include col("xs", 48, 100);
+        @include col("md", 32, 100);
+        margin: .75rem .375rem;
+      }
+
+      &.--fig_4 {
+        @include col("xs", 36, 100);
+        @include col("md", 24, 100);
+        margin: 2.25rem .375rem -.75rem;
+      }
+
+      &.--fig_7 {
+        @include col("xs", 42, 100);
+        @include col("md", 28, 100);
+        margin: 2.25rem .375rem -.75rem;
+
+        @media (min-width: breakpoint("md")) {
+          margin-left: percentage(1 / 12);
+        }
+      }
+
+      &.--wrHeading {
+        @include col();
+        width: 7.5rem;
+        @include col("md", 3);
+        @include col("lg", 2.5);
+        margin-bottom: 1.5rem;
+      }
+
+      &.--wrFig img {
+        width: 21rem;  
+      }
+    }
+
+    &__table {
+      &.--wrTable {
+        width: 100%;
+
+        caption {
+          caption-side: top;
+          margin-bottom: .75rem;
+          padding-top: .75rem;
+          border-top: 1px solid $bodyColor;
+          font-weight: 700;
+          text-align: left;
+        }
+
+        tr {
+          vertical-align: top;
+        }
+
+        @media (max-width: breakpoint("lg") - 1) {
+          caption {
+            border: 0;
+          }
+
+          td:nth-child(1) {
+            padding-right: 1.5rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,32 +11,20 @@
     content: var(--feature-more-text, $sectionMoreText);
   }
 
-  &.--feature .post__moreText::after {
-    content: var(--feature-item-more-text, $sliderItemMoreText);
-  }
-
   &.--about .post__moreText::after {
     content: var(--about-more-text, $sectionMoreText);
   }
 
-  &.--service .section__moreText::after {
-    content: var(--service-more-text, $sectionMoreText);
+  &.--model-plan .section__moreText::after {
+    content: var(--plan-more-text, $sectionMoreText);
   }
 
-  &.--service .post__moreText::after {
-    content: var(--service-item-more-text, $cardsItemMoreText);
-  }
-
-  &.--team .post__moreText::after {
-    content: var(--team-more-text, $sectionMoreText);
-  }
-
-  &.--news .section__moreText::after {
+  &.--blog-and-news .section__moreText::after {
     content: var(--news-more-text, $sectionMoreText);
   }
 
-  &.--news .post__moreText::after {
-    content: var(--news-item-more-text, $listItemMoreText);
+  &.--blog-and-news .post__moreText::after {
+    content: var(--news-item-more-text, $cardsItemMoreText);
   }
 }
 

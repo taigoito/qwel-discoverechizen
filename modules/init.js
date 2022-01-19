@@ -28,6 +28,28 @@ new Scrolling();
 import Modal from './modal.js';
 new Modal();
 
+// Panel
+import Panels from './panels.js';
+new Panels();
+
+//
+// Discover Echizen Original
+//
+import FormatHeadline from './formatHeadline.js';
+new FormatHeadline();
+
+import Island from './island.js';
+const islands = document.querySelectorAll('.contentMap__island');
+islands.forEach((elem, i) => {
+  new Island(elem);
+});
+
+import Wave from './wave.js';
+const sections = document.querySelectorAll('.wave');
+sections.forEach((elem, i) => {
+  new Wave(elem);
+});
+
 // Fader
 import Fader from './fader.js';
 const fader = document.querySelectorAll('.fader');

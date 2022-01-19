@@ -1,8 +1,8 @@
   <?php
-  $modifier = \Qwel::get_data('header', 'header_disable') ? ' responsiveColor' : '';
+  $modifier = \DE::get_data('header', 'header_disable') ? ' responsiveColor' : '';
   ?>
   <button id="drawer" class="drawer<?php echo $modifier; ?>" type="button" data-drawer="toggle">
-    <span class="drawer__navicon" data-icon="ei-navicon" data-size="m"></span>
+    <img class="drawer__navicon icon" src="<?php echo DE_THEME_ASSETS . 'illust_navicon.svg' ?>">
     <span class="drawer__close" data-icon="ei-close" data-size="m"></span>
   </button><!-- #drawer -->
   <div id="drawerMenu" class="drawerMenu">

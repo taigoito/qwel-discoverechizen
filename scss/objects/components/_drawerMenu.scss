@@ -34,22 +34,22 @@
 
   &__navicon {
     opacity: 0;
-    transform: rotate(45deg);
+    transform: none;
 
     @at-root .drawer:not(.--active) .drawer__navicon {
       opacity: 1;
-      transform: rotate(0);
+      transform: none;
     }
   }
 
   &__close {
     color: $bodyBg;
     opacity: 1;
-    transform: rotate(0);
+    transform: none;
 
     @at-root .drawer:not(.--active) .drawer__close {
       opacity: 0;
-      transform: rotate(-45deg);
+      transform: none;
     }
   }
 }
@@ -63,7 +63,7 @@
   width: 18rem;
   height: 100%;
   margin: auto;
-  background-color: rgba(themeColor("darkest"), .85);
+  background-color: rgba(themeColor("primary-dark"), .85);
   text-align: center;
   transition: width ease-in-out .25s;
   
@@ -90,8 +90,6 @@
   &__item {
     width: 100%;
     margin-bottom: 0;
-    padding-top: .375rem;
-    padding-bottom: .375rem;
     text-transform: capitalize;
 
     &.--brand {
@@ -113,12 +111,14 @@
 
     a {
       display: block;
+      padding-top: .375rem;
+      padding-bottom: .375rem;
       color: themeColor("lightest");
       text-decoration: none;
       
       &:hover {
-        color: $linkHoverColor;
-        text-decoration: $linkHoverDecoration;
+        background-color: themeColor("primary-dark");
+        text-decoration: none;
       }
     }
   }

@@ -17,3 +17,9 @@ if (!function_exists('str_to_snake')) {
     return ltrim(strtolower(preg_replace('/[A-Z]/', '_\0', $str)), '_');
   }
 }
+
+function my_format_slug($slug) {
+	$slug = str_replace('-', '&nbsp;', $slug);
+	$slug = str_replace('and', '&amp;', $slug);
+	return $slug;
+}

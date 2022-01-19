@@ -10,11 +10,13 @@
      * フロントページでは .section を使う (sass/objects/projects/_sections.scss)
      * 特殊な処理は .--hero, .--access などで対応
      */
+    // Hero
+    get_template_part('section-parts/hero');
     // セクション毎のテンプレート読み込み
-    $sections = \Qwel::get_sections();
+    $sections = \DE::get_sections();
     foreach ($sections as $section => $type) {
       // 表示の有無をチェック
-      $relational_id = \Qwel::get_data($section, 'relational_id');
+      $relational_id = \DE::get_data($section, 'relational_id');
       if ($relational_id) get_template_part('section-parts/' . $section);
     }
     ?>

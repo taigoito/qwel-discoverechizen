@@ -1,0 +1,224 @@
+/**
+ * Project - Content Map
+ */
+
+.contentMap {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 24rem;
+  margin: auto;
+  padding: 3rem 0;
+
+  @media (min-width: breakpoint("md")) {
+    width: 48rem;
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    width: 57.6rem; // 120%
+  }
+
+  &__island {
+    position: relative;
+    width: 20rem;
+    height: 15rem;
+
+    &:nth-child(1) {
+      width: 24rem;
+      height: 18rem;
+    }
+
+    @media (min-width: breakpoint("md")) {
+      &:nth-child(1) {
+        margin-bottom: 6rem; // heightと合わせて24rem
+      }
+
+      &:nth-child(2) {
+        margin-top: 9rem;
+      }
+
+      &:nth-child(3) {
+        order: 4;
+        margin-top: 3rem; // heightと合わせて18rem
+      }
+
+      &:nth-child(4) {
+        order: 3;
+        margin-bottom: 3rem;
+      }
+    }
+
+    @media (min-width: breakpoint("lg")) {
+      width: 24rem;
+      height: 18rem;
+  
+      &:nth-child(1) {
+        width: 28.8rem;
+        height: 21.6rem;
+        margin-bottom: 7.2rem; // heightと合わせて28.8rem
+      }
+
+      &:nth-child(2) {
+        margin-top: 10.8rem;
+      }
+
+      &:nth-child(3) {
+        margin-top: 3.6rem; // heightと合わせて24rem
+      }
+
+      &:nth-child(4) {
+        margin-bottom: 3.6rem;
+      }
+    }
+  }
+
+  &__islandImage {
+    width: 100%;
+  }
+
+  // 吹き出しを設置する要素
+  &__islandInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  &__content {
+    position: absolute;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: themeColor('primary-light');
+    transform: scale(.8, .8);
+    transition: .15s all ease-in-out;
+
+    @media (min-width: breakpoint("lg")) {
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+
+    &:not(.--active) {
+      transform: scale(0, 0);
+    }
+
+    &:hover {
+      transform: scale(1, 1);
+    }
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+
+      @at-root .contentMap__island:nth-child(even) .contentMap__content:nth-child(1) {
+        top: -1.5rem;
+        left: -1.5rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: .5rem solid transparent;
+        border-left: 1rem solid themeColor('primary-light');
+        transform: rotate(45deg);
+      }
+    }
+
+    &:nth-child(2) {
+      right: 0;
+      bottom: 0;
+
+      @at-root .contentMap__island:nth-child(even) .contentMap__content:nth-child(2) {
+        right: -1.5rem;
+        bottom: -1.5rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: .5rem solid transparent;
+        border-right: 1rem solid themeColor('primary-light');
+        transform: rotate(45deg);
+      }
+    }
+
+    &:nth-child(3) {
+      top: -1.5rem;
+      right: -1.5rem;
+
+      @at-root .contentMap__island:nth-child(even) .contentMap__content:nth-child(3) {
+        top: 0;
+        right: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border: .5rem solid transparent;
+        border-right: 1rem solid themeColor('primary-light');
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:nth-child(4) {
+      left: -1.5rem;
+      bottom: -1.5rem;
+
+      @at-root .contentMap__island:nth-child(even) .contentMap__content:nth-child(4) {
+        left: 0;
+        bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: .5rem solid transparent;
+        border-left: 1rem solid themeColor('primary-light');
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: .375rem;
+    left: .6rem;
+    width: 4.8rem;
+
+    @media (min-width: breakpoint("lg")) {
+      left: .75rem;
+      width: 6rem;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .3rem;
+    width: 4.8rem;
+    margin: auto;
+    color: themeColor('darker');
+    font-weight: bolder;
+    font-size: .875rem;
+
+    @media (min-width: breakpoint("lg")) {
+      bottom: .375rem;
+      width: 6rem;
+    }
+  }
+}

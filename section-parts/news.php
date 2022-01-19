@@ -1,19 +1,20 @@
     <?php
     $section           = 'news';
-    $term_id           = \Qwel::get_data($section, 'relational_id');
+    $term_id           = \DE::get_data($section, 'relational_id');
     $category          = get_category($term_id);
     $section_id        = $category->slug;
     $section_name      = $category->name;
     $section_sub       = $category->description;
-    $section_bg        = \Qwel::get_data($section, 'background');
     $section_class     = 'section --' . $section_id;
-    $section_class     .= $section_bg !== 'none' ? ' has-' . str_to_camel($section_bg) . '-background-color' : '';
-    $posts_per_page    = \Qwel::get_data($section, 'items_count');
-    $item_show_date    = \Qwel::get_data($section, 'item_show_date');
-    $item_show_tags    = \Qwel::get_data($section, 'item_show_tags');
+    $posts_per_page    = \DE::get_data($section, 'items_count');
     ?>
     <section id="<?php echo $section_id; ?>" class="<?php echo $section_class; ?>">
-      <h3 class="section__heading"><?php echo $section_name; ?></h3>
+      <div class="section__headingContainer">
+        <h3 class="section__heading">
+          <span class="section__headingSpan1" data-comfort="1"><?php echo my_format_slug($section_id); ?></span>
+          <span class="section__headingSpan2" data-comfort="1"><?php echo $section_name; ?></span>
+        </h3>
+      </div>
       <div class="section__description"><?php echo $section_sub; ?></div>
       <div class="section__inner --container">
         <div class="list --lg">
@@ -40,7 +41,7 @@
                     /**
                      * .post__date
                      */
-                    if ($item_show_date) get_template_part('template-parts/post/date');
+                    get_template_part('template-parts/post/date');
                     /**
                      * .post__heading
                      */
@@ -48,7 +49,7 @@
                     /**
                      * .post__tags
                      */
-                    if ($item_show_tags) get_template_part('template-parts/post/tags');
+                    get_template_part('template-parts/post/tags');
                     /**
                      * .post__excerpt
                      */

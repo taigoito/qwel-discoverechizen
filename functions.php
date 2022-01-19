@@ -1,39 +1,40 @@
 <?php
 /**
- * Qwel functions
- * Author: Taigo Ito (https://qwel.design/)
+ * Discover Echizen functions
+ * Author: Taigo Ito (https://DE.design/)
  * Location: Fukui, Japan
- * @package Qwel
+ * @package Discover Echiven
  */
 
 // テーマのパス, URI
-define('QWEL_THEME_DIR', get_template_directory());
-define('QWEL_THEME_URI', get_template_directory_uri());
+define('DE_THEME_DIR', get_template_directory());
+define('DE_THEME_URI', get_template_directory_uri());
+define('DE_THEME_ASSETS', get_stylesheet_directory_uri() . '/assets/');
 
 /**
  * 定数定義
  */
-require_once QWEL_THEME_DIR . '/inc/consts.php';
+require_once DE_THEME_DIR . '/inc/consts.php';
 
 /**
  * ヘルパー関数群
  */
-require_once QWEL_THEME_DIR . '/inc/helpers.php';
+require_once DE_THEME_DIR . '/inc/helpers.php';
 
 /**
  * パーツ生成関数群
  */
-require_once QWEL_THEME_DIR . '/inc/parts.php';
+require_once DE_THEME_DIR . '/inc/parts.php';
 
 /**
  * classのオートロード
  */
 spl_autoload_register(
 	function($classname) {
-		if (strpos($classname, 'Qwel_Theme') === false) return;
+		if (strpos($classname, 'DE_Theme') === false) return;
 		$classname = str_replace('\\', '/', $classname);
-		$classname = str_replace('Qwel_Theme/', '', $classname);
-		$file      = QWEL_THEME_DIR . '/inc/classes/' . $classname . '.php';
+		$classname = str_replace('DE_Theme/', '', $classname);
+		$file      = DE_THEME_DIR . '/inc/classes/' . $classname . '.php';
 		if (file_exists($file)) {
 			require $file;
 		}
@@ -43,12 +44,12 @@ spl_autoload_register(
 /**
  * Hookする関数群を継承して登録
  */
-class Qwel {
-	use	\Qwel_Theme\Supports,
-		\Qwel_Theme\Scripts,
-		\Qwel_Theme\Customizer,
-		\Qwel_Theme\Style,
-		\Qwel_Theme\Widgets;
+class DE {
+	use	\DE_Theme\Supports,
+		\DE_Theme\Scripts,
+		\DE_Theme\Customizer,
+		\DE_Theme\Style,
+		\DE_Theme\Widgets;
 		
 	public function __construct() {
 		// テーマサポート機能
@@ -70,6 +71,6 @@ class Qwel {
 }
 
 /**
- * Qwel start!
+ * DiscoverEchizen start!
  */
-new Qwel();
+new DE();

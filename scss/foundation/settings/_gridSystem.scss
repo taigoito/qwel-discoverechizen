@@ -119,5 +119,5 @@ $sliderHeights:       (
 // .header, .siteBrand, .hero, .preloaderの高さ
 $siteBrandHeight:  var(--site-brand-height, 48px);
 $headerHeight:     calc(#{$siteBrandHeight} + 24px);
-$heroHeight:       var(--cover-height, 75vh);
+$heroHeight:       100vh;
 $preloaderHeight:  calc(var(--header-height, 72px) * 2 + #{$heroHeight});
