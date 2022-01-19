@@ -161,7 +161,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 .wp-block {
-  max-width: calc(var(--container-base, 18rem) * 3);
+  max-width: calc(var(--container-base, 22.5rem) * 2);
 }
 
 /**
