@@ -43,7 +43,7 @@ trait Base_Settings {
 			'darkest_color'        => '#262626',
 
 			// コンテナと文字サイズ
-			'container_base'       => '18rem',
+			'container_base'       => '22.5rem',
 			'root_font_size'       => '16px',
 			'h1_font_size'         => '2rem',
 			'h2_font_size'         => '1.5rem',

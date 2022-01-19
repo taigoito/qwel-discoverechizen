@@ -83,8 +83,8 @@ trait Customizer_Settings {
 				'container_base'       => [
 					'type'     => 'select',
 					'choices'  => [
-						'16rem'    => 'Default',
-						'18rem'    => 'Wider'
+						'22.5rem'  => 'Default',
+						'24rem'    => 'Wider'
 					]
 				],
 				'root_font_size'       => [
