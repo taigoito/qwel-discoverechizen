@@ -602,7 +602,7 @@ function body_id()
 
 function no_image($size = 'sm')
 {
-  echo '<img src="' . get_template_directory_uri() . '/images/no-image' . ($size === 'sm' ? '-sm' : '') . '.gif">';
+  echo '<img src="' . get_template_directory_uri() . '/assets/no-image' . ($size === 'sm' ? '-sm' : '') . '.gif">';
 }
 
 

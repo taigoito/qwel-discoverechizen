@@ -3,7 +3,7 @@
 
 .photos {
   @extend %section;
-  @include background("dark");
+  @include background("darkest");
 
   &__heading {
     @extend %section__heading;

@@ -1,0 +1,44 @@
+// Color System
+
+// 任意の基準色を設定し、配色を決定する
+$primary-color:    hsl(200, 60%, 50%);
+$theme-colors:     (
+  primary-light:     lighten($primary-color, 25%),
+  primary:           $primary-color,
+  primary-dark:      darken($primary-color, 10%),
+  secondary:         adjust-hue($primary-color, -150deg),
+  lightest:          hsl(0, 0%, 100%),
+  lighter:           hsl(0, 0%, 85%),
+  light:             hsl(0, 0%, 70%),
+  dark:              hsl(0, 0%, 50%),
+  darker:            hsl(0, 0%, 30%),
+  darkest:           hsl(0, 0%, 15%)
+);
+
+// 配色の配列から色指定を抽出する関数
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+// 背景色から適切な文字色を判定する関数
+// 参考(https://en.wikipedia.org/wiki/YIQ)
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  @if ($yiq < 150) {
+    @return theme-color("lightest");
+  } @else {
+    @return theme-color("darkest");
+  }
+}
+
+// bodyの設定
+$body-bg:          theme-color('lightest');
+$body-color:       theme-color('darkest');
+
+// リンク文字の設定
+// リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
+$link-color:       theme-color('darker');
+$link-hover-color: theme-color("primary");

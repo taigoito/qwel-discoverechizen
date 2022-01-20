@@ -36,7 +36,7 @@
 
     a {
       display: inline-block;
-      @include button("sm", "light");
+      @include button("sm", "lighter");
       font-size: 1rem;
       line-height: 1.25; // Make 2.5rem height by button mixin and line-height
     }

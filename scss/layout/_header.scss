@@ -3,5 +3,5 @@
 
 .site-header {
   @include sticky-top();
-  @include background("light");
+  @include background("lighter");
 }

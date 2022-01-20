@@ -3,8 +3,8 @@
 @mixin container() {
   position: relative;
   width: 100%;
-  @each $infix, $breakpoint in $grid-breakpoints {
-    $max-width: map-get($container-max-widths, $infix);
+  @each $infix, $breakpoint in $breakpoints {
+    $max-width: map-get($container-widths, $infix);
     @media (min-width: $breakpoint) {
       max-width: $max-width;
     }
@@ -22,7 +22,7 @@
   margin-right: ($grid-gutter-width / -2);
 }
 
-@mixin col($infix: "sm", $size: 12) {
+@mixin col($infix: "sm", $size: 12, $grid-columns: 12) {
   position: relative;
   width: 100%;
   @if $infix == "sm" {
@@ -39,7 +39,7 @@
       max-width: percentage($size / $grid-columns);
     }
   } @else {
-    @media (min-width: map-get($grid-breakpoints, $infix)) {
+    @media (min-width: map-get($breakpoints, $infix)) {
       @if ($size == "auto") {
         width: auto;
         flex: 0 0 auto;

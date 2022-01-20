@@ -13,5 +13,5 @@
 
 .cover-image {
   @include cover-image();
-  @include background("light");
+  @include background("lighter");
 }

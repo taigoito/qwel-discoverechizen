@@ -3,7 +3,7 @@
 
 .footer {
   padding: 3rem 1rem;
-  @include background("dark");
+  @include background("darkest");
 
   @media (min-width: breakpoint("lg")) {
     text-align: center;
