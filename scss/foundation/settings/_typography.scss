@@ -1,0 +1,53 @@
+// Typography
+
+// 固有のフォント設定
+$font-family-sans-serif: "Noto Sans JP", sans-serif;
+$font-family-serif:      "Noto Serif JP", serif;
+$font-weight-sans-serif: 400;
+$font-weight-serif:      400;
+
+// フォントサイズ
+$font-sizes:           (
+  xs:                    .75rem,
+  sm:                    .875rem,
+  nr:                    1rem,
+  md:                    1.17rem,
+  lg:                    1.33rem,
+  xl:                    1.5rem,
+  xxl:                   2rem,
+);
+
+// body
+$font-family-base:       $font-family-sans-serif;
+$font-weight-base:       $font-weight-sans-serif;
+$line-height-base:       28.8 / ($root-font-size / ($root-font-size * 0 + 1)); // 単位除去
+$letter-spacing-base:    0;
+
+// セクション
+$section-margin-top:     0;
+$section-margin-bottom:  1.5rem;
+
+// 見出し
+$heading-margin-top:     1.5rem;
+$heading-margin-bottom:  .75rem;
+$heading-font-family:    $font-family-sans-serif;
+$heading-font-weight:    $font-weight-sans-serif;
+$h1-font-size:           var(--xxl-font-size, map-get($font-sizes, "xxl"));
+$h2-font-size:           var(--xl-font-size, map-get($font-sizes, "xl"));
+$h3-font-size:           var(--lg-font-size, map-get($font-sizes, "lg"));
+$h4-font-size:           var(--md-font-size, map-get($font-sizes, "md"));
+$h5-font-size:           var(--nr-font-size, map-get($font-sizes, "nr")); // bold
+$h6-font-size:           var(--sm-font-size, map-get($font-sizes, "sm")); // bold
+
+// 本文
+$text-margin-top:        0;
+$text-margin-bottom:     .75rem;
+
+// small (行間、字間を拡げる)
+$small-font-size:        percentage(7 / 8);
+$small-line-height:      $line-height-base * 9 / 8;
+$small-letter-spacing:   0.04rem;
+
+// リンク文字の装飾
+$link-decoration:        none;
+$link-hover-decoration:  underline;

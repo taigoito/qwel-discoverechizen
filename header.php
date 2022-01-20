@@ -12,7 +12,7 @@
     <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
       <br>JavaScriptを有効にして再度ご来訪ください。</p>
   </noscript>
-  <script src="<?php echo get_template_directory_uri() . '/js/preloader.js'; ?>"></script>
+  <script src="<?php echo get_template_directory_uri() . '/modules/preloader.js'; ?>"></script>
   <script>
     const preloader = new Preloader({
       backgroundColor: 'hsl(195, 100%, 42%)',

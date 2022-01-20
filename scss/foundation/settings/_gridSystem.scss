@@ -1,0 +1,50 @@
+// Grid System
+
+// ルート要素にて定義
+// これを基準とした1remを、全ての寸法の基本単位とする
+$root-font-size:     16px;
+$root-font-size-xs:  3.84vw; // 4vw以下推奨
+
+// 基準幅
+$breakpoint-base:    256px;
+$container-base:     20rem;
+$grid-gutter-width:  1rem;
+
+// xs: 1カラム
+// 文字サイズを流動させ、レイアウトを固定
+$container-width-xs: 24rem;
+
+// sm: 1〜2カラム (下層ページで、メディアと文章の使用くらいに留める)
+// コンテナ幅を拡げ、文字サイズをpxに切り替え固定
+// WordPressのブロックエディタの都合上、BPを600px以内に設置するのが望ましい
+$breakpoint-sm:      600px;
+$container-width-sm: $container-base * 3 / 2;
+
+// 以下、任意に定義
+// md: 1〜2カラム (カードレイアウト可能)
+$breakpoint-md:      782px;
+$container-width-md: $container-base * 2;
+
+// lg: 1〜3カラム (サイドバー設置可能)
+$breakpoint-lg:      $breakpoint-base * 4;
+$container-width-lg: $container-base * 3;
+
+// ブレイクポイント (以下BP)
+$breakpoints:      (
+  sm:                $breakpoint-sm,
+  md:                $breakpoint-md,
+  lg:                $breakpoint-lg
+);
+
+// コンテナ幅
+$container-widths:  (
+  xs:                $container-width-xs,
+  sm:                $container-width-sm,
+  md:                $container-width-md,
+  lg:                $container-width-lg
+);
+
+// BPの配列の接頭辞から値を返す関数
+@function breakpoint($infix: "lg") {
+  @return map-get($breakpoints, $infix);
+}

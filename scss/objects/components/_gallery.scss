@@ -7,7 +7,7 @@
   @include list-unstyled();
   justify-content: center;
 
-  @media(min-width: map-get($grid-breakpoints, "lg")) {
+  @media(min-width: breakpoint("lg")) {
     height: 30rem; // Twice the item height
     overflow: hidden;   
   }
@@ -30,7 +30,7 @@
       opacity: .7;
     }
 
-    @media(min-width: map-get($grid-breakpoints, "lg")) {
+    @media(min-width: breakpoint("lg")) {
       width: 15rem;
       height: 15rem; // Customized
     }

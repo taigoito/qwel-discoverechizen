@@ -36,7 +36,7 @@
   &__inner {
     @include row();
     padding: 1rem 0;
-    background: theme-color("light");
+    background: theme-color("lighter");
   }
 
   &__intro {

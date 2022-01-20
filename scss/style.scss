@@ -1,0 +1,64 @@
+/*
+Theme Name: Discover Echizen
+Description: This is a theme for Discover Echizen.
+Version: 2.5.1
+Requires PHP: 7.3
+Author: Taigo Ito
+Author URI: https://qwel.design/
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+ @charset "utf-8";
+ @import "foundation/settings/colorSystem";
+ @import "foundation/settings/gridSystem";
+ @import "foundation/settings/typography";
+ @import "foundation/mixins/colors";
+ @import "foundation/mixins/position";
+ @import "foundation/mixins/cover";
+ @import "foundation/mixins/grid";
+ @import "foundation/mixins/background";
+ @import "foundation/mixins/lists";
+ @import "foundation/mixins/tables";
+ @import "foundation/mixins/buttons";
+ @import "foundation/mixins/forms";
+ @import "foundation/mixins/embed";
+ @import "foundation/base";
+ @import "layout/header";
+ @import "layout/main";
+ @import "layout/footer";
+ @import "objects/projects/article";
+ @import "objects/projects/aside";
+ @import "objects/projects/hero";
+ @import "objects/projects/news";
+ @import "objects/projects/about";
+ @import "objects/projects/umitan";
+ @import "objects/projects/info";
+ @import "objects/projects/plan";
+ @import "objects/projects/blog";
+ @import "objects/projects/photos";
+ @import "objects/projects/movie";
+ @import "objects/projects/location";
+ @import "objects/projects/contact";
+ @import "objects/projects/archive-info";
+ @import "objects/projects/archive-plan";
+ @import "objects/projects/pic-info";
+ @import "objects/projects/member";
+ @import "objects/components/breadcrumb";
+ @import "objects/components/cards";
+ @import "objects/components/categories";
+ @import "objects/components/cols";
+ @import "objects/components/gallery";
+ @import "objects/components/lists";
+ @import "objects/components/evil-icons";
+ @import "objects/components/no-support";
+ @import "objects/components/pagination";
+ @import "objects/components/preloader";
+ @import "objects/components/slidebar";
+ @import "objects/components/slider";
+ @import "objects/components/wave";
+ @import "objects/utilities/accessibilities";
+ @import "objects/utilities/booking";
+ @import "objects/utilities/custom-logo";
+ @import "objects/utilities/tables";
+ @import "objects/utilities/widgets";

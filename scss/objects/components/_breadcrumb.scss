@@ -6,7 +6,7 @@
   top: 0;
   left: 1.5rem;
   display: none;
-  max-width: map-get($container-max-widths, "md");
+  max-width: map-get($container-widths, "md");
   margin-right: 6rem; // Nav toggler
   padding: 3rem .5rem;
   font-size: .875rem;

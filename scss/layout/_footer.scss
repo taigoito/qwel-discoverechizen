@@ -10,7 +10,7 @@
   }
 
   &__main {
-    max-width: map-get($container-max-widths, "md");
+    max-width: map-get($container-widths, "md");
     margin-left: auto;
     margin-right: auto;
     padding: 3rem .5rem;

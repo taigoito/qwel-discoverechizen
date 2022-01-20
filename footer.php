@@ -23,7 +23,7 @@
       </div>
     </div>
   </footer><!-- .footer -->
-  <script src="<?php echo get_template_directory_uri() . '/js/init.js'; ?>" type="module"></script>
+  <script src="<?php echo get_template_directory_uri() . '/modules/init.js'; ?>" type="module"></script>
   <script>
     // Preloader load
     window.onload = preloader.load;
