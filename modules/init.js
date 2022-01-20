@@ -15,7 +15,7 @@ import RenderItems from './_renderItems.js';
 import renderEvilIcons from './_evil-icons.js';
 
 const HOST = `${location.protocol}//${location.hostname}`;
-const ROOT = '/discoverechizen/';
+const ROOT = '/';
 
 // Slidebar init
 const slidebar = new Slidebar({
@@ -89,7 +89,7 @@ window.addEventListener('scroll', changeIcons);
 if (document.body.id === 'index') {
   // Main visual
   const image = new Image();
-  image.src = `${ROOT}wp/wp-content/themes/discoverechizen/assets/landscape/main00.jpg`;
+  image.src = `${ROOT}data/themes/discoverechizen/assets/landscape/main00.jpg`;
   image.onload = () => {
     for (let i = 0; i < 6; i++) {
       const logo = document.querySelector('.hero__content');

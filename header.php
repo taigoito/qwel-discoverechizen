@@ -16,7 +16,7 @@
   <script>
     const preloader = new Preloader({
       backgroundColor: 'hsl(195, 100%, 42%)',
-      img: '/discoverechizen/wp/wp-content/themes/discoverechizen/assets/svg/top_logo2.svg',
+      img: '/data/themes/discoverechizen/assets/svg/top_logo2.svg',
       terminateTime: 5000
     });
   </script>
