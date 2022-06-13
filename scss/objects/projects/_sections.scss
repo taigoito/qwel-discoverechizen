@@ -15,8 +15,8 @@
   }
 
   &::before, &::after {
-    @include col("md", 2);
-    @include col("lg", 4);
+    @include col("md", 8 / 3); // 192px
+    @include col("lg", 3);     // 288px
 
     @media (min-width: breakpoint("md")) {
       content: "";

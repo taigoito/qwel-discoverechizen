@@ -5,29 +5,29 @@
 $rootFontSize:     16px;
 $rootFontSizeXs:   3.84vw; // 4vw以下推奨
 
-// 基準幅 (21remまたは22.5rem推奨)
-$base:             22.5rem;
+// 基準幅
+$base:             18rem;
 $breakpointBase:   300px;
 $containerBase:    var(--container-base, #{$base});
 
 // xs: 1カラム
 // 文字サイズを流動させ、レイアウトを固定
-$containerWidthXs: $containerBase;
+$containerWidthXs: calc(#{$containerBase} * 4 / 3);
 
 // sm: 1〜2カラム (下層ページで、メディアと文章の使用くらいに留める)
 // コンテナ幅を拡げ、文字サイズをpxに切り替え固定
 // WordPressのブロックエディタの都合上、BPを600px以内に設置するのが望ましい
 $breakpointSm:     $breakpointBase * 2;
-$containerWidthSm: calc(#{$containerBase} * 3 / 2);
+$containerWidthSm: calc(#{$containerBase} * 2);
 
 // 以下、任意に定義
 // md: 1〜2カラム (カードレイアウト可能)
 $breakpointMd:     $breakpointBase * 3;
-$containerWidthMd: calc(#{$containerBase} * 2);
+$containerWidthMd: calc(#{$containerBase} * 3);
 
 // lg: 1〜3カラム (サイドバー設置可能)
 $breakpointLg:     $breakpointBase * 4;
-$containerWidthLg: calc(#{$containerBase} * 3);
+$containerWidthLg: calc(#{$containerBase} * 4);
 
 // ブレイクポイント (以下BP)
 $breakpoints:      (
