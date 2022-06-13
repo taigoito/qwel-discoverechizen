@@ -149,12 +149,6 @@
     
     .hero__logo {
       width: 18rem;
-      opacity: 0;
-      transition: opacity .35s linear;
-
-      .--loaded & {
-        opacity: 1;
-      }
     }
   }
 

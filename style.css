@@ -684,13 +684,6 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 .section.--hero .hero__logo {
   width: 18rem;
-  opacity: 0;
-  -webkit-transition: opacity .35s linear;
-  transition: opacity .35s linear;
-}
-
-.--loaded .section.--hero .hero__logo {
-  opacity: 1;
 }
 
 .section.--about .post__inner {
@@ -2557,6 +2550,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
   z-index: -100;
   width: 100%;
   height: 100%;
+  background-color: #37bef0;
 }
 
 .cover__image {
@@ -2567,7 +2561,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
   height: 100%;
   background-position: center center;
   background-size: cover;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: 1s linear opacity;
   transition: 1s linear opacity;
   -webkit-filter: none;
@@ -2598,7 +2592,11 @@ button, [type="button"], [type="reset"], [type="submit"] {
   background-image: url("./assets/main05.jpg");
 }
 
-.cover__image.--fade {
+.--loaded .cover__image {
+  opacity: 1;
+}
+
+.--loaded .cover__image.--fade {
   opacity: 0;
   -webkit-transition: none;
   transition: none;
