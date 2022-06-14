@@ -4,8 +4,11 @@
     ?>
     <section id="<?php echo $section_id; ?>" class="<?php echo $section_class; ?> wave" data-hue="195" data-lightness="42%">
       <div class="section__headingContainer --discover">
-        <h3 class="section__heading">越前海岸の暮らしを
-          <br>見つける旅に出かけよう</h3>
+        <h3 class="section__heading --discover">
+          <img class="section__headingImage --left" src="<?php echo DE_THEME_ASSETS . 'title_tour_left.svg'; ?>">
+          <img class="section__headingImage --main" src="<?php echo DE_THEME_ASSETS . 'title_tour.svg'; ?>">
+          <img class="section__headingImage --right" src="<?php echo DE_THEME_ASSETS . 'title_tour_right.svg'; ?>">
+        </h3>
       </div>
       <div class="section__inner">
         <div id="contentMap" class="contentMap">

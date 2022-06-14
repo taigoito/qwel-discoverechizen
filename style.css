@@ -525,7 +525,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
   }
 }
 
-.section__heading, .page__heading {
+.section__heading:not(.--discover), .page__heading {
   position: relative;
   width: 21rem;
   margin-top: 0;
@@ -536,7 +536,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 @media (min-width: 900px) {
-  .section__heading, .page__heading {
+  .section__heading:not(.--discover), .page__heading {
     text-align: center;
   }
 }
@@ -585,10 +585,99 @@ button, [type="button"], [type="reset"], [type="submit"] {
   padding-top: 6rem;
 }
 
-.section__headingContainer.--discover .section__heading {
-  width: 42rem;
-  max-width: 100%;
-  margin: 0 auto;
+.section__headingContainer.--discover {
+  position: relative;
+  width: calc(var(--container-base, 18rem) * 4 / 3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .section__headingContainer.--discover {
+    width: calc(var(--container-base, 18rem) * 2);
+  }
+}
+
+@media (min-width: 900px) {
+  .section__headingContainer.--discover {
+    width: calc(var(--container-base, 18rem) * 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section__headingContainer.--discover {
+    width: calc(var(--container-base, 18rem) * 4);
+  }
+}
+
+.section__heading.--discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .section__heading.--discover {
+    height: 12rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.section__headingImage.--main {
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 900px) {
+  .section__headingImage.--main {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section__headingImage.--main {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+.section__headingImage.--left {
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.section__headingImage.--right {
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
 }
 
 .section__description {

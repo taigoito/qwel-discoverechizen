@@ -81,12 +81,34 @@
     padding-top: 6rem;
   }
 
-  &__headingContainer:not(.--discover) {
-    @extend %__headingContainer;
+  &__headingContainer {
+    &:not(.--discover) {
+      @extend %__headingContainer;
+    }
+
+    &.--discover {
+      @include container();
+
+    }
   }
 
   &__heading {
-    @extend %__heading;
+    &:not(.--discover) {
+      @extend %__heading;
+    }
+
+    &.--discover {
+      @include row(center, stretch);
+      height: 6rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: breakpoint("md")) {
+        height: 12rem;
+        margin-top: 4.5rem;
+        margin-bottom: 3rem;
+      }
+    }
   }
 
   &__headingSpan1 {
@@ -97,10 +119,20 @@
     @extend %__headingSpan2;
   }
 
-  &__headingContainer.--discover .section__heading {
-    width: 42rem;
-    max-width: 100%;
-    margin: 0 auto;
+  &__headingImage {
+    &.--main {
+      @include col("xs", 6);
+      @include col("md", 5);
+      @include col("lg", 4);
+    }
+
+    &.--left {
+      @include col("xs", 3);
+    }
+
+    &.--right {
+      @include col("xs", 3);
+    }
   }
 
   &__description {
