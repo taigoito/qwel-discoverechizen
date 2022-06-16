@@ -1,3 +1,10 @@
+<?php
+/*
+ * Template Name: Featured category template
+ * Template Post Type: post
+ */
+?>
+
 <?php get_header();
   /**
    * Main
@@ -23,7 +30,7 @@
         <?php
         /**
          * メインループ
-         * 固定ページでは .post.--page を使う (sass/objects/projects/_pages.scss)
+         * 固定ページと同じく .post.--page を使う (sass/objects/projects/_pages.scss)
          */
         if (have_posts()) {
           while (have_posts()) {
@@ -43,7 +50,7 @@
         
         /**
          * 関連記事
-         * 特集記事(category: feature)を取得
+         * 自身のスラグと同名のカテゴリーの記事を取得
          */
         ?>
         <div class="archive">
@@ -52,12 +59,11 @@
               <?php
               $wp_obj  = get_queried_object();
               $post_id = $wp_obj->ID;
-              $term    = get_term_by('slug', 'feature', 'category');
-              $term    = $term->term_id;
+              $term    = get_term_by('slug', $wp_obj->post_name, 'category');
               $posts   = get_posts([
                 'posts_per_page'  => get_option('posts_per_page'),
                 'exclude'         => [$post_id],
-                'category'        => $term
+                'category'        => $term->term_id
               ]);
               foreach ($posts as $post) {
                 setup_postdata($post);
@@ -73,7 +79,7 @@
   <?php
   /**
    * Cover
-   * 固定ページでは、カスタマイザーで設定した2番目の画像から優先して表示
+   * 個別投稿ページと同じく、カスタマイザーで設定した3番目の画像から優先して表示
    */
   get_template_part('template-parts/cover');
   ?><!-- #cover -->
