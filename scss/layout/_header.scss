@@ -43,7 +43,7 @@
 
   &--umitan {
     @extend %site-header;
-    background-color: theme-color("primary");
+    background-color: theme-color("primary-dark");
 
     &__title {
       @extend %site-header__title;

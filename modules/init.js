@@ -158,7 +158,7 @@ if (document.body.id === 'archive-umitan' || document.body.id === 'umitan') {
   const wave = new Wave({
     target: document.querySelector('.wave'),
     lightness: '100%',
-    background: 'hsl(195, 100%, 42%)'
+    background: '#18aada'
   });
   wave.init();
 }
