@@ -102,7 +102,7 @@ trait Base_Settings {
 			'island_2_content_2_title' => '',
 			'island_2_content_2_href'  => '',
 			'island_2_content_3_image' => DE_THEME_ASSETS . 'illust_content_farmers_stay.svg',
-			'island_2_content_3_title' => '農家体験',
+			'island_2_content_3_title' => '田舎体験',
 			'island_2_content_3_href'  => './farmers-stay/',
 			'island_2_content_4_image' => DE_THEME_ASSETS . 'illust_content_stay.svg',
 			'island_2_content_4_title' => '宿泊',

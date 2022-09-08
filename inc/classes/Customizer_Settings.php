@@ -285,8 +285,7 @@ trait Customizer_Settings {
 		$customizer_settings = apply_filters('de_theme_customizer_settings', $customizer_settings);
 
 		$settings_array = [
-			'style'  => $customizer_settings['style'],
-			'header' => $customizer_settings['header'],
+			'style'  => $customizer_settings['style']
 		];
 
 		foreach ($sections as $section => $type) {
