@@ -20,6 +20,6 @@ if (!function_exists('str_to_snake')) {
 
 function my_format_slug($slug) {
 	$slug = str_replace('-', '&nbsp;', $slug);
-	$slug = str_replace('and', '&amp;', $slug);
+	//$slug = str_replace('and', '&amp;', $slug);
 	return $slug;
 }
