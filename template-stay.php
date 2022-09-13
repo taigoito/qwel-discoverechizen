@@ -44,12 +44,12 @@
                 <p>露天風呂付き和モダン客室プランが人気。
                   <br>和の趣とモダンの調和で特別なひとときを。
                   <br>露天風呂付きでゆっくりお寛ぎ下さい。</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_mangetu.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -76,6 +76,40 @@
                         </tbody>
                       </table>
                     </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_app.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_interior.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_kani.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_kani.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service01.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_stf.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -83,12 +117,12 @@
                 <h3>白浜荘</h3>
                 <p>地元特産もみわかめやオリジナルわかめ塩の商品も要チェック！
                   <br>かに剥きが得意な社長はバイリンガルなので英語の案内もお任せあれ。</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_shirahamaso.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/shirahamaso_app.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -122,12 +156,12 @@
                 <h3>国民宿舎 鷹巣荘</h3>
                 <p>源泉かけ流し100%のお湯が柔らかいとリピーターの方に評判を頂いているアルカリ性単純泉宿。
                   <br>水素濃度も高く、保温効果も◎！</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_takasusou.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -154,6 +188,30 @@
                         </tbody>
                       </table>
                     </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_app.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service01.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service02.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -161,12 +219,12 @@
                 <h3>ホテル割烹石丸</h3>
                 <p>目前に広がる「海」を眺めながら、新鮮な素材を活かした季節の味を堪能できます。
                   <br>海の幸のお土産品も販売しています。</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_ishimaru.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -193,6 +251,35 @@
                         </tbody>
                       </table>
                     </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -200,12 +287,12 @@
                 <h3>兼八旅館</h3>
                 <p>越前海岸を眼前に春夏秋冬それぞれに美味しく豊かな日本海の幸。
                   <br>海山に囲まれた素晴らしい景観に癒されるひととき。</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_kane8.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/kane8_interior.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -235,12 +322,12 @@
                 <h3>民宿 よねや</h3>
                 <p>築140年の老舗民宿。
                   <br>日本海の夕日を眺めながら食事が楽しめるほか、海辺で海水浴やワーケーションも。</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_yoneya.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/yoneya_app.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -263,15 +350,15 @@
                 </div>
               </section>
               <section>
-                <h3>Cafe Earth (カフェアース)</h3>
+                <h3>無限庵 Stay-Earth (むげんあんステイアース)</h3>
                 <p>コーヒー豆やお料理、フードも体に優しいオーガニック料理をご用意。
                   <br>美しい自然に囲まれた場所で本当の贅沢と豊かさを感じて。</p>
-                <div class="grid">
+                <div class="grid --mb_4">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
-                      <img src="<?php echo DE_THEME_URI . '/assets/stay/stay_cafeearth_app.jpg'; ?>">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app02.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -293,10 +380,39 @@
                           </tr>
                           <tr>
                             <th>参考価格</th>
-                            <td>2名様 38,000円位～</td>
+                            <td>2名様(素泊まり) 38,000円位～</td>
                           </tr>
                         </tbody>
                       </table>
+                    </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app02.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app03.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app03.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app04.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app04.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app05.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app05.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2">
+                          <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_interior02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_interior02.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -44,10 +44,10 @@
                 <p>源泉かけ流し100%のお湯が柔らかいとリピーターの方に評判を頂いているアルカリ性単純泉宿。水素濃度も高く、保温効果も◎</p>
                 <div class="grid">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
+                    <div class="grid__4">
                       <img src="<?php echo DE_THEME_URI . '/assets/spa/spa_takasusou.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
@@ -90,10 +90,10 @@
                 <p>雄大な日本海を見渡せる贅沢な眺望の中で、天然温泉の優しいぬくもりが疲れたからだをゆっくりと癒してくれます。</p>
                 <div class="grid">
                   <div class="grid__inner">
-                    <div class="grid__4 order__2">
+                    <div class="grid__4">
                       <img src="<?php echo DE_THEME_URI . '/assets/spa/spa_naminohana.jpg'; ?>">
                     </div>
-                    <div class="grid__6 order__1">
+                    <div class="grid__6">
                       <h4>INFORMATION</h4>
                       <table class="table">
                         <tbody>
