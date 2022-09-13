@@ -75,10 +75,17 @@
       padding-right: .75rem;
       
       @if ($i == 2) {
-        @include col("sm", 6);
+        @include col("xs", 6);
+        @include col("sm", 4);
+        @include col("md", 3);
       }
 
       @if ($i == 3) {
+        @include col("sm", 6);
+        @include col("md", 4);
+      }
+
+      @if ($i == 4) {
         @include col("md", 6);
       }
       
