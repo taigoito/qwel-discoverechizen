@@ -397,6 +397,41 @@
                 </div>
               </section>
               <section>
+                <h3>喫茶 波の音</h3>
+                <p>築140年の老舗民宿。
+                  <br>日本海の夕日を眺めながら食事が楽しめるほか、海辺で海水浴やワーケーションも。</p>
+                <div class="grid --mb_4">
+                  <div class="grid__inner">
+                    <div class="grid__4">
+                      <img src="<?php echo DE_THEME_URI . '/assets/stay/yoneya_app.jpg'; ?>">
+                    </div>
+                    <div class="grid__6">
+                      <h4>INFORMATION</h4>
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <th>事業所</th>
+                            <td>民宿 よねや</td>
+                          </tr>
+                          <tr>
+                            <th>所在地</th>
+                            <td>福井市蒲生町11-6</td>
+                          </tr>
+                          <tr>
+                            <th>連絡先</th>
+                            <td><a href="tel:0776-89-2266">0776-89-2266</a></td>
+                          </tr>
+                          <tr>
+                            <th>参考価格</th>
+                            <td>ドリンク・ソフトクリーム 400円位～</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
                 <h3>Cafe Earth (カフェアース)</h3>
                 <p>コーヒー豆やお料理、フードも体に優しいオーガニック料理をご用意。
                   <br>美しい自然に囲まれた場所で本当の贅沢と豊かさを感じて。</p>
