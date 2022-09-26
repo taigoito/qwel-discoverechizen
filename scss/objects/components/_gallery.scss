@@ -1,0 +1,39 @@
+/**
+ * Component - Gallery
+ */
+
+.gallery {
+  &__main {
+    height: calc(var(--container-base, 18rem));
+
+    @media (min-width: breakpoint("sm")) {
+      height: calc(var(--container-base, 18rem) * 3 / 2);
+    }
+
+    @media (min-width: breakpoint("md")) {
+      height: calc(var(--container-base, 18rem) * 9 / 8);
+    }
+
+    @media (min-width: breakpoint("lg")) {
+      height: var(--container-base, 18rem);
+    }
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      margin: auto;
+      object-fit: contain;
+      transition: opacity .35s linear;
+
+      &.--fade {
+        opacity: 0;
+      }
+
+
+    }
+  }
+}

@@ -44,9 +44,9 @@
                 <p>レストラン波乃華が提供するサービスのテーマは、目前に広がる「海」そのもの。
                   <br>夏は若大将が自ら素潜りで獲ったアワビやサザエをお手頃価格で味わったり、冬は越前カニと四季折々の日本海の恵みを堪能することができます。
                   <br>上質な素材を活かした料理は絶品。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -86,27 +86,27 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
                           </a>
@@ -121,9 +121,9 @@
                 <p>漁、魚、海を知り尽くした名物兄弟が目利きした魚は、新鮮そのもの！
                   <br>地元の越前で捕れた魚にこだわり抜いた魚屋直営のレストランです。
                   <br>ご当地でしか味わえない、四季折々の本物の鮮度と味覚をご堪能ください。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/matta_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -163,27 +163,27 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/matta_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_interior.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/matta_interior.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_service.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/matta_service.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_service01.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/matta_service01.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_stf.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/matta_stf.jpg'; ?>">
                           </a>
@@ -198,9 +198,9 @@
                 <p>創業40年の越前蟹と地魚専門店です。
                   <br>冬の越前蟹シーズンには、全て黄色いタグの付いた越前蟹のみを使用。
                   <br>その他にも、活イカのお刺身や海鮮丼も樽海自慢の一品。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -236,27 +236,27 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_service.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_service.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_service01.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_service01.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_service02.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_service02.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_stf.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_stf.jpg'; ?>">
                           </a>
@@ -274,9 +274,9 @@
                 <p>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/shinoya_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -322,9 +322,9 @@
                 <p>海のそばに建つ、恋愛、友愛、家族愛を育む愛の聖地。
                   <br>日本海を一望できるテラスは、カフェというより、リゾートのような非日常を味わうことができる明るい空間です。
                   <br>スタッフ達の誠意が、訪ねたその一日を忘れがたい「記念日」にしてくれます。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -366,27 +366,27 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_app01.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_app01.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior01.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior01.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_service03.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_service03.jpg'; ?>">
                           </a>
@@ -400,9 +400,9 @@
                 <h3>喫茶 波の音</h3>
                 <p>築140年の老舗民宿。
                   <br>日本海の夕日を眺めながら食事が楽しめるほか、海辺で海水浴やワーケーションも。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/stay/yoneya_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -435,9 +435,9 @@
                 <h3>Cafe Earth (カフェアース)</h3>
                 <p>コーヒー豆やお料理、フードも体に優しいオーガニック料理をご用意。
                   <br>美しい自然に囲まれた場所で本当の贅沢と豊かさを感じて。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_interior01.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -479,27 +479,27 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_interior01.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_interior01.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app01.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app01.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app05.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app05.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_service.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_service.jpg'; ?>">
                           </a>
@@ -517,9 +517,9 @@
                 <p>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -566,9 +566,9 @@
                 <p>一度飲んだら虜に♡
                   <br>越前海岸のバナナジュースのテイクアウト専門店。
                   <br>エンターテイナーのマサ越前がお出迎え。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -609,9 +609,9 @@
                 <h3>ごーる堂</h3>
                 <p>材料は、福井県産のきな粉と国産豆乳。
                   <br>100%植物性の体に優しいソフトクリーム屋さん。</p>
-                <div class="grid --mb_4">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/food/goledoh_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">

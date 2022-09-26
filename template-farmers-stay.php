@@ -43,9 +43,9 @@
                 <h3>オーベルジュフジイフェルミエ</h3>
                 <p>地場野菜や地魚をふんだんに用いた料理を心をこめてお出します。
                   <br>夕食は寛いだフレンチをお箸で、朝食は農家のおばんざい料理をご賞味を。</p>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -77,27 +77,27 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior.jpg'; ?>">
                           </a>
                         </div>
-                        <!--<div class="grid__2 --mb_2">
+                        <!--<div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior01.jpg'; ?>">
                             <img src="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior01.jpg'; ?>">
                           </a>
                         </div>-->
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_service.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_service.jpg'; ?>">
                           </a>
                         </div>
-                        <!--<div class="grid__2 --mb_2">
+                        <!--<div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_stf.jpg'; ?>">
                             <img src="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_stf.jpg'; ?>">
                           </a>
@@ -112,9 +112,9 @@
                 <p>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)</p>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -150,9 +150,9 @@
               <section>
                 <h3>海辺の農園宿 つかさ丸</h3>
                 <p>福井県の越前海岸の静かな村に、30年以上住んできた私たち夫婦が、ひとときの「田舎暮らし」のお楽しみを提供します。</p>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_tsukasamaru.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -189,9 +189,9 @@
                 <h3>いただき繕福井越廼</h3>
                 <p>お寺が運営するヴィーガン宿です。古民家での暮らし、料理、自然農を体験できます。
                   <br>今日はどんな「イノチ」に出会えるでしょうか。</p>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_app.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -224,22 +224,22 @@
                     </div>
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_app.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_app.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_service.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_service.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_landscape.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_landscape.jpg'; ?>">
                           </a>
                         </div>
-                        <div class="grid__2 --mb_2">
+                        <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_stf.jpg'; ?>">
                             <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_stf.jpg'; ?>">
                           </a>
@@ -254,9 +254,9 @@
                 <p>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)
                   <br>(ここにテキスト作成予定)</p>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_ichirobe.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -288,9 +288,9 @@
               <section>
                 <h3>殿下ファーマーズステイ</h3>
                 <p>ほっこり派も！アクティブ派も！里山の自然と幸せあふれる日常を体感しに来てください。</p>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_denga.jpg'; ?>">
                     </div>
                     <div class="grid__6">

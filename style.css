@@ -2237,6 +2237,43 @@ button, [type=button], [type=reset], [type=submit] {
 }
 
 /**
+ * Component - Gallery
+ */
+.gallery__main {
+  height: calc(var(--container-base, 18rem));
+}
+@media (min-width: 600px) {
+  .gallery__main {
+    height: calc(var(--container-base, 18rem) * 3 / 2);
+  }
+}
+@media (min-width: 900px) {
+  .gallery__main {
+    height: calc(var(--container-base, 18rem) * 9 / 8);
+  }
+}
+@media (min-width: 1200px) {
+  .gallery__main {
+    height: var(--container-base, 18rem);
+  }
+}
+.gallery__main > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: opacity 0.35s linear;
+}
+.gallery__main > img.--fade {
+  opacity: 0;
+}
+
+/**
  * Component - List
  */
 .list__inner {

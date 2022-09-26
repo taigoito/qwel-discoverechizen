@@ -50,6 +50,12 @@ sections.forEach((elem, i) => {
   new Wave(elem);
 });
 
+import Gallery from './gallery.js';
+const gallery = document.querySelectorAll('.gallery');
+gallery.forEach((elem) => {
+  new Gallery(elem);
+});
+
 // Fader
 import Fader from './fader.js';
 const fader = document.querySelectorAll('.fader');
