@@ -4,6 +4,7 @@
 
 .gallery {
   &__main {
+    position: relative;
     height: calc(var(--container-base, 18rem));
 
     @media (min-width: breakpoint("sm")) {
