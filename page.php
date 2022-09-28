@@ -70,11 +70,4 @@
       </div>
     </div>
   </main>
-  <?php
-  /**
-   * Cover
-   * 固定ページでは、カスタマイザーで設定した2番目の画像から優先して表示
-   */
-  get_template_part('template-parts/cover');
-  ?><!-- #cover -->
 <?php get_footer();

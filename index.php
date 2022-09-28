@@ -49,11 +49,4 @@
       </div>
     </div>
   </main><!-- #main -->
-  <?php
-  /**
-   * Cover
-   * アーカイブページでは、カスタマイザーで設定した4番目の画像から優先して表示
-   */
-  get_template_part('template-parts/cover');
-  ?><!-- #cover -->
 <?php get_footer();

@@ -455,11 +455,4 @@
       </div>
     </div>
   </main>
-  <?php
-  /**
-   * Cover
-   * 個別投稿ページと同じく、カスタマイザーで設定した3番目の画像から優先して表示
-   */
-  get_template_part('template-parts/cover');
-  ?><!-- #cover -->
 <?php get_footer();
