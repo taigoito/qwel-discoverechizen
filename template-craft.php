@@ -63,8 +63,20 @@
                             <td><a href="https://watariglass.com/" target="_blank">WATARIGLASS studio (ワタリグラススタジオ)</a></td>
                           </tr>
                           <tr>
-                            <th>開催期間</th>
+                            <th>所在地</th>
+                            <td>福井市鮎川町17-14</td>
+                          </tr>
+                          <tr>
+                            <th>連絡先</th>
+                            <td><a href="tel:0776-88-2025">0776-88-2025</a></td>
+                          </tr>
+                          <tr>
+                            <th>営業期間</th>
                             <td>通年 (水曜定休、火曜ショップのみ営業) ※</td>
+                          </tr>
+                          <tr>
+                            <th>営業時間</th>
+                            <td>9:00 ～ 17:00</td>
                           </tr>
                           <tr>
                             <th>ご料金</th>
@@ -82,17 +94,9 @@
                             <td>1名</td>
                           </tr>
                           <tr>
-                            <th>参加条件</th>
+                            <th>参加条件・準備</th>
                             <td>小学生以上
-                              <br>動きやすい服装、汗拭きタオル等ご準備ください。</td>
-                          </tr>
-                          <tr>
-                            <th>所在地</th>
-                            <td>福井市鮎川町17-14</td>
-                          </tr>
-                          <tr>
-                            <th>連絡先</th>
-                            <td><a href="tel:0776-88-2025">0776-88-2025</a></td>
+                              <br>動きやすい服装、汗拭きタオル等ご用意ください。</td>
                           </tr>
                         </tbody>
                       </table>
@@ -136,18 +140,17 @@
                 </div>
               </section>
               <section>
-                <h3>(見出し)</h3>
+                <h3>醤油絞り体験</h3>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__5">
-                      <div class="gallery__desc --mb_3">
-                        <p>(ここにテキスト作成予定)
-                          <br>(ここにテキスト作成予定)
-                          <br>(ここにテキスト作成予定)</p>
-                      </div>
-                      <div class="gallery__main">
-                        <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
-                      </div>
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>『ジガミ岩しょうゆ』の桜醤油は、魚料理を知り尽くした初代・岩尾孫次郎が、魚の旨味をより引き出せるように造り上げたこだわりの醤油。
+                        <br>海の幸蔵の中の届く、磯の香りをたっぷり含んだ潮風に包まれ、冬には怒涛の日本海の荒波を聞きながら熟成した醤油は、海の幸を調理するのに最適のお醤油として、魚料理のプロの方たちからも多くのご好評をいただいております。
+                        <br>その醤油のできる工程を聞き、オリジナル醤油ラベルを書いてボトルに詰める体験です。
+                        <br>醤油絞りや醤油樽の見学は、福井県でも数カ所でしか体験できません。</p>
+                    </div>
+                    <div class="grid__5 gallery__main">
+                      <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img.jpg'; ?>">
                     </div>
                     <div class="grid__5">
                       <h4>INFORMATION</h4>
@@ -155,48 +158,39 @@
                         <tbody>
                           <tr>
                             <th>事業所</th>
-                            <td>(事業所名)</td>
-                          </tr>
-                          <tr>
-                            <th>開催期間</th>
-                            <td>通年</td>
-                          </tr>
-                          <tr>
-                            <th>ご料金</th>
-                            <td>(代表的なサービス) 3,300円～</td>
-                          </tr>
-                          <tr>
-                            <th>ご予約</th>
-                            <td>3日前まで</td>
-                          </tr>
-                          <tr>
-                            <th>キャンセル規定</th>
-                            <td>3日前 50% / 前日 100%</td>
-                          </tr>
-                          <tr>
-                            <th>定員</th>
-                            <td>10名</td>
-                          </tr>
-                          <tr>
-                            <th>最低催行人数</th>
-                            <td>5名</td>
-                          </tr>
-                          <tr>
-                            <th>参加条件</th>
-                            <td>小学生以上
-                              <br>未成年の場合は保護者同伴</td>
+                            <td><a href="https://www.iwao-shoyu.com/" target="_blank">岩尾醤油醸造元</a></td>
                           </tr>
                           <tr>
                             <th>所在地</th>
-                            <td>福井市XXXX-XX</td>
+                            <td>福井市糸崎町1-3</td>
                           </tr>
                           <tr>
                             <th>連絡先</th>
-                            <td><a href="tel:0776-xx-xxxx">0776-xx-xxxx</a></td>
+                            <td><a href="tel:0776-86-1721">0776-86-1721</a></td>
                           </tr>
                           <tr>
-                            <th>URL</th>
-                            <td><a href="https://www.example.com/" target="_blank">https://www.example.com/</a></td>
+                            <th>営業期間</th>
+                            <td>通年 (月曜定休)</td>
+                          </tr>
+                          <tr>
+                            <th>営業時間</th>
+                            <td>18:00まで</td>
+                          </tr>
+                          <tr>
+                            <th>ご料金</th>
+                            <td>醤油絞り体験 2,200円</td>
+                          </tr>
+                          <tr>
+                            <th>ご予約</th>
+                            <td>前日まで</td>
+                          </tr>
+                          <tr>
+                            <th>最低催行人数</th>
+                            <td>2名</td>
+                          </tr>
+                          <tr>
+                            <th>参加条件・準備</th>
+                            <td>エプロンをご用意ください。</td>
                           </tr>
                         </tbody>
                       </table>
@@ -204,23 +198,174 @@
                     <div class="grid grid__11 --left_lg --mt_2">
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
-                          <a href="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
-                          <a href="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
-                          <a href="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_app.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <h3>塩づくり体験</h3>
+                <div class="grid --mb_4 gallery">
+                  <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>越前海岸のミネラル豊富な海水でお塩を作ります。
+                        <br>お塩の話を聞いた後、自分だけのお塩を作ります。
+                        <br>お塩の知ってそうで知らなかったお話、塩が結晶化する瞬間は歓声があがります！
+                        <br>越前和紙のパッケージを作ってお持ち帰りできます。お土産、旅の記念に！</p>
+                    </div>
+                    <div class="grid__5 gallery__main">
+                      <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_craft.jpg'; ?>">
+                    </div>
+                    <div class="grid__5">
+                      <h4>INFORMATION</h4>
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <th>事業所</th>
+                            <td><a href="https://shinoya004.stores.jp/" target="_blank">志野製塩所</a></td>
+                          </tr>
+                          <tr>
+                            <th>所在地</th>
+                            <td>福井市鮎川町133-1</td>
+                          </tr>
+                          <tr>
+                            <th>連絡先</th>
+                            <td><a href="tel:070-3630-1920">070-3630-1920</a></td>
+                          </tr>
+                          <tr>
+                            <th>開催期間</th>
+                            <td>通年 (土日祝日)</td>
+                          </tr>
+                          <tr>
+                            <th>ご料金</th>
+                            <td>塩づくり体験 2,200円</td>
+                          </tr>
+                          <tr>
+                            <th>ご予約</th>
+                            <td>1週間前まで</td>
+                          </tr>
+                          <tr>
+                            <th>最低催行人数</th>
+                            <td>2名</td>
+                          </tr>
+                          <tr>
+                            <th>参加条件・準備</th>
+                            <td>-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/shinoya_craft.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_craft.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
-                          <a href="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/shinoya_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_app.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/shinoya_vst.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_vst.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <h3>アワビデコレーション体験</h3>
+                <div class="grid --mb_4 gallery">
+                  <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>(ここにテキスト作成予定)
+                        <br>(ここにテキスト作成予定)
+                        <br>(ここにテキスト作成予定)</p>
+                    </div>
+                    <div class="grid__5 gallery__main">
+                      <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft.jpg'; ?>">
+                    </div>
+                    <div class="grid__5">
+                      <h4>INFORMATION</h4>
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <th>事業所</th>
+                            <td><a href="http://www.ishimaru.biz/" target="_blank">ホテル割烹石丸</td>
+                          </tr>
+                          <tr>
+                            <th>所在地</th>
+                            <td>福井市鮎川町94-8-1</td>
+                          </tr>
+                          <tr>
+                            <th>連絡先</th>
+                            <td><a href="tel:0776-88-2225">0776-88-2225</a></td>
+                          </tr>
+                          <tr>
+                            <th>営業期間</th>
+                            <td>通年 (不定休)</td>
+                          </tr>
+                          <tr>
+                            <th>営業時間</th>
+                            <td>11:00 ～ 14:00, 17:00 ～ 20:00</td>
+                          </tr>
+                          <tr>
+                            <th>ご料金</th>
+                            <td>アワビデコレーション体験 0,000円</td>
+                          </tr>
+                          <tr>
+                            <th>ご予約</th>
+                            <td>2日前まで</td>
+                          </tr>
+                          <tr>
+                            <th>最低催行人数</th>
+                            <td>2名</td>
+                          </tr>
+                          <tr>
+                            <th>参加条件・準備</th>
+                            <td>-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft01.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft02.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
                           </a>
                         </div>
                       </div>
