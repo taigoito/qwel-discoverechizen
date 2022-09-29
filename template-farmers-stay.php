@@ -41,10 +41,12 @@
               <h2>農家民宿と各種体験のご紹介</h2>
               <section>
                 <h3>オーベルジュフジイフェルミエ</h3>
-                <p>地場野菜や地魚をふんだんに用いた料理を心をこめてお出します。
-                  <br>夕食は寛いだフレンチをお箸で、朝食は農家のおばんざい料理をご賞味を。</p>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>地場野菜や地魚をふんだんに用いた料理を心をこめてお出します。
+                        <br>夕食は寛いだフレンチをお箸で、朝食は農家のおばんざい料理をご賞味を。</p>
+                    </div>
                     <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_app.jpg'; ?>">
                     </div>
@@ -109,11 +111,13 @@
               </section>
               <section>
                 <h3>志野ファーム（農家民宿 海人山）</h3>
-                <p>(ここにテキスト作成予定)
-                  <br>(ここにテキスト作成予定)
-                  <br>(ここにテキスト作成予定)</p>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>(ここにテキスト作成予定)
+                        <br>(ここにテキスト作成予定)
+                        <br>(ここにテキスト作成予定)</p>
+                    </div>
                     <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
                     </div>
@@ -149,9 +153,11 @@
               </section>
               <section>
                 <h3>海辺の農園宿 つかさ丸</h3>
-                <p>福井県の越前海岸の静かな村に、30年以上住んできた私たち夫婦が、ひとときの「田舎暮らし」のお楽しみを提供します。</p>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>福井県の越前海岸の静かな村に、30年以上住んできた私たち夫婦が、ひとときの「田舎暮らし」のお楽しみを提供します。</p>
+                    </div>
                     <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_tsukasamaru.jpg'; ?>">
                     </div>
@@ -187,10 +193,12 @@
               </section>
               <section>
                 <h3>いただき繕福井越廼</h3>
-                <p>お寺が運営するヴィーガン宿です。古民家での暮らし、料理、自然農を体験できます。
-                  <br>今日はどんな「イノチ」に出会えるでしょうか。</p>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>お寺が運営するヴィーガン宿です。古民家での暮らし、料理、自然農を体験できます。
+                        <br>今日はどんな「イノチ」に出会えるでしょうか。</p>
+                    </div>
                     <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_app.jpg'; ?>">
                     </div>
@@ -251,11 +259,13 @@
               </section>
               <section>
                 <h3>農家民宿いちろべえ</h3>
-                <p>(ここにテキスト作成予定)
-                  <br>(ここにテキスト作成予定)
-                  <br>(ここにテキスト作成予定)</p>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>(ここにテキスト作成予定)
+                        <br>(ここにテキスト作成予定)
+                        <br>(ここにテキスト作成予定)</p>
+                    </div>
                     <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_ichirobe.jpg'; ?>">
                     </div>
@@ -287,9 +297,11 @@
               </section>
               <section>
                 <h3>殿下ファーマーズステイ</h3>
-                <p>ほっこり派も！アクティブ派も！里山の自然と幸せあふれる日常を体感しに来てください。</p>
                 <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                      <p>ほっこり派も！アクティブ派も！里山の自然と幸せあふれる日常を体感しに来てください。</p>
+                    </div>
                     <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_denga.jpg'; ?>">
                     </div>
