@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Landscape template
- * Template Post Type: post
+ * Template Post Type: page
  */
 ?>
 

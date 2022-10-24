@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: Featured category template
- * Template Post Type: post
+ * Template Name: Featured articles template
+ * Template Post Type: page
  */
 ?>
 
@@ -50,20 +50,18 @@
         
         /**
          * 関連記事
-         * 自身のスラグと同名のカテゴリーの記事を取得
+         * 自身の子記事を取得
          */
         ?>
         <div class="archive">
           <div class="list --lg">
             <ul class="list__inner">
               <?php
-              $wp_obj  = get_queried_object();
               $post_id = $wp_obj->ID;
-              $term    = get_term_by('slug', $wp_obj->post_name, 'category');
               $posts   = get_posts([
-                'posts_per_page'  => get_option('posts_per_page'),
-                'exclude'         => [$post_id],
-                'category'        => $term->term_id
+                'posts_per_page' => $posts_per_page,
+                'post_type'      => 'page',
+                'post_parent'    => $post_id
               ]);
               foreach ($posts as $post) {
                 setup_postdata($post);

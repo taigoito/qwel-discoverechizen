@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: Blank template
- * Template Post Type: post, page
+ * Template Name: Model plan template
+ * Template Post Type: page
  */
 ?>
 
@@ -50,7 +50,7 @@
         
         /**
          * 関連記事
-         * 自身の属するカテゴリーの記事を取得
+         * 自身のスラグと同名のカテゴリーの記事を取得
          */
         ?>
         <div class="archive">
@@ -59,12 +59,11 @@
               <?php
               $wp_obj  = get_queried_object();
               $post_id = $wp_obj->ID;
-              $terms   = get_the_terms($post_id, 'category');
-              $term    = $terms[0]->term_id;
+              $term    = get_term_by('slug', $wp_obj->post_name, 'category');
               $posts   = get_posts([
                 'posts_per_page'  => get_option('posts_per_page'),
                 'exclude'         => [$post_id],
-                'category'        => $term
+                'category'        => $term->term_id
               ]);
               foreach ($posts as $post) {
                 setup_postdata($post);

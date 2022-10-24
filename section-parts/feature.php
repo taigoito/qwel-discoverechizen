@@ -1,23 +1,21 @@
     <?php
     $section           = 'feature';
-    $term_id           = \DE::get_data($section, 'relational_id');
-    $category          = get_category($term_id);
-    $section_id        = $category->slug;
-    $section_name      = $category->name;
-    $section_sub       = $category->description;
+    $post_id           = \DE::get_data($section, 'relational_id');
+    $post          = get_post($post_id);
+    $section_id        = $post->post_name;
     $section_class     = 'section --' . $section_id;
     $layout_modifier   = ' --' . \DE::get_data($section, 'layout');
     $posts_per_page    = \DE::get_data($section, 'items_count');
     $aspect_ratio      = \DE::get_data($section, 'item_aspect_ratio');
+    setup_postdata($post);
     ?>
     <section id="<?php echo $section_id; ?>" class="<?php echo $section_class; ?>">
       <div class="section__headingContainer">
         <h3 class="section__heading">
           <span class="section__headingSpan1" data-comfort="1"><?php echo my_format_slug($section_id); ?></span>
-          <span class="section__headingSpan2" data-comfort="1"><?php echo $section_name; ?></span>
+          <span class="section__headingSpan2" data-comfort="1"><?php the_title(); ?></span>
         </h3>
       </div>
-      <div class="section__description"><?php echo $section_sub; ?></div>
       <div class="section__inner">
         <div class="slider<?php echo $layout_modifier; ?> --fit" data-aspect-ratio="<?php echo $aspect_ratio; ?>">
           <ul class="slider__inner">
@@ -25,7 +23,8 @@
             global $posts;
             $posts = get_posts([
               'posts_per_page' => $posts_per_page,
-              'category'       => $term_id,
+              'post_type'      => 'page',
+              'post_parent'    => $post_id,
               'exclude'        => [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111]
             ]);
             foreach ($posts as $post) {

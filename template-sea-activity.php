@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Sea activity template
- * Template Post Type: post
+ * Template Post Type: page
  */
 ?>
 

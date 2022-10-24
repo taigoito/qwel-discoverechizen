@@ -177,6 +177,22 @@ trait Customizer_Settings {
 				'item_more_text'     => ['sanitize'  => '']
 			],
 
+			// 特集セクション設定
+			'feature'  => [
+				'order'              => ['type'  => 'number'],
+				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
+				'layout'             => [
+					'type'   => 'select',
+					'choices'  => [
+						'sm'   => 'Small',
+						'md'   => 'Medium',
+						'lg'   => 'Large',
+					]
+				],
+				'items_count'        => ['type'  => 'number'],
+				'item_aspect_ratio'  => ['type'  => 'select', 'choices'  => $option_aspect_ratio],
+			],
+
 			// アバウトセクション設定
 			'about'  => [
 				'order'              => ['type'  => 'number'],
