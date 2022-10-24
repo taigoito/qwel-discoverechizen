@@ -82,32 +82,32 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/mangetsu_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/mangetsu_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_interior.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/mangetsu_interior.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_kani.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_kani.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/mangetsu_kani.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_service01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/mangetsu_service01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_stf.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/mangetsu_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/mangetsu_stf.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -198,22 +198,22 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/takasusou_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/takasusou_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/takasusou_service01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service02.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/takasusou_service02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/takasusou_service02.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -263,27 +263,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_interior.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_stf.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_vst.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -407,27 +407,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app02.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/cafeearth_app02.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app03.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app03.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/cafeearth_app03.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app04.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app04.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/cafeearth_app04.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app05.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_app05.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/cafeearth_app05.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_interior02.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/stay/cafeearth_interior02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/stay/sm/cafeearth_interior02.jpg'; ?>">
                           </a>
                         </div>
                       </div>

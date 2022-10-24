@@ -90,27 +90,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_interior.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_stf.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_vst.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_vst.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -169,27 +169,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/matta_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/matta_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_interior.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/matta_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/matta_interior.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/matta_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/matta_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_service01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/matta_service01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/matta_service01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/matta_stf.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/matta_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/matta_stf.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -244,27 +244,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/tarumi_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/tarumi_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_service01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_service01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/tarumi_service01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_service02.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_service02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/tarumi_service02.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/tarumi_stf.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/tarumi_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/tarumi_stf.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -378,27 +378,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafemare_interior.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafemare_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_app01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_app01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafemare_app01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_interior01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafemare_interior01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafemare_service03.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafemare_service03.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafemare_service03.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -495,27 +495,27 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_interior01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_interior01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafeearth_interior01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafeearth_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafeearth_app01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app05.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_app05.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafeearth_app05.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/cafeearth_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/cafeearth_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/cafeearth_service.jpg'; ?>">
                           </a>
                         </div>
                       </div>

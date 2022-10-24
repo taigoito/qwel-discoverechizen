@@ -106,32 +106,32 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/watariglass_shop.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/watariglass_shop.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/watariglass_shop.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/watariglass_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/watariglass_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/watariglass_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/watariglass_act.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/watariglass_act01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act02.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/watariglass_act02.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act03.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/watariglass_act03.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/watariglass_act03.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -199,17 +199,17 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/iwaoshoyu_img.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_img01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/iwaoshoyu_img01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/iwaoshoyu_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/iwaoshoyu_app.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -247,8 +247,12 @@
                             <td><a href="tel:070-3630-1920">070-3630-1920</a></td>
                           </tr>
                           <tr>
-                            <th>開催期間</th>
+                            <th>営業期間</th>
                             <td>通年 (土日祝日)</td>
+                          </tr>
+                          <tr>
+                            <th>営業時間</th>
+                            <td>-</td>
                           </tr>
                           <tr>
                             <th>ご料金</th>
@@ -273,17 +277,17 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/shinoya_craft.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_craft.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/shinoya_craft.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/shinoya_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/shinoya_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/shinoya_vst.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/shinoya_vst.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/shinoya_vst.jpg'; ?>">
                           </a>
                         </div>
                       </div>
@@ -350,22 +354,22 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/ishimaru_craft.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft01.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft01.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/ishimaru_craft01.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft02.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/craft/ishimaru_craft02.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/craft/sm/ishimaru_craft02.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/food/ishimaru_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/food/sm/ishimaru_app.jpg'; ?>">
                           </a>
                         </div>
                       </div>

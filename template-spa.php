@@ -41,12 +41,12 @@
               <h2>温泉施設のご紹介</h2>
               <section>
                 <h3>国民宿舎鷹巣荘</h3>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__11 --mt_2 --mb_2">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
                       <p>源泉かけ流し100%のお湯が柔らかいとリピーターの方に評判を頂いているアルカリ性単純泉宿。水素濃度も高く、保温効果も◎</p>
                     </div>
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/spa/spa_takasusou.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -84,17 +84,31 @@
                         </tbody>
                       </table>
                     </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/spa/spa_takasusou.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/spa/sm/spa_takasusou.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/spa/spa_takasusou_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/spa/sm/spa_takasusou_app.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
               <section>
                 <h3>越前水仙の里温泉「波の華」</h3>
-                <div class="grid">
+                <div class="grid --mb_4 gallery">
                   <div class="grid__inner">
-                    <div class="grid__11 --mt_2 --mb_2">
+                    <div class="grid__11 --mt_2 --mb_2 gallery__desc">
                       <p>雄大な日本海を見渡せる贅沢な眺望の中で、天然温泉の優しいぬくもりが疲れたからだをゆっくりと癒してくれます。</p>
                     </div>
-                    <div class="grid__4">
+                    <div class="grid__4 gallery__main">
                       <img src="<?php echo DE_THEME_URI . '/assets/spa/spa_naminohana.jpg'; ?>">
                     </div>
                     <div class="grid__6">
@@ -131,6 +145,20 @@
                           </tr>
                         </tbody>
                       </table>
+                    </div>
+                    <div class="grid grid__11 --left_lg --mt_2">
+                      <div class="grid__inner">
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/spa/spa_naminohana.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/spa/sm/spa_naminohana.jpg'; ?>">
+                          </a>
+                        </div>
+                        <div class="grid__2 --mb_2 gallery__item">
+                          <a href="<?php echo DE_THEME_URI . '/assets/spa/spa_naminohana_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/spa/sm/spa_naminohana_app.jpg'; ?>">
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

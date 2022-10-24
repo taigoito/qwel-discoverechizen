@@ -81,12 +81,12 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/fujii-fermier_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/fujii-fermier_interior.jpg'; ?>">
                           </a>
                         </div>
                         <!--<div class="grid__2 --mb_2 gallery__item">
@@ -96,7 +96,7 @@
                         </div>-->
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/fujii-fermier_service.jpg'; ?>">
                           </a>
                         </div>
                         <!--<div class="grid__2 --mb_2 gallery__item">
@@ -234,22 +234,22 @@
                       <div class="grid__inner">
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_app.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_app.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/itadakizen_app.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_service.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_service.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/itadakizen_service.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_landscape.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_landscape.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/itadakizen_landscape.jpg'; ?>">
                           </a>
                         </div>
                         <div class="grid__2 --mb_2 gallery__item">
                           <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_stf.jpg'; ?>">
-                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/itadakizen_stf.jpg'; ?>">
+                            <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/itadakizen_stf.jpg'; ?>">
                           </a>
                         </div>
                       </div>
