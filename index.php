@@ -13,15 +13,15 @@
     get_template_part('template-parts/titleArea');
     ?><!-- #titleArea -->
     <div class="main__wrapper">
-      <div class="main__container --xl">
+      <div class="main__container">
         <?php
         /**
          * パンくずリスト
          */
         get_template_part('template-parts/breadcrumb');
         ?><!-- #breadcrumb-->
-        <div class="archive --xl">
-          <div class="list --xl">
+        <div class="archive">
+          <div class="list --lg">
             <ul class="list__inner">
               <?php
               /**
