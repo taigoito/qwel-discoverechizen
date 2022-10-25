@@ -1,10 +1,3 @@
-<?php
-/*
- * Template Name: Work template
- * Template Post Type: page
- */
-?>
-
 <?php get_header();
   /**
    * Main
@@ -273,27 +266,20 @@
             </h3>
           </section><!-- #reservation -->
         </article>
-        <?php
-        /**
-         * 関連記事
-         * 自身のスラグと同名のカテゴリーの記事を取得
-         */
-        ?>
+        
         <div class="archive">
           <div class="list --lg">
             <ul class="list__inner">
               <?php
-              $wp_obj  = get_queried_object();
-              $post_id = $wp_obj->ID;
-              $term    = get_term_by('slug', $wp_obj->post_name, 'category');
-              $posts   = get_posts([
-                'posts_per_page'  => get_option('posts_per_page'),
-                'exclude'         => [$post_id],
-                'category'        => $term->term_id
-              ]);
-              foreach ($posts as $post) {
-                setup_postdata($post);
-                get_template_part('template-parts/post');
+              /**
+               * メインループ
+               * 
+               */
+              if (have_posts()) {
+                while (have_posts()) {
+                  the_post();
+                  get_template_part('template-parts/post');
+                }
               }
               ?>
             </ul>
