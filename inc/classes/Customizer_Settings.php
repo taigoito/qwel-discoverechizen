@@ -127,9 +127,9 @@ trait Customizer_Settings {
 			],
 
 			// 個別投稿ページセクション設定
-			'post' => [
+			'page' => [
 				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_posts],
+				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
 				'layout'             => [
 					'type'   => 'select', 
 					'choices'  => [

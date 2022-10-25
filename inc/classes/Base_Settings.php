@@ -11,7 +11,7 @@ trait Base_Settings {
 	protected static $sections = [
 		'feature'  => 'feature',
 		'about'    => 'about',
-		'pickup'   => 'post',
+		'pickup'   => 'page',
 		'content'  => 'content', 
 		'plan'     => 'category',
 		'news'     => 'category',
