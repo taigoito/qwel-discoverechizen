@@ -1,34 +1,22 @@
     <?php
     $section           = 'feature';
-    $post_id           = \DE::get_data($section, 'relational_id');
-    $post          = get_post($post_id);
-    $section_id        = $post->post_name;
-    $section_class     = 'section --' . $section_id;
+    $section_title     = \DE::get_data($section, 'title');
     $layout_modifier   = ' --' . \DE::get_data($section, 'layout');
     $posts_per_page    = \DE::get_data($section, 'items_count');
     $aspect_ratio      = \DE::get_data($section, 'item_aspect_ratio');
-    setup_postdata($post);
     ?>
-    <section id="<?php echo $section_id; ?>" class="<?php echo $section_class; ?>">
+    <section id="<?php echo $section; ?>" class="<?php echo 'section --' . $section; ?>">
       <div class="section__headingContainer">
         <h3 class="section__heading">
-          <span class="section__headingSpan1" data-comfort="1"><?php echo my_format_slug($section_id); ?></span>
-          <span class="section__headingSpan2" data-comfort="1"><?php the_title(); ?></span>
+          <span class="section__headingSpan1" data-comfort="1"><?php echo my_format_slug($section); ?></span>
+          <span class="section__headingSpan2" data-comfort="1"><?php echo $section_title; ?></span>
         </h3>
       </div>
       <div class="section__inner">
         <div class="slider<?php echo $layout_modifier; ?> --fit" data-aspect-ratio="<?php echo $aspect_ratio; ?>">
           <ul class="slider__inner">
             <?php
-            global $posts;
-            $posts = get_posts([
-              'posts_per_page' => $posts_per_page,
-              'post_type'      => 'page',
-              'post_parent'    => $post_id,
-              'exclude'        => [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111]
-            ]);
-            foreach ($posts as $post) {
-              setup_postdata($post);
+            for ($i = 1; $i <= 4; $i++) {
             ?>
               <li class="post">
                 <div class="post__inner">
@@ -36,15 +24,21 @@
                   /**
                    * .post__image
                    */
-                  get_featured_image();
                   ?>
+                  <figure class="post__image">
+                    <?php if (\DE::get_data('feature', 'cat' . $i . '_image')) { ?>
+                      <img src="<?php echo \DE::get_data('feature', 'cat' . $i . '_image'); ?>">
+                    <?php } else { ?>
+                      <img src="<?php echo DE_DEFAULT_IMAGE; ?>">
+                    <?php } ?>
+                  </figure>
                   <div class="post__textContent">
                     <?php
                     /**
                      * .post__heading
                      */
-                    get_heading();
                     ?>
+                    <h4 class="post__heading"><a href="<?php echo get_category_link(\DE::get_data($section, 'cat' . $i .'_id')); ?>"><?php echo \DE::get_data('feature', 'cat' . $i . '_title'); ?></a></h4>
                   </div>
                 </div>
               </li>

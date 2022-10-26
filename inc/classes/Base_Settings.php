@@ -9,14 +9,14 @@ trait Base_Settings {
 	 * セクション構成
 	 */
 	protected static $sections = [
-		'feature'  => 'feature',
-		'about'    => 'about',
-		'pickup'   => 'page',
-		'content'  => 'content', 
-		'plan'     => 'category',
-		'news'     => 'category',
-		'access'   => 'access', 
-		'contact'  => 'contact'
+		'feature'        => 'feature',
+		'about'          => 'about',
+		'pickup'         => 'page',
+		'discover'       => 'discover', 
+		'model-plan'     => 'category',
+		'blog-and-news'  => 'category',
+		'location'       => 'location', 
+		'contact'        => 'contact'
 	];
 
 	/**
@@ -62,7 +62,19 @@ trait Base_Settings {
 		// Feature
 		'feature'  => [
 			'order'                => 0,
-			'relational_id'        => 13,
+			'title'       				 => '特集',
+			'cat1_id'              => 12,
+			'cat1_title'           => '隊員おすすめ旅プラン',
+			'cat1_image'           => '',
+			'cat2_id'              => 14,
+			'cat2_title'           => '『人の駅』プロジェクト',
+			'cat2_image'           => '',
+			'cat3_id'              => 15,
+			'cat3_title'           => 'オンライン交流会',
+			'cat3_image'           => '',
+			'cat4_id'              => 16,
+			'cat4_title'           => '越前海岸の暮らしを見つける旅',
+			'cat4_image'           => '',
 			'layout'               => 'md',
 			'items_count'          => -1,
 			'item_aspect_ratio'    => '0.625',
@@ -70,20 +82,19 @@ trait Base_Settings {
 		// About
 		'about'  => [
 			'order'                => 10,
-			'relational_id'        => 10,
-			'more_text'            => 'more >'
+			'title'       				 => '私たちについて'
 		],
 		// Pickup
 		'pickup' => [
 			'order'                => 20,
 			'relational_id'        => 0,
 			'layout'               => 'left',
-			'more_text'            => 'more >'
+			'more_text'            => 'もっと詳しく'
 		],
-		// Content
-		'content'  => [
+		// Discover
+		'discover'  => [
 			'order'                => 30,
-			'relational_id'        => 14,
+			'title'                => '越前海岸の暮らしを見つける旅',
 			'island_1_image'           => DE_THEME_ASSETS . 'illust_content_island_1.svg',
 			'island_1_content_1_image' => DE_THEME_ASSETS . 'illust_content_craft.svg',
 			'island_1_content_1_title' => '物作り',
@@ -132,43 +143,43 @@ trait Base_Settings {
 			'island_4_content_3_href'  => '',
 			'island_4_content_4_image' => DE_THEME_ASSETS . 'illust_content_life.svg',
 			'island_4_content_4_title' => '生活文化',
-			'island_4_content_4_href'  => './blog-and-news/'
+			'island_4_content_4_href'  => './echizen-coast/'
 		],
-		// Plan
-		'plan' => [
+		// Model-Plan
+		'model-plan' => [
 			'order'                => 40,
-			'relational_id'        => 15,
+			'relational_id'        => 12,
 			'layout'               => 'md',
-			'more_text'            => 'more >',
+			'more_text'            => 'もっと見る',
 			'items_count'          => -1,
 			'item_aspect_ratio'    => '1',
 		],
-		// News
-		'news' => [
+		// Blog-And-News
+		'blog-and-news' => [
 			'order'                => 50,
 			'relational_id'        => 1,
 			'layout'               => 'md',
-			'more_text'            => 'more >',
+			'more_text'            => 'もっと見る',
 			'items_count'          => 5,
 			'item_aspect_ratio'    => '0.75',
-			'item_more_text'       => 'more >'
+			'item_more_text'       => 'もっと詳しく'
 		],
-		// Access
-		'access' => [
+		// Location
+		'location' => [
 			'order'                => 60,
-			'relational_id'        => 18,
+			'title'                => 'アクセス情報',
 			'map_url'              => 'https://www.google.com/maps/embed'
 		],
 		// Contact
 		'contact'  => [
 			'order'                => 70,
-			'relational_id'        => 19,
+			'title'                => 'お問い合わせ',
 			'contact_form'         => ''
 		],
 
 		// Footer
 		'footer' => [
-			'copyright'            => '2021 福井市越前海岸盛り上げ隊'
+			'copyright'            => '2015-2022 福井市越前海岸盛り上げ隊'
 		],
 
 		// SNS設定

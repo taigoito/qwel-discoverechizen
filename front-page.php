@@ -16,8 +16,12 @@
     $sections = \DE::get_sections();
     foreach ($sections as $section => $type) {
       // 表示の有無をチェック
-      $relational_id = \DE::get_data($section, 'relational_id');
-      if ($relational_id) get_template_part('section-parts/' . $section);
+      $is_shown = true;
+      if ($type == 'page') {
+        $relational_id = \DE::get_data($section, 'relational_id');
+        if (!$relational_id) $is_shown = false;
+      }
+      if ($is_shown) get_template_part('section-parts/' . $section);
     }
     ?>
   </main><!-- #main -->

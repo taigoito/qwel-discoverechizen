@@ -113,32 +113,17 @@ trait Customizer_Settings {
 
 			// 固定ページセクション設定
 			'page' => [
-				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
-				'layout'             => [
-					'type'   => 'select', 
+				'order'      => ['type'  => 'number'],
+				'title'      => ['sanitize'  => ''],
+				'layout'     => [
+					'type'     => 'select', 
 					'choices'  => [
 						'default'  => 'Image top, text bottom',
 						'left'     => 'Image left, text right',
 						'right'    => 'Image right, text left'
 					]
 				],
-				'more_text'          => ['sanitize'  => '']
-			],
-
-			// 個別投稿ページセクション設定
-			'page' => [
-				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
-				'layout'             => [
-					'type'   => 'select', 
-					'choices'  => [
-						'default'  => 'Image top, text bottom',
-						'left'     => 'Image left, text right',
-						'right'    => 'Image right, text left'
-					]
-				],
-				'more_text'          => ['sanitize'  => '']
+				'more_text'  => ['sanitize'  => '']
 			],
 
 			// カテゴリーセクション設定
@@ -146,7 +131,7 @@ trait Customizer_Settings {
 				'order'              => ['type'  => 'number'],
 				'relational_id'      => ['type'  => 'select', 'choices'  => $option_cats],
 				'layout'             => [
-					'type'   => 'select',
+					'type'     => 'select',
 					'choices'  => [
 						'sm'   => 'Small',
 						'md'   => 'Medium',
@@ -164,7 +149,7 @@ trait Customizer_Settings {
 				'order'              => ['type'  => 'number'],
 				'relational_id'      => ['type'  => 'select', 'choices'  => $option_tags],
 				'layout'             => [
-					'type'   => 'select',
+					'type'     => 'select',
 					'choices'  => [
 						'sm'   => 'Small',
 						'md'   => 'Medium',
@@ -180,7 +165,19 @@ trait Customizer_Settings {
 			// 特集セクション設定
 			'feature'  => [
 				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
+				'title'              => ['sanitize'  => ''],
+				'cat1_id'            => ['type'  => 'select', 'choices'  => $option_cats],
+				'cat1_title'         => ['sanitize'  => ''],
+				'cat1_image'         => ['type'  => 'image'],
+				'cat2_id'            => ['type'  => 'select', 'choices'  => $option_cats],
+				'cat2_title'         => ['sanitize'  => ''],
+				'cat2_image'         => ['type'  => 'image'],
+				'cat3_id'            => ['type'  => 'select', 'choices'  => $option_cats],
+				'cat3_title'         => ['sanitize'  => ''],
+				'cat3_image'         => ['type'  => 'image'],
+				'cat4_id'            => ['type'  => 'select', 'choices'  => $option_cats],
+				'cat4_title'         => ['sanitize'  => ''],
+				'cat4_image'         => ['type'  => 'image'],
 				'layout'             => [
 					'type'   => 'select',
 					'choices'  => [
@@ -196,13 +193,13 @@ trait Customizer_Settings {
 			// アバウトセクション設定
 			'about'  => [
 				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
-				'more_text'          => ['sanitize'  => ''],
+				'title'              => ['sanitize'  => '']
 			],
 
-			// コンテンツセクション設定
-			'content' => [
+			// ディスカバーセクション設定
+			'discover' => [
 				'order'                    => ['type'  => 'number'],
+				'title'                    => ['sanitize'  => ''],
 				'island_1_image'           => ['type'  => 'image'],
 				'island_1_content_1_image' => ['type'  => 'image'],
 				'island_1_content_1_title' => [],
@@ -271,16 +268,16 @@ trait Customizer_Settings {
 			],
 
 			// アクセスセクション設定
-			'access' => [
+			'location' => [
 				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
+				'title'              => ['sanitize'  => ''],
 				'map_url'            => []
 			],
 
 			// お問い合わせセクション設定
 			'contact'  => [
 				'order'              => ['type'  => 'number'],
-				'relational_id'      => ['type'  => 'select', 'choices'  => $option_pages],
+				'title'              => ['sanitize'  => ''],
 				'contact_form'       => []
 			],
 

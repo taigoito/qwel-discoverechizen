@@ -43,18 +43,19 @@
         
         /**
          * 関連記事
-         * 特集記事(category: feature)を取得
+         * 特集記事(category: about-us)を取得
          */
         ?>
         <div class="archive">
           <div class="list --lg">
             <ul class="list__inner">
               <?php
-              $wp_obj  = get_queried_object();
-              $post_id = $wp_obj->ID;
-              $term    = get_term_by('slug', 'feature', 'category');
-              $term    = $term->term_id;
-              $posts   = get_posts([
+              $wp_obj    = get_queried_object();
+              $post_id   = $wp_obj->ID;
+              $post_name = $wp_obj->post_name;
+              $term      = get_term_by('slug', $post_name, 'category');
+              $term      = $term->term_id;
+              $posts     = get_posts([
                 'posts_per_page'  => get_option('posts_per_page'),
                 'exclude'         => [$post_id],
                 'category'        => $term
