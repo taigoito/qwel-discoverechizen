@@ -266,7 +266,7 @@
           <section>
             <h2>カフェのご紹介</h2>
             <section>
-              <h3>志野屋</h3>
+              <h3>ヒトモノコトを伝え繋がる商店 しの屋</h3>
               <div class="grid --mb_4 gallery">
                 <div class="grid__inner">
                   <div class="grid__11 --mt_2 --mb_2 gallery__desc">
@@ -283,11 +283,11 @@
                       <tbody>
                         <tr>
                           <th>事業所</th>
-                          <td>志野屋</td>
+                          <td>しの屋</td>
                         </tr>
                         <tr>
                           <th>所在地</th>
-                          <td>福井市鮎川町133-1-6</td>
+                          <td>福井市鮎川町133-1-1</td>
                         </tr>
                         <tr>
                           <th>連絡先</th>
@@ -295,11 +295,11 @@
                         </tr>
                         <tr>
                           <th>URL</th>
-                          <td><a href="https://shinoya004.stores.jp/" target="_blank">https://shinoya004.stores.jp/</a></td>
+                          <td><a href="https://anoh.jp/" target="_blank">https://anoh.jp/</a></td>
                         </tr>
                         <tr>
                           <th>営業期間</th>
-                          <td>通年（土日のみ営業）</td>
+                          <td>通年（土日祝日のみ営業）</td>
                         </tr>
                         <tr>
                           <th>営業時間</th>
@@ -307,7 +307,7 @@
                         </tr>
                         <tr>
                           <th>参考価格</th>
-                          <td>ランチ 1,000円位～</td>
+                          <td>おむすび・スープ 800円位～</td>
                         </tr>
                       </tbody>
                     </table>

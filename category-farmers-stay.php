@@ -79,64 +79,12 @@
                           <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/fujii-fermier_interior.jpg'; ?>">
                         </a>
                       </div>
-                      <!--<div class="grid__2 --mb_2 gallery__item">
-                        <a href="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior01.jpg'; ?>">
-                          <img src="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_interior01.jpg'; ?>">
-                        </a>
-                      </div>-->
                       <div class="grid__2 --mb_2 gallery__item">
                         <a href="<?php echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_service.jpg'; ?>">
                           <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/sm/fujii-fermier_service.jpg'; ?>">
                         </a>
                       </div>
-                      <!--<div class="grid__2 --mb_2 gallery__item">
-                        <a href="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_stf.jpg'; ?>">
-                          <img src="<?php //echo DE_THEME_URI . '/assets/farmers-stay/fujii-fermier_stf.jpg'; ?>">
-                        </a>
-                      </div>-->
                     </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section>
-              <h3>志野ファーム（農家民宿 海人山）</h3>
-              <div class="grid --mb_4 gallery">
-                <div class="grid__inner">
-                  <div class="grid__11 --mt_2 --mb_2 gallery__desc">
-                    <p>(ここにテキスト作成予定)
-                      <br>(ここにテキスト作成予定)
-                      <br>(ここにテキスト作成予定)</p>
-                  </div>
-                  <div class="grid__4 gallery__main">
-                    <img src="<?php echo DE_THEME_URI . '/assets/no-image.jpg'; ?>">
-                  </div>
-                  <div class="grid__6">
-                    <h4>INFORMATION</h4>
-                    <table class="table">
-                      <tbody>
-                        <tr>
-                          <th>事業所</th>
-                          <td>志野ファーム</td>
-                        </tr>
-                        <tr>
-                          <th>所在地</th>
-                          <td>福井市鮎川町133-1-6</td>
-                        </tr>
-                        <tr>
-                          <th>連絡先</th>
-                          <td><a href="tel:070-3630-1920">070-3630-1920</a></td>
-                        </tr>
-                        <tr>
-                          <th>URL</th>
-                          <td><a href="https://shinoya004.stores.jp/" target="_blank">https://shinoya004.stores.jp/</a></td>
-                        </tr>
-                        <tr>
-                          <th>参考価格</th>
-                          <td>(代表的なサービス) 11,000円～</td>
-                        </tr>
-                      </tbody>
-                    </table>
                   </div>
                 </div>
               </div>
