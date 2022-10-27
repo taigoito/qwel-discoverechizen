@@ -11,7 +11,7 @@ trait Base_Settings {
 	protected static $sections = [
 		'feature'        => 'feature',
 		'about'          => 'about',
-		'pickup'         => 'page',
+		'pickup'         => 'post',
 		'discover'       => 'discover', 
 		'model-plan'     => 'category',
 		'blog-and-news'  => 'category',
@@ -63,17 +63,17 @@ trait Base_Settings {
 		'feature'  => [
 			'order'                => 0,
 			'title'       				 => '特集',
-			'cat1_id'              => 12,
 			'cat1_title'           => '隊員おすすめ旅プラン',
+			'cat1_href'            => './feature/model-plan/',
 			'cat1_image'           => '',
-			'cat2_id'              => 14,
 			'cat2_title'           => '『人の駅』プロジェクト',
+			'cat2_href'            => './feature/model-plan/',
 			'cat2_image'           => '',
-			'cat3_id'              => 15,
-			'cat3_title'           => 'オンライン交流会',
+			'cat3_title'           => 'つるつるいっぱい浜ラジオ',
+			'cat3_href'            => './podcast_start/',
 			'cat3_image'           => '',
-			'cat4_id'              => 16,
 			'cat4_title'           => '越前海岸の暮らしを見つける旅',
+			'cat4_href'            => './feature/school-excusion/',
 			'cat4_image'           => '',
 			'layout'               => 'md',
 			'items_count'          => -1,
@@ -150,7 +150,7 @@ trait Base_Settings {
 			'order'                => 40,
 			'relational_id'        => 12,
 			'layout'               => 'md',
-			'more_text'            => 'もっと見る',
+			'more_text'            => '> 隊員おすすめ旅プラン をもっと見る',
 			'items_count'          => -1,
 			'item_aspect_ratio'    => '1',
 		],
@@ -159,10 +159,10 @@ trait Base_Settings {
 			'order'                => 50,
 			'relational_id'        => 1,
 			'layout'               => 'md',
-			'more_text'            => 'もっと見る',
+			'more_text'            => '> ブログ&ニュース をもっと見る',
 			'items_count'          => 5,
 			'item_aspect_ratio'    => '0.75',
-			'item_more_text'       => 'もっと詳しく'
+			'item_more_text'       => '> もっと詳しく'
 		],
 		// Location
 		'location' => [

@@ -111,11 +111,11 @@ trait Customizer_Settings {
 			// ヒーローセクション設定
 			'hero' => [],
 
-			// 固定ページセクション設定
-			'page' => [
-				'order'      => ['type'  => 'number'],
-				'title'      => ['sanitize'  => ''],
-				'layout'     => [
+			// 投稿ページセクション設定
+			'post' => [
+				'order'              => ['type'  => 'number'],
+				'relational_id'      => ['type'  => 'select', 'choices'  => $option_posts],
+				'layout'             => [
 					'type'     => 'select', 
 					'choices'  => [
 						'default'  => 'Image top, text bottom',
@@ -123,7 +123,7 @@ trait Customizer_Settings {
 						'right'    => 'Image right, text left'
 					]
 				],
-				'more_text'  => ['sanitize'  => '']
+				'more_text'          => ['sanitize'  => '']
 			],
 
 			// カテゴリーセクション設定
@@ -166,17 +166,17 @@ trait Customizer_Settings {
 			'feature'  => [
 				'order'              => ['type'  => 'number'],
 				'title'              => ['sanitize'  => ''],
-				'cat1_id'            => ['type'  => 'select', 'choices'  => $option_cats],
 				'cat1_title'         => ['sanitize'  => ''],
+				'cat1_href'          => ['sanitize'  => ''],
 				'cat1_image'         => ['type'  => 'image'],
-				'cat2_id'            => ['type'  => 'select', 'choices'  => $option_cats],
 				'cat2_title'         => ['sanitize'  => ''],
+				'cat2_href'          => ['sanitize'  => ''],
 				'cat2_image'         => ['type'  => 'image'],
-				'cat3_id'            => ['type'  => 'select', 'choices'  => $option_cats],
 				'cat3_title'         => ['sanitize'  => ''],
+				'cat3_href'          => ['sanitize'  => ''],
 				'cat3_image'         => ['type'  => 'image'],
-				'cat4_id'            => ['type'  => 'select', 'choices'  => $option_cats],
 				'cat4_title'         => ['sanitize'  => ''],
+				'cat4_href'          => ['sanitize'  => ''],
 				'cat4_image'         => ['type'  => 'image'],
 				'layout'             => [
 					'type'   => 'select',

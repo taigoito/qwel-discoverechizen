@@ -8,7 +8,7 @@
     $layout_class      = $layout === 'right' ? ' --right' : ($layout === 'left' ? ' --left' : '');
     setup_postdata($post);
     ?>
-    <section id="<?php echo $section_id; ?>" class="<?php echo $section_class; ?>">
+    <section id="<?php echo $section_id; ?>" class="section --pickup">
       <div class="section__headingContainer">
         <h3 class="section__heading">
           <span class="section__headingSpan1" data-comfort="1"><?php echo my_format_slug($section_id); ?></span>

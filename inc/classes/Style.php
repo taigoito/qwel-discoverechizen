@@ -36,11 +36,11 @@ trait Style {
       '--plan-aspect-ratio'    => self::get_data('plan', 'item_aspect_ratio'),
       '--news-aspect-ratio'    => self::get_data('news', 'item_aspect_ratio'),
       // More文字列
-      '--feature-more-text'    => '"' . self::get_data('feature', 'more_text') . '"',
       '--about-more-text'      => '"' . self::get_data('about', 'more_text') . '"',
-      '--plan-more-text'       => '"' . self::get_data('plan', 'more_text') . '"',
-      '--news-more-text'       => '"' . self::get_data('news', 'more_text') . '"',
-      '--news-item-more-text'  => '"' . self::get_data('news', 'item_more_text') . '"',
+      '--post-more-text'      => '"' . self::get_data('pickup', 'more_text') . '"',
+      '--model-plan-more-text'       => '"' . self::get_data('model-plan', 'more_text') . '"',
+      '--blog-and-news-more-text'       => '"' . self::get_data('blog-and-news', 'more_text') . '"',
+      '--blog-and-news-item-more-text'  => '"' . self::get_data('blog-and-news', 'item_more_text') . '"',
     ];
   }
   

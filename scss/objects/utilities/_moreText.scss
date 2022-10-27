@@ -7,27 +7,27 @@
     content: var(--hero-more-text, $sectionMoreText);
   }
 
-  &.--feature .section__moreText::after {
-    content: var(--feature-more-text, $sectionMoreText);
-  }
-
   &.--about .post__moreText::after {
     content: var(--about-more-text, $sectionMoreText);
   }
 
+  &.--pickup .post__moreText::after {
+    content: var(--post-more-text, $sectionMoreText);
+  }
+
   &.--model-plan .section__moreText::after {
-    content: var(--plan-more-text, $sectionMoreText);
+    content: var(--model-plan-more-text, $sectionMoreText);
   }
 
   &.--blog-and-news .section__moreText::after {
-    content: var(--news-more-text, $sectionMoreText);
+    content: var(--blog-and-news-more-text, $sectionMoreText);
   }
 
   &.--blog-and-news .post__moreText::after {
-    content: var(--news-item-more-text, $cardsItemMoreText);
+    content: var(--blog-and-news-item-more-text, $cardsItemMoreText);
   }
 }
 
 .archive .post__moreText::after {
-  content: var(--news-item-more-text, $listItemMoreText);
+  content: var(--blog-and-news-item-more-text, $listItemMoreText);
 }

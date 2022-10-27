@@ -3863,24 +3863,24 @@ button, [type=button], [type=reset], [type=submit] {
 .section.--hero .post__moreText::after {
   content: var(--hero-more-text, "more >");
 }
-.section.--feature .section__moreText::after {
-  content: var(--feature-more-text, "more >");
-}
 .section.--about .post__moreText::after {
   content: var(--about-more-text, "more >");
 }
+.section.--pickup .post__moreText::after {
+  content: var(--post-more-text, "more >");
+}
 .section.--model-plan .section__moreText::after {
-  content: var(--plan-more-text, "more >");
+  content: var(--model-plan-more-text, "more >");
 }
 .section.--blog-and-news .section__moreText::after {
-  content: var(--news-more-text, "more >");
+  content: var(--blog-and-news-more-text, "more >");
 }
 .section.--blog-and-news .post__moreText::after {
-  content: var(--news-item-more-text, "more >");
+  content: var(--blog-and-news-item-more-text, "more >");
 }
 
 .archive .post__moreText::after {
-  content: var(--news-item-more-text, "more >");
+  content: var(--blog-and-news-item-more-text, "more >");
 }
 
 /**

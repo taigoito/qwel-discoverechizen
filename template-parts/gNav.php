@@ -7,11 +7,11 @@
           // セクション毎の処理
           $sections = \DE::get_sections();
           foreach ($sections as $section => $type) {
-            if ($type === 'page' || $type === 'category') {
+            if ($type === 'post' || $type === 'category') {
               $relational_id = \DE::get_data($section, 'relational_id');
               $relational_id = intval($relational_id);
               if ($relational_id) {
-                if ($type === 'page') {
+                if ($type === 'post') {
                   $post = get_post($relational_id);
                   $name = $post->post_title;
                   $slug = $post->post_name;

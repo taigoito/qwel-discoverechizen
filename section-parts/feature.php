@@ -38,7 +38,7 @@
                      * .post__heading
                      */
                     ?>
-                    <h4 class="post__heading"><a href="<?php echo get_category_link(\DE::get_data($section, 'cat' . $i .'_id')); ?>"><?php echo \DE::get_data('feature', 'cat' . $i . '_title'); ?></a></h4>
+                    <h4 class="post__heading"><a href="<?php echo \DE::get_data('feature', 'cat' . $i . '_href'); ?>"><?php echo \DE::get_data('feature', 'cat' . $i . '_title'); ?></a></h4>
                   </div>
                 </div>
               </li>
@@ -49,8 +49,5 @@
           <a class="slider__prev" href="#"><span data-icon="ei-chevron-left" data-size="l"></span></a>
           <a class="slider__next" href="#"><span data-icon="ei-chevron-right" data-size="l"></span></a>
         </div><!-- .slider -->
-      </div>
-      <div class="section__moreWrap">
-        <a class="section__more" href="<?php echo get_category_link($term_id); ?>"><span class="section__moreText"></span></a>
       </div>
     </section><!-- #<?php echo $section_id; ?> -->

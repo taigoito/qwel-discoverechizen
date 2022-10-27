@@ -17,7 +17,7 @@
     foreach ($sections as $section => $type) {
       // 表示の有無をチェック
       $is_shown = true;
-      if ($type == 'page') {
+      if ($type == 'post') {
         $relational_id = \DE::get_data($section, 'relational_id');
         if (!$relational_id) $is_shown = false;
       }
