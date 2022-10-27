@@ -29,11 +29,11 @@
     a {
       display: block;
       // サイドバー内ではボーダー
-      .sidebar & {
+      /*.sidebar & {
         padding-top: .625rem;
         padding-bottom: .625rem;
         border-bottom: 1px solid themeColor("lighter");
-      }
+      }*/
       // フッター内では行を狭く
       .footer & {
         padding-top: .375rem;
@@ -51,7 +51,7 @@
       }
     }
 
-    .sidebar & {
+    /*.sidebar & {
       &:first-child a {
         border-top: 1px solid themeColor("lighter");
       }
@@ -59,7 +59,7 @@
       li:first-child a {
         border-top: 0;
       }
-    }
+    }*/
   }
 
   // ウィジェット > テーブル

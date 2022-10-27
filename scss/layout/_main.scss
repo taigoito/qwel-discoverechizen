@@ -11,6 +11,6 @@
 
   &__container {
     @include container();
-    @include row(space-between, flex-start);
+    @include row(space-around, flex-start);
   }
 }

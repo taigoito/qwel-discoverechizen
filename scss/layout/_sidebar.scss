@@ -4,9 +4,11 @@
 
 .sidebar {
   position: relative;
+  display: none;
   width: 100%;
 
   @media (min-width: breakpoint("lg")) {
+    display: block;
     flex: 0 0 map-get($cardWidths, "sm");
     max-width: map-get($cardWidths, "sm");
   }

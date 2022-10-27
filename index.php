@@ -39,13 +39,6 @@
           </div>
           <?php get_template_part('template-parts/pagination'); ?><!-- #pagination-->
         </div><!-- .archive -->
-        <?php
-        /**
-         * Sidebar
-         * ウィジェットエリア (個別投稿、アーカイブページのみ)
-         */
-        get_sidebar();
-         ?>
       </div>
     </div>
   </main><!-- #main -->

@@ -295,7 +295,7 @@ button, [type=button], [type=reset], [type=submit] {
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 }
 @media (min-width: 600px) {
@@ -328,10 +328,12 @@ button, [type=button], [type=reset], [type=submit] {
  */
 .sidebar {
   position: relative;
+  display: none;
   width: 100%;
 }
 @media (min-width: 1200px) {
   .sidebar {
+    display: block;
     flex: 0 0 calc(var(--container-base, 18rem) * 0.64);
     max-width: calc(var(--container-base, 18rem) * 0.64);
   }
@@ -1756,14 +1758,23 @@ button, [type=button], [type=reset], [type=submit] {
   line-height: 2.025;
   letter-spacing: 0.04rem;
   text-transform: capitalize;
+  /*.sidebar & {
+    &:first-child a {
+      border-top: 1px solid themeColor("lighter");
+    }
+    // サブメニューのボーダーの重なりを除去
+    li:first-child a {
+      border-top: 0;
+    }
+  }*/
 }
 .widget li a {
   display: block;
-}
-.sidebar .widget li a {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  border-bottom: 1px solid hsl(0deg, 0%, 85%);
+  /*.sidebar & {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+    border-bottom: 1px solid themeColor("lighter");
+  }*/
 }
 .footer .widget li a {
   padding-top: 0.375rem;
@@ -1774,12 +1785,6 @@ button, [type=button], [type=reset], [type=submit] {
 }
 .widget li li li a {
   padding-left: 1.5rem;
-}
-.sidebar .widget li:first-child a {
-  border-top: 1px solid hsl(0deg, 0%, 85%);
-}
-.sidebar .widget li li:first-child a {
-  border-top: 0;
 }
 .widget table {
   width: 100%;
