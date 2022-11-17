@@ -88,6 +88,8 @@ trait Base_Settings {
 		'pickup' => [
 			'order'                => 20,
 			'relational_id'        => 0,
+			'title'                => '注目のセクション',
+			'slug'                 => 'pickup',
 			'layout'               => 'left',
 			'more_text'            => 'もっと詳しく'
 		],

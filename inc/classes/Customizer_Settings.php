@@ -115,6 +115,8 @@ trait Customizer_Settings {
 			'post' => [
 				'order'              => ['type'  => 'number'],
 				'relational_id'      => ['type'  => 'select', 'choices'  => $option_posts],
+				'title'              => ['sanitize'  => ''],
+				'slug'               => ['sanitize'  => ''],
 				'layout'             => [
 					'type'     => 'select', 
 					'choices'  => [

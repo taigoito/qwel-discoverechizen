@@ -13,8 +13,8 @@
               if ($relational_id) {
                 if ($type === 'post') {
                   $post = get_post($relational_id);
-                  $name = $post->post_title;
-                  $slug = $post->post_name;
+                  $name = \DE::get_data($section, 'title');
+                  $slug = 'pickup';
                   $href = home_url('/#' . $slug);
                 } else if ($type === 'category') {
                   $category = get_category($relational_id);
