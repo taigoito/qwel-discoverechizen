@@ -768,7 +768,7 @@ button, [type=button], [type=reset], [type=submit] {
   }
   .contentMap__island:nth-child(3) {
     order: 4;
-    margin-top: 3rem;
+    margin-left: 6rem;
   }
   .contentMap__island:nth-child(4) {
     order: 3;
@@ -789,7 +789,7 @@ button, [type=button], [type=reset], [type=submit] {
     margin-top: 10.8rem;
   }
   .contentMap__island:nth-child(3) {
-    margin-top: 3.6rem;
+    margin-left: 10.8rem;
   }
   .contentMap__island:nth-child(4) {
     margin-bottom: 3.6rem;

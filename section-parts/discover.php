@@ -12,21 +12,23 @@
       <div class="section__inner">
         <div id="contentMap" class="contentMap">
           <?php for ($i = 1; $i <= 4; $i++) { ?>
-          <div class="contentMap__island">
-            <img class="contentMap__islandImage" src="<?php echo DE::get_data('discover', 'island_' . $i . '_image'); ?>">
-            <div class="contentMap__islandInner">
-            <?php for ($j = 1; $j <= 4; $j++) { ?>
-              <?php if (DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_image')) { ?>
-                <a class="contentMap__content" href="<?php echo DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_href'); ?>">
-                  <img class="contentMap__image" src="<?php echo DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_image'); ?>">
-                  <span class="contentMap__text"><?php echo DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_title'); ?></span>
-                </a>
-              <?php } else { ?>
-                <span class="contentMap__blankcontent"></span>
+            <?php if ($i !== 3) { //tmp ?>
+            <div class="contentMap__island">
+              <img class="contentMap__islandImage" src="<?php echo DE::get_data('discover', 'island_' . $i . '_image'); ?>">
+              <div class="contentMap__islandInner">
+              <?php for ($j = 1; $j <= 4; $j++) { ?>
+                <?php if (DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_image')) { ?>
+                  <a class="contentMap__content" href="<?php echo DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_href'); ?>">
+                    <img class="contentMap__image" src="<?php echo DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_image'); ?>">
+                    <span class="contentMap__text"><?php echo DE::get_data('discover', 'island_' . $i . '_content_' . $j . '_title'); ?></span>
+                  </a>
+                <?php } else { ?>
+                  <span class="contentMap__blankcontent"></span>
+                <?php } ?>
               <?php } ?>
-            <?php } ?>
+              </div>
             </div>
-          </div>
+            <?php } //tmp ?>
           <?php } ?>
         </div>
       </div>

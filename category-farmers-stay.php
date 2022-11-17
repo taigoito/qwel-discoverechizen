@@ -199,11 +199,11 @@
               <h3>農家民宿いちろべえ</h3>
               <div class="grid --mb_4 gallery">
                 <div class="grid__inner">
-                  <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                  <!--<div class="grid__11 --mt_2 --mb_2 gallery__desc">
                     <p>(ここにテキスト作成予定)
                       <br>(ここにテキスト作成予定)
                       <br>(ここにテキスト作成予定)</p>
-                  </div>
+                  </div>-->
                   <div class="grid__4 gallery__main">
                     <img src="<?php echo DE_THEME_URI . '/assets/farmers-stay/farmers-stay_ichirobe.jpg'; ?>">
                   </div>

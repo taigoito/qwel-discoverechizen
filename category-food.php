@@ -269,11 +269,11 @@
               <h3>ヒトモノコトを伝え繋がる商店 しの屋</h3>
               <div class="grid --mb_4 gallery">
                 <div class="grid__inner">
-                  <div class="grid__11 --mt_2 --mb_2 gallery__desc">
+                  <!--<div class="grid__11 --mt_2 --mb_2 gallery__desc">
                     <p>(ここにテキスト作成予定)
                       <br>(ここにテキスト作成予定)
                       <br>(ここにテキスト作成予定)</p>
-                  </div>
+                  </div>-->
                   <div class="grid__4 gallery__main">
                     <img src="<?php echo DE_THEME_URI . '/assets/food/shinoya_app.jpg'; ?>">
                   </div>
@@ -516,7 +516,7 @@
           </section>
           <section>
             <h2>テイクアウト施設のご紹介</h2>
-            <section>
+            <!--<section>
               <h3>サメワワワ</h3>
               <div class="grid --mb_4 gallery">
                 <div class="grid__inner">
@@ -566,8 +566,8 @@
                   </div>
                 </div>
               </div>
-            </section>
-            <section>
+            </section>-->
+            <!--<section>
               <h3>バナナボーイ</h3>
               <div class="grid --mb_4 gallery">
                 <div class="grid__inner">
@@ -612,7 +612,7 @@
                   </div>
                 </div>
               </div>
-            </section>
+            </section>-->
             <section>
               <h3>ごーる堂</h3>
               <div class="grid --mb_4 gallery">
