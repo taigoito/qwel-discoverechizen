@@ -233,6 +233,22 @@ button, [type=button], [type=reset], [type=submit] {
 .btn.--secondary:hover {
   opacity: 1;
 }
+.btn.--tertiary {
+  background-color: var(--tertiary-color, #ff6900);
+  color: hsl(0deg, 0%, 100%);
+  opacity: 0.85;
+}
+.btn.--tertiary:hover {
+  opacity: 1;
+}
+.btn.--quaternary {
+  background-color: var(--quaternary-color, #ff69b4);
+  color: hsl(0deg, 0%, 15%);
+  opacity: 0.85;
+}
+.btn.--quaternary:hover {
+  opacity: 1;
+}
 .btn.--lightest {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(0deg, 0%, 15%);

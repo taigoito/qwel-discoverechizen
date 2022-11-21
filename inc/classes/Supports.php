@@ -75,6 +75,16 @@ trait Supports {
         'color'  => self::get_data('style', 'secondary_color') 
       ],
       [
+        'name'   => 'Tertiary',
+        'slug'   => 'tertiary' ,
+        'color'  => self::get_data('style', 'tertiary_color')
+      ],
+      [
+        'name'   => 'Quaternary',
+        'slug'   => 'quaternary',
+        'color'  => self::get_data('style', 'quaternary_color') 
+      ],
+      [
         'name'   => 'Lightest',
         'slug'   => 'lightest' ,
         'color'  => '#ffffff'
