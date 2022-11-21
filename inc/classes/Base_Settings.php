@@ -69,7 +69,7 @@ trait Base_Settings {
 			'cat1_href'            => './about-us/',
 			'cat1_image'           => '',
 			'cat2_title'           => 'つるつるいっぱい浜ラジオ',
-			'cat2_href'            => './podcast_start/',
+			'cat2_href'            => './blog-and-news/podcast_start/',
 			'cat2_image'           => '',
 			'cat3_title'           => '『人の駅』プロジェクト',
 			'cat3_href'            => './feature/people-platform/',

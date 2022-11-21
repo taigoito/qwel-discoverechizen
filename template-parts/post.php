@@ -25,7 +25,7 @@
                         /**
                          * .post__tags
                          */
-                        get_template_part('template-parts/post/tags');
+                        //get_template_part('template-parts/post/tags');
                         
                         /**
                          * .post__excerpt
