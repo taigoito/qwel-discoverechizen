@@ -42,7 +42,12 @@
              * .post__content
              */
             get_template_part('template-parts/post/content');
-            ?>
+            
+            /**
+             * Pagenation
+             */
+            if (is_single()) get_template_part('template-parts/pagination');
+            ?><!-- #pagination-->
           </article><!-- .post -->
         <?php
           }
