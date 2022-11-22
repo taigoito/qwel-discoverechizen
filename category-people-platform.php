@@ -46,6 +46,16 @@
                 <div class="grid__6 --mb_3 --order_1">
                   <img src="<?php echo DE_THEME_URI . '/assets/people-platform/campfire.jpg'; ?>">
                 </div>
+                <div class="grid__12 --mb_3 --order_3">
+                  <h3>隊員メッセージ</h3>
+                  <?php
+                  $reuse_block = get_post(4004);
+                  $reuse_block_content = apply_filters('the_content', $reuse_block->post_content);
+                  echo $reuse_block_content;
+                  ?>
+                </div>
+              </div>
+            </div>
           </section>
         </article>
 
