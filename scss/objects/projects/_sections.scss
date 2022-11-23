@@ -26,11 +26,11 @@
 }
 
 %__heading {
+  @extend %__title;
   position: relative;
   width: 21rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: $h2FontSize;
   text-align: left;
   text-transform: capitalize;
 

@@ -2,8 +2,17 @@
  * Layout - Title Area
  */
 
+%__title {
+  font-family: $titleFontFamily;
+  font-size: $h2FontSize;
+}
+
 .titleArea {
   padding-top: 6rem;
   padding-bottom: 0;
   background-color: #ffffff;
+
+  h1, h2, h3, h4, h5, h6 {
+    @extend %__title;
+  }
 }
