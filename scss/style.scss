@@ -1,7 +1,7 @@
 /*
 Theme Name: Discover Echiven
 Description: This is a theme for Discover Echizen.
-Version: 2.6
+Version: 2.6.1
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -17,6 +17,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "foundation/settings/typography";
 @import "foundation/mixins/background";
 @import "foundation/mixins/button";
+@import "foundation/mixins/embed";
 @import "foundation/mixins/form";
 @import "foundation/mixins/grid";
 @import "foundation/mixins/table";

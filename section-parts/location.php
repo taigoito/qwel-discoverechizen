@@ -33,6 +33,10 @@
         </div>
         <div class="section__map">
           <iframe src="<?php echo $url; ?>" width="960" height="480" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+          <div class="section__mapCover">
+            <p class="section__mapInfo">クリックするとマップを拡大/縮小できるようになります。
+              <br>その後、左上のアイコンからメニューを呼び出せます。</p>
+          </div>
         </div>
       </div>
     </section><!-- #<?php echo $section_id; ?> -->

@@ -50,6 +50,9 @@ sections.forEach((elem, i) => {
   new Wave(elem);
 });
 
+import Map from './map.js';
+new Map();
+
 import Gallery from './gallery.js';
 const gallery = document.querySelectorAll('.gallery');
 gallery.forEach((elem) => {

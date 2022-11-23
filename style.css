@@ -2,7 +2,7 @@
 /*
 Theme Name: Discover Echiven
 Description: This is a theme for Discover Echizen.
-Version: 2.6
+Version: 2.6.1
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -632,6 +632,11 @@ button, [type=button], [type=reset], [type=submit] {
 .section.--hero .section__content {
   text-align: center;
 }
+.section.--hero .section__content.--fade {
+  opacity: 0;
+  -webkit-animation: fade 30s ease 0s infinite normal;
+          animation: fade 30s ease 0s infinite normal;
+}
 .section.--hero .hero__logo {
   width: 18rem;
 }
@@ -679,6 +684,22 @@ button, [type=button], [type=reset], [type=submit] {
   left: 0;
   right: 0;
   width: 100%;
+}
+.section.--location .section__mapCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  transition: opacity linear 0.25s;
+}
+.section.--location .section__mapCover:not(.active) {
+  opacity: 0;
 }
 .section.--contact .section__content {
   margin-top: 0;
@@ -728,6 +749,35 @@ button, [type=button], [type=reset], [type=submit] {
   text-decoration: none;
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
 /**
  * Project - Content Map
  */
