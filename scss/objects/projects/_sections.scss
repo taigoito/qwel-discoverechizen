@@ -224,6 +224,7 @@
   &.--location {
     .section__map {
       @include embed-responsive();
+      margin-bottom: 1.5rem;
     }
     
     .section__mapCover {

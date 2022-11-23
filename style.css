@@ -681,6 +681,7 @@ button, [type=button], [type=reset], [type=submit] {
   position: relative;
   width: 100%;
   height: 480px;
+  margin-bottom: 1.5rem;
 }
 .section.--location .section__map iframe {
   position: absolute;

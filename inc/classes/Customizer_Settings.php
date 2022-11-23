@@ -273,7 +273,8 @@ trait Customizer_Settings {
 			'location' => [
 				'order'              => ['type'  => 'number'],
 				'title'              => ['sanitize'  => ''],
-				'map_url'            => []
+				'map_url'            => [],
+				'pdf_url'            => ['sanitize'  => '']
 			],
 
 			// お問い合わせセクション設定

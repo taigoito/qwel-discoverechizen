@@ -172,7 +172,8 @@ trait Base_Settings {
 		'location' => [
 			'order'                => 60,
 			'title'                => 'アクセス情報',
-			'map_url'              => 'https://www.google.com/maps/embed'
+			'map_url'              => 'https://www.google.com/maps/embed',
+			'pdf_url'              => DE_THEME_ASSETS . 'map2021.pdf'
 		],
 		// Contact
 		'contact'  => [

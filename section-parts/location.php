@@ -38,5 +38,9 @@
               <br>その後、左上のアイコンからメニューを呼び出せます。</p>
           </div>
         </div>
+        <div class="section__moreWrap">
+        <a class="section__more" href="<?php echo DE::get_data('location', 'pdf_url'); ?>">&gt; 最新のトレジャーマップをPDFで見る</a>
       </div>
+      </div>
+
     </section><!-- #<?php echo $section_id; ?> -->
