@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace DiscoverEchizen_Theme;
 
 trait Shortcodes {
   // ショートコード登録
@@ -15,7 +15,7 @@ trait Shortcodes {
     $atts = shortcode_atts(
       [
         'year' => '2022',
-        'text' => 'Qwel'
+        'text' => '福井市越前海岸盛り上げ隊'
       ],
       $atts
     );

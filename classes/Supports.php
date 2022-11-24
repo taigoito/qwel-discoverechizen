@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Theme;
+namespace DiscoverEchizen_Theme;
 
 trait Supports {
   // テーマサポート機能
