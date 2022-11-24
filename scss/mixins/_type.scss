@@ -22,12 +22,12 @@
 // リンクの設定を適用
 @mixin link() {
   &, &:active {
-    color: var(--wp--preset--color--medium-dark);
+    color: var(--wp--preset--color--primary);
     text-decoration: none;
   }
   
   &:hover, &:focus {
-    color: var(--wp--preset--color--primary);
-    text-decoration: underline dotted;
+    color: var(--wp--preset--color--primary-dark);
+    text-decoration: underline;
   }
 }

@@ -25,24 +25,29 @@
 					"color": "#cccccc"
 				},
 				{
+					"slug": "primary-dark",
+					"name": "Primary Dark",
+					"color": "#18aada"
+				},
+				{
 					"slug": "primary",
 					"name": "Primary",
-					"color": "#3399cc"
+					"color": "#37bef0"
 				},
 				{
 					"slug": "primary-light",
 					"name": "Primary Light",
-					"color": "#add6eb"
+					"color": "#d1f0fc"
 				},
 				{
 					"slug": "secondary",
 					"name": "Secondary",
-					"color": "#cc334b"
+					"color": "#9bcb6b"
 				},
 				{
-					"slug": "secondary-light",
-					"name": "Secondary Light",
-					"color": "#ebadb7"
+					"slug": "tertiary",
+					"name": "Tertiary",
+					"color": "#ff69b4"
 				}
 			]
 		},
@@ -61,17 +66,12 @@
 				{
 					"slug": "sans-serif",
 					"name": "Sans Serif",
-					"fontFamily": "\"Yu Gothic\", sans-serif"
+					"fontFamily": "\"Sawarabi Gothic\", sans-serif"
 				},
 				{
-					"slug": "serif",
-					"name": "Serif",
-					"fontFamily": "\"Yu Mincho\", serif"
-				},
-				{
-					"slug": "system-font",
-					"name": "System Font",
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif"
+					"slug": "title",
+					"name": "Title",
+					"fontFamily": "\"Hiragino UD Sans W6 JIS2004\", sans-serif"
 				}
 			],
 			"fontSizes": [
@@ -145,16 +145,16 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
-					"fontWeight": "400",
+					"fontFamily": "var(--wp--preset--font-family--title)",
+					"fontWeight": "600",
 					"fontSize": "var(--wp--custom--font-size--x-large)",
 					"lineHeight": "var(--wp--custom--line-height--x-small)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
-					"fontWeight": "400",
+					"fontFamily": "var(--wp--preset--font-family--title)",
+					"fontWeight": "600",
 					"fontSize": "var(--wp--custom--font-size--large)",
 					"lineHeight": "var(--wp--custom--line-height--x-small)"
 				}
@@ -195,7 +195,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--medium-dark)"
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
 		}
