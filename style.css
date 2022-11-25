@@ -95,6 +95,7 @@ button, [type=button], [type=reset], [type=submit] {
   text-align: right;
 }
 .wp-block-image {
+  margin: 1.5rem 0;
   overflow: hidden;
 }
 .wp-block-query-pagination-numbers .page-numbers {
@@ -157,6 +158,13 @@ button, [type=button], [type=reset], [type=submit] {
   font-size: var(--wp--custom--font-size--small);
   line-height: var(--wp--custom--line-height--large);
   letter-spacing: 0.04rem;
+}
+.wp-block-search__label {
+  display: none;
+}
+.wp-block-categories, .wp-block-archives {
+  list-style: none;
+  padding: 0 0.5rem;
 }
 
 /**
@@ -280,8 +288,8 @@ button, [type=button], [type=reset], [type=submit] {
 /**
  * Layout - Footer
  */
-.footer__inner {
-  text-align: center;
+.footer__logo {
+  filter: invert(1) grayscale(1) brightness(4);
 }
 
 /**

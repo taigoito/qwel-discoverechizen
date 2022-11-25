@@ -3,7 +3,7 @@
  */
 
 .footer {
-  &__inner {
-    text-align: center;
+  &__logo {
+    @include white();
   }
 }

@@ -52,7 +52,7 @@ trait Shortcodes {
     // デフォルト値
     $atts = shortcode_atts(
       [
-        'year' => '2022',
+        'year' => '2015',
         'text' => '福井市越前海岸盛り上げ隊'
       ],
       $atts

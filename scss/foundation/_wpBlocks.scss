@@ -40,6 +40,7 @@
   }
 
   &-image {
+    margin: 1.5rem 0;
     overflow: hidden;
   }
 
@@ -67,5 +68,17 @@
 
   &-table {
     @include table();
+  }
+
+  &-search {
+    &__label {
+      display: none;
+    }
+  }
+
+  &-categories,
+  &-archives {
+    list-style: none;
+    padding: 0 0.5rem;
   }
 }

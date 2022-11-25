@@ -1,0 +1,5 @@
+// Image
+
+@mixin white() {
+  filter: invert(1) grayscale(1) brightness(4);
+}
