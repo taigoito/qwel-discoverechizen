@@ -1,0 +1,17 @@
+/**
+ * Layout - Main
+ */
+
+.main {
+  &__titleArea {
+    @extend %__titleArea;
+  }
+
+  &__title {
+    @extend %__title;
+  }
+
+  &__titleText {
+    @extend %__titleText;
+  }
+}
