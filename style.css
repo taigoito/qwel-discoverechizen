@@ -169,17 +169,24 @@ button, [type=button], [type=reset], [type=submit] {
 }
 
 /**
+ * Layout - Header
+ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/**
  * Layout - G Nav
  */
-@media (max-width: 899px) {
-  .gNav__primaryMenu {
-    display: none !important;
-  }
+.gNav__primaryMenu {
+  display: none !important;
 }
-@media (max-width: 899px) {
-  .gNav__socialMenu {
-    display: none !important;
-  }
+.gNav__socialMenu {
+  display: none !important;
 }
 
 /**
@@ -278,6 +285,102 @@ button, [type=button], [type=reset], [type=submit] {
   color: var(--wp--preset--color--dark);
 }
 
+/**
+ * Project - Hero
+ */
+.hero__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 480px;
+  background-color: transparent;
+}
+.hero__content {
+  text-align: center;
+}
+.hero__content.--fade {
+  opacity: 0;
+}
+.hero__logo {
+  width: 18rem;
+}
+.hero__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background-color: var(--wp--preset--color--primary-dark);
+}
+.hero__coverImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/img_default.jpg");
+  background-position: center center;
+  background-size: cover;
+  transition: 1s linear opacity;
+}
+.hero__coverImage.--num_1 {
+  background-image: url("./assets/main00.jpg");
+}
+.hero__coverImage.--num_2 {
+  background-image: url("./assets/main01.jpg");
+}
+.hero__coverImage.--num_3 {
+  background-image: url("./assets/main02.jpg");
+}
+.hero__coverImage.--num_4 {
+  background-image: url("./assets/main03.jpg");
+}
+.hero__coverImage.--num_5 {
+  background-image: url("./assets/main04.jpg");
+}
+.hero__coverImage.--num_6 {
+  background-image: url("./assets/main05.jpg");
+}
+.--loaded .hero__coverImage {
+  opacity: 1;
+}
+.--loaded .hero__coverImage.--fade {
+  opacity: 0;
+  transition: none;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
 /**
  * Utility - Flex
  */

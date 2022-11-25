@@ -202,6 +202,11 @@
 	},
 	"templateParts": [
 		{
+			"name": "hero",
+			"title": "Hero",
+			"area": "header"
+		},
+		{
 			"name": "header",
 			"title": "Header",
 			"area": "header"
@@ -209,10 +214,6 @@
 		{
 			"name": "g-nav",
 			"title": "G Nav"
-		},
-		{
-			"name": "section-hero",
-			"title": "Section Hero"
 		},
 		{
 			"name": "section-about",

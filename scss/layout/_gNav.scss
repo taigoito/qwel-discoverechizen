@@ -4,14 +4,14 @@
 
 .gNav {
   &__primaryMenu {
-    @media (max-width: breakpoint() - 1) {
+    //@media (max-width: breakpoint() - 1) {
       display: none !important;
-    }
+    //}
   }
 
   &__socialMenu {
-    @media (max-width: breakpoint() - 1) {
+    //@media (max-width: breakpoint() - 1) {
       display: none !important;
-    }
+    //}
   }
 }
