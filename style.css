@@ -761,3 +761,22 @@ button, [type=button], [type=reset], [type=submit] {
     text-align: justify;
   }
 }
+
+/**
+ * Utility - visibility
+ */
+@media (max-width: 599px) {
+  .--visible_sm {
+    display: none !important;
+  }
+}
+@media (max-width: 899px) {
+  .--visible_md {
+    display: none !important;
+  }
+}
+@media (max-width: 1199px) {
+  .--visible_lg {
+    display: none !important;
+  }
+}

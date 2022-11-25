@@ -1,0 +1,13 @@
+/**
+ * Utility - visibility
+ */
+
+ .--visible {
+  @each $infix, $breakpoint in $breakpoints {
+    &_#{$infix} {
+      @media (max-width: $breakpoint - 1) {
+        display: none !important;
+      }
+    }
+  }
+}
