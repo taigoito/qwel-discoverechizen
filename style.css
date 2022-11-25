@@ -274,6 +274,10 @@ button, [type=button], [type=reset], [type=submit] {
 /**
  * Layout - Main
  */
+.main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 /**
  * Layout - Sidebar
  */
