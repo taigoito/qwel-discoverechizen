@@ -1,0 +1,24 @@
+/**
+ * Project - Section
+ */
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__titleArea {
+    @extend %__titleArea;
+  }
+
+  &__title {
+    @extend %__title;
+  }
+
+  &__titleText {
+    @extend %__titleText;
+  }
+
+  &__container {
+    @extend %__container;
+  }
+}

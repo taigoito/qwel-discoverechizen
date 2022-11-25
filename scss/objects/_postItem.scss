@@ -1,0 +1,9 @@
+/**
+ * Project - Post Item
+ */
+
+.postItem {
+  .post:not(:last-child) &__contentWrap {
+    border-bottom: 1px solid var(--wp--preset--color--light);
+  }
+}

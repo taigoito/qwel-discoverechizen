@@ -21,8 +21,7 @@
   padding-right: var(--wp--custom--spacing--container-pad-wide);
 }
 
-.header, .gNav, .main, .breadcrumb, .titleArea, .postList, .postItem, .footer,
-.about, .news, .access, .contact {
+.header, .main, .breadcrumb, .postList, .postItem, .footer {
   &__container {
     @extend %__container;
   }

@@ -29,6 +29,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "layout/container";
 @import "layout/header";
 @import "layout/gNav";
+@import "layout/titleArea";
 @import "layout/sidebar";
 @import "layout/footer";
 
@@ -39,6 +40,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 // Projects
 @import "objects/hero";
+@import "objects/section";
+@import "objects/postItem";
 
 // Utility
 @import "utilities/flex";
