@@ -41,9 +41,9 @@ trait Shortcodes {
     $slug  = str_replace( '-', ' ', $slug ); 
 
     // タイトル文字列を作成
-    $h3    = '<h3 class="main__titleText --bottom" data-comfort="1">' . $title . '</h3>';
+    $h1    = '<h1 class="main__titleText --bottom" data-comfort="1">' . $title . '</h1>';
     $p     = '<p class="main__titleText --top" data-comfort="1">' . $slug . '</p>';
-    $html  = '<div class="main__titleArea"><div class="main__title">' . $h3 . $p . '</div></div>';
+    $html  = '<div class="main__titleArea"><div class="main__title">' . $h1 . $p . '</div></div>';
 
     return $html;
   }
