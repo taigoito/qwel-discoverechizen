@@ -1,7 +1,7 @@
 /*
 Theme Name: Discover Echiven
 Description: This is a theme for Discover Echizen.
-Version: 2.6.1
+Version: 2.6.2
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -59,12 +59,14 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "objects/components/slider";
 @import "objects/components/wave";
 @import "objects/utilities/button";
+@import "objects/utilities/flex";
+@import "objects/utilities/flexItem";
 @import "objects/utilities/form";
 @import "objects/utilities/grid";
 @import "objects/utilities/sizing";
 @import "objects/utilities/spacing";
 @import "objects/utilities/table";
-@import "objects/utilities/type";
+@import "objects/utilities/text";
 @import "objects/utilities/visibility";
 @import "objects/utilities/moreText";
 @import "objects/utilities/responsiveColor";

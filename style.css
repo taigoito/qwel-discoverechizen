@@ -2,7 +2,7 @@
 /*
 Theme Name: Discover Echiven
 Description: This is a theme for Discover Echizen.
-Version: 2.6.1
+Version: 2.6.2
 Requires PHP: 7.3
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -3261,6 +3261,230 @@ button, [type=button], [type=reset], [type=submit] {
 }
 
 /**
+ * Utility - Flex
+ */
+.--flex_left {
+  justify-content: flex-start !important;
+}
+.--flex_center {
+  justify-content: center !important;
+}
+.--flex_right {
+  justify-content: flex-end !important;
+}
+.--flex_around {
+  justify-content: space-around !important;
+}
+.--flex_between {
+  justify-content: space-between !important;
+}
+.--flex_top {
+  align-items: flex-start !important;
+}
+.--flex_stretch {
+  align-items: stretch !important;
+}
+@media (min-width: 600px) {
+  .--flex_sm-left {
+    justify-content: flex-start !important;
+  }
+  .--flex_sm-center {
+    justify-content: center !important;
+  }
+  .--flex_sm-right {
+    justify-content: flex-end !important;
+  }
+  .--flex_sm-around {
+    justify-content: space-around !important;
+  }
+  .--flex_sm-between {
+    justify-content: space-between !important;
+  }
+  .--flex_sm-top {
+    align-items: flex-start !important;
+  }
+  .--flex_sm-stretch {
+    align-items: stretch !important;
+  }
+}
+@media (min-width: 900px) {
+  .--flex_md-left {
+    justify-content: flex-start !important;
+  }
+  .--flex_md-center {
+    justify-content: center !important;
+  }
+  .--flex_md-right {
+    justify-content: flex-end !important;
+  }
+  .--flex_md-around {
+    justify-content: space-around !important;
+  }
+  .--flex_md-between {
+    justify-content: space-between !important;
+  }
+  .--flex_md-top {
+    align-items: flex-start !important;
+  }
+  .--flex_md-stretch {
+    align-items: stretch !important;
+  }
+}
+@media (min-width: 1200px) {
+  .--flex_lg-left {
+    justify-content: flex-start !important;
+  }
+  .--flex_lg-center {
+    justify-content: center !important;
+  }
+  .--flex_lg-right {
+    justify-content: flex-end !important;
+  }
+  .--flex_lg-around {
+    justify-content: space-around !important;
+  }
+  .--flex_lg-between {
+    justify-content: space-between !important;
+  }
+  .--flex_lg-top {
+    align-items: flex-start !important;
+  }
+  .--flex_lg-stretch {
+    align-items: stretch !important;
+  }
+}
+.--flex_gap-none {
+  gap: 0 !important;
+}
+.--flex_gap-x-small {
+  gap: 0.375rem !important;
+}
+.--flex_gap-small {
+  gap: 0.75rem !important;
+}
+.--flex_gap-medium {
+  gap: 1.5rem !important;
+}
+.--flex_gap-large {
+  gap: 3rem !important;
+}
+.--flex_gap-x-large {
+  gap: 6rem !important;
+}
+
+/**
+ * Utility - Flex Item
+ */
+.--flex-item_1 {
+  flex: 1 1 4.5rem;
+}
+.--flex-item_2 {
+  flex: 2 1 9rem;
+}
+.--flex-item_3 {
+  flex: 3 1 13.5rem;
+}
+.--flex-item_4 {
+  flex: 4 1 18rem;
+}
+.--flex-item_5 {
+  flex: 5 1 22.5rem;
+}
+.--flex-item_6 {
+  flex: 6 1 27rem;
+}
+.--flex-item_7 {
+  flex: 7 1 31.5rem;
+}
+.--flex-item_8 {
+  flex: 8 1 36rem;
+}
+.--flex-item_9 {
+  flex: 9 1 40.5rem;
+}
+.--flex-item_10 {
+  flex: 10 1 45rem;
+}
+.--flex-item_11 {
+  flex: 11 1 49.5rem;
+}
+.--flex-item_12 {
+  flex: 12 1 54rem;
+}
+.--flex-item_order-0 {
+  order: 0;
+}
+.--flex-item_order-1 {
+  order: 1;
+}
+.--flex-item_order-2 {
+  order: 2;
+}
+.--flex-item_order-3 {
+  order: 3;
+}
+@media (min-width: 600px) {
+  .--flex-item_order-sm-0 {
+    order: 0;
+  }
+}
+@media (min-width: 600px) {
+  .--flex-item_order-sm-1 {
+    order: 1;
+  }
+}
+@media (min-width: 600px) {
+  .--flex-item_order-sm-2 {
+    order: 2;
+  }
+}
+@media (min-width: 600px) {
+  .--flex-item_order-sm-3 {
+    order: 3;
+  }
+}
+@media (min-width: 900px) {
+  .--flex-item_order-md-0 {
+    order: 0;
+  }
+}
+@media (min-width: 900px) {
+  .--flex-item_order-md-1 {
+    order: 1;
+  }
+}
+@media (min-width: 900px) {
+  .--flex-item_order-md-2 {
+    order: 2;
+  }
+}
+@media (min-width: 900px) {
+  .--flex-item_order-md-3 {
+    order: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .--flex-item_order-lg-0 {
+    order: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .--flex-item_order-lg-1 {
+    order: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .--flex-item_order-lg-2 {
+    order: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .--flex-item_order-lg-3 {
+    order: 3;
+  }
+}
+
+/**
  * Utility - Form
  */
 .form {
@@ -3895,22 +4119,61 @@ button, [type=button], [type=reset], [type=submit] {
 }
 
 /**
- * Utility - Type
+ * Utility - Text
  */
 .--text_left {
-  text-align: left !important;
+  text-align: left;
 }
-
 .--text_center {
-  text-align: center !important;
+  text-align: center;
 }
-
 .--text_right {
-  text-align: right !important;
+  text-align: right;
 }
-
 .--text_justify {
-  text-align: justify !important;
+  text-align: justify;
+}
+@media (min-width: 600px) {
+  .--text_sm-left {
+    text-align: left;
+  }
+  .--text_sm-center {
+    text-align: center;
+  }
+  .--text_sm-right {
+    text-align: right;
+  }
+  .--text_sm-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 900px) {
+  .--text_md-left {
+    text-align: left;
+  }
+  .--text_md-center {
+    text-align: center;
+  }
+  .--text_md-right {
+    text-align: right;
+  }
+  .--text_md-justify {
+    text-align: justify;
+  }
+}
+@media (min-width: 1200px) {
+  .--text_lg-left {
+    text-align: left;
+  }
+  .--text_lg-center {
+    text-align: center;
+  }
+  .--text_lg-right {
+    text-align: right;
+  }
+  .--text_lg-justify {
+    text-align: justify;
+  }
 }
 
 /**
