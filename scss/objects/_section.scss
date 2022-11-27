@@ -6,6 +6,10 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
 
+  &__inner {
+    background-color: var(--wp--preset--color--white);
+  }
+
   &__titleArea {
     @extend %__titleArea;
   }

@@ -7,8 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width: var(--wp--style--global--wide-size);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--wp--style--global--wide-size);
   height: 6rem;
   margin: 0 auto 1.5rem;
   background: url("./assets/dec_sm.svg") no-repeat right top;
