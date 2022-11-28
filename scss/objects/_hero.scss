@@ -20,7 +20,7 @@
       $imageCount: 6;
       $imageDuration: 5;
       opacity: 0;
-      //animation: fade #{$imageCount * $imageDuration}s ease 0s infinite normal;
+      animation: fade #{$imageCount * $imageDuration}s ease 0s infinite normal;
     }
   }
   
@@ -47,7 +47,7 @@
     background-image: url("./assets/img_default.jpg");
     background-position: center center;
     background-size: cover;
-    //opacity: 0;
+    opacity: 0;
     transition: 1s linear opacity;
 
     @for $i from 1 through 6 {

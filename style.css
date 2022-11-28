@@ -401,6 +401,8 @@ button, [type=button], [type=reset], [type=submit] {
 }
 .hero__content.--fade {
   opacity: 0;
+  -webkit-animation: fade 30s ease 0s infinite normal;
+          animation: fade 30s ease 0s infinite normal;
 }
 .hero__logo {
   width: 18rem;
@@ -423,6 +425,7 @@ button, [type=button], [type=reset], [type=submit] {
   background-image: url("./assets/img_default.jpg");
   background-position: center center;
   background-size: cover;
+  opacity: 0;
   transition: 1s linear opacity;
 }
 .hero__coverImage.--num_1 {
