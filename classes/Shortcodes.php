@@ -14,18 +14,54 @@ trait Shortcodes {
   }
 
   public function get_title( $atts ) {
-    if (is_page()) {
-      // 固定ページ
-      // 記事情報を取得
-      global $post;
-      $title = $post->post_title;
-      $slug  = $post->post_name;
 
-    } else {
-      // 個別投稿
+    $wp_obj  = get_queried_object();
+    $title   = ''; // 小文字・h1タグ
+    $slug    = ''; // 大文字
+
+    // 固定ページ
+    if (is_home() || is_page()) {
+      $title = $wp_obj->post_title;
+      $slug  = $wp_obj->post_name;
+
+    // 個別投稿ページ
+    } else if (is_single()) {
       $title = 'ブログ&ニュース';
-      $slug  = 'blog &amp; news';
+      $slug  = 'blog and news';
 
+    // 日付別
+    } else if (is_date()) {
+      $year  = get_query_var('year');
+      $month = get_query_var('monthnum');
+      $day   = get_query_var('day');
+      if ($day > 0) $title = $year . ' / ' . sprintf('%02d', $month) . ' / ' . sprintf('%02d', $day);
+      else if ($month > 0) $title = $year . ' / ' . sprintf('%02d', $month);
+      else $title = $year;
+
+    // 投稿者アーカイブ
+    } else if (is_author()) {
+      $title = '著者:' . $wp_obj->display_name;
+      $slug  = 'author';
+    
+    // タームアーカイブ
+    } else if (is_archive()) {
+      $title = $wp_obj->name;
+      $slug  = $wp_obj->slug;
+
+    // 検索結果ページ
+    } else if (is_search()) {
+      $title = '検索:' . get_search_query();
+      $slug  = 'searching';
+
+    // 404ページ
+    } else if (is_404()) {
+      $title = 'Not Found';
+      $slug  = '404';
+
+    // その他
+    } else {
+      $title = 'ブログ&ニュース';
+      $slug  = 'blog and news';
     }
 
     // デフォルト値
@@ -44,8 +80,8 @@ trait Shortcodes {
     $h1    = '<h1 class="main__titleText --bottom" data-comfort="1">' . $title . '</h1>';
     $p     = '<p class="main__titleText --top" data-comfort="1">' . $slug . '</p>';
     $html  = '<div class="main__titleArea"><div class="main__title">' . $h1 . $p . '</div></div>';
-
     return $html;
+    
   }
 
   public function get_copyright( $atts ) {
