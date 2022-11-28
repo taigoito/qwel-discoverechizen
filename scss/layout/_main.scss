@@ -6,9 +6,13 @@
   padding-top: 6rem; // header height
   padding-bottom: 3rem;
 
-  &__header {
+  &__headerInner {
     // 背景色検知用
     background-color: var(--wp--preset--color--white);
+  }
+
+  &__headerContainer {
+    @extend %__container;
   }
 
   &__titleArea {

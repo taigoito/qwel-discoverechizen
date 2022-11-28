@@ -2,10 +2,22 @@
  * Component - Breadcrumb
  */
 
-.breadcrumb {
-  &__item:not(.--current)::after {
-    content: ">";
-    margin-left: 1.5em;
-    margin-right: 1em; // デフォルトのblockGap:0.5emが加わる
+.breadcrumb {  
+  position: relative;
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  padding: 1.5rem 0;
+  @include smallText();
+
+  &__item {
+    display: inline-block;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    
+    &:not(:first-child)::before {
+      content: ">";
+      padding-left: .375rem;
+      padding-right: .375rem;
+    }
   }
 }
