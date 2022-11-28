@@ -200,48 +200,64 @@
 			}
 		}
 	},
+	"customTemplates": [
+		{
+			"name": "page-echizen-coast-default",
+			"title": "固定ページ: 越前海岸について [デフォルト]",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
+			"name": "page-about-us-default",
+			"title": "固定ページ: 越前海岸盛り上げ隊とは [デフォルト]",
+			"postTypes": [
+				"page"
+			]
+		}
+	],
 	"templateParts": [
 		{
 			"name": "hero",
-			"title": "Hero",
+			"title": "ヒーロー",
 			"area": "header"
 		},
 		{
 			"name": "header",
-			"title": "Header",
+			"title": "ヘッダー",
 			"area": "header"
 		},
 		{
 			"name": "g-nav",
-			"title": "G Nav"
+			"title": "ナビゲーション"
 		},
 		{
 			"name": "section-feature",
-			"title": "Section Feature"
+			"title": "特集セクション"
 		},
 		{
 			"name": "section-about",
-			"title": "Section About"
+			"title": "私たちについてセクション"
 		},
 		{
 			"name": "section-news",
-			"title": "Section News"
+			"title": "ブログ&ニュースセクション"
 		},
 		{
 			"name": "section-access",
-			"title": "Section Access"
+			"title": "アクセス情報セクション"
 		},
 		{
 			"name": "section-contact",
-			"title": "Section Contact"
+			"title": "お問い合わせセクション"
 		},
 		{
 			"name": "sidebar",
-			"title": "Sidebar"
+			"title": "サイドバー"
 		},
 		{
 			"name": "footer",
-			"title": "Footer",
+			"title": "フッター",
 			"area": "footer"
 		}
 	]

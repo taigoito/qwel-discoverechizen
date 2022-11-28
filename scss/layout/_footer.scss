@@ -3,6 +3,11 @@
  */
 
 .footer {
+  &__inner {
+    // 背景色検知用
+    background-color: var(--wp--preset--color--primary);
+  }
+
   &__logo {
     @include white();
   }

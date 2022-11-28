@@ -285,9 +285,16 @@ button, [type=button], [type=reset], [type=submit] {
  * Layout - Main
  */
 .main {
-  padding-top: 3rem;
+  padding-top: 6rem;
   padding-bottom: 3rem;
 }
+.main__header {
+  background-color: var(--wp--preset--color--white);
+}
+.main__body {
+  background-color: var(--wp--preset--color--white);
+}
+
 /**
  * Layout - Sidebar
  */
@@ -302,6 +309,9 @@ button, [type=button], [type=reset], [type=submit] {
 /**
  * Layout - Footer
  */
+.footer__inner {
+  background-color: var(--wp--preset--color--primary);
+}
 .footer__logo {
   filter: invert(1) grayscale(1) brightness(4);
 }

@@ -3,8 +3,13 @@
  */
 
 .main {
-  padding-top: 3rem;
+  padding-top: 6rem; // header height
   padding-bottom: 3rem;
+
+  &__header {
+    // 背景色検知用
+    background-color: var(--wp--preset--color--white);
+  }
 
   &__titleArea {
     @extend %__titleArea;
@@ -16,5 +21,9 @@
 
   &__titleText {
     @extend %__titleText;
+  }
+
+  &__body {
+    background-color: var(--wp--preset--color--white);
   }
 }
