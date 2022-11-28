@@ -216,6 +216,10 @@
 			"title": "G Nav"
 		},
 		{
+			"name": "section-feature",
+			"title": "Section Feature"
+		},
+		{
 			"name": "section-about",
 			"title": "Section About"
 		},
