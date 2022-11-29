@@ -33,8 +33,7 @@ spl_autoload_register(
  */
 class DiscoverEchizen {
 	use	\DiscoverEchizen_Theme\Supports,
-		\DiscoverEchizen_Theme\Scripts,
-		\DiscoverEchizen_Theme\Shortcodes;
+		\DiscoverEchizen_Theme\Scripts;
 		
 	public function __construct() {
 		// テーマサポート機能
@@ -42,9 +41,6 @@ class DiscoverEchizen {
 
 		// CSS, JSファイルを読み込み
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
-
-		// ショートコード登録
-		add_action( 'init', [ $this, 'register_shortcode' ] );
 	}
 }
 
