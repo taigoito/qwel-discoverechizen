@@ -19,6 +19,7 @@
     padding-top: .625rem;
     padding-bottom: .625rem;
     border: 0; // Reset
+    font-weight: 400; // Reset
     @include smallText();
   }
 }

@@ -13,5 +13,25 @@ fader.forEach((elem) => {
 });
 
 // Format Title
-import FormatTitle from "./_formatTitle.js";
+import FormatTitle from './_formatTitle.js';
 new FormatTitle();
+
+// Embedded
+import Embed from './_embed.js';
+new Embed();
+
+// Gallery
+import Gallery from './_gallery.js';
+const gallery = document.querySelectorAll('.gallery');
+gallery.forEach((elem) => {
+  new Gallery(elem);
+});
+
+// Modal
+import Modal from './_modal.js';
+new Modal();
+
+// School Excursion
+// Accordion
+import Accordion from './_accordion.js';
+new Accordion();

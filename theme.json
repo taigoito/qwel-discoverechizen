@@ -155,7 +155,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
 					"fontWeight": "400",
-					"fontSize": "var(--wp--custom--font-size--large)",
+					"fontSize": "var(--wp--custom--font-size--x-large)",
 					"lineHeight": "var(--wp--custom--line-height--x-small)"
 				}
 			},
@@ -163,7 +163,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
 					"fontWeight": "400",
-					"fontSize": "var(--wp--custom--font-size--medium)",
+					"fontSize": "var(--wp--custom--font-size--large)",
 					"lineHeight": "var(--wp--custom--line-height--x-small)"
 				}
 			},
@@ -202,18 +202,64 @@
 	},
 	"customTemplates": [
 		{
-			"name": "page-echizen-coast-default",
-			"title": "固定ページ: 越前海岸について [デフォルト]",
+			"name": "blank",
+			"title": "空白のテンプレート",
 			"postTypes": [
+				"post",
 				"page"
 			]
 		},
 		{
-			"name": "page-about-us-default",
-			"title": "固定ページ: 越前海岸盛り上げ隊とは [デフォルト]",
-			"postTypes": [
-				"page"
-			]
+			"name": "category-echizen-coast",
+			"title": "特集: 越前海岸について"
+		},
+		{
+			"name": "category-about-us",
+			"title": "特集: 越前海岸盛り上げ隊とは"
+		},
+		{
+			"name": "category-craft",
+			"title": "特集: 物作り"
+		},
+		{
+			"name": "category-farmers-stay",
+			"title": "特集: 農家民宿"
+		},
+		{
+			"name": "category-food",
+			"title": "特集: グルメ"
+		},
+		{
+			"name": "category-landscape",
+			"title": "特集: 景観"
+		},
+		{
+			"name": "category-mountain-activity",
+			"title": "特集: 山遊び"
+		},
+		{
+			"name": "category-sea-activity",
+			"title": "特集: 海遊び"
+		},
+		{
+			"name": "category-spa",
+			"title": "特集: 温泉"
+		},
+		{
+			"name": "category-stay",
+			"title": "特集: 宿泊"
+		},
+		{
+			"name": "category-work",
+			"title": "特集: 仕事"
+		},
+		{
+			"name": "category-people-platform",
+			"title": "特集: 人の駅プロジェクト"
+		},
+		{
+			"name": "category-school-excursion",
+			"title": "特集: 教育旅行"
 		}
 	],
 	"templateParts": [
@@ -242,6 +288,10 @@
 		{
 			"name": "section-about",
 			"title": "私たちについてセクション"
+		},
+		{
+			"name": "section-pickup",
+			"title": "注目のプロジェクトセクション"
 		},
 		{
 			"name": "section-news",

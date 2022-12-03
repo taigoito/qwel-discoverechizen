@@ -17,6 +17,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 // Mixins
 @import "mixins/button";
 @import "mixins/form";
+@import "mixins/grid";
 @import "mixins/image";
 @import "mixins/table";
 @import "mixins/type";
@@ -41,11 +42,16 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 // Projects
 @import "objects/hero";
-@import "objects/section";
+@import "objects/lp";
 @import "objects/postItem";
+@import "objects/profile";
+@import "objects/section";
 
 // Utility
 @import "utilities/flex";
 @import "utilities/flexItem";
+@import "utilities/grid";
+@import "utilities/sizing";
+@import "utilities/spacing";
 @import "utilities/text";
 @import "utilities/visibility";

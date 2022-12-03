@@ -22,10 +22,17 @@
       opacity: 0;
       animation: fade #{$imageCount * $imageDuration}s ease 0s infinite normal;
     }
+
+    h1 {
+      width: 18rem;
+      height: 18rem;
+      margin: 0;
+    }
   }
   
   &__logo {
     width: 18rem;
+    height: 18rem;
   }
 
   &__cover {

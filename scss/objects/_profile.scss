@@ -1,0 +1,13 @@
+/**
+ * Project - Profile
+ */
+
+.profile {
+  .wp-block-cover:not(.--profile) & {
+    @include smallText();
+  }
+
+  .wp-block-column:not(:first-child) {
+    margin-left: 1rem;
+  }
+}

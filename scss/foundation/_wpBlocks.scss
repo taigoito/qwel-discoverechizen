@@ -79,6 +79,10 @@
   }
 
   &-search {
+    &__inside-wrapper {
+      margin: 0.75rem auto;
+    }
+
     &__label {
       display: none;
     }

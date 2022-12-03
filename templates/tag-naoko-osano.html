@@ -1,0 +1,67 @@
+<!-- wp:template-part {"slug":"header","theme":"discoverechizen","tagName":"header","className":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"main","layout":{"inherit":false}} -->
+<main id="main" class="wp-block-group main"><!-- wp:group {"tagName":"header","align":"wide","className":"main__header","layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignwide main__header"><!-- wp:group {"align":"wide","className":"main__headerInner","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide main__headerInner"><!-- wp:group {"align":"wide","className":"main__headerContainer","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide main__headerContainer"><!-- wp:shortcode -->
+[title]
+<!-- /wp:shortcode -->
+
+<!-- wp:shortcode -->
+[breadcrumb]
+<!-- /wp:shortcode --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></header>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"article","className":"main__body","layout":{"inherit":true,"type":"constrained"}} -->
+<article class="wp-block-group main__body"><!-- wp:group {"align":"wide","className":"main__container lp","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide main__container lp">
+
+<!-- wp:cover {"dimRatio":30,"overlayColor":"primary-light","isDark":false,"className":"--profile"} -->
+<div class="wp-block-cover is-light --profile"><span aria-hidden="true" class="wp-block-cover__background has-primary-light-background-color has-background-dim-30 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:block {"ref":3937} /--></div></div>
+<!-- /wp:cover -->
+
+</div>
+<!-- /wp:group --></article>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide" style="padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"align":"wide"} -->
+<h2 class="alignwide">関連記事</h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"list"},"className":"postList","layout":{"inherit":true}} -->
+<div class="wp-block-query postList"><!-- wp:post-template {"align":"wide","className":"postList__inner"} -->
+<!-- wp:group {"className":"postItem"} -->
+<div class="wp-block-group postItem"><!-- wp:group {"className":"postItem__container"} -->
+<div class="wp-block-group postItem__container"><!-- wp:group {"align":"wide","className":"postItem__contentWrap","layout":{"type":"flex","allowOrientation":false,"justifyContent":"center"}} -->
+<div class="wp-block-group alignwide postItem__contentWrap"><!-- wp:group {"align":"wide","className":"postItem__image --flex-item_4","layout":{"inherit":false}} -->
+<div class="wp-block-group alignwide postItem__image --flex-item_4"><!-- wp:post-featured-image {"isLink":true,"width":"","height":"","align":"center","style":{"spacing":{"padding":{"right":"0.75rem","left":"0.75rem"}}}} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"postItem__content --flex-item_8","layout":{"inherit":false}} -->
+<div class="wp-block-group postItem__content --flex-item_8"><!-- wp:group {"className":"postItem__info","layout":{"type":"flex","allowOrientation":false}} -->
+<div class="wp-block-group postItem__info"><!-- wp:post-date {"format":"Y.m.d"} /-->
+
+<!-- wp:post-terms {"term":"category","separator":""} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:post-title {"level":3,"isLink":true,"align":"wide"} /-->
+
+<!-- wp:post-excerpt {"moreText":"&gt;&gt;&gt; もっと詳しく"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-numbers /-->
+<!-- /wp:query-pagination --></div>
+<!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"discoverechizen","tagName":"footer","className":"footer"} /-->

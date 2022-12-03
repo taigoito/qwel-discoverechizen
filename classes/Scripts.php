@@ -15,10 +15,10 @@ trait Scripts {
     }
 
     // Typesquare
-    /*$url = '//typesquare.com/3/tsst/script/ja/typesquare.js?61b823f8fd9c446dacda0a37ac1e02e5&fadein=10';
+    $url = '//typesquare.com/3/tsst/script/ja/typesquare.js?61b823f8fd9c446dacda0a37ac1e02e5&fadein=10';
     if ($url !== '') {
       wp_enqueue_script('typesquare-fonts', $url, [], null, false);
-    }*/
+    }
 
 		// style.css
 		wp_enqueue_style(
