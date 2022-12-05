@@ -33,4 +33,8 @@
       opacity: 0;
     }
   }
+
+  &__info {
+    font-size: var(--wp--preset--font-size--small);
+  }
 }
