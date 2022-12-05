@@ -6,7 +6,7 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
 
-  &__inner {
+  section:not(.--discover) &__inner {
     // 背景色検知用
     background-color: var(--wp--preset--color--white);
   }

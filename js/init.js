@@ -16,6 +16,20 @@ fader.forEach((elem) => {
 import FormatTitle from './_formatTitle.js';
 new FormatTitle();
 
+// Island
+import Island from './_island.js';
+const islands = document.querySelectorAll('.discoverMap__island');
+islands.forEach((elem, i) => {
+  new Island(elem);
+});
+
+// Wave
+import Wave from './_wave.js';
+const sections = document.querySelectorAll('.wave');
+sections.forEach((elem, i) => {
+  new Wave(elem);
+});
+
 // Embedded
 import Embed from './_embed.js';
 new Embed();
