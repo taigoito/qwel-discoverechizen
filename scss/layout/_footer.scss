@@ -3,24 +3,7 @@
  */
 
 .footer {
-  padding: 3rem 1.5rem;
-  background-color: themeColor("darkest");
-  color: colorYiq(themeColor("darkest"));
-
-  &__container {
-    @include container();
-    @include row(space-between, flex-start);
-    margin-bottom: 1.5rem;
-    text-align: left;
-  }
-
-  &__1, &__2, &__3, &__4 {
-    flex: 0 0 map-get($cardWidths, "sm");
-    width: map-get($cardWidths, "sm");
-  }
-
-  &__copyright {
-    margin-bottom: 1.5rem;
+  &__inner {
     text-align: center;
   }
 }

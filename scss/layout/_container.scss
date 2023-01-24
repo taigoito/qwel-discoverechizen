@@ -1,0 +1,29 @@
+/**
+ * Layout
+ */
+
+// header, section, footer等各パーツは、以下の構造を基本にする
+//
+// Template part
+// ex) wp:template-part {"slug":"xxxx","className":"xxxx"}
+//
+// Inner: 背景色等設定するwrapper要素
+// ex) wp:group {"className":"xxxx__inner","layout":{"inherit":true}}
+//
+// Container: 全体幅を設定する要素であり、"type":"flex" させて行としても機能
+// ex) wp:group {"align":"wide","className":"xxxx__container","layout":{"type":"flex","justifyContent":"space-between"}}
+//
+// [Content]: flexitemクラスを付与し、コンテンツ幅を制御する
+
+%__container {
+  gap: 0 !important;
+  padding-left: var(--wp--custom--spacing--container-pad-wide);
+  padding-right: var(--wp--custom--spacing--container-pad-wide);
+}
+
+.header, .gNav, .main, .breadcrumb, .titleArea, .postList, .postItem, .footer,
+.about, .news, .access, .contact {
+  &__container {
+    @extend %__container;
+  }
+}

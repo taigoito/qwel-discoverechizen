@@ -1,0 +1,19 @@
+/**
+ * Foundation
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  @media (max-width: breakpoint("sm") - 1) {
+    font-size: $fixedFontSize;
+  }
+}
+
+a {
+  @include link();
+}

@@ -1,0 +1,38 @@
+// Form
+
+@mixin form() {
+  margin-top: var(--wp--custom--spacing--large);
+  margin-bottom: var(--wp--custom--spacing--large);
+  
+  label {
+    display: block;
+  }
+
+  input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="file"], select, optgroup, textarea {
+    display: block;
+    width: 100%;
+    margin-top: .375rem;
+    margin-bottom: .75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="file"], select, optgroup {
+    height: 1.8rem;
+  }
+
+  input[type="file"] {
+    outline: 0;  
+  }
+
+  textarea {
+    padding-top: 0.5rem;
+    padding-top: 0.5rem;
+    resize: vertical;
+  }
+
+  [type="button"], [type="reset"], [type="submit"] {
+    display: block;
+    @include button();
+  }
+}

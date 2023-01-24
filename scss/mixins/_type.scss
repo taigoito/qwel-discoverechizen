@@ -1,0 +1,33 @@
+// Type
+
+// smallの設定を適用
+@mixin smallText() {
+  font-size: var(--wp--custom--font-size--small);;
+  line-height: var(--wp--custom--line-height--large);
+  letter-spacing:  0.04rem;
+}
+
+// blockquoteの設定を適用
+@mixin blockquote() {
+  margin: 0 0 1.75em;
+  padding-left: 1em;
+  border-left: 0.5em solid var(--wp--preset--color--light);
+
+  p, cite {
+    font-style: italic;
+    @include smallText();
+  }
+}
+
+// リンクの設定を適用
+@mixin link() {
+  &, &:active {
+    color: var(--wp--preset--color--medium-dark);
+    text-decoration: none;
+  }
+  
+  &:hover, &:focus {
+    color: var(--wp--preset--color--primary);
+    text-decoration: underline dotted;
+  }
+}

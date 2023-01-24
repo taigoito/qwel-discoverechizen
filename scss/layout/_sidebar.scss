@@ -3,11 +3,11 @@
  */
 
 .sidebar {
-  position: relative;
-  width: 100%;
-
-  @media (min-width: breakpoint("lg")) {
-    flex: 0 0 map-get($cardWidths, "sm");
-    max-width: map-get($cardWidths, "sm");
+  &__inner {
+    @media (min-width: breakpoint()) {
+      width: 18rem;
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 }

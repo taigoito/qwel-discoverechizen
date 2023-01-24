@@ -1,0 +1,24 @@
+// Button
+
+$buttonPadX: calc(1.333em + 2px);
+$buttonPadY: calc(0.667em + 2px);
+
+@mixin button($color: "primary", $size: $buttonPadX, $rounded: 3px) {
+  margin: auto;
+  padding: $buttonPadY $size;
+  border: none;
+  border-radius: $rounded;
+  background-color: var(--wp--preset--color--#{$color});
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--wp--preset--color--#{$color}-light);
+    color: var(--wp--preset--color--dark);
+  }
+}

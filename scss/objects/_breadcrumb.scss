@@ -1,0 +1,11 @@
+/**
+ * Component - Breadcrumb
+ */
+
+.breadcrumb {
+  &__item:not(.--current)::after {
+    content: ">";
+    margin-left: 1.5em;
+    margin-right: 1em; // デフォルトのblockGap:0.5emが加わる
+  }
+}

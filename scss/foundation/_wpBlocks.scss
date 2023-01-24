@@ -1,0 +1,70 @@
+/**
+ * WP Blocks
+ */
+
+.wp-block {
+  &-navigation {
+    &-item a {
+      @include link();
+    }
+  }
+
+  &-post {
+    &-featured-image {
+      text-align: center;
+      
+      img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+    }
+
+    &-terms {
+      padding-left: var(--wp--custom--spacing--x-small);
+
+      a::before {
+        content: "#";
+      }
+
+      &__separator {
+        padding-left: var(--wp--custom--spacing--x-small);
+      }
+    }
+
+    &-excerpt {
+      &__more-text {
+        text-align: right;
+      }
+    }
+  }
+
+  &-image {
+    overflow: hidden;
+  }
+
+  &-query-pagination {
+    &-numbers {
+      .page-numbers {
+        display: inline-block;
+        @include button();
+        padding: 1rem;
+        border: 2px solid var(--wp--preset--color--white);
+
+        &.current {
+          background-color: var(--wp--preset--color--primary-light);
+          color: var(--wp--preset--color--dark);
+          opacity: 1;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &-quote {
+    @include blockquote();
+  }
+
+  &-table {
+    @include table();
+  }
+}
