@@ -1,6 +1,63 @@
-/*
+/**
+ * Foundation
  * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: $rootFontSize;
+
+  @media (max-width: breakpoint("sm") - 0.1) {
+    font-size: $fixedFontSize;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $headingMarginTop;
+  margin-bottom: $headingMarginBottom;
+  font-family: $headingFontFamily;
+  font-weight: $headingFontWeight;
+}
+
+h1 {
+  font-size: $h1FontSize;
+}
+
+h2 {
+  font-size: $h2FontSize;
+}
+
+h3 {
+  font-size: $h3FontSize;
+}
+
+h4 {
+  font-size: $h4FontSize;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: $h5FontSize;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: $h6FontSize;
+}
+
+p {
+  margin-top: $textMarginTop;
+  margin-bottom: $textMarginBottom;
+}
+
+a {
+  @include link();
+}
 
 table {
   border-collapse: collapse;

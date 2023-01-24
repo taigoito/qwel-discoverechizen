@@ -1,0 +1,9 @@
+/**
+ * Project - Section
+ */
+
+.section {
+  &__container {
+    @extend %__container;
+  }
+}

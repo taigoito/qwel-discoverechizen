@@ -1,0 +1,30 @@
+// Button
+
+@mixin makeBlock($size: 12rem) {
+  display: block;
+  width: $size;
+  margin: auto;
+}
+
+@mixin makeButton($rounded: 3px) {
+  padding: space(2);
+  border: none;
+  border-radius: $rounded;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-word;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+@mixin button($color: "primary", $size: 12rem, $rounded: 3px) {
+  @include background($color);
+  @include makeBlock($size);
+  @include makeButton($rounded);
+}

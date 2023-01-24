@@ -1,0 +1,9 @@
+/**
+ * Layout - Header
+ */
+
+.header {
+  &__container {
+    @extend %__container;
+  }
+}

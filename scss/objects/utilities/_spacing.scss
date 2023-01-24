@@ -1,0 +1,32 @@
+/**
+ * Utility - Spacing
+ */
+
+$spacingProps: (
+  m:   "margin",
+  mt:  "margin-top",
+  ml:  "margin-left",
+  mr:  "margin-right",
+  mb:  "margin-bottom",
+  p:   "padding",
+  pt:  "padding-top",
+  pl:  "padding-left",
+  pr:  "padding-right",
+  pb:  "padding-bottom",
+);
+
+@each $prefix, $prop in $spacingProps {
+  @each $key, $val in $spacingValues {
+    .--#{$prefix}_#{$key} {
+      #{$prop}: $val !important;
+    }
+  }
+
+  @each $key1, $breakpoint in $breakpoints {
+    @each $key2, $val in $spacingValues {
+      .--#{$prefix}_#{$key1}-#{$key2} {
+        #{$prop}: $val !important;
+      }
+    }
+  }
+}

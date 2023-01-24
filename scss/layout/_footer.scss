@@ -4,6 +4,11 @@
 
 .footer {
   &__inner {
+    padding: space(5);
     text-align: center;
+  }
+  
+  &__container {
+    @extend %__container;
   }
 }

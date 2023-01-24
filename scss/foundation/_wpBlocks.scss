@@ -20,14 +20,14 @@
     }
 
     &-terms {
-      padding-left: var(--wp--custom--spacing--x-small);
+      padding-left: space(2);
 
       a::before {
         content: "#";
       }
 
       &__separator {
-        padding-left: var(--wp--custom--spacing--x-small);
+        padding-left: space(2);
       }
     }
 
@@ -46,14 +46,13 @@
     &-numbers {
       .page-numbers {
         display: inline-block;
-        @include button();
+        @include background();
+        @include makeButton();
         padding: 1rem;
-        border: 2px solid var(--wp--preset--color--white);
+        border: 2px solid themeColor("lightest");
 
         &.current {
-          background-color: var(--wp--preset--color--primary-light);
-          color: var(--wp--preset--color--dark);
-          opacity: 1;
+          @include background("primaryLight");
           cursor: default;
         }
       }

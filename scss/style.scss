@@ -12,31 +12,51 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @charset "utf-8";
 
 // Settings
-@import "foundation/gridsystem";
+@import "foundation/settings/colorSystem";
+@import "foundation/settings/gridSystem";
+@import "foundation/settings/typography";
+@import "foundation/settings/components";
 
 // Mixins
-@import "mixins/button";
-@import "mixins/form";
-@import "mixins/table";
-@import "mixins/type";
+@import "foundation/mixins/background";
+@import "foundation/mixins/button";
+@import "foundation/mixins/form";
+@import "foundation/mixins/table";
+@import "foundation/mixins/type";
 
-// Foundation
-@import "foundation/root";
+// Normalize
 @import "foundation/normalize";
+
+// WP Blocks
 @import "foundation/wpBlocks";
 
 // Layout
 @import "layout/container";
+@import "layout/header";
 @import "layout/gNav";
-@import "layout/sidebar";
+@import "layout/main";
 @import "layout/footer";
+@import "layout/sidebar";
 
 // Components
-@import "objects/breadcrumb";
-@import "objects/embed";
-@import "objects/form";
+@import "objects/components/breadcrumb";
+@import "objects/components/button";
+@import "objects/components/cover";
+@import "objects/components/drawerMenu";
+@import "objects/components/embed";
+@import "objects/components/form";
+@import "objects/components/icon";
+@import "objects/components/slider";
+@import "objects/components/table";
+
+// Projects
+@import "objects/projects/section";
+@import "objects/projects/postItem";
+@import "objects/projects/postList";
 
 // Utility
-@import "utilities/flex";
-@import "utilities/flexItem";
-@import "utilities/text";
+@import "objects/utilities/flex";
+@import "objects/utilities/flexItem";
+@import "objects/utilities/spacing";
+@import "objects/utilities/text";
+@import "objects/utilities/visibility";

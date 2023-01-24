@@ -1,0 +1,69 @@
+/**
+ * Project - Post List
+ */
+
+.postList {
+  &.--grid {
+    @include row();
+
+    .post {
+      @include col();
+      @include col(4, "md");
+    }
+
+    .postItem {
+      &__heading {
+        font-size: $h4FontSize;
+      }
+
+      &__excerpt, &__more {
+        @include smallText();
+      }
+
+      &__more {
+        text-align: center;
+      }
+    }
+  }
+
+  &.--list {
+    .post {
+      margin-bottom: space(3);
+      padding-bottom: space(3);
+      border-bottom: 1px solid themeColor('dark');
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    .postItem {
+      @include row(center);
+      gap: 0 !important;
+
+      &__image {
+        @include col(3, "md", ture);
+
+        .wp-block-post-featured-image {
+          margin: 0;
+        }
+      }
+
+      &__content {
+        @include col(6, "md", ture);
+      }
+
+      &__heading {
+        font-size: $h4FontSize;
+      }
+
+      &__excerpt, &__more {
+        @include smallText();
+      }
+
+      &__more {
+        text-align: right;
+      }
+    }
+  }
+}

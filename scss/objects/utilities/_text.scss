@@ -1,0 +1,23 @@
+/**
+ * Utility - Text
+ */
+
+$textAlignValues: left, center, right, justify;
+
+.--text {
+  @each $value in $textAlignValues {
+    &_#{$value} {
+      text-align: $value !important;
+    }
+  }
+
+  @each $key, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      @each $value in $textAlignValues {
+        &_#{$key}-#{$value} {
+          text-align: $value !important;
+        }
+      }
+    }
+  }
+}

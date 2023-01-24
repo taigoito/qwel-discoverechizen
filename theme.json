@@ -5,24 +5,34 @@
 		"color": {
 			"palette": [
 				{
+					"slug": "darkest",
+					"name": "Darkest",
+					"color": "#262626"
+				},
+				{
+					"slug": "darker",
+					"name": "Darker",
+					"color": "#4d4d4d"
+				},
+				{
 					"slug": "dark",
 					"name": "Dark",
-					"color": "#333333"
-				},
-				{
-					"slug": "medium-dark",
-					"name": "Medium Dark",
-					"color": "#666666"
-				},
-				{
-					"slug": "medium-light",
-					"name": "Medium Light",
-					"color": "#999999"
+					"color": "#808080"
 				},
 				{
 					"slug": "light",
 					"name": "Light",
-					"color": "#cccccc"
+					"color": "#b3b3b3"
+				},
+				{
+					"slug": "lighter",
+					"name": "Lighter",
+					"color": "#d9d9d9"
+				},
+				{
+					"slug": "lightest",
+					"name": "Lightest",
+					"color": "#ffffff"
 				},
 				{
 					"slug": "primary",
@@ -32,7 +42,7 @@
 				{
 					"slug": "primary-light",
 					"name": "Primary Light",
-					"color": "#add6eb"
+					"color": "#85c2e0"
 				},
 				{
 					"slug": "secondary",
@@ -42,7 +52,7 @@
 				{
 					"slug": "secondary-light",
 					"name": "Secondary Light",
-					"color": "#ebadb7"
+					"color": "#e08594"
 				}
 			]
 		},
@@ -105,7 +115,7 @@
 				"x-large": "6rem"
 			},
 			"font-size": {
-				"small": "0.8rem",
+				"small": "0.875rem",
 				"normal": "1rem",
 				"medium": "1.17rem",
 				"large": "1.33rem",

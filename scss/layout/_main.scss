@@ -1,0 +1,9 @@
+/**
+ * Layout - Main
+ */
+
+.main {
+  &__container {
+    @extend %__container;
+  }
+}

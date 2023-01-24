@@ -1,0 +1,61 @@
+// Color System
+
+// 配色を決定する
+$colorDefinitions: (
+  darkest:           #262626, // 15%
+  darker:            #4d4d4d, // 30%
+  dark:              #808080, // 50%
+  light:             #b3b3b3, // 70%
+  lighter:           #d9d9d9, // 85%
+  lightest:          #ffffff, // 100%
+  primary:           #3399cc, // hsl(200, 60%, 50%)
+  primaryLight:      #85c2e0, // hsl(200, 60%, 70%)
+  secondary:         #cc334b, // hsl(350, 60%, 50%)
+  secondaryLight:    #e08594  // hsl(350, 60%, 70%)
+);
+
+$themeColors:      (
+  darkest:           var(--wp--preset--color--darkest, map-get($colorDefinitions, "darkest")),
+  darker:            var(--wp--preset--color--darker, map-get($colorDefinitions, "darker")),
+  dark:              var(--wp--preset--color--dark, map-get($colorDefinitions, "dark")),
+  light:             var(--wp--preset--color--light, map-get($colorDefinitions, "light")),
+  lighter:           var(--wp--preset--color--lighter, map-get($colorDefinitions, "lighter")),
+  lightest:          var(--wp--preset--color--lightest, map-get($colorDefinitions, "lightest")),
+  primary:           var(--wp--preset--color--primary, map-get($colorDefinitions, "primary")),
+  primaryLight:      var(--wp--preset--color--primary-light, map-get($colorDefinitions, "primaryLight")),
+  secondary:         var(--wp--preset--color--secondary, map-get($colorDefinitions, "secondary")),
+  secondaryLight:    var(--wp--preset--color--secondary-light, map-get($colorDefinitions, "secondaryLight")),
+);
+
+// 配色の配列から色指定を抽出する関数
+@function themeColor($key: "primary") {
+  @return map-get($themeColors, $key);
+}
+
+// 背景色から適切な文字色を判定する関数
+// 参考(https://en.wikipedia.org/wiki/YIQ)
+@function colorYiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  @if ($yiq < 150) {
+    @return themeColor("lightest");
+  } @else {
+    @return themeColor("darkest");
+  }
+}
+
+@function colorYiqByKey($key) {
+  $color: map-get($colorDefinitions, $key);
+  @return colorYiq($color);
+}
+
+// bodyの設定
+$bodyBg:           themeColor("lightest");
+$bodyColor:        themeColor("darkest");
+
+// リンク文字の設定
+// リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
+$linkColor:        themeColor("darker");
+$linkHoverColor:   themeColor("primary");
