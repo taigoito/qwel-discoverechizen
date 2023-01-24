@@ -3,14 +3,5 @@
  */
 
 .main {
-  &__wrapper {
-    min-height: calc(66.66vh - 4.5rem); // コンテンツが少ない場合に.coverを隠す
-    background-color: $bodyBg;
-    overflow: hidden; // コンテナ内での全幅使用対策
-  }
-
-  &__container {
-    @include container();
-    @include row(space-between, flex-start);
-  }
+  
 }

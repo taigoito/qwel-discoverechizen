@@ -1,0 +1,49 @@
+/**
+ * Project - Post Item
+ */
+
+.postItem {
+  &__info {
+    @include row(flex-start);
+    margin-top: space(2);
+    margin-bottom: space(1);
+    font-size: $smallFontSize;
+  }
+
+  &__date {
+    @include row(flex-start);
+  }
+
+  &__terms {
+    @include row(flex-start);
+
+    a {
+      margin-left: 0.5em;
+    }
+  }
+
+  &__heading {
+    margin-top: space(2);
+    margin-bottom: space(1);
+    font-size: $h3FontSize;
+  }
+
+  &__excerpt {
+    margin-bottom: space(1);
+  }
+
+  &.--single {
+    @include row();
+
+    .postItem {
+      &__image {
+        @include col(4, "md", true);
+      }
+
+      &__content {
+        @include col(5, "md", true);
+        margin-bottom: space(4);
+      }
+    }
+  }
+}

@@ -8,33 +8,33 @@
   right: 0;
   z-index: 1110;
   display: block;
-  width: $headerHeight;
-  height: $headerHeight;
-  padding: .75rem;
+  width: calc(#{$drawerPad * 2} + #{$drawerHeight});
+  height: calc(#{$drawerPad * 2} + #{$drawerHeight});
+  padding: 0; // Reset
   border: 0;
   background-color: transparent;
   text-align: center;
   outline: 0;
   cursor: pointer;
 
-  &:not(.responsiveColor) { // 設定によってheaderが有効のとき
-    @media (min-width: breakpoint("lg")) {
+  @if $drawerAlwaysShown == false {
+    @media (min-width: $breakpoint) {
       display: none;
     }
   }
 
   &__navicon.icon, &__close.icon {
     position: absolute;
-    top: .75rem;
-    right: .75rem;
-    width: $siteBrandHeight;
-    height: $siteBrandHeight;
+    top: $drawerPad;
+    right: $drawerPad;
+    width: $drawerHeight;
+    height: $drawerHeight;
     transition: .25s all ease-in-out;
   }
 
   &__navicon {
     opacity: 0;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
 
     @at-root .drawer:not(.--active) .drawer__navicon {
       opacity: 1;
@@ -43,13 +43,18 @@
   }
 
   &__close {
-    color: $bodyBg;
     opacity: 1;
     transform: rotate(0);
 
     @at-root .drawer:not(.--active) .drawer__close {
       opacity: 0;
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &.--dark {
+    .drawer__close {
+      color: themeColor("lightest");
     }
   }
 }
@@ -59,11 +64,11 @@
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1100; // header: 1000 より前面
-  width: 18rem;
+  z-index: 1100;
+  width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
-  background-color: rgba(themeColor("darkest"), .85);
+  background-color: themeColor("light");
   text-align: center;
   transition: width ease-in-out .25s;
   
@@ -72,10 +77,13 @@
   }
   
   &__inner {
-    @include row(center);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     height: 100%;
     margin-bottom: 0;
-    align-content: center;
+    padding-left: 20%;
+    text-align: left;
     opacity: 1;
     
     &:not(.--show) {
@@ -87,11 +95,25 @@
     }
   }
 
+  &__siteBrand,
+  &__primaryMenu,
+  &__socialMenu {
+    list-style: none;
+    flex: 1 1 100%;
+    padding-left: 0;
+  }
+
+  &__socialMenu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   &__item {
     width: 100%;
     margin-bottom: 0;
-    padding-top: .375rem;
-    padding-bottom: .375rem;
+    padding-top: space(1);
+    padding-bottom: space(1);
     text-transform: capitalize;
 
     &.--brand {
@@ -99,9 +121,8 @@
       padding-bottom: 1rem;
 
       img {
-        filter: var(--header-filter, $whiteShape);
         width: auto;
-        height: $siteBrandHeight;
+        height: $drawerHeight;
       }
     }
 
@@ -109,16 +130,33 @@
       width: 3rem;
       padding-top: 1rem;
       padding-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     a {
       display: block;
-      color: themeColor("lightest");
       text-decoration: none;
-      
-      &:hover {
-        color: $linkHoverColor;
-        text-decoration: $linkHoverDecoration;
+    }
+  }
+
+  &.--dark {
+    background-color: $drawerMenuDarkBg;
+
+    .drawerMenu__item {
+      &.--social {
+        fill: themeColor("lightest");
+      }
+
+      a {
+        color: themeColor("lightest");
+
+        img {
+          filter: $whiteningFilter;
+        }
       }
     }
   }

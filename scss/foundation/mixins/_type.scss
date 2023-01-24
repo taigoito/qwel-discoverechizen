@@ -19,3 +19,16 @@
     @include smallText();
   }
 }
+
+// リンクの設定を適用
+@mixin link() {
+  &, &:active {
+    color: $linkColor;
+    text-decoration: $linkDecoration;
+  }
+  
+  &:hover, &:focus {
+    color: $linkHoverColor;
+    text-decoration: $linkHoverDecoration;
+  }
+}

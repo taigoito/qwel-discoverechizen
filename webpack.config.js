@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'production',
-  entry: './modules/init.js',
+  entry: './js/init.js',
   output: {
    path: `${__dirname}/`,
    filename: 'init.js'

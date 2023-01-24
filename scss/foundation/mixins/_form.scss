@@ -11,14 +11,14 @@
   input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="file"], select, optgroup, textarea {
     display: block;
     width: 100%;
-    margin-top: .375rem;
-    margin-bottom: .75rem;
+    margin-top: space(1);
+    margin-bottom: space(2);
     padding-left: round($rootFontSize / 2);
     padding-right: round($rootFontSize / 2);
   }
 
   input[type="text"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="file"], select, optgroup {
-    height: 2.8rem;
+    height: 1.8rem;
   }
 
   input[type="file"] {
@@ -33,6 +33,6 @@
 
   [type="button"], [type="reset"], [type="submit"] {
     display: block;
-    @include button("md");
+    @include button();
   }
 }

@@ -1,0 +1,65 @@
+/**
+ * Project - Post List
+ */
+
+.postList {
+  &.--grid {
+    @include row();
+
+    .postList__item {
+      @include col();
+      @include col(4, "md");
+    }
+
+    .postItem {
+      &__heading {
+        font-size: $h4FontSize;
+      }
+
+      &__excerpt, &__more {
+        @include smallText();
+      }
+
+      &__more {
+        text-align: center;
+      }
+    }
+  }
+
+  &.--list {
+    .postList__item {
+      margin-bottom: space(3);
+      padding-bottom: space(3);
+      border-bottom: 1px solid themeColor('dark');
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    .postItem {
+      @include row(center);
+
+      &__image {
+        @include col(3, "md", ture);
+        margin: 0;
+      }
+
+      &__content {
+        @include col(6, "md", ture);
+      }
+
+      &__heading {
+        font-size: $h4FontSize;
+      }
+
+      &__excerpt, &__more {
+        @include smallText();
+      }
+
+      &__more {
+        text-align: right;
+      }
+    }
+  }
+}

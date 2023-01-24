@@ -1,0 +1,59 @@
+/**
+ * Utility - Flex
+ */
+
+$horizontalAlignValues: (
+  center:  center, // 水平垂直共に適用される
+  left:    flex-start,
+  right:   flex-end,
+  around:  space-around,
+  between: space-between
+);
+
+$verticalAlignValues: (
+  center:  center, // 水平垂直共に適用される
+  top:     flex-start,
+  stretch: stretch
+);
+
+.--flex {
+  @each $key, $value in $horizontalAlignValues {
+    &_#{$key} {
+      justify-content: $value !important;
+    }
+  }
+
+  @each $key, $value in $verticalAlignValues {
+    &_#{$key} {
+      align-items: $value !important;
+    }
+  }
+
+  @each $key, $value in $spacingValues {
+    &_gap-#{$key} {
+      gap: $value !important;
+    }
+  }
+
+  @each $key1, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      @each $key2, $value in $horizontalAlignValues {
+        &_#{$key1}-#{$key2} {
+          justify-content: $value !important;
+        }
+      }
+
+      @each $key2, $value in $verticalAlignValues {
+        &_#{$key1}-#{$key2} {
+          align-items: $value !important;
+        }
+      }
+
+      @each $key2, $value in $spacingValues {
+        &_gap-#{$key1}-#{$key2} {
+          gap: $value !important;
+        }
+      }
+    }
+  }
+}

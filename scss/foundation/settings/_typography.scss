@@ -13,7 +13,7 @@ $fontWeightSerif:      400;
 // フォントサイズ
 $fontSizes:            (
   xs:                    .75rem,
-  sm:                    .875rem,
+  sm:                    0.875rem,
   nr:                    1rem,
   md:                    1.17rem,
   lg:                    1.33rem,
@@ -28,37 +28,30 @@ $lineHeightBase:       28.8 / ($rootFontSize / ($rootFontSize * 0 + 1)); // 単�
 $letterSpacingBase:    0;
 
 // セクション
-$sectionMarginTop:     0;
-$sectionMarginBottom:  1.5rem;
+$sectionMarginTop:     space(0);
+$sectionMarginBottom:  space(3);
 
 // 見出し
-$headingMarginTop:     1.5rem;
-$headingMarginBottom:  .75rem;
+$headingMarginTop:     space(3);
+$headingMarginBottom:  space(2);
 $headingFontFamily:    $fontFamilySansSerif;
 $headingFontWeight:    $fontWeightSansSerif;
-$h1FontSize:           var(--xxl-font-size, map-get($fontSizes, "xxl"));
-$h2FontSize:           var(--xl-font-size, map-get($fontSizes, "xl"));
-$h3FontSize:           var(--lg-font-size, map-get($fontSizes, "lg"));
-$h4FontSize:           var(--md-font-size, map-get($fontSizes, "md"));
-$h5FontSize:           var(--nr-font-size, map-get($fontSizes, "nr")); // bold
-$h6FontSize:           var(--sm-font-size, map-get($fontSizes, "sm")); // bold
+$h1FontSize:           map-get($fontSizes, "xxl");
+$h2FontSize:           map-get($fontSizes, "xl");
+$h3FontSize:           map-get($fontSizes, "lg");
+$h4FontSize:           map-get($fontSizes, "md");
+$h5FontSize:           map-get($fontSizes, "nr"); // bold
+$h6FontSize:           map-get($fontSizes, "sm"); // bold
 
 // 本文
 $textMarginTop:        0;
-$textMarginBottom:     .75rem;
+$textMarginBottom:     space(2);
 
 // small (行間、字間を拡げる)
-$smallFontSize:        percentage(7 / 8);
+$smallFontSize:        map-get($fontSizes, "sm");
 $smallLineHeight:      $lineHeightBase * 9 / 8;
 $smallLetterSpacing:   0.04rem;
 
 // リンク文字の装飾
 $linkDecoration:       none;
 $linkHoverDecoration:  underline;
-
-// more文字列
-$sectionMoreText:      "more >";
-$sliderItemMoreText:   "more >";
-$mediaItemMoreText:    "more >";
-$cardsItemMoreText:    "more >";
-$listItemMoreText:     "more >";

@@ -1,68 +1,47 @@
-/*
-Theme Name: Qwel One
-Description: This is a theme for someone's portfolio or blog. You can customize and use.
-Version: 1.0
-Requires PHP: 7.3
-Author: Taigo Ito
-Author URI: https://qwel.design/
-License: GNU General Public License v3 or later
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
-*/
-
 @charset "utf-8";
 
-// Foundation
+// Settings
 @import "foundation/settings/colorSystem";
 @import "foundation/settings/gridSystem";
 @import "foundation/settings/typography";
+@import "foundation/settings/components";
+
+// Mixins
 @import "foundation/mixins/background";
 @import "foundation/mixins/button";
 @import "foundation/mixins/form";
-@import "foundation/mixins/grid";
 @import "foundation/mixins/table";
 @import "foundation/mixins/type";
-@import "foundation/base";
+
+// Normalize
+@import "foundation/normalize";
 
 // Layout
+@import "layout/container";
 @import "layout/header";
-@import "layout/siteBrand";
 @import "layout/gNav";
 @import "layout/main";
-@import "layout/titleArea";;
-@import "layout/sidebar";
 @import "layout/footer";
 
-// Objects
-@import "objects/projects/sections";
-@import "objects/projects/pages";
-@import "objects/projects/posts";
-@import "objects/projects/archive";
-@import "objects/projects/widgets";
-@import "objects/projects/widgets/searchForm";
-@import "objects/projects/widgets/subMenu";
-@import "objects/projects/widgets/calendar";
-@import "objects/components/breadcrumb";
-@import "objects/components/cards";
+// Components
+@import "objects/components/button";
 @import "objects/components/cover";
 @import "objects/components/drawerMenu";
-@import "objects/components/list";
+@import "objects/components/embed";
+@import "objects/components/form";
 @import "objects/components/icon";
-@import "objects/components/mediaText";
-@import "objects/components/modal";
-@import "objects/components/pagination";
-@import "objects/components/preloader";
 @import "objects/components/slider";
-@import "objects/utilities/button";
-@import "objects/utilities/form";
-@import "objects/utilities/grid";
-@import "objects/utilities/table";
+@import "objects/components/table";
+
+// Projects
+@import "objects/projects/hero";
+@import "objects/projects/section";
+@import "objects/projects/postItem";
+@import "objects/projects/postList";
+
+// Utility
+@import "objects/utilities/flex";
+@import "objects/utilities/flexItem";
 @import "objects/utilities/spacing";
-@import "objects/utilities/type";
+@import "objects/utilities/text";
 @import "objects/utilities/visibility";
-@import "objects/utilities/moreText";
-@import "objects/utilities/responsiveColor";
-@import "objects/utilities/accessibilities";
-@import "objects/utilities/hasAdminbar";
-@import "objects/utilities/hasBackgroundColor";
-@import "objects/utilities/hasColor";
-@import "objects/utilities/hasFontSize";

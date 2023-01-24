@@ -1,43 +1,287 @@
-<!doctype html>
-<html lang="ja">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qwel Workspace</title>
-  <link href="./style.css" rel="stylesheet">
-  <link href="./favicon.ico" rel="shortcut icon">
-</head>
-
-<body>
-  <header id="header">
-
-  </header><!-- #header -->
-  <nav id="nav">
-
-  </nav><!-- #nav -->
-  <main id="main">
-
-
-
-  </main><!-- #main -->
-  <div id="cover" class="cover">
-    <div class="cover__image"></div>
-  </div><!-- #cover -->
-  <button id="drawer" class="drawer" type="button" data-drawer="toggle">
-    <span class="drawer__navicon" data-icon="ei-navicon" data-size="m"></span>
-    <span class="drawer__close" data-icon="ei-close" data-size="m"></span>
-  </button><!-- #drawer -->
-  <div id="drawerMenu" class="drawerMenu">
-    <ul class="drawerMenu__inner"></ul>
-  </div><!-- #drawerMenu -->
-  <div id="drawerMenuOverlay" class="drawerMenuOverlay"></div><!-- #drawerMenuOverlay -->
-  <template id="drawerMenuItemTemplate">
-    <li class="drawerMenu__item"><a href=""></a></li>
-  </template><!-- #drawerMenuItemTemplate -->
-  <footer id="footer">
-
-  </footer>
-  <script src='./modules/init.js' type="module"></script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter Template</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header__inner">
+        <nav id="gNav" class="gNav">
+          <div class="gNav__container">
+            <h1 class="gNav__siteBrand">
+              <a href="/">Site Title</a>
+            </h1>
+            <ul class="gNav__primaryMenu --visible_md">
+              <li class="gNav__menuItem"><a href="#feature">feature</a></li>
+              <li class="gNav__menuItem"><a href="#about">about</a></li>
+              <li class="gNav__menuItem"><a href="#service">service</a></li>
+              <li class="gNav__menuItem"><a href="#news">news</a></li>
+              <li class="gNav__menuItem"><a href="#team">team</a></li>
+              <li class="gNav__menuItem"><a href="#access">access</a></li>
+              <li class="gNav__menuItem"><a href="#contact">contact</a></li>
+            </ul>
+            <ul class="gNav__socialMenu --visible_md">
+              <li class="gNav__menuItem --social"><a href="https://twitter.com/"><span data-icon="ei-sc-twitter" data-size="m"></span></a></li>
+              <li class="gNav__menuItem --social"><a href="https://facebook.com/"><span data-icon="ei-sc-facebook" data-size="m"></span></a></li>
+              <li class="gNav__menuItem --social"><a href="https://instagram.com/"><span data-icon="ei-sc-instagram" data-size="m"></span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="main">
+      <header id="hero" class="hero">
+        <div class="hero__content">
+          <p>Welcome to our website.</p>
+        </div>
+      </header>
+      <section id="feature" class="section">
+        <div class="section__inner">
+          <h2 class="section__heading">feature</h2>
+          <div class="slider --mt_3 --mb_2">
+            <figure class="slider__inner">
+              <figure class="slider__item">
+                <img class="slider__image" src="./img_default.jpg">
+                <figcaption class="slider__caption"><a href="#">feature 1. title here</a></figcaption>
+              </figure>
+              <figure class="slider__item">
+                <img class="slider__image" src="./img_default.jpg">
+                <figcaption class="slider__caption"><a href="#">feature 2. title here</a></figcaption>
+              </figure>
+              <figure class="slider__item">
+                <img class="slider__image" src="./img_default.jpg">
+                <figcaption class="slider__caption"><a href="#">feature 3. title here</a></figcaption>
+              </figure>
+              <figure class="slider__item">
+                <img class="slider__image" src="./img_default.jpg">
+                <figcaption class="slider__caption"><a href="#">feature 4. title here</a></figcaption>
+              </figure>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="section">
+        <div class="section__inner">
+          <h2 class="section__heading">about</h2>
+          <div class="section__container">
+            <article class="postItem --single">
+              <figure class="postItem__image">
+                <img src="./img_default.jpg">
+              </figure>
+              <div class="postItem__content">
+                <h3 class="postItem__heading">Mission</h3>
+                <p class="postItem__excerpt">Our mission is ...</p>
+                <div class="postItem__more">
+                  <a class="btn --primary">read more</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="service" class="section">
+        <div class="section__inner">
+          <h2 class="section__heading">service</h2>
+          <div class="section__container">
+            <div class="postList --grid">
+              <div class="postList__item">
+                <section class="postItem">
+                  <figure class="postItem__image">
+                    <img src="./img_default.jpg">
+                  </figure>
+                  <div class="postItem__content">
+                    <div class="postItem__info">
+                      <div class="postItem__date">2023.01.01</div>
+                      <div class="postItem__terms">
+                        <a href="#">info</a>
+                        <a href="#">news</a>
+                      </div>
+                    </div>
+                    <h3 class="postItem__heading">Article heading here.</h3>
+                    <p class="postItem__excerpt">Today is ...</p>
+                    <div class="postItem__more">
+                      <a href="#">read more &gt;</a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="postList__item">
+                <section class="postItem">
+                  <figure class="postItem__image">
+                    <img src="./img_default.jpg">
+                  </figure>
+                  <div class="postItem__content">
+                    <div class="postItem__info">
+                      <div class="postItem__date">2023.01.01</div>
+                      <div class="postItem__terms">
+                        <a href="#">info</a>
+                        <a href="#">news</a>
+                      </div>
+                    </div>
+                    <h3 class="postItem__heading">Article heading here.</h3>
+                    <p class="postItem__excerpt">Today is ...</p>
+                    <div class="postItem__more">
+                      <a href="#">read more &gt;</a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="postList__item">
+                <section class="postItem">
+                  <figure class="postItem__image">
+                    <img src="./img_default.jpg">
+                  </figure>
+                  <div class="postItem__content">
+                    <div class="postItem__info">
+                      <div class="postItem__date">2023.01.01</div>
+                      <div class="postItem__terms">
+                        <a href="#">info</a>
+                        <a href="#">news</a>
+                      </div>
+                    </div>
+                    <h3 class="postItem__heading">Article heading here.</h3>
+                    <p class="postItem__excerpt">Today is ...</p>
+                    <div class="postItem__more">
+                      <a href="#">read more &gt;</a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="news" class="section">
+        <div class="section__inner">
+          <h2 class="section__heading">news</h2>
+          <div class="section__container">
+            <ul class="postList --list">
+              <li class="postList__item">
+                <div class="postItem">
+                  <figure class="postItem__image">
+                    <img src="./img_default.jpg">
+                  </figure>
+                  <div class="postItem__content">
+                    <div class="postItem__info">
+                      <div class="postItem__date">2023.01.01</div>
+                      <div class="postItem__terms">
+                        <a href="#">info</a>
+                        <a href="#">news</a>
+                      </div>
+                    </div>
+                    <h3 class="postItem__heading">Article heading here.</h3>
+                    <p class="postItem__excerpt">Today is ...</p>
+                    <div class="postItem__more">
+                      <a href="#">read more &gt;</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="postList__item">
+                <div class="postItem">
+                  <figure class="postItem__image">
+                    <img src="./img_default.jpg">
+                  </figure>
+                  <div class="postItem__content">
+                    <div class="postItem__info">
+                      <div class="postItem__date">2023.01.01</div>
+                      <div class="postItem__terms">
+                        <a href="#">info</a>
+                        <a href="#">news</a>
+                      </div>
+                    </div>
+                    <h3 class="postItem__heading">Article heading here.</h3>
+                    <p class="postItem__excerpt">Today is ...</p>
+                    <div class="postItem__more">
+                      <a href="#">read more &gt;</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="postList__item">
+                <div class="postItem">
+                  <figure class="postItem__image">
+                    <img src="./img_default.jpg">
+                  </figure>
+                  <div class="postItem__content">
+                    <div class="postItem__info">
+                      <div class="postItem__date">2023.01.01</div>
+                      <div class="postItem__terms">
+                        <a href="#">info</a>
+                        <a href="#">news</a>
+                      </div>
+                    </div>
+                    <h3 class="postItem__heading">Article heading here.</h3>
+                    <p class="postItem__excerpt">Today is ...</p>
+                    <div class="postItem__more">
+                      <a href="#">read more &gt;</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="team" class="section">
+        <div class="section__inner">
+          <h2 class="section__heading">team</h2>
+          <div class="section__container">
+            <article class="postItem --single">
+              <figure class="postItem__image">
+                <img src="./img_default.jpg">
+              </figure>
+              <div class="postItem__content">
+                <h3 class="postItem__heading">Mission</h3>
+                <p class="postItem__excerpt">Our mission is ...</p>
+                <div class="postItem__more">
+                  <a class="btn --primary">read more</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="access" class="section">
+        <div class="section__inner --pb_0">
+          <h2 class="section__heading">access</h2>
+          <div class="embed --mt_4">
+            <iframe src="https://www.google.com/maps/embed"></iframe>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <div class="section__inner">
+          <h2 class="section__heading">contact</h2>
+          <div class="section__container --sm">
+            <form class="form">
+              <label>氏名
+                <br><input type="text"></label>
+              <label>メールアドレス
+                <br><input type="email"></label>
+              <label>表題
+                <br><input type="text"></label>
+              <label>お問い合わせ内容
+                <br><textarea rows="8"></textarea></label>
+              <input class="btn --primary" type="submit">
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="cover">
+      <div class="cover__image"></div>
+    </div>
+    <footer id="footer" class="footer">
+      <small>&copy; 2019 - 2023 QWEL DESIGN
+    </footer>
+    <script src="./js/scrolling.js"></script>
+    <script src="./js/drawerMenu.js"></script>
+    <script src="./js/evilIcons.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./init.js"></script>
+  </body>
 </html>

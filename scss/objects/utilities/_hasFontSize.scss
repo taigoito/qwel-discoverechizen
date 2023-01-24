@@ -1,9 +1,0 @@
-/**
- * Utility - Has Font Size
- */
-
-@each $key, $size in $fontSizes {
-  .has-#{$key}-font-size {
-    font-size: var(--#{$key}-font-size, $size) !important;
-  }
-}

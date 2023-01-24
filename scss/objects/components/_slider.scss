@@ -8,14 +8,14 @@
   height: calc(83.33vmin * #{$sliderAspectRatio});
   overflow: hidden;
 
-  @media (min-width: breakpoint("md")) {
+  @media (min-width: $breakpoint) {
     @each $key, $height in $sliderHeights {
       &.--#{$key} {
         height: $height;
       }
     }
   }
-
+  
   &__inner {
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@
     transform: translateX(0);
   }
 
-  .post {
+  &__item {
     position: relative;
     flex: 0 1 auto; 
     order: 0;
@@ -36,127 +36,27 @@
     &:not(.--current) {
       opacity: .5;
     }
-  }
 
-  .post__image {
-    width: 83.33vmin;
-    height: calc(83.33vmin * #{$sliderAspectRatio});
-    margin: 0;
-    
-    @each $key, $width in $sliderWidths {
-      @at-root .slider.--#{$key}.--fit .post__image {
-        @media (min-width: breakpoint("md")) {
-          width: $width;
-          height: map-get($sliderHeights, $key);
-        }
-      }
-    }
-  
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      cursor: default;
+      margin: 0;
     }
   }
 
-  .post__textContent {
+  &__caption {
     position: absolute;
-    left: 1.5rem;
-    right: 1.5rem;
-    bottom: .75rem;
-    padding: .75rem 1.5rem;
-    background-color: rgba(themeColor("lightest"), .7);
-    color: $bodyColor;
-    text-align: left;
-
-    &:hover {
-      background-color: rgba(themeColor("lightest"), .85);
-      color: $bodyColor;
-    }
-  }
-
-  .post__date {
-    display: none;
-    margin-top: 0;
-    margin-bottom: .75rem;
-
-    @media (min-width: breakpoint("md")) {
-      display: block;
-    }
-  }
-
-  .post__heading {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: $h4FontSize;
-    text-transform: capitalize;
-  }
-
-  .post__tags {
-    display: none;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @media (min-width: breakpoint("md")) {
-      display: inline-flex;
-    }
-  }
-
-  .post__tag {
-    margin: .375rem;
-    padding-left: .375rem;
-    padding-right: .375rem;
-    @include background("darker");
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: space(2) space(3);
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5));
+    color: $lightest;
+    font-size: $h2FontSize;
+    text-align: center;
 
     a {
-      color: themeColor("lightest");
-
-      &:hover {
-        color: themeColor("lighter");
-      }
-    }
-
-    a::before {
-      content:"#";
-    }
-  }
-
-  .post__excerpt {
-    display: none;
-    height: 3.6rem; // 2行
-    margin-top: .75rem;
-    margin-bottom: .75rem;
-    text-align: justify;
-    @include smallText();
-
-    @media (min-width: breakpoint("md")) {
       display: block;
+      color: $lightest;
     }
-  }
-
-  .post__moreWrap {
-    display: none;
-
-    @media (min-width: breakpoint("md")) {
-      display: block;
-      text-align: right;
-    }
-  }
-
-  .post__more {
-    display: inline-block;
-  }
-
-  .post__moreText::after {
-    content: $sliderItemMoreText;
   }
 
   &__prev, &__next {
@@ -168,11 +68,11 @@
     margin: auto;
     border: 0;
     background-color: transparent;
-    color: $linkColor;
+    color: $primaryLight;
     text-align: center;
     
     &:hover {
-      color: $linkHoverColor;
+      color: $primary;
     }
   }
 
@@ -183,24 +83,26 @@
   &__next {
     right: 0;
   }
-}
   
-.sliderNav {
-  display: flex;
-  justify-content: center;
-  height: 1rem;
-  margin: .75rem auto;
+  &__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    height: 1rem;
+    margin: space(2) auto;
+    padding: 0;
+  }
 
-  &__item {
+  &__navItem {
     width: .5rem;
     height: .5rem;
-    margin: .75rem;
+    margin: space(2);
     border-radius: 50%;
-    background-color: $linkHoverColor;
+    background-color: $primary;
     cursor: pointer;
 
     &:not(.--current) {
-      background-color: $linkColor;
+      background-color: $primaryLight;
     }
   }
 }

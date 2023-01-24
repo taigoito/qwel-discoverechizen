@@ -3,9 +3,9 @@
  */
 
 .--visible {
-  @each $infix, $breakpoint in $breakpoints {
-    &_#{$infix} {
-      @media (max-width: $breakpoint - 1) {
+  @each $key, $breakpoint in $breakpoints {
+    &_#{$key} {
+      @media (max-width: $breakpoint - 0.1) {
         display: none !important;
       }
     }

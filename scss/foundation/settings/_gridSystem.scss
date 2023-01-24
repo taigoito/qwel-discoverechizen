@@ -2,122 +2,103 @@
 
 // ルート要素にて定義
 // これを基準とした1remを、全ての寸法の基本単位とする
-$rootFontSize:     16px;
-$rootFontSizeXs:   3.84vw; // 4vw以下推奨
+$rootFontSize:   16px;
+$fixedFontSize:  3.84vw; // 4vw以下推奨
 
 // 基準幅
-$base:             18rem;
-$breakpointBase:   300px;
-$containerBase:    var(--container-base, #{$base});
+$gridBase:       6rem;
 
-// xs: 1カラム
+// 各BP別用途
+// xs: 1カラム (4グリッド: 24rem)
 // 文字サイズを流動させ、レイアウトを固定
-$containerWidthXs: calc(#{$containerBase} * 4 / 3);
-
-// sm: 1〜2カラム (下層ページで、メディアと文章の使用くらいに留める)
+//
+// sm: 1〜2カラム (6グリッド: 36rem)
 // コンテナ幅を拡げ、文字サイズをpxに切り替え固定
-// WordPressのブロックエディタの都合上、BPを600px以内に設置するのが望ましい
-$breakpointSm:     $breakpointBase * 2;
-$containerWidthSm: calc(#{$containerBase} * 2);
+// このサイズのデバイスは少ないため、ほとんどxsのレイアウトを継承する
+// 用途はせいぜい下層ページで、メディアと文章の使用くらいに留める
+// WordPressブロックエディタの都合上、BPを600pxで設置するのが望ましい
+//
+// md: 1〜3カラム (9グリッド: 54rem)
+// 画像:文章を1:2の割合で表示するリストレイアウトが可能
+//
+// lg: 1～4カラム (12グリッド: 72rem)
+// 幅広ラッパー使用時に4カラムレイアウトが可能
+// "md"からflexItemを伸長させる使い方を推奨
 
-// 以下、任意に定義
-// md: 1〜2カラム (カードレイアウト可能)
-$breakpointMd:     $breakpointBase * 3;
-$containerWidthMd: calc(#{$containerBase} * 3);
-
-// lg: 1〜3カラム (サイドバー設置可能)
-$breakpointLg:     $breakpointBase * 4;
-$containerWidthLg: calc(#{$containerBase} * 4);
-
-// ブレイクポイント (以下BP)
-$breakpoints:      (
-  sm:                $breakpointSm,
-  md:                $breakpointMd,
-  lg:                $breakpointLg
+// ブレイクポイント (BP)
+// padding: clamp(12px, 2%, 24px)を左右に付与し、コンテナが収まる
+$breakpoints:    (
+  sm:              600px, // コンテナ576px WordPressブロックエディタのBP
+  md:              900px, // コンテナ864px theme.json settings.layout.contentSize の値
+  lg:              1200px // コンテナ1152px theme.json settings.layout.wideSize の値
 );
 
-// コンテナ幅
-$containerWidths:  (
-  xs:                $containerWidthXs,
-  sm:                $containerWidthSm,
-  md:                $containerWidthMd,
-  lg:                $containerWidthLg
-);
-
-// モーダルアスペクト比
-$modalRatio:       5 / 8;
-$modalAspectRatio: var(--modal-aspect-ratio, #{$modalRatio});
-
-// モーダル幅
-$modalWidths:      (
-  md:                calc(#{$containerBase} * 2),
-  lg:                calc(#{$containerBase} * 3)
-);
-
-// モーダル幅
-$modalHeights:      (
-  md:                calc(#{$containerBase} * #{$modalAspectRatio} * 2),
-  lg:                calc(#{$containerBase} * #{$modalAspectRatio} * 3)
-);
-
-// リストアスペクト比
-$listRatio:        5 / 8;
-$listAspectRatio:  var(--list-aspect-ratio, #{$listRatio});
-
-// カードアスペクト比
-$cardRatio:        5 / 8;
-$cardAspectRatio:  var(--card-aspect-ratio, #{$cardRatio});
-
-// カード幅
-$cardWidths:       (
-  sm:                calc(#{$containerBase} * 0.64),
-  md:                calc(#{$containerBase} * 0.96),
-  lg:                calc(#{$containerBase} * 1.28)
-);
-
-// カード高さ
-$cardHeights:      (
-  sm:                calc(#{$containerBase} * #{$cardAspectRatio} * 0.64),
-  md:                calc(#{$containerBase} * #{$cardAspectRatio} * 0.96),
-  lg:                calc(#{$containerBase} * #{$cardAspectRatio} * 1.28)
-);
-
-// スライダーアスペクト比
-$sliderRatio:        5 / 8;
-$sliderAspectRatio:  var(--slider-aspect-ratio, #{$sliderRatio});
-
-// スライダー幅
-$sliderWidths:     (
-  sm:                calc(#{$containerBase} / #{$sliderAspectRatio} * 0.64),
-  md:                calc(#{$containerBase} / #{$sliderAspectRatio} * 0.96),
-  lg:                calc(#{$containerBase} / #{$sliderAspectRatio} * 1.28)
-);
-
-// スライダー高さ
-$sliderHeights:       (
-  sm:                calc(#{$containerBase} * 0.64),
-  md:                calc(#{$containerBase} * 0.96),
-  lg:                calc(#{$containerBase} * 1.28)
+// 余白定義
+$spacingValues:  (
+  0:               0,
+  1:               0.375rem,
+  2:               0.75rem,
+  3:               1.5rem,
+  4:               3rem,
+  5:               6rem
 );
 
 // BPの配列の接頭辞から値を返す関数
-@function breakpoint($infix: "lg") {
-  @return map-get($breakpoints, $infix);
+@function breakpoint($key: "lg") {
+  @return map-get($breakpoints, $key);
 }
 
-// BPの配列から、引数の接頭辞以降を取り除く関数
-@function popBreakpoints($infix: "lg") {
-  @if $infix == "lg" {
-    @return $breakpoints;
-  } @else if $infix == "md" {
-    @return map-remove($breakpoints, "lg");
-  } @else if $infix == "sm" {
-    @return map-remove($breakpoints, "lg", "md");
+// 余白の配列の接頭辞から値を返す関数
+@function space($key: 2) {
+  @return map-get($spacingValues, $key);
+}
+
+// ガター
+// 行を生成することで、コンテナの端とコンテンツ間が、それぞれ1.5rem空く仕様
+$gutter:         space();
+$containerPad:   (
+  sm:              $gutter,
+  md:              clamp(#{$gutter}, 2%, 18px),
+  lg:              clamp(#{$gutter}, 2%, 24px)
+);
+
+// コンテナ生成
+// 最大幅のみ固定の流動コンテナ
+@mixin container($key: "lg") {
+  @if ($key == "lg") {
+    @extend %__containerLg;
+  } @else if ($key == "md") {
+    @extend %__containerMd;
+  } @else {
+    @extend %__containerSm;
+  }
+  max-width: breakpoint($key);
+}
+
+// 行生成
+@mixin row($horizontalAlign: space-around, $verticalAlign: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $horizontalAlign;
+  align-items: $verticalAlign;
+}
+
+// 列生成
+@mixin col($size: 12, $key: "xs", $flexGrow: false) {
+  @extend %__containerSm;
+
+  @if ($key == "xs") {
+    flex: 0 1 #{$size * $gridBase};
+  } @else {
+    // 幅広レイアウト時の定義
+    // "xs"～"sm"は未定義でも自動で1カラム一杯に広がる
+    // "md"で幅を指定し、flex-glowを指定するのを推奨
+    @media (min-width: breakpoint($key)) {
+      @if ($flexGrow == false) {
+        flex: 0 1 #{$size * $gridBase};
+      } @else {
+        flex: $size 1 #{$size * $gridBase};
+      }
+    }
   }
 }
-
-// .header, .siteBrand, .hero, .preloaderの高さ
-$siteBrandHeight:  var(--site-brand-height, 48px);
-$headerHeight:     calc(#{$siteBrandHeight} + 24px);
-$heroHeight:       var(--cover-height, 75vh);
-$preloaderHeight:  calc(var(--header-height, 72px) * 2 + #{$heroHeight});

@@ -1,18 +1,17 @@
 // Color System
 
-// 任意の基準色を設定し、配色を決定する
-$primaryColor:     hsl(200, 60%, 50%);
+// 配色を決定する
 $themeColors:      (
-  primary-light:     lighten($primaryColor, 25%),
-  primary:           $primaryColor,
-  primary-dark:      darken($primaryColor, 10%),
-  secondary:         adjust-hue($primaryColor, -150deg),
-  lightest:          hsl(0, 0%, 100%),
-  lighter:           hsl(0, 0%, 85%),
-  light:             hsl(0, 0%, 70%),
-  dark:              hsl(0, 0%, 50%),
-  darker:            hsl(0, 0%, 30%),
-  darkest:           hsl(0, 0%, 15%)
+  darkest:           #262626, // 15%
+  darker:            #4d4d4d, // 30%
+  dark:              #808080, // 50%
+  light:             #b3b3b3, // 70%
+  lighter:           #d9d9d9, // 85%
+  lightest:          #ffffff, // 100%
+  primary:           #3399cc, // hsl(200, 60%, 50%)
+  primaryLight:      #85c2e0, // hsl(200, 60%, 70%)
+  secondary:         #cc334b, // hsl(350, 60%, 50%)
+  secondaryLight:    #e08594  // hsl(350, 60%, 70%)
 );
 
 // 配色の配列から色指定を抽出する関数
@@ -34,51 +33,11 @@ $themeColors:      (
   }
 }
 
-// 動的色指定
-$originalColors:   (
-  primary-light:     var(--primary-light-color, themeColor("primary-light")),
-  primary:           var(--primary-color, themeColor("primary")),
-  primary-dark:      var(--primary-dark-color, themeColor("primary-dark")),
-  secondary:         var(--secondary-color, themeColor("secondary")),
-  lightest:          hsl(0, 0%, 100%),
-  lighter:           hsl(0, 0%, 85%),
-  light:             hsl(0, 0%, 70%),
-  dark:              hsl(0, 0%, 50%),
-  darker:            hsl(0, 0%, 30%),
-  darkest:           hsl(0, 0%, 15%)
-);
-
-// 動的色指定を抽出する関数
-@function originalColor($key: "primary") {
-  @return map-get($originalColors, $key);
-}
-
-// キー指定の背景色から適切な文字色を判定する関数
-@function colorYiqByKey($key) {
-  $color: themeColor(($key));
-  $r: red($color);
-  $g: green($color);
-  $b: blue($color);
-  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-  @if ($yiq < 160) {
-    @return themeColor("lightest");
-  } @else {
-    @return themeColor("darkest");
-  }
-}
-
 // bodyの設定
-$bodyBg:           themeColor('lightest');
-$bodyColor:        themeColor('darkest');
+$bodyBg:           themeColor("lightest");
+$bodyColor:        themeColor("darkest");
 
 // リンク文字の設定
 // リンクを強調するため、_typography.scssにて、文字の装飾も設定すること
-$linkColor:        themeColor('darker');
-$linkHoverColor:   originalColor("primary");
-
-// Preloaderの設定
-$preloaderBg:      themeColor("dark");
-
-// filter
-$blur:             brightness(0.85) blur(1px);
-$whiteShape:       invert(1) grayscale(1) brightness(4);
+$linkColor:        themeColor("darker");
+$linkHoverColor:   themeColor("primary");

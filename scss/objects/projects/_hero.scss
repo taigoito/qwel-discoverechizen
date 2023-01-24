@@ -1,0 +1,15 @@
+/**
+ * Project - Hero
+ */
+
+.hero {
+  @include row(center, center);
+  width: 100%;
+  height: calc(100vh - #{$headerHeight * 2});
+  color: themeColor("lightest");
+  text-align: center;
+
+  &__content {
+    font-size: $h1FontSize;
+  }
+}
