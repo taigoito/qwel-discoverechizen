@@ -1,0 +1,17 @@
+/**
+ * Component - Responsive Color
+ */
+
+.responsiveColor {
+  &.--change {
+    color: $white;
+
+    span, a {
+      color: $white;
+    }
+
+    img {
+      filter: $whiten;
+    }
+  }
+}

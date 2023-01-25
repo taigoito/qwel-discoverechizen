@@ -11,12 +11,14 @@ $primary:              themeColor("primary") !default;
 $primaryLight:         themeColor("primaryLight") !default;
 $secondary:            themeColor("secondary") !default;
 $secondaryLight:       themeColor("secondaryLight") !default;
+$black:                #000000;
+$white:                #ffffff;
 $linkColor:            $linkColor !default;
 $linkHoverColor:       $linkHoverColor !default;
 
 // Filter for images
 $blur:                 brightness(0.85) blur(1px);
-$whiteningFilter:      invert(1) grayscale(1) brightness(4) !default;
+$whiten:               invert(1) grayscale(1) brightness(4) !default;
 
 // Breakpoint
 $breakpoint:           900px !default;
@@ -30,7 +32,7 @@ $drawerMenuDarkBg:     $primary;
 // Preloader
 $spinnerWidth:         48px !default;
 $spinnerBarsCount:     12 !default;
-$spinnerBarsBg:        #ffffff !default; // rgba関数を使用するため16進数指定
+$spinnerBarsBg:        $white !default; // rgba関数を使用するため16進数指定
 $preloaderHeight:      100vh !default;
 $preloaderBg:          $primary !default;
 

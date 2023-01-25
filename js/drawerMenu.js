@@ -54,11 +54,11 @@ class DrawerMenu {
     this._overlay = document.createElement('div');
     this._overlay.classList.add('drawerMenuOverlay', '--collapse');
 
-    // main要素に挿入
-    const wrapper = document.querySelector('main');
-    wrapper.appendChild(this._drawer);
-    wrapper.appendChild(this._drawerMenu);
-    wrapper.appendChild(this._overlay);
+    // body要素に挿入
+    const body = document.body;
+    body.appendChild(this._drawer);
+    body.appendChild(this._drawerMenu);
+    body.appendChild(this._overlay);
 
     // 状態
     this.isShown = false;

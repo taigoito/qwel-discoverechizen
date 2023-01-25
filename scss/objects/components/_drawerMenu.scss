@@ -54,7 +54,7 @@
 
   &.--dark {
     .drawer__close {
-      color: themeColor("lightest");
+      color: $white;
     }
   }
 }
@@ -95,7 +95,6 @@
     }
   }
 
-  &__siteBrand,
   &__primaryMenu,
   &__socialMenu {
     list-style: none;
@@ -116,7 +115,7 @@
     padding-bottom: space(1);
     text-transform: capitalize;
 
-    &.--brand {
+    &.--siteBrand {
       padding-top: 1rem;
       padding-bottom: 1rem;
 
@@ -148,14 +147,14 @@
 
     .drawerMenu__item {
       &.--social {
-        fill: themeColor("lightest");
+        fill: $white;
       }
 
       a {
-        color: themeColor("lightest");
+        color: $white;
 
         img {
-          filter: $whiteningFilter;
+          filter: $whiten;
         }
       }
     }

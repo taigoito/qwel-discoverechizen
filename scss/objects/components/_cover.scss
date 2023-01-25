@@ -18,5 +18,53 @@
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0),  rgba(0, 0, 0, 0.3),  rgba(0, 0, 0, 0)), url("./img_default.jpg") no-repeat center center / cover scroll;
     filter: $blur;
-  } 
+    //background-image: url("./img_default.jpg");
+    //background-position: center center;
+    //background-size: cover;
+    transition: 1s linear opacity;
+
+    // Fader用クラス
+    // 画像の数とパスを設定
+    @for $i from 1 through 4 {
+      &.--num_#{$i} {
+        //background-image: url("./assets/img0#{$i}.jpg");
+      }
+    }
+    
+    &.--fade {
+      //opacity: 0;
+      //transition: none;
+    }
+  }
+
+  // Preloader用クラス
+  .preloader & {
+    //opacity: 0; // Preloader稼働前は透過
+
+    .--loaded & {
+      //opacity: 1; // イメージを読み込んだら透過を解除
+    }
+  }
+}
+
+// 画像の数で要調整 (以下はn枚の場合)
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  // 1/(n*2)
+  13% {
+    opacity: 1;
+  }
+
+  // 2/(n*2)
+  25% {
+    opacity: 1;
+  }
+
+  // 3/(n*2)
+  37% {
+    opacity: 0;
+  }
 }
