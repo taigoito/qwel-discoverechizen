@@ -15,7 +15,6 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "foundation/settings/colorSystem";
 @import "foundation/settings/gridSystem";
 @import "foundation/settings/typography";
-@import "foundation/settings/components";
 
 // Mixins
 @import "foundation/mixins/background";
@@ -42,11 +41,9 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "objects/components/breadcrumb";
 @import "objects/components/button";
 @import "objects/components/cover";
-@import "objects/components/drawerMenu";
 @import "objects/components/embed";
 @import "objects/components/form";
 @import "objects/components/icon";
-@import "objects/components/slider";
 @import "objects/components/table";
 
 // Projects
