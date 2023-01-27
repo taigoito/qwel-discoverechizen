@@ -11,13 +11,13 @@ $primary:              themeColor("primary") !default;
 $primaryLight:         themeColor("primaryLight") !default;
 $secondary:            themeColor("secondary") !default;
 $secondaryLight:       themeColor("secondaryLight") !default;
-$black:                #000000;
-$white:                #ffffff;
+$black:                #000000 !default;
+$white:                #ffffff !default;
 $linkColor:            $linkColor !default;
 $linkHoverColor:       $linkHoverColor !default;
 
 // Filter for images
-$blur:                 brightness(0.85) blur(1px);
+$blur:                 brightness(0.85) blur(1px) !default;
 $whiten:               invert(1) grayscale(1) brightness(4) !default;
 
 // Breakpoint
@@ -27,7 +27,7 @@ $breakpoint:           900px !default;
 $drawerAlwaysShown:    false !default;
 $drawerPad:            space(2) !default;
 $drawerHeight:         48px !default;
-$drawerMenuDarkBg:     $primary;
+$drawerMenuDarkBg:     $primary !default;
 
 // Preloader
 $spinnerWidth:         48px !default;

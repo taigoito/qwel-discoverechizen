@@ -68,7 +68,7 @@
   width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
-  background-color: themeColor("light");
+  background-color: $light;
   text-align: center;
   transition: width ease-in-out .25s;
   
@@ -146,12 +146,9 @@
     background-color: $drawerMenuDarkBg;
 
     .drawerMenu__item {
-      &.--social {
-        fill: $white;
-      }
-
       a {
         color: $white;
+        fill: $white;
 
         img {
           filter: $whiten;

@@ -487,11 +487,9 @@ button, [type=button], [type=reset], [type=submit] {
 .drawerMenu.--dark {
   background-color: #3399cc;
 }
-.drawerMenu.--dark .drawerMenu__item.--social {
-  fill: #ffffff;
-}
 .drawerMenu.--dark .drawerMenu__item a {
   color: #ffffff;
+  fill: #ffffff;
 }
 .drawerMenu.--dark .drawerMenu__item a img {
   filter: invert(1) grayscale(1) brightness(4);
