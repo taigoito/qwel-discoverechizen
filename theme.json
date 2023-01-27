@@ -25,6 +25,11 @@
 					"color": "#cccccc"
 				},
 				{
+					"slug": "background",
+					"name": "Background",
+					"color": "#ffffff"
+				},
+				{
 					"slug": "primary-dark",
 					"name": "Primary Dark",
 					"color": "#18aada"

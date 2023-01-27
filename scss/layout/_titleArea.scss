@@ -3,14 +3,12 @@
  */
 
 %__titleArea {
-  @extend %__container;
+  @extend %__containerLg;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width: 100%;
-  max-width: var(--wp--style--global--wide-size);
   height: 6rem;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto space(3);
   background: url("./assets/dec_sm.svg") no-repeat right top;
 
   @media (min-width: breakpoint("md")) {

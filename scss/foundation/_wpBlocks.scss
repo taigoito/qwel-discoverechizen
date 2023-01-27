@@ -11,11 +11,11 @@
 
   &-post {
     &-featured-image {
-      margin: 0.75rem 0;
+      margin: space(2) 0;
       text-align: center;
 
       @media (min-width: breakpoint("md")) {
-        margin: 1.5rem 0;
+        margin: space(3) 0;
       }
       
       img {
@@ -25,14 +25,14 @@
     }
 
     &-terms {
-      padding-left: var(--wp--custom--spacing--x-small);
+      padding-left: space(2);
 
       a::before {
         content: "#";
       }
 
       &__separator {
-        padding-left: var(--wp--custom--spacing--x-small);
+        padding-left: space(2);
       }
     }
 
@@ -44,11 +44,11 @@
   }
 
   &-image {
-    margin: 0.75rem 0;
+    margin: space(2) 0;
     overflow: hidden;
 
     @media (min-width: breakpoint("md")) {
-      margin: 1.5rem 0;
+      margin: space(3) 0;
     }
   }
 
@@ -56,14 +56,13 @@
     &-numbers {
       .page-numbers {
         display: inline-block;
-        @include button();
+        @include background();
+        @include makeButton();
         padding: 1rem;
-        border: 2px solid var(--wp--preset--color--white);
+        border: 2px solid themeColor("background");
 
         &.current {
-          background-color: var(--wp--preset--color--primary-light);
-          color: var(--wp--preset--color--dark);
-          opacity: 1;
+          @include background("primaryLight");
           cursor: default;
         }
       }
@@ -80,7 +79,7 @@
 
   &-search {
     &__inside-wrapper {
-      margin: 0.75rem auto;
+      margin: space(2) auto;
     }
 
     &__label {
@@ -91,6 +90,6 @@
   &-categories,
   &-archives {
     list-style: none;
-    padding: 0 0.5rem;
+    padding: 0 space(2);
   }
 }

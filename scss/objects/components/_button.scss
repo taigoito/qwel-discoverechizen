@@ -1,0 +1,14 @@
+/**
+ * Component - Button
+ */
+
+.btn {
+  @include makeBlock();
+  @include makeButton();
+
+  @each $color, $val in $themeColors {
+    &.--#{$color} {
+      @include background($color);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// Type
+
+// smallの設定を適用
+@mixin smallText() {
+  font-size: $smallFontSize;
+  line-height: $smallLineHeight;
+  letter-spacing: $smallLetterSpacing;
+}
+
+// blockquoteの設定を適用
+@mixin blockquote() {
+  margin-top: $textMarginTop;
+  margin-bottom: $textMarginBottom;
+  padding-left: 1em;
+  border-left: 4px solid $bodyColor;
+
+  p, cite {
+    font-style: italic;
+    @include smallText();
+  }
+}
+
+// リンクの設定を適用
+@mixin link() {
+  &, &:active {
+    color: $linkColor;
+    text-decoration: $linkDecoration;
+  }
+  
+  &:hover, &:focus {
+    color: $linkHoverColor;
+    text-decoration: $linkHoverDecoration;
+  }
+}

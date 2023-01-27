@@ -1,0 +1,57 @@
+// Typography
+
+// 固有のフォント設定
+$fontFamilySansSerif:  "游ゴシック", "Yu Gothic", sans-serif;
+$fontFamilySerif:      "游明朝", "Yu Mincho", serif;
+$fontWeightSansSerif:  500; // 游ゴシック固有
+$fontWeightSerif:      400;
+//$fontFamilySansSerif:  "Noto Sans JP", sans-serif;
+//$fontFamilySerif:      "Noto Serif JP", serif;
+//$fontWeightSansSerif:  400;
+//$fontWeightSerif:      400;
+
+// フォントサイズ
+$fontSizes:            (
+  xs:                    .75rem,
+  sm:                    var(--wp--custom--font-size--small, 0.875rem),
+  nr:                    var(--wp--custom--font-size--normal, 1rem),
+  md:                    var(--wp--custom--font-size--medium, 1.17rem),
+  lg:                    var(--wp--custom--font-size--large, 1.33rem),
+  xl:                    var(--wp--custom--font-size--x-large, 1.5rem),
+  xxl:                   var(--wp--preset--font-size--x-large, 2rem),
+);
+
+// body
+$fontFamilyBase:       $fontFamilySansSerif;
+$fontWeightBase:       $fontWeightSansSerif;
+$lineHeightBase:       28.8 / ($rootFontSize / ($rootFontSize * 0 + 1)); // 単位除去
+$letterSpacingBase:    0;
+
+// セクション
+$sectionMarginTop:     space(0);
+$sectionMarginBottom:  space(3);
+
+// 見出し
+$headingMarginTop:     space(3);
+$headingMarginBottom:  space(2);
+$headingFontFamily:    $fontFamilySansSerif;
+$headingFontWeight:    $fontWeightSansSerif;
+$h1FontSize:           map-get($fontSizes, "xxl");
+$h2FontSize:           map-get($fontSizes, "xl");
+$h3FontSize:           map-get($fontSizes, "lg");
+$h4FontSize:           map-get($fontSizes, "md");
+$h5FontSize:           map-get($fontSizes, "nr"); // bold
+$h6FontSize:           map-get($fontSizes, "sm"); // bold
+
+// 本文
+$textMarginTop:        0;
+$textMarginBottom:     space(2);
+
+// small (行間、字間を拡げる)
+$smallFontSize:        map-get($fontSizes, "sm");
+$smallLineHeight:      $lineHeightBase * 9 / 8;
+$smallLetterSpacing:   0.04rem;
+
+// リンク文字の装飾
+$linkDecoration:       none;
+$linkHoverDecoration:  underline;

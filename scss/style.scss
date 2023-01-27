@@ -1,7 +1,7 @@
 /*
 Theme Name: Discover Echizen
 Description: This is a theme for Discover Echizen remade into a block theme.
-Version: 3.0
+Version: 3.1
 Requires PHP: 7.4
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -12,46 +12,52 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @charset "utf-8";
 
 // Settings
-@import "foundation/gridsystem";
+@import "foundation/settings/colorSystem";
+@import "foundation/settings/gridSystem";
+@import "foundation/settings/typography";
 
 // Mixins
-@import "mixins/button";
-@import "mixins/form";
-@import "mixins/grid";
-@import "mixins/image";
-@import "mixins/table";
-@import "mixins/type";
+@import "foundation/mixins/background";
+@import "foundation/mixins/button";
+@import "foundation/mixins/form";
+@import "foundation/mixins/table";
+@import "foundation/mixins/type";
 
-// Foundation
-@import "foundation/root";
+// Normalize
 @import "foundation/normalize";
+
+// WP Blocks
 @import "foundation/wpBlocks";
 
 // Layout
 @import "layout/container";
-@import "layout/titleArea";
 @import "layout/header";
 @import "layout/gNav";
 @import "layout/main";
-@import "layout/sidebar";
+@import "layout/titleArea";
 @import "layout/footer";
+@import "layout/sidebar";
 
 // Components
-@import "objects/embed";
-@import "objects/form";
+@import "objects/components/button";
+@import "objects/components/embed";
+@import "objects/components/form";
+@import "objects/components/icon";
+@import "objects/components/table";
 
 // Projects
-@import "objects/hero";
-@import "objects/lp";
-@import "objects/postItem";
-@import "objects/profile";
-@import "objects/section";
+@import "objects/projects/hero";
+@import "objects/projects/grid";
+@import "objects/projects/lp";
+//@import "objects/projects/postItem";
+//@import "objects/projects/postList";
+@import "objects/projects/profile";
+@import "objects/projects/section";
 
 // Utility
-@import "utilities/flex";
-@import "utilities/flexItem";
-@import "utilities/grid";
-@import "utilities/sizing";
-@import "utilities/spacing";
-@import "utilities/text";
-@import "utilities/visibility";
+@import "objects/utilities/flex";
+@import "objects/utilities/flexItem";
+@import "objects/utilities/sizing";
+@import "objects/utilities/spacing";
+@import "objects/utilities/text";
+@import "objects/utilities/visibility";

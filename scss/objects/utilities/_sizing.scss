@@ -19,3 +19,16 @@ $sizingValues: (
     margin-right: auto;
   }
 }
+
+@each $key, $breakpoint in $breakpoints {
+  @media (min-width: $breakpoint) {
+    @each $suffix, $val in $sizingValues {
+      .--w_#{key}-#{$suffix} {
+        width: $val !important;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

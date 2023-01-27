@@ -3,12 +3,11 @@
  */
 
 .main {
-  padding-top: 6rem; // header height
-  padding-bottom: 3rem;
+  padding-top: space(5); // header height
+  padding-bottom: space(4);
 
   &__headerInner {
-    // 背景色検知用
-    background-color: var(--wp--preset--color--white);
+    @include background("background");
   }
 
   &__headerContainer {
@@ -28,6 +27,6 @@
   }
 
   &__body {
-    background-color: var(--wp--preset--color--white);
+    @include background("background");
   }
 }

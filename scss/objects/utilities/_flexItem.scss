@@ -1,0 +1,43 @@
+/**
+ * Utility - Flex Item (Old system)
+ */
+
+.--flex-item {
+  @for $i from 2 through 12 {
+    &_#{$i} {
+      @include col($i);
+    }
+  }
+
+  @each $key, $breakpoint in $breakpoints {
+    @for $i from 2 through 12 {
+      &_#{$key}-#{$i} {
+        @extend %__containerSm;
+      }
+    }
+
+    @media (min-width: $breakpoint) {
+      @for $i from 2 through 12 {
+        &_#{$key}-#{$i} {
+          @include col($i);
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 3 {
+    &_order-#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $key, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+      @for $i from 0 through 3 {
+        &_order-#{$key}-#{$i} {
+          order: $i;
+        }
+      }
+    }
+  }
+}

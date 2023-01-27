@@ -4,12 +4,11 @@
 
 .footer {
   &__inner {
-    // 背景色検知用
-    background-color: var(--wp--preset--color--primary);
+    @include background();
   }
 
   &__logo {
     width: 15rem;
-    @include white();
+    filter: invert(1) grayscale(1) brightness(4); // whiten
   }
 }

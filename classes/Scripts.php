@@ -6,7 +6,6 @@ trait Scripts {
   public static function enqueue_scripts() {
     // バージョン情報を取得
 		$version = wp_get_theme()->get( 'Version' );
-		$version = is_string( $theme_version ) ? $theme_version : false;
 
 		// Google Fonts
     $family = 'Sawarabi+Gothic';

@@ -1,0 +1,133 @@
+/**
+ * Utility - Grid
+ * 旧システムの移管
+ */
+
+// 行生成
+// アイテムの水平配置、垂直配置のプロパティを渡して、flexboxを設定
+// コンテナに直接@includeしても良い
+@mixin gridRow($justifyContent: space-around, $alignItems: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+// 列生成
+// 列内での絶対配置の使用を想定 (position: relative)
+// 接頭辞、幅としての列数を引数として渡す (デフォルトで"auto"を指定)
+@mixin gridCol($infix: "xs", $size: "auto", $gridColumns: 12) {
+  @if $infix == "xs" {
+    position: relative;
+    width: 100%; // メディアクエリが適用されない場合
+    @if $size == "auto" {
+      flex: 0 0 auto;
+      max-width: none;
+    } @else {
+      flex: 0 0 percentage($size / $gridColumns);
+      max-width: percentage($size / $gridColumns);
+    }
+  } @else {
+    @media (min-width: map-get($breakpoints, $infix)) {
+      @if $size == "auto" {
+        flex: 0 0 auto;
+        max-width: none;
+      } @else {
+        flex: 0 0 percentage($size / $gridColumns);
+        max-width: percentage($size / $gridColumns);
+      }
+    }
+  }
+}
+
+.grid {
+  padding-left: .75rem;
+  padding-right: .75rem;
+
+  & > * {
+    @include gridRow();
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+  }
+
+  &.--center {
+    & > * {
+      justify-content: center;
+    }
+
+    &_lg > * {
+      @media (min-width: breakpoint("lg")) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &.--left {
+    & > * {
+      justify-content: flex-start;
+    }
+
+    &_lg > * {
+      @media (min-width: breakpoint("lg")) {
+        justify-content:flex-start;
+      }
+    }
+  }
+
+  &.--right {
+    & > * {
+      justify-content: flex-end;
+    }
+
+    &_lg > * {
+      @media (min-width: breakpoint("lg")) {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &.--top {
+    & > * {
+      align-items: flex-start;
+    }
+
+    &_lg > * {
+      @media (min-width: breakpoint("lg")) {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  @for $i from 2 through 12 {
+    &__#{$i} {
+      @include gridCol();
+      padding-left: .75rem;
+      padding-right: .75rem;
+      
+      @if ($i == 2) {
+        @include gridCol("xs", 6);
+        @include gridCol("sm", 4);
+        @include gridCol("md", 3);
+      }
+
+      @if ($i == 3) {
+        @include gridCol("sm", 6);
+        @include gridCol("md", 4);
+      }
+
+      @if ($i == 4) {
+        @include gridCol("md", 6);
+      }
+      
+      @include gridCol("lg", $i);
+    }
+  }
+
+  @for $i from 1 through 6 {
+    .--order_#{$i} {
+      @media (min-width: breakpoint("lg")) {
+        order: $i;
+      }
+    }
+  }
+}

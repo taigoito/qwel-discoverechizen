@@ -3,8 +3,8 @@
  */
 
 .section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: space(4);
+  padding-bottom: space(4);
 
   &__inner {
     // 背景色検知用
