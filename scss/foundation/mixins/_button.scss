@@ -23,7 +23,7 @@
   }
 }
 
-@mixin button($color: "primary", $size: 12rem, $rounded: 3px) {
+@mixin button($color: "primaryDark", $size: 12rem, $rounded: 3px) {
   @include background($color);
   @include makeBlock($size);
   @include makeButton($rounded);
