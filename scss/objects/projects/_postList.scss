@@ -3,6 +3,8 @@
  */
 
 .postList {
+  @include listUnstyled();
+
   &.--grid {
     @include row();
 

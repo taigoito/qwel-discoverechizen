@@ -1,6 +1,5 @@
 /**
  * Foundation
- * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
  */
 
 *,
@@ -8,9 +7,10 @@
 *::after {
    box-sizing: border-box;
 }
- 
+
 html {
   font-size: $rootFontSize;
+  scroll-behavior: smooth;
   
   @media (max-width: breakpoint("sm") - 0.1) {
     font-size: $fixedFontSize;
@@ -67,10 +67,8 @@ p {
 }
 
 ol, ul {
-  list-style: none;
   margin-top: $textMarginTop;
   margin-bottom: $textMarginBottom;
-  padding-left: 0;
 }
 
 li {
@@ -119,20 +117,6 @@ th {
   text-align: left;
 }
 
-button, input, optgroup, select, textarea {
-  font-family: inherit; // Change the font styles in all browsers
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button, input {
-  overflow: visible; // Show the overflow in Edge
-}
-
-button, select {
-  text-transform: none; // Remove the inheritance of text transform in Firefox
-}
-
-button, [type="button"], [type="reset"], [type="submit"] {
-  -webkit-appearance: button; // Correct the inability to style clickable types in iOS and Safari
+button, input, select, textarea {
+  font: inherit;  // Change the font styles in all browsers
 }

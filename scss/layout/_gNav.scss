@@ -19,12 +19,14 @@
 
   &__primaryMenu {
     @include row();
+    @include listUnstyled();
     flex: 0 1 36rem;
     margin: 0;
   }
 
   &__socialMenu {
     @include row();
+    @include listUnstyled();
     flex: 0 1 9rem;
     margin: 0;
   }

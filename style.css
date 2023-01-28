@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /**
  * Foundation
- * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
  */
 *,
 *::before,
@@ -11,6 +10,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 599.9px) {
   html {
@@ -68,10 +68,8 @@ p {
 }
 
 ol, ul {
-  list-style: none;
   margin-top: 0;
   margin-bottom: 0.75rem;
-  padding-left: 0;
 }
 
 li {
@@ -138,22 +136,8 @@ th {
   text-align: left;
 }
 
-button, input, optgroup, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button, input {
-  overflow: visible;
-}
-
-button, select {
-  text-transform: none;
-}
-
-button, [type=button], [type=reset], [type=submit] {
-  -webkit-appearance: button;
+button, input, select, textarea {
+  font: inherit;
 }
 
 /**
@@ -212,6 +196,8 @@ button, [type=button], [type=reset], [type=submit] {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
+  padding-left: 0;
   flex: 0 1 36rem;
   margin: 0;
 }
@@ -220,6 +206,8 @@ button, [type=button], [type=reset], [type=submit] {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
+  padding-left: 0;
   flex: 0 1 9rem;
   margin: 0;
 }
@@ -965,6 +953,10 @@ button, [type=button], [type=reset], [type=submit] {
 /**
  * Project - Post List
  */
+.postList {
+  list-style: none;
+  padding-left: 0;
+}
 .postList.--grid {
   display: flex;
   flex-wrap: wrap;
