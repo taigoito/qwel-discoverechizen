@@ -26,4 +26,18 @@
   &__container {
     @extend %__container;
   }
+
+  &.--pickup {
+    .wp-block-post-excerpt {
+      &__more-text {
+        text-align: center;
+      }
+
+      &__more-link {
+        @include button("primaryDark");
+      }
+    }
+
+
+  }
 }
