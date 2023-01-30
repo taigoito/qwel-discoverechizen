@@ -28,10 +28,6 @@ new Preloader();
 //import ResponsiveColor from './js/responsiveColor.js';
 new ResponsiveColor();
 
-// Scrolling
-//import Scrolling from './js/_scrolling.js';
-new Scrolling();
-
 // Slider
 //import Slider from './js/slider.js';
 new Slider();
