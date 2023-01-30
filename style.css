@@ -627,7 +627,25 @@ button, [type=button], [type=reset], [type=submit] {
   opacity: 0.5;
 }
 .slider__item img {
+  width: 83.33vmin;
+  aspect-ratio: 1.6;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
+}
+@media (min-width: 900px) {
+  .slider.--sm .slider__item img {
+    width: auto;
+    height: 12rem;
+  }
+  .slider.--md .slider__item img {
+    width: auto;
+    height: 18rem;
+  }
+  .slider.--lg .slider__item img {
+    width: auto;
+    height: 24rem;
+  }
 }
 .slider__caption {
   position: absolute;

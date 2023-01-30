@@ -16,6 +16,7 @@
     }
   }
   
+  // gapはJSで指定
   &__inner {
     display: flex;
     align-items: center;
@@ -38,7 +39,19 @@
     }
 
     img {
+      width: 83.33vmin;
+      aspect-ratio: 1 / $sliderAspectRatio;
+      object-fit: cover;
       margin: 0;
+
+      @media (min-width: $breakpoint) {
+        @each $key, $height in $sliderHeights {
+          @at-root .slider.--#{$key} .slider__item img {
+            width: auto;
+            height: $height;
+          }
+        }
+      }
     }
   }
 
