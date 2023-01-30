@@ -24,7 +24,7 @@ $fontSizes:            (
 // body
 $fontFamilyBase:       $fontFamilySansSerif;
 $fontWeightBase:       $fontWeightSansSerif;
-$lineHeightBase:       28.8 / ($rootFontSize / ($rootFontSize * 0 + 1)); // 単位除去
+$lineHeightBase:       var(--wp--custom--line-height--large, 1.8);
 $letterSpacingBase:    0;
 
 // セクション
@@ -49,7 +49,7 @@ $textMarginBottom:     space(2);
 
 // small (行間、字間を拡げる)
 $smallFontSize:        map-get($fontSizes, "sm");
-$smallLineHeight:      $lineHeightBase * 9 / 8;
+$smallLineHeight:      var(--wp--custom--line-height--x-large, 2);
 $smallLetterSpacing:   0.04rem;
 
 // リンク文字の装飾

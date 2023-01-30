@@ -11,7 +11,6 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 /**
  * Foundation
- * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
  */
 *,
 *::before,
@@ -19,13 +18,25 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
   box-sizing: border-box;
 }
 
-:root {
+html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 599.9px) {
-  :root {
+  html {
     font-size: 3.84vw;
   }
+}
+
+body {
+  margin: 0;
+  background-color: var(--wp--preset--color--lightest, #ffffff);
+  color: var(--wp--preset--color--darkest, #262626);
+  font-family: "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: 500;
+  line-height: var(--wp--custom--line-height--large, 1.8);
+  letter-spacing: 0;
+  -webkit-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,6 +77,39 @@ p {
   margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
 }
 
+ol, ul {
+  margin-top: 0;
+  margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
+}
+
+li {
+  margin-top: 0;
+  margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: var(--wp--custom--font-size--small, 0.875rem);
+  line-height: var(--wp--custom--line-height--x-large, 2);
+  letter-spacing: 0.04rem;
+}
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: var(--wp--custom--spacing--small, 0.75rem);
+  padding-left: 1em;
+  border-left: 4px solid var(--wp--preset--color--darkest, #262626);
+}
+blockquote p, blockquote cite {
+  font-style: italic;
+  font-size: var(--wp--custom--font-size--small, 0.875rem);
+  line-height: var(--wp--custom--line-height--x-large, 2);
+  letter-spacing: 0.04rem;
+}
+
 a, a:active {
   color: var(--wp--preset--color--darker, #4d4d4d);
   text-decoration: none;
@@ -73,6 +117,24 @@ a, a:active {
 a:hover, a:focus {
   color: var(--wp--preset--color--primary, #3399cc);
   text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure {
+  display: block;
+  margin: 0 auto var(--wp--custom--spacing--small, 0.75rem);
+}
+
+figcaption {
+  font-size: var(--wp--custom--font-size--small, 0.875rem);
+  line-height: var(--wp--custom--line-height--x-large, 2);
+  letter-spacing: 0.04rem;
+  text-align: center;
 }
 
 table {
@@ -84,22 +146,8 @@ th {
   text-align: left;
 }
 
-button, input, optgroup, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button, input {
-  overflow: visible;
-}
-
-button, select {
-  text-transform: none;
-}
-
-button, [type=button], [type=reset], [type=submit] {
-  -webkit-appearance: button;
+button, input, select, textarea {
+  font: inherit;
 }
 
 /**
@@ -173,7 +221,7 @@ button, [type=button], [type=reset], [type=submit] {
 .wp-block-quote p, .wp-block-quote cite {
   font-style: italic;
   font-size: var(--wp--custom--font-size--small, 0.875rem);
-  line-height: 2.025;
+  line-height: var(--wp--custom--line-height--x-large, 2);
   letter-spacing: 0.04rem;
 }
 .wp-block-table {
@@ -195,7 +243,7 @@ button, [type=button], [type=reset], [type=submit] {
   padding-bottom: 0.625rem;
   border: 0;
   font-size: var(--wp--custom--font-size--small, 0.875rem);
-  line-height: 2.025;
+  line-height: var(--wp--custom--line-height--x-large, 2);
   letter-spacing: 0.04rem;
 }
 
@@ -212,8 +260,8 @@ button, [type=button], [type=reset], [type=submit] {
 }
 
 .--flex-item_lg-12, .--flex-item_lg-11, .--flex-item_lg-10, .--flex-item_lg-9, .--flex-item_lg-8, .--flex-item_lg-7, .--flex-item_lg-6, .--flex-item_lg-5, .--flex-item_lg-4, .--flex-item_lg-3, .--flex-item_lg-2, .--flex-item_md-12, .--flex-item_md-11, .--flex-item_md-10, .--flex-item_md-9, .--flex-item_md-8, .--flex-item_md-7, .--flex-item_md-6, .--flex-item_md-5, .--flex-item_md-4, .--flex-item_md-3, .--flex-item_md-2, .--flex-item_sm-12, .--flex-item_sm-11, .--flex-item_sm-10, .--flex-item_sm-9, .--flex-item_sm-8, .--flex-item_sm-7, .--flex-item_sm-6, .--flex-item_sm-5, .--flex-item_sm-4, .--flex-item_sm-3, .--flex-item_sm-2, .--flex-item_12, .--flex-item_11, .--flex-item_10, .--flex-item_9, .--flex-item_8, .--flex-item_7, .--flex-item_6, .--flex-item_5, .--flex-item_4, .--flex-item_3, .--flex-item_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image {
-  padding-left: var(--wp--custom--spacing--small, 0.75rem);
-  padding-right: var(--wp--custom--spacing--small, 0.75rem);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 /**
@@ -473,7 +521,7 @@ button, [type=button], [type=reset], [type=submit] {
   padding-bottom: 0.625rem;
   border: 0;
   font-size: var(--wp--custom--font-size--small, 0.875rem);
-  line-height: 2.025;
+  line-height: var(--wp--custom--line-height--x-large, 2);
   letter-spacing: 0.04rem;
 }
 
@@ -536,7 +584,7 @@ button, [type=button], [type=reset], [type=submit] {
 }
 .postList.--grid .postItem__excerpt, .postList.--grid .postItem__more {
   font-size: var(--wp--custom--font-size--small, 0.875rem);
-  line-height: 2.025;
+  line-height: var(--wp--custom--line-height--x-large, 2);
   letter-spacing: 0.04rem;
 }
 .postList.--grid .postItem__more {
@@ -575,7 +623,7 @@ button, [type=button], [type=reset], [type=submit] {
 }
 .postList.--list .postItem__excerpt, .postList.--list .postItem__more {
   font-size: var(--wp--custom--font-size--small, 0.875rem);
-  line-height: 2.025;
+  line-height: var(--wp--custom--line-height--x-large, 2);
   letter-spacing: 0.04rem;
 }
 .postList.--list .postItem__more {
