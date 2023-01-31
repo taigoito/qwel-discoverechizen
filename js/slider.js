@@ -19,7 +19,7 @@ class Slider {
     // 各オプション (data属性から取得)
     this._isHeader = this._elem.dataset.isHeader || false; // headerに設置する場合はドラグ、ホイール操作に対応しない
     this._aspectRatio = this._elem.dataset.aspectRatio || 5 / 8;
-    this._gap = 0; // アイテム間隔(px)
+    this._gap = this._elem.dataset.gap - 0 || 0; // アイテム間隔(px)
     this._interval = this._elem.dataset.interval || 3000; // 1000未満を指定すると自動再生しない
     this._duration = this._elem.dataset.duration || 500;
 
