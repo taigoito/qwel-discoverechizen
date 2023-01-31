@@ -153,6 +153,9 @@ button, input, select, textarea {
 /**
  * WP Blocks
  */
+.wp-block-navigation-item {
+  margin: 0;
+}
 .wp-block-navigation-item a, .wp-block-navigation-item a:active {
   color: var(--wp--preset--color--darker, #4d4d4d);
   text-decoration: none;
@@ -160,6 +163,9 @@ button, input, select, textarea {
 .wp-block-navigation-item a:hover, .wp-block-navigation-item a:focus {
   color: var(--wp--preset--color--primary, #3399cc);
   text-decoration: underline;
+}
+.wp-block-social-links {
+  margin: 0;
 }
 .wp-block-post-featured-image {
   text-align: center;
@@ -250,7 +256,7 @@ button, input, select, textarea {
 /**
  * Layout
  */
-.section__container, .footer__container, .main__container, .gNav__container, .header__container, .--flex-item_lg-12, .--flex-item_lg-11, .--flex-item_lg-10, .--flex-item_lg-9, .--flex-item_lg-8, .--flex-item_lg-7, .--flex-item_lg-6, .--flex-item_lg-5, .--flex-item_lg-4, .--flex-item_lg-3, .--flex-item_lg-2, .--flex-item_md-12, .--flex-item_md-11, .--flex-item_md-10, .--flex-item_md-9, .--flex-item_md-8, .--flex-item_md-7, .--flex-item_md-6, .--flex-item_md-5, .--flex-item_md-4, .--flex-item_md-3, .--flex-item_md-2, .--flex-item_sm-12, .--flex-item_sm-11, .--flex-item_sm-10, .--flex-item_sm-9, .--flex-item_sm-8, .--flex-item_sm-7, .--flex-item_sm-6, .--flex-item_sm-5, .--flex-item_sm-4, .--flex-item_sm-3, .--flex-item_sm-2, .--flex-item_12, .--flex-item_11, .--flex-item_10, .--flex-item_9, .--flex-item_8, .--flex-item_7, .--flex-item_6, .--flex-item_5, .--flex-item_4, .--flex-item_3, .--flex-item_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image {
+.section__container, .footer__container, .main__container, .header__container, .--flex-item_lg-12, .--flex-item_lg-11, .--flex-item_lg-10, .--flex-item_lg-9, .--flex-item_lg-8, .--flex-item_lg-7, .--flex-item_lg-6, .--flex-item_lg-5, .--flex-item_lg-4, .--flex-item_lg-3, .--flex-item_lg-2, .--flex-item_md-12, .--flex-item_md-11, .--flex-item_md-10, .--flex-item_md-9, .--flex-item_md-8, .--flex-item_md-7, .--flex-item_md-6, .--flex-item_md-5, .--flex-item_md-4, .--flex-item_md-3, .--flex-item_md-2, .--flex-item_sm-12, .--flex-item_sm-11, .--flex-item_sm-10, .--flex-item_sm-9, .--flex-item_sm-8, .--flex-item_sm-7, .--flex-item_sm-6, .--flex-item_sm-5, .--flex-item_sm-4, .--flex-item_sm-3, .--flex-item_sm-2, .--flex-item_12, .--flex-item_11, .--flex-item_10, .--flex-item_9, .--flex-item_8, .--flex-item_7, .--flex-item_6, .--flex-item_5, .--flex-item_4, .--flex-item_3, .--flex-item_2, .postList.--list .postItem__content, .postList.--list .postItem__image, .postList.--grid .post, .postItem.--single .postItem__content, .postItem.--single .postItem__image {
   position: relative;
   flex: auto;
   gap: 0;
@@ -264,12 +270,41 @@ button, input, select, textarea {
   padding-right: 0.75rem;
 }
 
+.header__container {
+  padding-left: var(--wp--custom--spacing--container-pad-wide, 0.75rem);
+  padding-right: var(--wp--custom--spacing--container-pad-wide, 0.75rem);
+}
+
 /**
  * Layout - Header
  */
+.header {
+  height: 4.5rem;
+}
+.header__inner {
+  height: 100%;
+  background-color: var(--wp--preset--color--lightest, #ffffff);
+}
+.header__container {
+  max-width: 1200px;
+  height: 100%;
+}
+
 /**
  * Layout - G Nav
  */
+.gNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.gNav__siteBrand {
+  flex: 0 1 9rem;
+  margin: 0;
+  line-height: 1;
+}
 @media (max-width: 899.9px) {
   .gNav__primaryMenu {
     display: none !important;

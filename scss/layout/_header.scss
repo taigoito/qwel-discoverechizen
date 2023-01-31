@@ -2,8 +2,18 @@
  * Layout - Header
  */
 
+$headerHeight: 4.5rem;
+
 .header {
+  height: $headerHeight;
+
+  &__inner {
+    height: 100%;
+    background-color: $bodyBg;
+  }
+
   &__container {
-    @extend %__container;
+    @include container();
+    height: 100%;
   }
 }
