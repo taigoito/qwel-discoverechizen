@@ -333,34 +333,6 @@ button, [type=button], [type=reset], [type=submit] {
   filter: brightness(0.85) blur(1px);
   transition: 1s linear opacity;
 }
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  13% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  37% {
-    opacity: 0;
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  13% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  37% {
-    opacity: 0;
-  }
-}
 /**
  * Component - Drawer Menu
  */
