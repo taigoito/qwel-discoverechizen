@@ -6,7 +6,7 @@ $rootFontSize:   16px;
 $fixedFontSize:  3.84vw; // 4vw以下推奨
 
 // 基準幅
-$gridBase:       4.5rem;
+$gridBase:       6rem;
 
 // 各BP別用途
 // xs: 1カラム (4グリッド: 24rem)
@@ -84,16 +84,11 @@ $containerPad:   (
 }
 
 // 列生成
-// このテーマでは flex-glow をデフォルトで指定
-@mixin col($size: 12, $key: "xs", $flexGrow: true) {
+@mixin col($size: 12, $key: "xs", $flexGrow: false) {
   @extend %__containerSm;
 
   @if ($key == "xs") {
-    @if ($flexGrow == false) {
-      flex: 0 1 #{$size * $gridBase};
-    } @else {
-      flex: $size 1 #{$size * $gridBase};
-    }
+    flex: 0 1 #{$size * $gridBase};
   } @else {
     // 幅広レイアウト時の定義
     // "xs"～"sm"は未定義でも自動で1カラム一杯に広がる
