@@ -4,6 +4,15 @@
 
 .main {
   &__container {
-    @extend %__container;
+    @extend %__containerLg;
+  }
+
+  &__content {
+    @include col(6, "md", true);
+  }
+
+  &__sidebar {
+    @include col(3, "md");
+
   }
 }

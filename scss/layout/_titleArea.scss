@@ -1,0 +1,13 @@
+/**
+ * Layout - Title Area
+ */
+
+.titleArea {
+  &__container {
+    @extend %__containerLg;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

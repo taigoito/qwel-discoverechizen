@@ -3,7 +3,11 @@
  */
 
 .section {
+  &__inner {
+    background-color: $bodyBg;
+  }
+  
   &__container {
-    @extend %__container;
+    @extend %__containerLg;
   }
 }

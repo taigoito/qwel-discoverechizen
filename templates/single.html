@@ -3,43 +3,43 @@
 <!-- wp:group {"tagName":"main","className":"main","layout":{"inherit":false}} -->
 <main id="main" class="wp-block-group main"><!-- wp:group {"tagName":"header","className":"main__header"} -->
 <header class="wp-block-group main__header"><!-- wp:cover {"overlayColor":"secondary-light","isDark":false,"className":"titleArea","style":{"spacing":{"padding":{"top":"0rem","right":"0rem","bottom":"0rem","left":"0rem"}}}} -->
-<div class="wp-block-cover is-light titleArea" style="padding-top:0rem;padding-right:0rem;padding-bottom:0rem;padding-left:0rem"><span aria-hidden="true" class="has-secondary-light-background-color has-background-dim-100 wp-block-cover__gradient-background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"titleArea__inner","layout":{"inherit":true}} -->
+<div class="wp-block-cover is-light titleArea" style="padding-top:0rem;padding-right:0rem;padding-bottom:0rem;padding-left:0rem"><span aria-hidden="true" class="wp-block-cover__background has-secondary-light-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"titleArea__inner","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group titleArea__inner"><!-- wp:group {"align":"wide","className":"titleArea__container"} -->
-<div class="wp-block-group alignwide titleArea__container"><!-- wp:heading {"level":1,"align":"wide","fontSize":"x-large"} -->
-<h1 class="alignwide has-x-large-font-size" id="ブログタイトル">ブログタイトル</h1>
+<div class="wp-block-group alignwide titleArea__container"><!-- wp:heading {"level":1,"align":"wide","className":"titleArea__title","fontSize":"x-large"} -->
+<h1 class="alignwide titleArea__title has-x-large-font-size" id="ブログタイトル">ブログタイトル</h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"}}},"className":"breadcrumb","layout":{"inherit":true}} -->
-<div class="wp-block-group breadcrumb" style="padding-top:2rem;padding-bottom:2rem"><!-- wp:group {"align":"wide","className":"breadcrumb__container","layout":{"type":"flex","allowOrientation":false}} -->
-<div class="wp-block-group alignwide breadcrumb__container"><!-- wp:site-title {"level":2,"className":"breadcrumb__item","fontSize":"small"} /-->
-
-<!-- wp:heading {"level":3,"className":"breadcrumb__item","fontSize":"small"} -->
-<h3 class="breadcrumb__item has-small-font-size" id="ブログタイトル-1"><a href="/blog/">ブログタイトル</a></h3>
-<!-- /wp:heading -->
-
-<!-- wp:post-title {"level":4,"className":"breadcrumb__item --current","fontSize":"small"} /--></div>
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide"><!-- wp:shortcode -->
+[breadcrumb]
+<!-- /wp:shortcode --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></header>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"main__body","layout":{"inherit":true}} -->
-<div class="wp-block-group main__body"><!-- wp:group {"align":"wide","className":"main__container --flex_top","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-<div class="wp-block-group alignwide main__container --flex_top"><!-- wp:group {"className":"postItem --flex-item_8","layout":{"inherit":false}} -->
-<div class="wp-block-group postItem --flex-item_8"><!-- wp:group {"className":"postItem__info","layout":{"type":"flex","allowOrientation":false}} -->
-<div class="wp-block-group postItem__info"><!-- wp:post-date {"format":"Y.m.d"} /-->
+<!-- wp:group {"className":"main__body","layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group main__body"><!-- wp:group {"align":"wide","className":"main__container","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","verticalAlignment":"top"}} -->
+<div class="wp-block-group alignwide main__container"><!-- wp:group {"className":"main__content","layout":{"type":"constrained","contentSize":"48rem"}} -->
+<div class="wp-block-group main__content"><!-- wp:group {"className":"postItem","layout":{"type":"default"}} -->
+<div class="wp-block-group postItem"><!-- wp:group {"className":"postItem__info","layout":{"type":"flex","allowOrientation":false}} -->
+<div class="wp-block-group postItem__info"><!-- wp:post-date {"format":"Y.m.d","className":"postItem__date"} /-->
 
-<!-- wp:post-terms {"term":"category","separator":""} /--></div>
+<!-- wp:post-terms {"term":"category","separator":"","className":"postItem__terms"} /--></div>
 <!-- /wp:group -->
 
-<!-- wp:post-title /-->
+<!-- wp:post-title {"className":"postItem__heading"} /-->
 
-<!-- wp:post-content /--></div>
+<!-- wp:post-content {"className":"postItem__content"} /--></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"sidebar","tagName":"aside","className":"sidebar --flex-item_4"} /--></div>
+<!-- wp:group {"className":"main__sidebar","layout":{"type":"constrained","contentSize":"48rem"}} -->
+<div class="wp-block-group main__sidebar"><!-- wp:template-part {"slug":"sidebar","tagName":"aside","className":"sidebar"} /--></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></main>
 <!-- /wp:group -->
