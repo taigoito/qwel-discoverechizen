@@ -6,9 +6,14 @@ $headerHeight: 4.5rem;
 
 .header {
   height: $headerHeight;
-  background-color: $bodyBg;
 
   &__inner {
+    height: 100%;
+    background-color: $bodyBg;
+  }
+
+  &__container {
+    @include container();
     height: 100%;
   }
 }

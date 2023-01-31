@@ -3,13 +3,8 @@
  */
 
 .gNav {
+  @include row(space-between);
   height: 100%;
-  
-  &__container {
-    @include container();
-    @include row(space-between);
-    height: 100%;
-  }
 
   &__siteBrand {
     flex: 0 1 9rem;
