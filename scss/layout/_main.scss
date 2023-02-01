@@ -8,11 +8,11 @@
   }
 
   &__content {
-    @include col(6, "md", true);
+    @include col(6, true);
   }
 
   &__sidebar {
-    @include col(3, "md");
+    @include col(3, false, "md");
 
   }
 }

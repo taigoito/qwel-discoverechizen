@@ -5,23 +5,7 @@
 .--flexItem {
   @for $i from 2 through 12 {
     &_#{$i} {
-      @include col($i);
-    }
-  }
-
-  @each $key, $breakpoint in $breakpoints {
-    @for $i from 2 through 12 {
-      &_#{$key}-#{$i} {
-        @extend %__containerSm;
-      }
-    }
-
-    @media (min-width: $breakpoint) {
-      @for $i from 2 through 12 {
-        &_#{$key}-#{$i} {
-          @include col($i);
-        }
-      }
+      @include col($i, true);
     }
   }
 
