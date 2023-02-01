@@ -5,10 +5,9 @@
 .section {
   padding-top: space(4);
   padding-bottom: space(4);
-
+  
   &__inner {
-    // 背景色検知用
-    background-color: var(--wp--preset--color--white);
+    background-color: $bodyBg;
   }
 
   &__titleArea {
@@ -24,7 +23,7 @@
   }
 
   &__container {
-    @extend %__container;
+    @extend %__containerLg;
   }
 
   &.--pickup {
@@ -37,7 +36,5 @@
         @include button("primaryDark");
       }
     }
-
-
   }
 }

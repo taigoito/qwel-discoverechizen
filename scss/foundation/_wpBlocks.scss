@@ -4,9 +4,17 @@
 
 .wp-block {
   &-navigation {
-    &-item a {
-      @include link();
+    &-item {
+      margin: 0;
+      
+      a {
+        @include link();
+      }
     }
+  }
+
+  &-social-links {
+    margin: 0;
   }
 
   &-post {

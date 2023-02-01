@@ -3,6 +3,8 @@
  */
 
 .gNav {
+  @include row(space-between);
+  
   &__primaryMenu {
     //@media (max-width: breakpoint("md") - 0.1) {
       display: none !important;

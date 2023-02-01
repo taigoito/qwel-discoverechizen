@@ -1,5 +1,12 @@
 // Type
 
+// ol, ulの設定を適用
+// Normalizeでは適用しない
+@mixin listUnstyled() {
+  list-style: none;
+  padding-left: 0;
+}
+
 // smallの設定を適用
 @mixin smallText() {
   font-size: $smallFontSize;

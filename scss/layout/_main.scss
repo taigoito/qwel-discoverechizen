@@ -7,11 +7,11 @@
   padding-bottom: space(4);
 
   &__headerInner {
-    @include background("background");
+    background-color: $bodyBg;
   }
 
   &__headerContainer {
-    @extend %__container;
+    @extend %__containerLg;
   }
 
   &__titleArea {
@@ -27,6 +27,19 @@
   }
 
   &__body {
-    @include background("background");
+    background-color: $bodyBg;
+  }
+  
+  &__container {
+    @extend %__containerLg;
+  }
+
+  &__content {
+    @include col(6, true);
+  }
+
+  &__sidebar {
+    @include col(3, false, "md");
+
   }
 }

@@ -6,7 +6,7 @@ $rootFontSize:   16px;
 $fixedFontSize:  3.84vw; // 4vw以下推奨
 
 // 基準幅
-$gridBase:       4.5rem;
+$gridBase:       6rem;
 
 // 各BP別用途
 // xs: 1カラム (4グリッド: 24rem)
@@ -55,11 +55,11 @@ $spacingValues:  (
 
 // ガター
 // 行を生成することで、コンテナの端とコンテンツ間が、それぞれ1.5rem空く仕様
-$gutter:         space();
+$gutter:         0.75rem;
 $containerPad:   (
   sm:              $gutter,
-  md:              clamp(#{$gutter}, 2%, 18px),
-  lg:              clamp(#{$gutter}, 2%, 24px)
+  md:              var(--wp--custom--spacing--container-pad, $gutter),
+  lg:              var(--wp--custom--spacing--container-pad-wide, $gutter)
 );
 
 // コンテナ生成
@@ -84,8 +84,7 @@ $containerPad:   (
 }
 
 // 列生成
-// このテーマでは flex-glow をデフォルトで指定
-@mixin col($size: 12, $key: "xs", $flexGrow: true) {
+@mixin col($size: 12, $flexGrow: false, $key: "xs") {
   @extend %__containerSm;
 
   @if ($key == "xs") {
