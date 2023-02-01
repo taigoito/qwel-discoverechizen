@@ -9,8 +9,8 @@
     @include row();
 
     .postList__item {
-      @include col();
-      @include col(4, "md");
+      @include col(4, false, "md");
+      margin-bottom: space(3);
     }
 
     .postItem {
@@ -43,12 +43,12 @@
       @include row(center);
 
       &__image {
-        @include col(3, "md", ture);
+        @include col(3, ture);
         margin: 0;
       }
 
       &__content {
-        @include col(6, "md", ture);
+        @include col(6, ture);
       }
 
       &__heading {
