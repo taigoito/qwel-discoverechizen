@@ -37,11 +37,11 @@
 
     .postItem {
       &__image {
-        @include col(4, "md", true);
+        @include col(4, true);
       }
 
       &__content {
-        @include col(5, "md", true);
+        @include col(5, true);
         margin-bottom: space(4);
       }
     }
