@@ -888,6 +888,11 @@ button, input, select, textarea {
 /**
  * Project - Post Item
  */
+.postItem__image img {
+  aspect-ratio: 1.3333333333;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .postItem__info {
   display: flex;
   flex-wrap: wrap;

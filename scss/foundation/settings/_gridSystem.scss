@@ -8,6 +8,9 @@ $fixedFontSize:  3.84vw; // 4vw以下推奨
 // 基準幅
 $gridBase:       6rem;
 
+// 画像アスペクト比 (高さ/幅)
+$imgAspectRatio: 3 / 4;
+
 // 各BP別用途
 // xs: 1カラム (4グリッド: 24rem)
 // 文字サイズを流動させ、レイアウトを固定
