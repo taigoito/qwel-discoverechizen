@@ -1854,7 +1854,7 @@ button, input, select, textarea {
 }
 .postItem.--single .postItem__content {
   flex: 5 1 30rem;
-  margin-bottom: var(--wp--custom--spacing--large, 3rem);
+  margin-bottom: var(--wp--custom--spacing--medium, 1.5rem);
 }
 
 /**
@@ -1888,6 +1888,10 @@ button, input, select, textarea {
 .postList.--list .post {
   margin-bottom: var(--wp--custom--spacing--medium, 1.5rem);
   padding-bottom: var(--wp--custom--spacing--medium, 1.5rem);
+  border-bottom: 1px solid var(--wp--preset--color--primary-light, #d1f0fc);
+}
+.postList.--list .post:last-child {
+  border: none;
 }
 .postList.--list .postItem {
   display: flex;

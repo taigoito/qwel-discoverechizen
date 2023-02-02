@@ -30,6 +30,11 @@
     .post {
       margin-bottom: space(3);
       padding-bottom: space(3);
+      border-bottom: 1px solid themeColor('primaryLight');
+
+      &:last-child {
+        border: none;
+      }
     }
 
     .postItem {
