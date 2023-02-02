@@ -3,6 +3,13 @@
  */
 
 .postItem {
+  &__image {
+    img {
+      aspect-ratio: 1 / $imgAspectRatio;
+      object-fit: cover;
+    }
+  }
+
   &__info {
     margin-top: space(2);
     margin-bottom: space(1);
