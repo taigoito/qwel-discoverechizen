@@ -1,7 +1,7 @@
 /*
 Theme Name: Discover Echizen
 Description: This is a theme for Discover Echizen remade into a block theme.
-Version: 3.1.4
+Version: 3.2
 Requires PHP: 7.4
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -49,10 +49,12 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 @import "objects/projects/hero";
 @import "objects/projects/grid";
 @import "objects/projects/lp";
+@import "objects/projects/discoverMap";
 @import "objects/projects/postItem";
 @import "objects/projects/postList";
 @import "objects/projects/profile";
 @import "objects/projects/section";
+@import "objects/projects/wave";
 
 // Utility
 @import "objects/utilities/flex";

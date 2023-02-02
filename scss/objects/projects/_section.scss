@@ -6,7 +6,7 @@
   padding-top: space(4);
   padding-bottom: space(4);
   
-  &__inner {
+  section:not(.--discover) &__inner {
     background-color: $bodyBg;
   }
 

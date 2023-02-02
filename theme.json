@@ -299,6 +299,10 @@
 			"title": "注目のプロジェクトセクション"
 		},
 		{
+			"name": "section-discover",
+			"title": "ディスカバーセクション"
+		},
+		{
 			"name": "section-news",
 			"title": "ブログ&ニュースセクション"
 		},
