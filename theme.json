@@ -215,6 +215,14 @@
 			]
 		},
 		{
+			"name": "full",
+			"title": "全幅のテンプレート",
+			"postTypes": [
+				"post",
+				"page"
+			]
+		},
+		{
 			"name": "category-echizen-coast",
 			"title": "特集: 越前海岸について"
 		},
