@@ -2,7 +2,7 @@
 /*
 Theme Name: Discover Echizen
 Description: This is a theme for Discover Echizen remade into a block theme.
-Version: 3.2
+Version: 3.2.1
 Requires PHP: 7.4
 Author: Taigo Ito
 Author URI: https://qwel.design/
@@ -215,7 +215,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -525,7 +524,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -655,7 +653,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -740,8 +737,7 @@ button, input, select, textarea {
 }
 .hero__content.--fade {
   opacity: 0;
-  -webkit-animation: fade 30s ease 0s infinite normal;
-          animation: fade 30s ease 0s infinite normal;
+  animation: fade 30s ease 0s infinite normal;
 }
 .hero__content h1 {
   width: 18rem;
@@ -801,21 +797,6 @@ button, input, select, textarea {
 .hero__coverImage.--fade {
   opacity: 0;
   transition: none;
-}
-
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  17% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
 }
 
 @keyframes fade {
@@ -1550,7 +1531,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -1820,6 +1800,11 @@ button, input, select, textarea {
 .gallery__main > img.--fade {
   opacity: 0;
 }
+@media (max-width: 899.9px) {
+  .gallery__item {
+    display: none;
+  }
+}
 
 /**
  * Component - Accordion Panel
@@ -1859,10 +1844,10 @@ button, input, select, textarea {
 .discoverMap__description {
   width: 100%;
   max-width: var(--wp--style--global--content-size);
-  padding-left: var(--wp--custom--spacing--container-pad-wide);
-  padding-right: var(--wp--custom--spacing--container-pad-wide);
+  padding-left: var(--wp--custom--spacing--medium, 1.5rem);
+  padding-right: var(--wp--custom--spacing--medium, 1.5rem);
   color: var(--wp--preset--color--white);
-  text-align: left;
+  text-align: justify;
 }
 @media (min-width: 900px) {
   .discoverMap__description {
@@ -2074,14 +2059,24 @@ button, input, select, textarea {
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
   font-size: var(--wp--custom--font-size--large, 1.33rem);
 }
+.postItem__content p {
+  text-align: justify;
+}
 .postItem__excerpt {
   margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
+  text-align: justify;
 }
 .postItem.--single .postItem__image {
   flex: 4 1 24rem;
 }
 .postItem.--single .postItem__content {
   flex: 5 1 30rem;
+  margin-bottom: var(--wp--custom--spacing--medium, 1.5rem);
+}
+.postItem.--single .postItem__excerpt {
+  margin-bottom: var(--wp--custom--spacing--x-small, 0.375rem);
+}
+.postItem.--single .postItem__excerpt .wp-block-post-excerpt__excerpt {
   margin-bottom: var(--wp--custom--spacing--medium, 1.5rem);
 }
 
@@ -2189,7 +2184,6 @@ section:not(.--discover) .section__inner {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;

@@ -675,6 +675,12 @@ $work_themeColors: (
       }
     }
   }
+
+  &__item {
+    @media (max-width: breakpoint("md") - 0.1) {
+      display: none;
+    }
+  }
 }
 
 /**

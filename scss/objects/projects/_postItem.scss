@@ -22,8 +22,13 @@
     font-size: $h3FontSize;
   }
 
+  &__content p {
+    text-align: justify;
+  }
+
   &__excerpt {
     margin-bottom: space(1);
+    text-align: justify;
   }
 
   &.--single {
@@ -35,6 +40,14 @@
       &__content {
         @include col(5, true);
         margin-bottom: space(3);
+      }
+
+      &__excerpt {
+        margin-bottom: space(1);
+
+        .wp-block-post-excerpt__excerpt {
+          margin-bottom: space(3);
+        }
       }
     }
   }

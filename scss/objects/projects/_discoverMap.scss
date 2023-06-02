@@ -34,10 +34,10 @@
   &__description {
     width: 100%;
     max-width: var(--wp--style--global--content-size);
-    padding-left: var(--wp--custom--spacing--container-pad-wide);
-    padding-right: var(--wp--custom--spacing--container-pad-wide);
+    padding-left: space(3);
+    padding-right: space(3);
     color: var(--wp--preset--color--white);
-    text-align: left;
+    text-align: justify;
 
     @media (min-width: breakpoint("md")) {
       text-align: center;
